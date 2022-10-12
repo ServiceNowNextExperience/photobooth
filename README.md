@@ -10,4 +10,4 @@ This contains the UI component that this application uses to interact with the c
 
 2. Photobooth Core
 https://github.com/ServiceNowNextExperience/photobooth-core
-The core application for photobooth including tables and flows.
+The core application for photobooth including tables, flows and a REST api endpoint for posting images.
