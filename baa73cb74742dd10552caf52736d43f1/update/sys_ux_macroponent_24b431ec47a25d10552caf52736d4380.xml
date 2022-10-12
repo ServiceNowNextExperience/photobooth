@@ -57,13 +57,13 @@
         }
       },
       "eventMappings" : [ {
-        "eventMappingId" : "cljjeeoaaiibbkaabbggwddbhhtqddflczvm",
+        "eventMappingId" : "cljjggffvhhaffaabbgguddbhhtcccbbvrxkt",
         "isConfiguration" : false,
         "offRowStorageId" : null,
-        "sourceEventApiName" : "x_snc_pb_camera.PHOTOBOOTH_CAMERA#SNAPPED",
+        "sourceEventApiName" : "x_snc_pb_camera.PHOTOBOOTH#SNAPPED",
         "sourceEventCorrelationId" : null,
         "sourceEventDefinition" : {
-          "apiName" : "x_snc_pb_camera.PHOTOBOOTH_CAMERA#SNAPPED",
+          "apiName" : "x_snc_pb_camera.PHOTOBOOTH#SNAPPED",
           "id" : null,
           "type" : "UXEVENT"
         },
@@ -77,8 +77,51 @@
           "declarativeAction" : null,
           "event" : null,
           "operation" : null,
-          "targetId" : "cljjeeoaaiibbkaabbggxddbhhthhhhndaaffpii",
+          "targetId" : "cljjggffvhhaffaabbggvddbhhtnxaacapphh",
           "type" : "CLIENT_SCRIPT"
+        } ]
+      }, {
+        "eventMappingId" : "cljjeeoaaiibbkaabbggwddbhhtqddflczvm",
+        "isConfiguration" : false,
+        "offRowStorageId" : null,
+        "sourceEventApiName" : "x_snc_pb_camera.PHOTOBOOTH_CAMERA#SNAPPED",
+        "sourceEventCorrelationId" : null,
+        "sourceEventDefinition" : {
+          "apiName" : "x_snc_pb_camera.PHOTOBOOTH_CAMERA#SNAPPED",
+          "id" : null,
+          "type" : "UXEVENT"
+        },
+        "sourceEventSysId" : null,
+        "targets" : [ {
+          "broker" : null,
+          "clientScript" : null,
+          "conditional" : null,
+          "declarativeAction" : null,
+          "event" : null,
+          "operation" : {
+            "dataBrokerId" : "883bf27c47a29d10552caf52736d436e",
+            "operationName" : "EXECUTE",
+            "parentResourceId" : "post_snapshot",
+            "payload" : {
+              "type" : "MAP_CONTAINER",
+              "container" : {
+                "imageData" : {
+                  "type" : "EVENT_PAYLOAD_BINDING",
+                  "binding" : {
+                    "address" : [ "imageData" ]
+                  }
+                },
+                "requestId" : {
+                  "type" : "STATE_BINDING",
+                  "binding" : {
+                    "address" : [ "requestId" ]
+                  }
+                }
+              }
+            }
+          },
+          "targetId" : "cljjggggfffggeaabbffgddbhhtlkytswddi",
+          "type" : "DATABROKER_OP"
         } ]
       } ],
       "slot" : "",
@@ -382,7 +425,31 @@
         <handled_events/>
         <interactions/>
         <interfaces/>
-        <internal_event_mappings>{ }</internal_event_mappings>
+        <internal_event_mappings>{
+  "MACROPONENT_READY" : [ {
+    "broker" : null,
+    "clientScript" : null,
+    "conditional" : null,
+    "declarativeAction" : null,
+    "event" : {
+      "apiName" : "sn_uxf.MACROPONENT_STATE_UPDATE_REQUESTED",
+      "payload" : {
+        "type" : "CLIENT_TRANSFORM_SCRIPT",
+        "script" : {
+          "apiVersion" : "1.0.0",
+          "controllerElementId" : null,
+          "inlineScript" : "/**\n* @param {params} params\n* @param {api} params.api\n* @param {any} params.event\n*/\nfunction evaluateEvent({api, event}) {\n\treturn {\n\t\tpropName: \"requestId\",\n\t\tvalue: Date.now()\n\t};\n}",
+          "scriptSysId" : null,
+          "target" : null
+        }
+      },
+      "sysId" : "32408b42ff7a10109046e490703bf176"
+    },
+    "operation" : null,
+    "targetId" : "cljjggggtffncaabbggggddbhhtqljxfwyf",
+    "type" : "EVENT"
+  } ]
+}</internal_event_mappings>
         <layout>{
   "default" : {
     "children" : null,
@@ -435,6 +502,17 @@
   "initialValue" : {
     "type" : "JSON_LITERAL",
     "value" : null
+  }
+}, {
+  "name" : "requestId",
+  "label" : "requestId",
+  "fieldType" : "string",
+  "valueType" : "string",
+  "shape" : "",
+  "description" : "",
+  "initialValue" : {
+    "type" : "JSON_LITERAL",
+    "value" : ""
   }
 } ]</state_properties>
         <sys_class_name>sys_ux_macroponent</sys_class_name>
