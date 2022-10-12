@@ -3,6 +3,8 @@ UI Builder (UIB) photobooth application
 
 This is the main UX application that contains a page which will render the photobooth experience.
 
+Open by navigating to UI Builder > Photobooth
+
 ##Dependencies##
 1. Photobooth UIC Camera application
 https://github.com/ServiceNowNextExperience/photobooth-uic-camera
