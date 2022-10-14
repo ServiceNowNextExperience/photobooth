@@ -22,3 +22,4 @@ https://github.com/ServiceNowNextExperience/photobooth-core
 This App Engine Studio application is the core implementation for photobooth processes including tables, flows and a REST api endpoint for posting images to.
 
 ## Design Overview
+The main Photobooth App relies on the Photobooth UIC Camera app to take the snapshots and the Photobooth Core app for tables and flows. When a new record is added to the Request table the web application will monitor with an AMB Record Watcher and initiate a snapshot, which is then sent back to the Core app via an API.
