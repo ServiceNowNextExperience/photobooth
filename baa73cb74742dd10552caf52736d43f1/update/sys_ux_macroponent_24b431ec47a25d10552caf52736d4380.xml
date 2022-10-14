@@ -417,6 +417,169 @@
   "eventMappings" : [ ],
   "inputValues" : { },
   "readEvaluationMode" : "EXPLICIT"
+}, {
+  "definition" : {
+    "id" : "bba46ec077223010f5025df90f5a9920",
+    "type" : "CLIENT_STATE"
+  },
+  "dependencies" : { },
+  "elementId" : "request_record_watcher",
+  "elementLabel" : "Request Record Watcher",
+  "eventMappings" : [ {
+    "eventMappingId" : "cljjiiwccikvaabbhhkddbhhthhferddccat",
+    "isConfiguration" : false,
+    "offRowStorageId" : null,
+    "sourceEventApiName" : "sn_record_watcher.RECORD_WATCHER#MESSAGE_RECEIVED",
+    "sourceEventCorrelationId" : null,
+    "sourceEventDefinition" : {
+      "apiName" : "sn_record_watcher.RECORD_WATCHER#MESSAGE_RECEIVED",
+      "id" : null,
+      "type" : "UXEVENT"
+    },
+    "sourceEventSysId" : null,
+    "targets" : [ {
+      "broker" : null,
+      "clientScript" : {
+        "sysId" : "339cb82987a65d1089790fe5dabb35a0"
+      },
+      "conditional" : null,
+      "declarativeAction" : null,
+      "event" : null,
+      "operation" : null,
+      "targetId" : "cljjiiwccikvaabbhhlddbhhtddlpbymtcc",
+      "type" : "CLIENT_SCRIPT"
+    }, {
+      "broker" : null,
+      "clientScript" : null,
+      "conditional" : null,
+      "declarativeAction" : null,
+      "event" : {
+        "apiName" : "sn_uxf.MACROPONENT_STATE_UPDATE_REQUESTED",
+        "payload" : {
+          "type" : "JSON_LITERAL",
+          "value" : {
+            "propName" : "snapRequested",
+            "value" : null
+          }
+        },
+        "sysId" : "32408b42ff7a10109046e490703bf176"
+      },
+      "operation" : null,
+      "targetId" : "cljjiiwjjnqraabbiivddbhhtmccenggevx",
+      "type" : "EVENT"
+    } ]
+  }, {
+    "eventMappingId" : "cljjiiwccffjdaabbhhhddbhhtccdicbbffhhy",
+    "isConfiguration" : false,
+    "offRowStorageId" : null,
+    "sourceEventApiName" : "sn_record_watcher.RECORD_WATCHER#SUBSCRIPTION_UNSUBSCRIBED",
+    "sourceEventCorrelationId" : null,
+    "sourceEventDefinition" : {
+      "apiName" : "sn_record_watcher.RECORD_WATCHER#SUBSCRIPTION_UNSUBSCRIBED",
+      "id" : null,
+      "type" : "UXEVENT"
+    },
+    "sourceEventSysId" : null,
+    "targets" : [ {
+      "broker" : null,
+      "clientScript" : {
+        "sysId" : "339cb82987a65d1089790fe5dabb35a0"
+      },
+      "conditional" : null,
+      "declarativeAction" : null,
+      "event" : null,
+      "operation" : null,
+      "targetId" : "cljjiiwccffjdaabbhhiddbhhtaaogghyinv",
+      "type" : "CLIENT_SCRIPT"
+    } ]
+  }, {
+    "eventMappingId" : "cljjiiwccaagbbaabbhhfddbhhtcviivldjt",
+    "isConfiguration" : false,
+    "offRowStorageId" : null,
+    "sourceEventApiName" : "sn_record_watcher.RECORD_WATCHER#SUBSCRIPTION_FAILED",
+    "sourceEventCorrelationId" : null,
+    "sourceEventDefinition" : {
+      "apiName" : "sn_record_watcher.RECORD_WATCHER#SUBSCRIPTION_FAILED",
+      "id" : null,
+      "type" : "UXEVENT"
+    },
+    "sourceEventSysId" : null,
+    "targets" : [ {
+      "broker" : null,
+      "clientScript" : {
+        "sysId" : "339cb82987a65d1089790fe5dabb35a0"
+      },
+      "conditional" : null,
+      "declarativeAction" : null,
+      "event" : null,
+      "operation" : null,
+      "targetId" : "cljjiiwccaagbbaabbhhgddbhhtynaapzggccff",
+      "type" : "CLIENT_SCRIPT"
+    } ]
+  }, {
+    "eventMappingId" : "cljjiiwbbuffggaabbhhdddbhhtctjageeggf",
+    "isConfiguration" : false,
+    "offRowStorageId" : null,
+    "sourceEventApiName" : "sn_record_watcher.RECORD_WATCHER#SUBSCRIPTION_SUCCEEDED",
+    "sourceEventCorrelationId" : null,
+    "sourceEventDefinition" : {
+      "apiName" : "sn_record_watcher.RECORD_WATCHER#SUBSCRIPTION_SUCCEEDED",
+      "id" : null,
+      "type" : "UXEVENT"
+    },
+    "sourceEventSysId" : null,
+    "targets" : [ {
+      "broker" : null,
+      "clientScript" : {
+        "sysId" : "339cb82987a65d1089790fe5dabb35a0"
+      },
+      "conditional" : null,
+      "declarativeAction" : null,
+      "event" : null,
+      "operation" : null,
+      "targetId" : "cljjiiwbbuffggaabbhheddbhhtaaqcggvkjd",
+      "type" : "CLIENT_SCRIPT"
+    } ]
+  }, {
+    "eventMappingId" : "cljjiiwbbnqlaabbhhbddbhhtccrmqoeeiiff",
+    "isConfiguration" : false,
+    "offRowStorageId" : null,
+    "sourceEventApiName" : "sn_record_watcher.RECORD_WATCHER#SUBSCRIPTION_STARTED",
+    "sourceEventCorrelationId" : null,
+    "sourceEventDefinition" : {
+      "apiName" : "sn_record_watcher.RECORD_WATCHER#SUBSCRIPTION_STARTED",
+      "id" : null,
+      "type" : "UXEVENT"
+    },
+    "sourceEventSysId" : null,
+    "targets" : [ {
+      "broker" : null,
+      "clientScript" : {
+        "sysId" : "339cb82987a65d1089790fe5dabb35a0"
+      },
+      "conditional" : null,
+      "declarativeAction" : null,
+      "event" : null,
+      "operation" : null,
+      "targetId" : "cljjiiwbbnqlaabbhhcddbhhtqhhjifnjjbb",
+      "type" : "CLIENT_SCRIPT"
+    } ]
+  } ],
+  "inputValues" : {
+    "table" : {
+      "type" : "JSON_LITERAL",
+      "value" : "x_snc_pb_core_request"
+    },
+    "filterConditions" : {
+      "type" : "JSON_LITERAL",
+      "value" : "state=ready^emailISNOTEMPTY"
+    },
+    "subscribe" : {
+      "type" : "JSON_LITERAL",
+      "value" : true
+    }
+  },
+  "readEvaluationMode" : "EAGER"
 } ]</data>
         <description/>
         <dispatched_events/>
@@ -438,7 +601,7 @@
         "script" : {
           "apiVersion" : "1.0.0",
           "controllerElementId" : null,
-          "inlineScript" : "/**\n* @param {params} params\n* @param {api} params.api\n* @param {any} params.event\n*/\nfunction evaluateEvent({api, event}) {\n\treturn {\n\t\tpropName: \"requestId\",\n\t\tvalue: Date.now()\n\t};\n}",
+          "inlineScript" : "/**\n* @param {params} params\n* @param {api} params.api\n* @param {any} params.event\n*/\nfunction evaluateEvent({api, event}) {\n\tconsole.log('Update Client State Parameter');\n\treturn {\n\t\tpropName: \"requestId\",\n\t\tvalue: Date.now()\n\t};\n}",
           "scriptSysId" : null,
           "target" : null
         }
@@ -448,6 +611,17 @@
     "operation" : null,
     "targetId" : "cljjggggtffncaabbggggddbhhtqljxfwyf",
     "type" : "EVENT"
+  }, {
+    "broker" : null,
+    "clientScript" : {
+      "sysId" : "339cb82987a65d1089790fe5dabb35a0"
+    },
+    "conditional" : null,
+    "declarativeAction" : null,
+    "event" : null,
+    "operation" : null,
+    "targetId" : "cljjiiuojjddiaabbamddbhhtiitffdggpbz",
+    "type" : "CLIENT_SCRIPT"
   } ]
 }</internal_event_mappings>
         <layout>{
