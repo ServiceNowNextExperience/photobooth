@@ -8,7 +8,7 @@ Open by navigating to UI Builder > Photobooth
 **PRO TIP** Be sure to "Pull from repository" each time you start dev and it will make your life easier and you won't be having to stash all your changes every time I modify this readme before checking in your changes.
 
 ## Quick Start
-Install the following dependencies into your instance.  
+Install the following dependencies into your instance then install this application.  The rendered page will be available at /now/photobooth/home
 
 ## Dependencies
 
