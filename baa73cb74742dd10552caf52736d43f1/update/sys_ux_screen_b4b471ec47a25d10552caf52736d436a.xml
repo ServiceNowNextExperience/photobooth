@@ -6,6 +6,10 @@
         <event_mappings>[ ]</event_mappings>
         <macroponent display_value="Home default Copy">24b431ec47a25d10552caf52736d4380</macroponent>
         <macroponent_config>{
+  "photoboothNameOrNumberOrSysId" : {
+    "type" : "JSON_LITERAL",
+    "value" : ""
+  },
   "label" : {
     "type" : "TRANSLATION_LITERAL",
     "value" : {

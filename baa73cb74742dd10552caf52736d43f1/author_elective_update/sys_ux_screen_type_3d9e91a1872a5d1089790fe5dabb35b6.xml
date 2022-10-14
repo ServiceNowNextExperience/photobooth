@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_screen_type">
+    <sys_ux_screen_type action="DELETE">
+        <description/>
+        <name>Home Record</name>
+        <sys_class_name>sys_ux_screen_type</sys_class_name>
+        <sys_created_by>jon.lind</sys_created_by>
+        <sys_created_on>2022-10-14 21:15:21</sys_created_on>
+        <sys_id>3d9e91a1872a5d1089790fe5dabb35b6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Home Record</sys_name>
+        <sys_package display_value="Photobooth App" source="x_snc_pb_app">baa73cb74742dd10552caf52736d43f1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Photobooth App">baa73cb74742dd10552caf52736d43f1</sys_scope>
+        <sys_update_name>sys_ux_screen_type_3d9e91a1872a5d1089790fe5dabb35b6</sys_update_name>
+        <sys_updated_by>jon.lind</sys_updated_by>
+        <sys_updated_on>2022-10-14 21:15:21</sys_updated_on>
+    </sys_ux_screen_type>
+    <sys_translated_text action="DELETE" query="documentkey=3d9e91a1872a5d1089790fe5dabb35b6"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Photobooth App">baa73cb74742dd10552caf52736d43f1</application>
+        <file_path/>
+        <instance_id>634887c3db11915c8aea21c4059619b9</instance_id>
+        <instance_name>tennis</instance_name>
+        <name>sys_ux_screen_type_3d9e91a1872a5d1089790fe5dabb35b6</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_screen_type"><sys_ux_screen_type action="INSERT_OR_UPDATE"><description/><name>Home Record</name><sys_class_name>sys_ux_screen_type</sys_class_name><sys_created_by>jon.lind</sys_created_by><sys_created_on>2022-10-14 21:15:21</sys_created_on><sys_id>3d9e91a1872a5d1089790fe5dabb35b6</sys_id><sys_mod_count>0</sys_mod_count><sys_name>Home Record</sys_name><sys_package display_value="Photobooth App" source="x_snc_pb_app">baa73cb74742dd10552caf52736d43f1</sys_package><sys_policy/><sys_scope display_value="Photobooth App">baa73cb74742dd10552caf52736d43f1</sys_scope><sys_update_name>sys_ux_screen_type_3d9e91a1872a5d1089790fe5dabb35b6</sys_update_name><sys_updated_by>jon.lind</sys_updated_by><sys_updated_on>2022-10-14 21:15:21</sys_updated_on></sys_ux_screen_type><sys_translated_text action="delete_multiple" query="documentkey=3d9e91a1872a5d1089790fe5dabb35b6"/></record_update>]]></payload>
+        <payload_hash>2122782123</payload_hash>
+        <record_name>Home Record</record_name>
+        <reverted_from/>
+        <source>f57a51ed87e65d1089790fe5dabb3591</source>
+        <source_table>sys_update_set</source_table>
+        <state>current</state>
+        <sys_created_by>jon.lind</sys_created_by>
+        <sys_created_on>2022-10-14 21:15:21</sys_created_on>
+        <sys_id>799e91a1872a5d1089790fe5dabb35b8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>183d85a040a0000001</sys_recorded_at>
+        <sys_updated_by>jon.lind</sys_updated_by>
+        <sys_updated_on>2022-10-14 21:15:21</sys_updated_on>
+        <type>UX Screen Collection</type>
+        <update_guid>b19e91a1de2a5d109a914d84daa48cb8</update_guid>
+        <update_guid_history>b19e91a1de2a5d109a914d84daa48cb8:2122782123</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>jon.lind</sys_created_by>
+        <sys_created_on>2022-10-14 21:16:14</sys_created_on>
+        <sys_db_object display_value="" name="sys_ux_screen_type">sys_ux_screen_type</sys_db_object>
+        <sys_id>436cc75ce6244008ab40bd97ab5dcf10</sys_id>
+        <sys_metadata>3d9e91a1872a5d1089790fe5dabb35b6</sys_metadata>
+        <sys_name>Home Record</sys_name>
+        <sys_package display_value="Photobooth App" source="x_snc_pb_app">baa73cb74742dd10552caf52736d43f1</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Photobooth App">baa73cb74742dd10552caf52736d43f1</sys_scope>
+        <sys_scope_delete display_value="">868a264ca04c47ed906cd87c81ce8d11</sys_scope_delete>
+        <sys_update_name>sys_ux_screen_type_3d9e91a1872a5d1089790fe5dabb35b6</sys_update_name>
+        <sys_update_version display_value="sys_ux_screen_type_3d9e91a1872a5d1089790fe5dabb35b6">799e91a1872a5d1089790fe5dabb35b8</sys_update_version>
+    </sys_metadata_delete>
+</record_update>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ux_screen">
+    <sys_ux_screen action="DELETE">
+        <active>true</active>
+        <app_config display_value="Photobooth">aa68bcf74742dd10552caf52736d432d</app_config>
+        <description/>
+        <event_mappings/>
+        <macroponent display_value="Blank record page">d36e51a1872a5d1089790fe5dabb3564</macroponent>
+        <macroponent_config>{ }</macroponent_config>
+        <name>Home Record</name>
+        <order>0</order>
+        <parent_macroponent display_value="UXR Base Experience Shell">76a83a645b122010b913030a1d81c780</parent_macroponent>
+        <required_translations>[ ]</required_translations>
+        <rollback_screen/>
+        <screen_condition/>
+        <screen_type display_value="Home">1488303b4742dd10552caf52736d4356</screen_type>
+        <sys_class_name>sys_ux_screen</sys_class_name>
+        <sys_created_by>jon.lind</sys_created_by>
+        <sys_created_on>2022-10-14 21:14:38</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>136e51a1872a5d1089790fe5dabb356b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Home Record</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Photobooth App" source="x_snc_pb_app">baa73cb74742dd10552caf52736d43f1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Photobooth App">baa73cb74742dd10552caf52736d43f1</sys_scope>
+        <sys_update_name>sys_ux_screen_136e51a1872a5d1089790fe5dabb356b</sys_update_name>
+        <sys_updated_by>jon.lind</sys_updated_by>
+        <sys_updated_on>2022-10-14 21:14:38</sys_updated_on>
+    </sys_ux_screen>
+    <sys_translated_text action="DELETE" query="documentkey=136e51a1872a5d1089790fe5dabb356b"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Photobooth App">baa73cb74742dd10552caf52736d43f1</application>
+        <file_path/>
+        <instance_id>634887c3db11915c8aea21c4059619b9</instance_id>
+        <instance_name>tennis</instance_name>
+        <name>sys_ux_screen_136e51a1872a5d1089790fe5dabb356b</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ux_screen"><sys_ux_screen action="INSERT_OR_UPDATE"><active>true</active><app_config display_value="Photobooth">aa68bcf74742dd10552caf52736d432d</app_config><description/><event_mappings/><macroponent display_value="Blank record page">d36e51a1872a5d1089790fe5dabb3564</macroponent><macroponent_config>{ }</macroponent_config><name>Home Record</name><order>0</order><parent_macroponent display_value="UXR Base Experience Shell">76a83a645b122010b913030a1d81c780</parent_macroponent><required_translations>[ ]</required_translations><rollback_screen/><screen_condition/><screen_type display_value="Home">1488303b4742dd10552caf52736d4356</screen_type><sys_class_name>sys_ux_screen</sys_class_name><sys_created_by>jon.lind</sys_created_by><sys_created_on>2022-10-14 21:14:38</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>136e51a1872a5d1089790fe5dabb356b</sys_id><sys_mod_count>0</sys_mod_count><sys_name>Home Record</sys_name><sys_overrides/><sys_package display_value="Photobooth App" source="x_snc_pb_app">baa73cb74742dd10552caf52736d43f1</sys_package><sys_policy/><sys_scope display_value="Photobooth App">baa73cb74742dd10552caf52736d43f1</sys_scope><sys_update_name>sys_ux_screen_136e51a1872a5d1089790fe5dabb356b</sys_update_name><sys_updated_by>jon.lind</sys_updated_by><sys_updated_on>2022-10-14 21:14:38</sys_updated_on></sys_ux_screen><sys_translated_text action="delete_multiple" query="documentkey=136e51a1872a5d1089790fe5dabb356b"/></record_update>]]></payload>
+        <payload_hash>978370726</payload_hash>
+        <record_name>Home Record</record_name>
+        <reverted_from/>
+        <source>f57a51ed87e65d1089790fe5dabb3591</source>
+        <source_table>sys_update_set</source_table>
+        <state>current</state>
+        <sys_created_by>jon.lind</sys_created_by>
+        <sys_created_on>2022-10-14 21:14:38</sys_created_on>
+        <sys_id>db6e51a1872a5d1089790fe5dabb356d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>183d8595e060000001</sys_recorded_at>
+        <sys_updated_by>jon.lind</sys_updated_by>
+        <sys_updated_on>2022-10-14 21:14:38</sys_updated_on>
+        <type>UX Screen</type>
+        <update_guid>176e51a1e12a5d103e90d2667e37ad6d</update_guid>
+        <update_guid_history>176e51a1e12a5d103e90d2667e37ad6d:978370726</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>jon.lind</sys_created_by>
+        <sys_created_on>2022-10-14 21:16:38</sys_created_on>
+        <sys_db_object display_value="" name="sys_ux_screen">sys_ux_screen</sys_db_object>
+        <sys_id>2866fb3696a04788ab9e4b8470a25d90</sys_id>
+        <sys_metadata>136e51a1872a5d1089790fe5dabb356b</sys_metadata>
+        <sys_name>Home Record</sys_name>
+        <sys_package display_value="Photobooth App" source="x_snc_pb_app">baa73cb74742dd10552caf52736d43f1</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Photobooth App">baa73cb74742dd10552caf52736d43f1</sys_scope>
+        <sys_scope_delete display_value="">868a264ca04c47ed906cd87c81ce8d11</sys_scope_delete>
+        <sys_update_name>sys_ux_screen_136e51a1872a5d1089790fe5dabb356b</sys_update_name>
+        <sys_update_version display_value="sys_ux_screen_136e51a1872a5d1089790fe5dabb356b">db6e51a1872a5d1089790fe5dabb356d</sys_update_version>
+    </sys_metadata_delete>
+</record_update>

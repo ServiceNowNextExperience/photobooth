@@ -3,7 +3,7 @@
         <app_config display_value="Photobooth">aa68bcf74742dd10552caf52736d432d</app_config>
         <description/>
         <extension_point/>
-        <fields/>
+        <fields>photoboothNameOrNumberOrSysId</fields>
         <icon/>
         <name>Home</name>
         <optional_parameters/>
