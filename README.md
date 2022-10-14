@@ -20,3 +20,5 @@ This contains the UI component that this application uses to interact with the c
 2. Photobooth Core
 https://github.com/ServiceNowNextExperience/photobooth-core
 This App Engine Studio application is the core implementation for photobooth processes including tables, flows and a REST api endpoint for posting images to.
+
+## Design Overview
