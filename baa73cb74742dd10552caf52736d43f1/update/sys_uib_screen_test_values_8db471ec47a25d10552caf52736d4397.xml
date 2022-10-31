@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="sys_uib_screen_test_values">
     <sys_uib_screen_test_values action="INSERT_OR_UPDATE">
         <macroponent_config>{
-  "photoboothNameOrNumberOrSysId" : "Jons-Office"
+  "photoboothNameOrNumberOrSysId" : "MyPB"
 }</macroponent_config>
         <screen display_value="Home default">b4b471ec47a25d10552caf52736d436a</screen>
         <sys_class_name>sys_uib_screen_test_values</sys_class_name>

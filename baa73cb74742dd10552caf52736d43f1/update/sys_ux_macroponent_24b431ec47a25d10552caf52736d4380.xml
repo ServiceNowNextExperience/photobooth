@@ -296,7 +296,7 @@
                 "apiVersion" : "2.0.0",
                 "controllerElementId" : null,
                 "inlineScript" : null,
-                "scriptSysId" : "57afd8788736d51089790fe5dabb35aa",
+                "scriptSysId" : "c688071587b2591089790fe5dabb3579",
                 "target" : null
               }
             },
@@ -378,16 +378,8 @@
               "value" : null
             },
             "disabled" : {
-              "type" : "UNARY",
-              "operation" : {
-                "operand" : {
-                  "type" : "STATE_BINDING",
-                  "binding" : {
-                    "address" : [ "cameraEnabled" ]
-                  }
-                },
-                "operator" : "NOT"
-              }
+              "type" : "JSON_LITERAL",
+              "value" : false
             },
             "label" : {
               "type" : "TRANSLATION_LITERAL",
@@ -463,12 +455,55 @@
           "isNonDestructive" : false,
           "items" : [ ],
           "styles" : { }
+        }, {
+          "elementId" : "stylized_text_3",
+          "elementLabel" : "Stylized text 3",
+          "propertyValues" : {
+            "css" : {
+              "type" : "JSON_LITERAL",
+              "value" : "* { }"
+            },
+            "text" : {
+              "type" : "TRANSLATION_LITERAL",
+              "value" : {
+                "code" : null,
+                "message" : "No Request ID set yet.  Please use \"Create Request\".",
+                "comment" : ""
+              }
+            },
+            "tag" : {
+              "type" : "JSON_LITERAL",
+              "value" : "p"
+            }
+          },
+          "eventMappings" : [ ],
+          "slot" : null,
+          "definition" : {
+            "id" : "4335ba6dca80378f7ba7a67cd6667bec",
+            "type" : "MACROPONENT"
+          },
+          "overrides" : null,
+          "isHidden" : {
+            "type" : "CLIENT_TRANSFORM_SCRIPT",
+            "script" : {
+              "apiVersion" : "2.0.0",
+              "controllerElementId" : null,
+              "inlineScript" : null,
+              "scriptSysId" : "4ca6984787ba911089790fe5dabb357a",
+              "target" : null
+            }
+          },
+          "isHero" : false,
+          "extensionPoints" : [ ],
+          "isNonDestructive" : false,
+          "items" : [ ],
+          "styles" : { }
         } ],
         "layout" : {
           "default" : {
             "children" : null,
             "isInline" : null,
-            "items" : [{"element_id":"toggle_1","styles":{"padding":"var(--now-static-space--sm)"}},{"element_id":"button_1","styles":{"padding":"var(--now-static-space--sm)"}},{"element_id":"button_3","styles":{"padding":"var(--now-static-space--sm)"}}],
+            "items" : [{"element_id":"toggle_1","styles":{"padding":"var(--now-static-space--sm)"}},{"element_id":"button_1","styles":{"padding":"var(--now-static-space--sm)"}},{"element_id":"button_3","styles":{"padding":"var(--now-static-space--sm)"}},{"element_id":"stylized_text_3","styles":{}}],
             "root" : null,
             "rules" : null,
             "styles" : {"flex-direction":"row"},
@@ -1096,6 +1131,30 @@
               "operation" : null,
               "targetId" : "cljjirhhnaraabbggiddbhhtqbcxvkkgg",
               "type" : "CLIENT_SCRIPT"
+            }, {
+              "broker" : null,
+              "clientScript" : null,
+              "conditional" : null,
+              "declarativeAction" : null,
+              "event" : {
+                "apiName" : "x_snc_pb_app.MODAL_SELECTED_RELAY_24b431ec47a25d10552caf52736d4380",
+                "payload" : {
+                  "type" : "JSON_LITERAL",
+                  "value" : {
+                    "modalId" : "[component-id$='email_address_modal']",
+                    "showModal" : null,
+                    "displayOptions" : null,
+                    "bare" : true,
+                    "viewportElementId" : null,
+                    "viewportRoute" : null,
+                    "viewportFields" : null
+                  }
+                },
+                "sysId" : "4634e8fb87aa151089790fe5dabb35d2"
+              },
+              "operation" : null,
+              "targetId" : "cljjxddgwhheaabbhtddbhhtddkqjwucce",
+              "type" : "EVENT"
             } ]
           } ],
           "slot" : null,
@@ -1223,7 +1282,7 @@
           "type" : "LIST_CONTAINER",
           "container" : [ {
             "type" : "JSON_LITERAL",
-            "value" : "state=ready^emailISNOTEMPTY^photobooth.sys_id="
+            "value" : "emailISNOTEMPTY^state=ready^photobooth.sys_id="
           }, {
             "type" : "CONTEXT_BINDING",
             "binding" : {
@@ -1370,9 +1429,90 @@
     "type" : "GRAPHQL"
   },
   "dependencies" : { },
-  "elementId" : "create_request_record",
-  "elementLabel" : "Create Request Record",
-  "eventMappings" : [ ],
+  "elementId" : "create_record",
+  "elementLabel" : "Create Record",
+  "eventMappings" : [ {
+    "eventMappingId" : "cljjqeeiiffggcaabbfnddbhhtjiixujjqer",
+    "isConfiguration" : false,
+    "offRowStorageId" : null,
+    "sourceEventApiName" : "sn_uxf.DATA_OP_SUCCEEDED",
+    "sourceEventCorrelationId" : null,
+    "sourceEventDefinition" : {
+      "apiName" : "sn_uxf.DATA_OP_SUCCEEDED",
+      "id" : null,
+      "type" : "UXEVENT"
+    },
+    "sourceEventSysId" : null,
+    "targets" : [ {
+      "broker" : null,
+      "clientScript" : {
+        "sysId" : "63d2042e47229110552caf52736d4327"
+      },
+      "conditional" : null,
+      "declarativeAction" : null,
+      "event" : null,
+      "operation" : null,
+      "targetId" : "cljjqeeiiffggdaabbfoddbhhteexpsrklz",
+      "type" : "CLIENT_SCRIPT"
+    }, {
+      "broker" : null,
+      "clientScript" : {
+        "sysId" : "f33b97158736591089790fe5dabb357b"
+      },
+      "conditional" : null,
+      "declarativeAction" : null,
+      "event" : null,
+      "operation" : null,
+      "targetId" : "cljjxcczernaabbdgddbhhtuplddqrddgg",
+      "type" : "CLIENT_SCRIPT"
+    } ]
+  } ],
+  "inputValues" : { },
+  "readEvaluationMode" : "EXPLICIT"
+}, {
+  "definition" : {
+    "id" : "6622d31587f2591089790fe5dabb35d3",
+    "type" : "GRAPHQL"
+  },
+  "dependencies" : { },
+  "elementId" : "create_new_photobooth_request",
+  "elementLabel" : "Create New Photobooth Request",
+  "eventMappings" : [ {
+    "eventMappingId" : "cljjqfflccncaabbboddbhhtxffcctcubee",
+    "isConfiguration" : false,
+    "offRowStorageId" : null,
+    "sourceEventApiName" : "sn_uxf.DATA_OP_SUCCEEDED",
+    "sourceEventCorrelationId" : null,
+    "sourceEventDefinition" : {
+      "apiName" : "sn_uxf.DATA_OP_SUCCEEDED",
+      "id" : null,
+      "type" : "UXEVENT"
+    },
+    "sourceEventSysId" : null,
+    "targets" : [ {
+      "broker" : null,
+      "clientScript" : {
+        "sysId" : "63d2042e47229110552caf52736d4327"
+      },
+      "conditional" : null,
+      "declarativeAction" : null,
+      "event" : null,
+      "operation" : null,
+      "targetId" : "cljjqfflccndaabbbpddbhhtxddggqqngd",
+      "type" : "CLIENT_SCRIPT"
+    }, {
+      "broker" : null,
+      "clientScript" : {
+        "sysId" : "f33b97158736591089790fe5dabb357b"
+      },
+      "conditional" : null,
+      "declarativeAction" : null,
+      "event" : null,
+      "operation" : null,
+      "targetId" : "cljjqgghegiaabbhhjddbhhtefjwkxggp",
+      "type" : "CLIENT_SCRIPT"
+    } ]
+  } ],
   "inputValues" : { },
   "readEvaluationMode" : "EXPLICIT"
 } ]</data>
@@ -1427,6 +1567,9 @@
   "comment" : ""
 }, {
   "message" : "Go!",
+  "comment" : ""
+}, {
+  "message" : "No Request ID set yet.  Please use \"Create Request\".",
   "comment" : ""
 }, {
   "message" : "Snap!",

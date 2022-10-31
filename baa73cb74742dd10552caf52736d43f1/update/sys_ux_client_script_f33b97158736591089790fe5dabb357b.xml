@@ -2,46 +2,31 @@
     <sys_ux_client_script action="INSERT_OR_UPDATE">
         <includes/>
         <macroponent display_value="Home default Copy">24b431ec47a25d10552caf52736d4380</macroponent>
-        <name>Create Request Record</name>
+        <name>Request Record Created</name>
         <preset/>
         <required_translations>[ ]</required_translations>
         <script><![CDATA[/**
- * @param {params} params
- * @param {api} params.api
- * @param {any} params.event
- * @param {any} params.imports
- * @param {ApiHelpers} params.helpers
- */
-function handler({
-    api,
-    event,
-    helpers,
-    imports
-}) {
-    const {
-        photoboothId,
-        emailAddress
-    } = api.state;
-    console.log(event);
-    console.log(`${photoboothId} , ${emailAddress}`);
+* @param {params} params
+* @param {api} params.api
+* @param {any} params.event
+* @param {any} params.imports
+* @param {ApiHelpers} params.helpers
+*/
+function handler({api, event, helpers, imports}) {
 
-    const fields = `photobooth=${photoboothId}^email=${emailAddress}`;
-
-    api.data.create_record.execute({
-        "table": "x_snc_pb_core_request",
-        "templateFields": fields
-    });
+    const requestId = event.payload.data.output.data.GlideRecord_Mutation.insert_x_snc_pb_core_request.sys_id.value;
+    api.setState('requestId', requestId);
 }]]></script>
         <script_api_version>2.0.0</script_api_version>
         <sys_class_name>sys_ux_client_script</sys_class_name>
         <sys_created_by>jon.lind</sys_created_by>
-        <sys_created_on>2022-10-21 16:57:16</sys_created_on>
-        <sys_id>d1a6287387ea151089790fe5dabb35e5</sys_id>
-        <sys_name>Create Request Record</sys_name>
+        <sys_created_on>2022-10-26 21:57:13</sys_created_on>
+        <sys_id>f33b97158736591089790fe5dabb357b</sys_id>
+        <sys_name>Request Record Created</sys_name>
         <sys_package display_value="Photobooth App" source="x_snc_pb_app">baa73cb74742dd10552caf52736d43f1</sys_package>
         <sys_policy/>
         <sys_scope display_value="Photobooth App">baa73cb74742dd10552caf52736d43f1</sys_scope>
-        <sys_update_name>sys_ux_client_script_d1a6287387ea151089790fe5dabb35e5</sys_update_name>
+        <sys_update_name>sys_ux_client_script_f33b97158736591089790fe5dabb357b</sys_update_name>
         <target>macroponent</target>
         <type>default</type>
     </sys_ux_client_script>
