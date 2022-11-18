@@ -58,8 +58,8 @@
         "imageSize" : {
           "type" : "JSON_LITERAL",
           "value" : {
-            "width" : 640,
-            "height" : 480
+            "width" : 800,
+            "height" : 600
           }
         },
         "snapRequested" : {
@@ -76,7 +76,7 @@
         },
         "watermarkImageScale" : {
           "type" : "JSON_LITERAL",
-          "value" : 0.2
+          "value" : 0.4
         },
         "countdownAnimationCss" : {
           "type" : "JSON_LITERAL",
@@ -144,7 +144,7 @@
       "apiVersion" : "2.0.0",
       "controllerElementId" : null,
       "inlineScript" : null,
-      "scriptSysId" : "cdf4a9a5872a5d1089790fe5dabb3554",
+      "scriptSysId" : "2f4b68b487df111089790fe5dabb35ba",
       "target" : null
     }
   },
@@ -218,13 +218,18 @@
       },
       "overrides" : null,
       "isHidden" : {
-        "type" : "CLIENT_TRANSFORM_SCRIPT",
-        "script" : {
-          "apiVersion" : "2.0.0",
-          "controllerElementId" : null,
-          "inlineScript" : null,
-          "scriptSysId" : "dc55ada5872a5d1089790fe5dabb3569",
-          "target" : null
+        "type" : "CLIENT_TRANSFORM",
+        "transform" : {
+          "operands" : {
+            "type" : "LIST_CONTAINER",
+            "container" : [ {
+              "type" : "STATE_BINDING",
+              "binding" : {
+                "address" : [ "errorMessage" ]
+              }
+            } ]
+          },
+          "operator" : "EMPTY"
         }
       },
       "isHero" : false,
@@ -248,13 +253,18 @@
     }
   },
   "isHidden" : {
-    "type" : "CLIENT_TRANSFORM_SCRIPT",
-    "script" : {
-      "apiVersion" : "2.0.0",
-      "controllerElementId" : null,
-      "inlineScript" : null,
-      "scriptSysId" : "0436e5e5872a5d1089790fe5dabb35da",
-      "target" : null
+    "type" : "CLIENT_TRANSFORM",
+    "transform" : {
+      "operands" : {
+        "type" : "LIST_CONTAINER",
+        "container" : [ {
+          "type" : "STATE_BINDING",
+          "binding" : {
+            "address" : [ "errorMessage" ]
+          }
+        } ]
+      },
+      "operator" : "EMPTY"
     }
   },
   "isHero" : false,
@@ -538,6 +548,46 @@
             }
           },
           "eventMappings" : [ {
+            "eventMappingId" : "clamrjgnccaabbffoddbhhtvzbjggffadd",
+            "isConfiguration" : false,
+            "offRowStorageId" : null,
+            "sourceEventApiName" : "sn_input.NOW_INPUT#INPUT",
+            "sourceEventCorrelationId" : null,
+            "sourceEventDefinition" : {
+              "apiName" : "sn_input.NOW_INPUT#INPUT",
+              "id" : null,
+              "type" : "UXEVENT"
+            },
+            "sourceEventSysId" : null,
+            "targets" : [ {
+              "broker" : null,
+              "clientScript" : null,
+              "conditional" : null,
+              "declarativeAction" : null,
+              "event" : {
+                "apiName" : "sn_uxf.MACROPONENT_STATE_UPDATE_REQUESTED",
+                "payload" : {
+                  "type" : "MAP_CONTAINER",
+                  "container" : {
+                    "propName" : {
+                      "type" : "JSON_LITERAL",
+                      "value" : "emailAddress"
+                    },
+                    "value" : {
+                      "type" : "EVENT_PAYLOAD_BINDING",
+                      "binding" : {
+                        "address" : [ "fieldValue" ]
+                      }
+                    }
+                  }
+                },
+                "sysId" : "32408b42ff7a10109046e490703bf176"
+              },
+              "operation" : null,
+              "targetId" : "clamrjgnccaabbffpddbhhtvjffjjggaaab",
+              "type" : "EVENT"
+            } ]
+          }, {
             "eventMappingId" : "cljjiqetzfaabbadddbhhtqcclbbeci",
             "isConfiguration" : false,
             "offRowStorageId" : null,
@@ -980,7 +1030,7 @@
             "apiVersion" : "2.0.0",
             "controllerElementId" : null,
             "inlineScript" : null,
-            "scriptSysId" : "c688071587b2591089790fe5dabb3579",
+            "scriptSysId" : "433cf8f08713511089790fe5dabb35e8",
             "target" : null
           }
         },
@@ -1140,8 +1190,8 @@
       "items" : [ ],
       "styles" : { }
     }, {
-      "elementId" : "stylized_text_3",
-      "elementLabel" : "Stylized text 3",
+      "elementId" : "no_request_set_message",
+      "elementLabel" : "No Request ID Set Message",
       "propertyValues" : {
         "css" : {
           "type" : "JSON_LITERAL",
@@ -1173,7 +1223,7 @@
           "apiVersion" : "2.0.0",
           "controllerElementId" : null,
           "inlineScript" : null,
-          "scriptSysId" : "4ca6984787ba911089790fe5dabb357a",
+          "scriptSysId" : "193c01308753511089790fe5dabb3521",
           "target" : null
         }
       },
@@ -1187,7 +1237,7 @@
       "default" : {
         "children" : null,
         "isInline" : null,
-        "items" : [{"element_id":"toggle_1","styles":{"padding":"var(--now-static-space--sm)"}},{"element_id":"button_1","styles":{"padding":"var(--now-static-space--sm)"}},{"element_id":"button_3","styles":{"padding":"var(--now-static-space--sm)"}},{"element_id":"stylized_text_3","styles":{}}],
+        "items" : [{"element_id":"toggle_1","styles":{"padding":"var(--now-static-space--sm)"}},{"element_id":"button_1","styles":{"padding":"var(--now-static-space--sm)"}},{"element_id":"button_3","styles":{"padding":"var(--now-static-space--sm)"}},{"element_id":"no_request_set_message","styles":{}}],
         "root" : null,
         "rules" : null,
         "styles" : {"flex-direction":"row"},
@@ -1533,6 +1583,18 @@
   "mandatory" : false,
   "defaultValue" : "",
   "description" : "",
+  "readOnly" : true,
+  "selectable" : false,
+  "disabled" : false
+}, {
+  "name" : "requestId",
+  "label" : "requestId",
+  "fieldType" : "string",
+  "typeMetadata" : null,
+  "valueType" : "string",
+  "mandatory" : false,
+  "defaultValue" : "",
+  "description" : null,
   "readOnly" : true,
   "selectable" : false,
   "disabled" : false

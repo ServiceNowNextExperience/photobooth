@@ -6,7 +6,7 @@
         <fields>photoboothNameOrNumberOrSysId</fields>
         <icon/>
         <name>Home</name>
-        <optional_parameters/>
+        <optional_parameters>requestId</optional_parameters>
         <order>0</order>
         <parent_macroponent display_value="UXR Base Experience Shell">76a83a645b122010b913030a1d81c780</parent_macroponent>
         <parent_macroponent_composition_element_id/>

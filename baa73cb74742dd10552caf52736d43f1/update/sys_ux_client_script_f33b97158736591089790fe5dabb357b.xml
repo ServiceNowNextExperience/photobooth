@@ -13,7 +13,6 @@
 * @param {ApiHelpers} params.helpers
 */
 function handler({api, event, helpers, imports}) {
-
     const requestId = event.payload.data.output.data.GlideRecord_Mutation.insert_x_snc_pb_core_request.sys_id.value;
     api.setState('requestId', requestId);
 }]]></script>

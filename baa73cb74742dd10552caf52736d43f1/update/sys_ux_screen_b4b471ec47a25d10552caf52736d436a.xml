@@ -82,6 +82,10 @@
     "type" : "JSON_LITERAL",
     "value" : ""
   },
+  "requestId" : {
+    "type" : "JSON_LITERAL",
+    "value" : ""
+  },
   "label" : {
     "type" : "TRANSLATION_LITERAL",
     "value" : {
