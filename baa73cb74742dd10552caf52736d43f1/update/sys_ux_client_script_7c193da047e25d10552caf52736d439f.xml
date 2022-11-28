@@ -12,13 +12,9 @@
 * @param {any} params.imports
 * @param {ApiHelpers} params.helpers
 */
-function handler({api, event, helpers, imports}) {
-    console.log(event);
-    const imageData = event.payload.imageData;
-    console.log(imageData);
-
-    console.log("Beginning request to save to snapshot api!");
-    api.data.post_snapshot.execute({"imageData" : imageData, "requestId" : "1"});
+function handler({api : {data, state : {requestId}}, event : {payload: {imageData}}, helpers, imports}) {
+    console.log(`Beginning request to save to snapshot api for request id ${requestId} and image data of ${imageData}!`);
+    data.post_snapshot.execute({"imageData" : imageData, "requestId" : requestId});
 }]]></script>
         <script_api_version>2.0.0</script_api_version>
         <sys_class_name>sys_ux_client_script</sys_class_name>
