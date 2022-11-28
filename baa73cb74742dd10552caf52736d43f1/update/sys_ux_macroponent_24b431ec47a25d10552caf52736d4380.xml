@@ -295,7 +295,39 @@
       "value" : false
     }
   },
-  "eventMappings" : [ ],
+  "eventMappings" : [ {
+    "eventMappingId" : "clbbbaacddozaabbpfddbhhtmeeqhcvhhw",
+    "isConfiguration" : false,
+    "offRowStorageId" : null,
+    "sourceEventApiName" : "sn_uxf_page.CANVAS_MODAL#CLOSED",
+    "sourceEventCorrelationId" : null,
+    "sourceEventDefinition" : {
+      "apiName" : "sn_uxf_page.CANVAS_MODAL#CLOSED",
+      "id" : null,
+      "type" : "UXEVENT"
+    },
+    "sourceEventSysId" : null,
+    "targets" : [ {
+      "broker" : null,
+      "clientScript" : null,
+      "conditional" : null,
+      "declarativeAction" : null,
+      "event" : {
+        "apiName" : "sn_uxf.MACROPONENT_STATE_UPDATE_REQUESTED",
+        "payload" : {
+          "type" : "JSON_LITERAL",
+          "value" : {
+            "propName" : "newEmailAddress",
+            "value" : null
+          }
+        },
+        "sysId" : "32408b42ff7a10109046e490703bf176"
+      },
+      "operation" : null,
+      "targetId" : "clbbbaacddozaabbpgddbhhtawaawheeln",
+      "type" : "EVENT"
+    } ]
+  } ],
   "slot" : null,
   "definition" : {
     "id" : "9c2e3b0978b3250ef3081204f151026a",
@@ -548,6 +580,83 @@
             }
           },
           "eventMappings" : [ {
+            "eventMappingId" : "clbbbccmtiizaabbggrddbhhtycchkqqccdd",
+            "isConfiguration" : false,
+            "offRowStorageId" : null,
+            "sourceEventApiName" : "sn_input.NOW_INPUT#VALUE_SET",
+            "sourceEventCorrelationId" : null,
+            "sourceEventDefinition" : {
+              "apiName" : "sn_input.NOW_INPUT#VALUE_SET",
+              "id" : null,
+              "type" : "UXEVENT"
+            },
+            "sourceEventSysId" : null,
+            "targets" : [ {
+              "broker" : null,
+              "clientScript" : null,
+              "conditional" : null,
+              "declarativeAction" : null,
+              "event" : {
+                "apiName" : "sn_uxf.MACROPONENT_STATE_UPDATE_REQUESTED",
+                "payload" : {
+                  "type" : "MAP_CONTAINER",
+                  "container" : {
+                    "propName" : {
+                      "type" : "JSON_LITERAL",
+                      "value" : "emailAddress"
+                    },
+                    "value" : {
+                      "type" : "EVENT_PAYLOAD_BINDING",
+                      "binding" : {
+                        "address" : [ "value" ]
+                      }
+                    }
+                  }
+                },
+                "sysId" : "32408b42ff7a10109046e490703bf176"
+              },
+              "operation" : null,
+              "targetId" : "clbbbccmtiizaabbggsddbhhtzaqaaggddjg",
+              "type" : "EVENT"
+            } ]
+          }, {
+            "eventMappingId" : "clbbbaailhhyaabbsgddbhhtqffvsulehh",
+            "isConfiguration" : false,
+            "offRowStorageId" : null,
+            "sourceEventApiName" : "sn_input.NOW_INPUT#INVALID_SET",
+            "sourceEventCorrelationId" : null,
+            "sourceEventDefinition" : {
+              "apiName" : "sn_input.NOW_INPUT#INVALID_SET",
+              "id" : null,
+              "type" : "UXEVENT"
+            },
+            "sourceEventSysId" : null,
+            "targets" : [ {
+              "broker" : null,
+              "clientScript" : null,
+              "conditional" : {
+                "type" : "EVENT_PAYLOAD_BINDING",
+                "binding" : {
+                  "address" : [ "value" ]
+                }
+              },
+              "declarativeAction" : null,
+              "event" : {
+                "apiName" : "sn_uxf.MACROPONENT_STATE_UPDATE_REQUESTED",
+                "payload" : {
+                  "type" : "JSON_LITERAL",
+                  "value" : {
+                    "propName" : "emailAddress",
+                    "value" : null
+                  }
+                },
+                "sysId" : "32408b42ff7a10109046e490703bf176"
+              },
+              "operation" : null,
+              "targetId" : "clbbbaailhhyaabbshddbhhtsjjbyxuwl",
+              "type" : "EVENT"
+            } ]
+          }, {
             "eventMappingId" : "clamrjgnccaabbffoddbhhtvzbjggffadd",
             "isConfiguration" : false,
             "offRowStorageId" : null,
@@ -584,47 +693,7 @@
                 "sysId" : "32408b42ff7a10109046e490703bf176"
               },
               "operation" : null,
-              "targetId" : "clamrjgnccaabbffpddbhhtvjffjjggaaab",
-              "type" : "EVENT"
-            } ]
-          }, {
-            "eventMappingId" : "cljjiqetzfaabbadddbhhtqcclbbeci",
-            "isConfiguration" : false,
-            "offRowStorageId" : null,
-            "sourceEventApiName" : "sn_input.NOW_INPUT#VALUE_SET",
-            "sourceEventCorrelationId" : null,
-            "sourceEventDefinition" : {
-              "apiName" : "sn_input.NOW_INPUT#VALUE_SET",
-              "id" : null,
-              "type" : "UXEVENT"
-            },
-            "sourceEventSysId" : null,
-            "targets" : [ {
-              "broker" : null,
-              "clientScript" : null,
-              "conditional" : null,
-              "declarativeAction" : null,
-              "event" : {
-                "apiName" : "sn_uxf.MACROPONENT_STATE_UPDATE_REQUESTED",
-                "payload" : {
-                  "type" : "MAP_CONTAINER",
-                  "container" : {
-                    "propName" : {
-                      "type" : "JSON_LITERAL",
-                      "value" : "emailAddress"
-                    },
-                    "value" : {
-                      "type" : "EVENT_PAYLOAD_BINDING",
-                      "binding" : {
-                        "address" : [ "value" ]
-                      }
-                    }
-                  }
-                },
-                "sysId" : "32408b42ff7a10109046e490703bf176"
-              },
-              "operation" : null,
-              "targetId" : "cljjiqetzgaabbaeddbhhtiihtitziia",
+              "targetId" : "clbbbaahhggeiiaabbladdbhhtneerwgzffv",
               "type" : "EVENT"
             } ]
           } ],
@@ -803,6 +872,27 @@
               },
               "operation" : null,
               "targetId" : "cljjxddgwhheaabbhtddbhhtddkqjwucce",
+              "type" : "EVENT"
+            }, {
+              "broker" : null,
+              "clientScript" : null,
+              "conditional" : null,
+              "declarativeAction" : null,
+              "event" : {
+                "apiName" : "sn_uxf_page.NOW_UXF_PAGE#SET_LOADING_STATE",
+                "payload" : {
+                  "type" : "JSON_LITERAL",
+                  "value" : {
+                    "loading" : true,
+                    "label" : "Please wait while request is created.",
+                    "action" : null,
+                    "nonBlocking" : false
+                  }
+                },
+                "sysId" : "0404f68486f1baab1dc7ef2a27a3de50"
+              },
+              "operation" : null,
+              "targetId" : "clbaazoiaapaabbhhkddbhhtqtggnceebp",
               "type" : "EVENT"
             } ]
           } ],
@@ -1097,7 +1187,7 @@
       "styles" : { }
     }, {
       "elementId" : "button_3",
-      "elementLabel" : "Button 3",
+      "elementLabel" : "Create Request Button",
       "propertyValues" : {
         "size" : {
           "type" : "JSON_LITERAL",
@@ -1171,6 +1261,28 @@
           },
           "operation" : null,
           "targetId" : "cljjiqeetitaabbhhiiddbhhtiircwogjl",
+          "type" : "EVENT"
+        }, {
+          "broker" : null,
+          "clientScript" : null,
+          "conditional" : null,
+          "declarativeAction" : null,
+          "event" : {
+            "apiName" : "sn_uxf.MACROPONENT_TRACK_USAGE_REQUESTED",
+            "payload" : {
+              "type" : "CLIENT_TRANSFORM_SCRIPT",
+              "script" : {
+                "apiVersion" : "1.0.0",
+                "controllerElementId" : null,
+                "inlineScript" : "/**\n* @param {params} params\n* @param {api} params.api\n* @param {any} params.event\n*/\nfunction evaluateEvent({api, event}) {\n\tconsole.log(`Email Address: ${api.state.emailAddress}`);\n\treturn {\n\t\tevent: null,\n\t\tvalue: null\n\t};\n}",
+                "scriptSysId" : null,
+                "target" : null
+              }
+            },
+            "sysId" : "66375ab240edff20524ba9b56584fad0"
+          },
+          "operation" : null,
+          "targetId" : "clbbbcciicbbaaaabbjjoddbhhtmtkpaiibbcc",
           "type" : "EVENT"
         } ]
       } ],
@@ -1499,6 +1611,27 @@
       "operation" : null,
       "targetId" : "cljjxcczernaabbdgddbhhtuplddqrddgg",
       "type" : "CLIENT_SCRIPT"
+    }, {
+      "broker" : null,
+      "clientScript" : null,
+      "conditional" : null,
+      "declarativeAction" : null,
+      "event" : {
+        "apiName" : "sn_uxf_page.NOW_UXF_PAGE#SET_LOADING_STATE",
+        "payload" : {
+          "type" : "JSON_LITERAL",
+          "value" : {
+            "loading" : false,
+            "label" : null,
+            "action" : null,
+            "nonBlocking" : false
+          }
+        },
+        "sysId" : "0404f68486f1baab1dc7ef2a27a3de50"
+      },
+      "operation" : null,
+      "targetId" : "clbaazqgbeaabbiieeddbhhtiitscqccbbb",
+      "type" : "EVENT"
     } ]
   } ],
   "inputValues" : { },
@@ -1618,6 +1751,9 @@
   "message" : "No Request ID set yet.  Please use \"Create Request\".",
   "comment" : ""
 }, {
+  "message" : "Please wait while request is created.",
+  "comment" : ""
+}, {
   "message" : "Snap!",
   "comment" : ""
 }, {
@@ -1693,6 +1829,17 @@
   "initialValue" : {
     "type" : "JSON_LITERAL",
     "value" : null
+  }
+}, {
+  "name" : "createRequestEnabled",
+  "label" : "createRequestEnabled",
+  "fieldType" : "boolean",
+  "valueType" : "boolean",
+  "shape" : "",
+  "description" : "",
+  "initialValue" : {
+    "type" : "JSON_LITERAL",
+    "value" : true
   }
 } ]</state_properties>
         <sys_class_name>sys_ux_macroponent</sys_class_name>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_app_route">
+    <sys_ux_app_route action="INSERT_OR_UPDATE">
+        <app_config display_value="Photobooth">aa68bcf74742dd10552caf52736d432d</app_config>
+        <description/>
+        <extension_point/>
+        <fields/>
+        <icon/>
+        <name>List of Requests default New Model Modal</name>
+        <optional_parameters/>
+        <order>0</order>
+        <parent_macroponent display_value="List of Requests default">e4de49b08753511089790fe5dabb35c9</parent_macroponent>
+        <parent_macroponent_composition_element_id>modal_viewport_1</parent_macroponent_composition_element_id>
+        <route_type>new-model-modal</route_type>
+        <screen_type display_value="List of Requests default New Model Modal">dddec9b08753511089790fe5dabb3561</screen_type>
+        <sys_class_name>sys_ux_app_route</sys_class_name>
+        <sys_created_by>jon.lind</sys_created_by>
+        <sys_created_on>2022-11-18 18:58:12</sys_created_on>
+        <sys_id>86de0db08753511089790fe5dabb3509</sys_id>
+        <sys_name>List of Requests default New Model Modal</sys_name>
+        <sys_package display_value="Photobooth App" source="x_snc_pb_app">baa73cb74742dd10552caf52736d43f1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Photobooth App">baa73cb74742dd10552caf52736d43f1</sys_scope>
+        <sys_update_name>sys_ux_app_route_86de0db08753511089790fe5dabb3509</sys_update_name>
+    </sys_ux_app_route>
+    <sys_translated_text action="delete_multiple" query="documentkey=86de0db08753511089790fe5dabb3509"/>
+</record_update>

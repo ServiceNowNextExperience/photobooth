@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_app_route">
+    <sys_ux_app_route action="INSERT_OR_UPDATE">
+        <app_config display_value="Asset Workspace App Config">67137075530130106b86ddeeff7b1213</app_config>
+        <description/>
+        <extension_point/>
+        <fields/>
+        <icon/>
+        <name>List of Requests default New asset modal</name>
+        <optional_parameters>query</optional_parameters>
+        <order>0</order>
+        <parent_macroponent display_value="List of Requests default">0fbd81708753511089790fe5dabb355e</parent_macroponent>
+        <parent_macroponent_composition_element_id>modal_viewport_1</parent_macroponent_composition_element_id>
+        <route_type>new-asset-modal</route_type>
+        <screen_type display_value="New asset modal">23dd7e850b21301021fd092db4673a8c</screen_type>
+        <sys_class_name>sys_ux_app_route</sys_class_name>
+        <sys_created_by>jon.lind</sys_created_by>
+        <sys_created_on>2022-11-18 18:53:25</sys_created_on>
+        <sys_id>40cd09708753511089790fe5dabb35e9</sys_id>
+        <sys_name>List of Requests default New asset modal</sys_name>
+        <sys_package display_value="Asset Management Workspace" source="sn_itam_workspace">54b90b435d70f410f87728dca52fcfea</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Photobooth App">baa73cb74742dd10552caf52736d43f1</sys_scope>
+        <sys_update_name>sys_ux_app_route_40cd09708753511089790fe5dabb35e9</sys_update_name>
+    </sys_ux_app_route>
+    <sys_translated_text action="delete_multiple" query="documentkey=40cd09708753511089790fe5dabb35e9"/>
+</record_update>

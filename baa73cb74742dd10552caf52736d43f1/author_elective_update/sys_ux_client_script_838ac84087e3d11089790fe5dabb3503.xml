@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_client_script">
+    <sys_ux_client_script action="DELETE">
+        <includes/>
+        <macroponent display_value="Home default Copy">24b431ec47a25d10552caf52736d4380</macroponent>
+        <name>Email Input Set State</name>
+        <preset/>
+        <required_translations>[ ]</required_translations>
+        <script><![CDATA[/**
+* @param {params} params
+* @param {api} params.api
+* @param {any} params.event
+* @param {any} params.imports
+* @param {ApiHelpers} params.helpers
+*/
+function handler({api : {setState}, event, helpers, imports}) {
+    setState("emailAddress", event.payload.value);
+}]]></script>
+        <script_api_version>2.0.0</script_api_version>
+        <sys_class_name>sys_ux_client_script</sys_class_name>
+        <sys_created_by>jon.lind</sys_created_by>
+        <sys_created_on>2022-11-28 16:20:04</sys_created_on>
+        <sys_id>838ac84087e3d11089790fe5dabb3503</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>Email Input Set State</sys_name>
+        <sys_package display_value="Photobooth App" source="x_snc_pb_app">baa73cb74742dd10552caf52736d43f1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Photobooth App">baa73cb74742dd10552caf52736d43f1</sys_scope>
+        <sys_update_name>sys_ux_client_script_838ac84087e3d11089790fe5dabb3503</sys_update_name>
+        <sys_updated_by>jon.lind</sys_updated_by>
+        <sys_updated_on>2022-11-28 16:23:20</sys_updated_on>
+        <target>macroponent</target>
+        <type>default</type>
+    </sys_ux_client_script>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Photobooth App">baa73cb74742dd10552caf52736d43f1</application>
+        <file_path/>
+        <instance_id>634887c3db11915c8aea21c4059619b9</instance_id>
+        <instance_name>tennis</instance_name>
+        <name>sys_ux_client_script_838ac84087e3d11089790fe5dabb3503</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sys_ux_client_script"&gt;&lt;sys_ux_client_script action="INSERT_OR_UPDATE"&gt;&lt;includes/&gt;&lt;macroponent display_value="Home default Copy"&gt;24b431ec47a25d10552caf52736d4380&lt;/macroponent&gt;&lt;name&gt;Email Input Set State&lt;/name&gt;&lt;preset/&gt;&lt;required_translations&gt;[ ]&lt;/required_translations&gt;&lt;script&gt;&lt;![CDATA[/**
+* @param {params} params
+* @param {api} params.api
+* @param {any} params.event
+* @param {any} params.imports
+* @param {ApiHelpers} params.helpers
+*/
+function handler({api : {setState}, event, helpers, imports}) {
+    setState("emailAddress", event.payload.value);
+}]]&gt;&lt;/script&gt;&lt;script_api_version&gt;2.0.0&lt;/script_api_version&gt;&lt;sys_class_name&gt;sys_ux_client_script&lt;/sys_class_name&gt;&lt;sys_created_by&gt;jon.lind&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-11-28 16:20:04&lt;/sys_created_on&gt;&lt;sys_id&gt;838ac84087e3d11089790fe5dabb3503&lt;/sys_id&gt;&lt;sys_mod_count&gt;2&lt;/sys_mod_count&gt;&lt;sys_name&gt;Email Input Set State&lt;/sys_name&gt;&lt;sys_package display_value="Photobooth App" source="x_snc_pb_app"&gt;baa73cb74742dd10552caf52736d43f1&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Photobooth App"&gt;baa73cb74742dd10552caf52736d43f1&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_ux_client_script_838ac84087e3d11089790fe5dabb3503&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;jon.lind&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-11-28 16:23:20&lt;/sys_updated_on&gt;&lt;target&gt;macroponent&lt;/target&gt;&lt;type&gt;default&lt;/type&gt;&lt;/sys_ux_client_script&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>-583158979</payload_hash>
+        <record_name>Email Input Set State</record_name>
+        <reverted_from/>
+        <source>7b4432a1474f1110552caf52736d4321</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>jon.lind</sys_created_by>
+        <sys_created_on>2022-11-28 17:06:37</sys_created_on>
+        <sys_id>b035988887e3d11089790fe5dabb359d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>184bf3477b60000001</sys_recorded_at>
+        <sys_updated_by>jon.lind</sys_updated_by>
+        <sys_updated_on>2022-11-28 17:06:37</sys_updated_on>
+        <type>UX Client Script</type>
+        <update_guid>5b5e404452e3d110382732642ebce7a9</update_guid>
+        <update_guid_history>5b5e404452e3d110382732642ebce7a9:-583158979,54e4d0887ee3d110118156c90ffc7455:647889993,d74b0880d2e3d110e85d70b0f678a342:-583158979,ebda808006e3d110808b0e15657eb2d6:-1281129925,938a8c408ee3d110843f3658cbe6f38e:381994616</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>jon.lind</sys_created_by>
+        <sys_created_on>2022-11-28 17:34:44</sys_created_on>
+        <sys_db_object display_value="" name="sys_ux_client_script">sys_ux_client_script</sys_db_object>
+        <sys_id>2710184262444aee941b004f01447ad1</sys_id>
+        <sys_metadata>838ac84087e3d11089790fe5dabb3503</sys_metadata>
+        <sys_name>Email Input Set State</sys_name>
+        <sys_package display_value="Photobooth App" source="x_snc_pb_app">baa73cb74742dd10552caf52736d43f1</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Photobooth App">baa73cb74742dd10552caf52736d43f1</sys_scope>
+        <sys_scope_delete display_value="">868a264ca04c47ed906cd87c81ce8d11</sys_scope_delete>
+        <sys_update_name>sys_ux_client_script_838ac84087e3d11089790fe5dabb3503</sys_update_name>
+        <sys_update_version display_value="sys_ux_client_script_838ac84087e3d11089790fe5dabb3503">b035988887e3d11089790fe5dabb359d</sys_update_version>
+    </sys_metadata_delete>
+</record_update>

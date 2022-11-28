@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_client_script">
+    <sys_ux_client_script action="DELETE">
+        <includes/>
+        <macroponent display_value="Home default Copy">24b431ec47a25d10552caf52736d4380</macroponent>
+        <name>button_2/disabled</name>
+        <preset/>
+        <required_translations/>
+        <script><![CDATA[/**
+  * @param {params} params
+  * @param {api} params.api
+  * @param {TransformApiHelpers} params.helpers
+  */
+function evaluateProperty({api, helpers}) {
+  console.log(`Email Address !: ${api.state.emailAddress}`)
+	return !api.state.emailAddress;
+}]]></script>
+        <script_api_version>2.0.0</script_api_version>
+        <sys_class_name>sys_ux_client_script</sys_class_name>
+        <sys_created_by>jon.lind</sys_created_by>
+        <sys_created_on>2022-11-28 17:28:34</sys_created_on>
+        <sys_id>d23a94cc87e3d11089790fe5dabb3597</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>button_2/disabled</sys_name>
+        <sys_package display_value="Photobooth App" source="x_snc_pb_app">baa73cb74742dd10552caf52736d43f1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Photobooth App">baa73cb74742dd10552caf52736d43f1</sys_scope>
+        <sys_update_name>sys_ux_client_script_d23a94cc87e3d11089790fe5dabb3597</sys_update_name>
+        <sys_updated_by>jon.lind</sys_updated_by>
+        <sys_updated_on>2022-11-28 17:28:34</sys_updated_on>
+        <target>macroponent</target>
+        <type>transform</type>
+    </sys_ux_client_script>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Photobooth App">baa73cb74742dd10552caf52736d43f1</application>
+        <file_path/>
+        <instance_id>634887c3db11915c8aea21c4059619b9</instance_id>
+        <instance_name>tennis</instance_name>
+        <name>sys_ux_client_script_d23a94cc87e3d11089790fe5dabb3597</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sys_ux_client_script"&gt;&lt;sys_ux_client_script action="INSERT_OR_UPDATE"&gt;&lt;includes/&gt;&lt;macroponent display_value="Home default Copy"&gt;24b431ec47a25d10552caf52736d4380&lt;/macroponent&gt;&lt;name&gt;button_2/disabled&lt;/name&gt;&lt;preset/&gt;&lt;required_translations/&gt;&lt;script&gt;&lt;![CDATA[/**
+  * @param {params} params
+  * @param {api} params.api
+  * @param {TransformApiHelpers} params.helpers
+  */
+function evaluateProperty({api, helpers}) {
+  console.log(`Email Address !: ${api.state.emailAddress}`)
+	return !api.state.emailAddress;
+}]]&gt;&lt;/script&gt;&lt;script_api_version&gt;2.0.0&lt;/script_api_version&gt;&lt;sys_class_name&gt;sys_ux_client_script&lt;/sys_class_name&gt;&lt;sys_created_by&gt;jon.lind&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-11-28 17:28:34&lt;/sys_created_on&gt;&lt;sys_id&gt;d23a94cc87e3d11089790fe5dabb3597&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name&gt;button_2/disabled&lt;/sys_name&gt;&lt;sys_package display_value="Photobooth App" source="x_snc_pb_app"&gt;baa73cb74742dd10552caf52736d43f1&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Photobooth App"&gt;baa73cb74742dd10552caf52736d43f1&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_ux_client_script_d23a94cc87e3d11089790fe5dabb3597&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;jon.lind&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-11-28 17:28:34&lt;/sys_updated_on&gt;&lt;target&gt;macroponent&lt;/target&gt;&lt;type&gt;transform&lt;/type&gt;&lt;/sys_ux_client_script&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>-783112357</payload_hash>
+        <record_name>button_2/disabled</record_name>
+        <reverted_from/>
+        <source>7b4432a1474f1110552caf52736d4321</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>jon.lind</sys_created_by>
+        <sys_created_on>2022-11-28 17:28:35</sys_created_on>
+        <sys_id>a63a94cc87e3d11089790fe5dabb35b1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>184bf48926d0000001</sys_recorded_at>
+        <sys_updated_by>jon.lind</sys_updated_by>
+        <sys_updated_on>2022-11-28 17:28:35</sys_updated_on>
+        <type>UX Client Script</type>
+        <update_guid>223a94ccc9e3d110169a964ba2f038b1</update_guid>
+        <update_guid_history>223a94ccc9e3d110169a964ba2f038b1:-783112357</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>jon.lind</sys_created_by>
+        <sys_created_on>2022-11-28 17:35:25</sys_created_on>
+        <sys_db_object display_value="" name="sys_ux_client_script">sys_ux_client_script</sys_db_object>
+        <sys_id>1b1ae704c844499e8f4b2c3270f25684</sys_id>
+        <sys_metadata>d23a94cc87e3d11089790fe5dabb3597</sys_metadata>
+        <sys_name>button_2/disabled</sys_name>
+        <sys_package display_value="Photobooth App" source="x_snc_pb_app">baa73cb74742dd10552caf52736d43f1</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Photobooth App">baa73cb74742dd10552caf52736d43f1</sys_scope>
+        <sys_scope_delete display_value="">868a264ca04c47ed906cd87c81ce8d11</sys_scope_delete>
+        <sys_update_name>sys_ux_client_script_d23a94cc87e3d11089790fe5dabb3597</sys_update_name>
+        <sys_update_version display_value="sys_ux_client_script_d23a94cc87e3d11089790fe5dabb3597">a63a94cc87e3d11089790fe5dabb35b1</sys_update_version>
+    </sys_metadata_delete>
+</record_update>

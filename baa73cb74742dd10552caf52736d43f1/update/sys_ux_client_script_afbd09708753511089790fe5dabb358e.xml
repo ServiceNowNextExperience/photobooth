@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_client_script">
+    <sys_ux_client_script action="INSERT_OR_UPDATE">
+        <includes/>
+        <macroponent display_value="List of Requests default">0fbd81708753511089790fe5dabb355e</macroponent>
+        <name>Update tab title</name>
+        <preset/>
+        <required_translations>[ ]</required_translations>
+        <script><![CDATA[/**
+ * @param {params} params
+ * @param {api} params.api
+ * @param {any} params.event
+ * @param {any} params.imports
+ */ 
+function handler({api, event, helpers, imports}) {
+    if (!api.context.props.listTitle)
+        return;
+
+    const setTabTitle = (title) => {
+        api.emit('SCREEN_STATUS_CHANGED', { 
+            'title': title
+        });
+    };
+
+    switch (event.name) {
+      case 'MACROPONENT_PROPERTY_CHANGED':
+        if (event.payload.name === 'listTitle')
+          setTabTitle(api.context.props.listTitle);
+        break;
+      case 'MACROPONENT_READY':
+        setTabTitle(api.context.props.listTitle);
+        break;
+    }
+}
+]]></script>
+        <script_api_version>2.0.0</script_api_version>
+        <sys_class_name>sys_ux_client_script</sys_class_name>
+        <sys_created_by>jon.lind</sys_created_by>
+        <sys_created_on>2022-11-18 18:53:24</sys_created_on>
+        <sys_id>afbd09708753511089790fe5dabb358e</sys_id>
+        <sys_name>Update tab title</sys_name>
+        <sys_package display_value="Photobooth App" source="x_snc_pb_app">baa73cb74742dd10552caf52736d43f1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Photobooth App">baa73cb74742dd10552caf52736d43f1</sys_scope>
+        <sys_update_name>sys_ux_client_script_afbd09708753511089790fe5dabb358e</sys_update_name>
+        <target>macroponent</target>
+        <type>default</type>
+    </sys_ux_client_script>
+</record_update>

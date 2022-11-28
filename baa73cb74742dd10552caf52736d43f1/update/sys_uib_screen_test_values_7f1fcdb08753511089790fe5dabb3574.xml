@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_uib_screen_test_values">
+    <sys_uib_screen_test_values action="INSERT_OR_UPDATE">
+        <macroponent_config>{
+  "table" : "x_snc_pb_core_request"
+}</macroponent_config>
+        <screen display_value="Simple List">771fcdb08753511089790fe5dabb3572</screen>
+        <sys_class_name>sys_uib_screen_test_values</sys_class_name>
+        <sys_created_by>jon.lind</sys_created_by>
+        <sys_created_on>2022-11-18 18:59:25</sys_created_on>
+        <sys_id>7f1fcdb08753511089790fe5dabb3574</sys_id>
+        <sys_name/>
+        <sys_package display_value="Photobooth App" source="x_snc_pb_app">baa73cb74742dd10552caf52736d43f1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Photobooth App">baa73cb74742dd10552caf52736d43f1</sys_scope>
+        <sys_update_name>sys_uib_screen_test_values_7f1fcdb08753511089790fe5dabb3574</sys_update_name>
+    </sys_uib_screen_test_values>
+</record_update>
