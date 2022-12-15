@@ -2,7 +2,7 @@
     <sys_ux_client_script action="INSERT_OR_UPDATE">
         <includes/>
         <macroponent display_value="Home default Copy">24b431ec47a25d10552caf52736d4380</macroponent>
-        <name>no_request_set_message/NODE__isHidden</name>
+        <name>container_4/NODE__isHidden</name>
         <preset/>
         <required_translations/>
         <script><![CDATA[/**
@@ -16,13 +16,13 @@ function evaluateProperty({api : {state}, helpers}) {
         <script_api_version>2.0.0</script_api_version>
         <sys_class_name>sys_ux_client_script</sys_class_name>
         <sys_created_by>jon.lind</sys_created_by>
-        <sys_created_on>2022-11-18 18:46:41</sys_created_on>
-        <sys_id>193c01308753511089790fe5dabb3521</sys_id>
-        <sys_name>no_request_set_message/NODE__isHidden</sys_name>
+        <sys_created_on>2022-12-14 23:54:38</sys_created_on>
+        <sys_id>c60cc0dd47f39550552caf52736d43ef</sys_id>
+        <sys_name>container_4/NODE__isHidden</sys_name>
         <sys_package display_value="Photobooth App" source="x_snc_pb_app">baa73cb74742dd10552caf52736d43f1</sys_package>
         <sys_policy/>
         <sys_scope display_value="Photobooth App">baa73cb74742dd10552caf52736d43f1</sys_scope>
-        <sys_update_name>sys_ux_client_script_193c01308753511089790fe5dabb3521</sys_update_name>
+        <sys_update_name>sys_ux_client_script_c60cc0dd47f39550552caf52736d43ef</sys_update_name>
         <target>macroponent</target>
         <type>transform</type>
     </sys_ux_client_script>

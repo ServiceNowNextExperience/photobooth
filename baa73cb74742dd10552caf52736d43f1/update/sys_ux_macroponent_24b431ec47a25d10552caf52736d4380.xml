@@ -47,6 +47,12 @@
           "type" : "JSON_LITERAL",
           "value" : "x_snc_pb_camera.servicenow_flat.png"
         },
+        "cameraDeviceId" : {
+          "type" : "STATE_BINDING",
+          "binding" : {
+            "address" : [ "selectedCameraIds", "0" ]
+          }
+        },
         "watermarkImagePosition" : {
           "type" : "JSON_LITERAL",
           "value" : "top-left"
@@ -84,6 +90,30 @@
         }
       },
       "eventMappings" : [ {
+        "eventMappingId" : "clbojjkkgaaaabbeaddbhhslbbggrxiiiij",
+        "isConfiguration" : false,
+        "offRowStorageId" : null,
+        "sourceEventApiName" : "x_snc_pb_camera.PHOTOBOOTH_CAMERA#AVAILABLE_CAMERAS_UPDATED",
+        "sourceEventCorrelationId" : null,
+        "sourceEventDefinition" : {
+          "apiName" : "x_snc_pb_camera.PHOTOBOOTH_CAMERA#AVAILABLE_CAMERAS_UPDATED",
+          "id" : null,
+          "type" : "UXEVENT"
+        },
+        "sourceEventSysId" : null,
+        "targets" : [ {
+          "broker" : null,
+          "clientScript" : {
+            "sysId" : "80b0041547f39550552caf52736d43c7"
+          },
+          "conditional" : null,
+          "declarativeAction" : null,
+          "event" : null,
+          "operation" : null,
+          "targetId" : "clbojjkkgaaaabbebddbhhsdccgnaadjff",
+          "type" : "CLIENT_SCRIPT"
+        } ]
+      }, {
         "eventMappingId" : "clabbojbbrbaabbffsddbhhtdshhhwyccs",
         "isConfiguration" : false,
         "offRowStorageId" : null,
@@ -1302,6 +1332,220 @@
       "items" : [ ],
       "styles" : { }
     }, {
+      "elementId" : "camera_dropdown",
+      "elementLabel" : "Camera Dropdown",
+      "propertyValues" : {
+        "select" : {
+          "type" : "JSON_LITERAL",
+          "value" : "single"
+        },
+        "showPadding" : {
+          "type" : "JSON_LITERAL",
+          "value" : false
+        },
+        "showPresencePattern" : {
+          "type" : "JSON_LITERAL",
+          "value" : false
+        },
+        "icon" : {
+          "type" : "JSON_LITERAL",
+          "value" : null
+        },
+        "opened" : {
+          "type" : "JSON_LITERAL",
+          "value" : false
+        },
+        "tooltipContent" : {
+          "type" : "JSON_LITERAL",
+          "value" : null
+        },
+        "panelFitProps" : {
+          "type" : "JSON_LITERAL",
+          "value" : { }
+        },
+        "configAria" : {
+          "type" : "JSON_LITERAL",
+          "value" : null
+        },
+        "hideCaret" : {
+          "type" : "JSON_LITERAL",
+          "value" : false
+        },
+        "search" : {
+          "type" : "JSON_LITERAL",
+          "value" : "none"
+        },
+        "size" : {
+          "type" : "JSON_LITERAL",
+          "value" : "md"
+        },
+        "variant" : {
+          "type" : "JSON_LITERAL",
+          "value" : "secondary"
+        },
+        "disabled" : {
+          "type" : "JSON_LITERAL",
+          "value" : false
+        },
+        "placeholder" : {
+          "type" : "TRANSLATION_LITERAL",
+          "value" : {
+            "code" : null,
+            "message" : "Camera",
+            "comment" : ""
+          }
+        },
+        "bare" : {
+          "type" : "JSON_LITERAL",
+          "value" : false
+        },
+        "items" : {
+          "type" : "STATE_BINDING",
+          "binding" : {
+            "address" : [ "availableCameras" ]
+          }
+        },
+        "selectedItems" : {
+          "type" : "STATE_BINDING",
+          "binding" : {
+            "address" : [ "selectedCameraIds" ]
+          }
+        },
+        "hideLabel" : {
+          "type" : "JSON_LITERAL",
+          "value" : false
+        }
+      },
+      "eventMappings" : [ {
+        "eventMappingId" : "clboakftraabbhhdddbhhsbkiiilliff",
+        "isConfiguration" : false,
+        "offRowStorageId" : null,
+        "sourceEventApiName" : "sn_dropdown.NOW_DROPDOWN#SELECTED_ITEMS_SET",
+        "sourceEventCorrelationId" : null,
+        "sourceEventDefinition" : {
+          "apiName" : "sn_dropdown.NOW_DROPDOWN#SELECTED_ITEMS_SET",
+          "id" : null,
+          "type" : "UXEVENT"
+        },
+        "sourceEventSysId" : null,
+        "targets" : [ {
+          "broker" : null,
+          "clientScript" : {
+            "sysId" : "63d2042e47229110552caf52736d4327"
+          },
+          "conditional" : null,
+          "declarativeAction" : null,
+          "event" : null,
+          "operation" : null,
+          "targetId" : "clboakftraabbhheddbhhshlahheudp",
+          "type" : "CLIENT_SCRIPT"
+        }, {
+          "broker" : null,
+          "clientScript" : null,
+          "conditional" : null,
+          "declarativeAction" : null,
+          "event" : {
+            "apiName" : "sn_uxf.MACROPONENT_STATE_UPDATE_REQUESTED",
+            "payload" : {
+              "type" : "MAP_CONTAINER",
+              "container" : {
+                "propName" : {
+                  "type" : "JSON_LITERAL",
+                  "value" : "selectedCameraIds"
+                },
+                "value" : {
+                  "type" : "EVENT_PAYLOAD_BINDING",
+                  "binding" : {
+                    "address" : [ "value" ]
+                  }
+                }
+              }
+            },
+            "sysId" : "32408b42ff7a10109046e490703bf176"
+          },
+          "operation" : null,
+          "targetId" : "clboamvvvaabbhhuddbhhsykiiggzikm",
+          "type" : "EVENT"
+        } ]
+      } ],
+      "slot" : null,
+      "definition" : {
+        "id" : "22c67d9a1e515fef66442e1469bed3a2",
+        "type" : "MACROPONENT"
+      },
+      "overrides" : null,
+      "isHidden" : {
+        "type" : "JSON_LITERAL",
+        "value" : null
+      },
+      "isHero" : false,
+      "extensionPoints" : [ ],
+      "isNonDestructive" : false,
+      "items" : [ ],
+      "styles" : { }
+    } ],
+    "layout" : {
+      "default" : {
+        "children" : null,
+        "isInline" : null,
+        "items" : [{"element_id":"toggle_1","styles":{"padding":"var(--now-static-space--sm)"}},{"element_id":"button_1","styles":{"padding":"var(--now-static-space--sm)"}},{"element_id":"button_3","styles":{"padding":"var(--now-static-space--sm)"}},{"element_id":"camera_dropdown","styles":{"padding":"var(--now-static-space--sm)"}}],
+        "root" : null,
+        "rules" : null,
+        "styles" : {"flex-direction":"row"},
+        "templateId" : "5832fd4d53c31010e6bcddeeff7b12db",
+        "type" : "flex"
+      },
+      "version" : "3.0.0"
+    }
+  },
+  "isHidden" : {
+    "type" : "JSON_LITERAL",
+    "value" : null
+  },
+  "isHero" : false,
+  "extensionPoints" : [ ],
+  "isNonDestructive" : false,
+  "items" : [ ],
+  "styles" : {
+    "width" : "100%"
+  }
+}, {
+  "elementId" : "container_4",
+  "elementLabel" : "Container 4",
+  "propertyValues" : {
+    "ariaRegionHeadingLevel" : {
+      "type" : "JSON_LITERAL",
+      "value" : "1"
+    },
+    "ariaRegionName" : {
+      "type" : "TRANSLATION_LITERAL",
+      "value" : {
+        "code" : null,
+        "message" : "",
+        "comment" : ""
+      }
+    },
+    "includeAriaHeading" : {
+      "type" : "JSON_LITERAL",
+      "value" : false
+    },
+    "type" : {
+      "type" : "JSON_LITERAL",
+      "value" : "section"
+    },
+    "ariaRole" : {
+      "type" : "JSON_LITERAL",
+      "value" : ""
+    }
+  },
+  "eventMappings" : [ ],
+  "slot" : null,
+  "definition" : {
+    "id" : "d356d14b6e293a3020a244b63d278d8f",
+    "type" : "MACROPONENT"
+  },
+  "overrides" : {
+    "composition" : [ {
       "elementId" : "no_request_set_message",
       "elementLabel" : "No Request ID Set Message",
       "propertyValues" : {
@@ -1323,21 +1567,15 @@
         }
       },
       "eventMappings" : [ ],
-      "slot" : null,
+      "slot" : "",
       "definition" : {
         "id" : "4335ba6dca80378f7ba7a67cd6667bec",
         "type" : "MACROPONENT"
       },
       "overrides" : null,
       "isHidden" : {
-        "type" : "CLIENT_TRANSFORM_SCRIPT",
-        "script" : {
-          "apiVersion" : "2.0.0",
-          "controllerElementId" : null,
-          "inlineScript" : null,
-          "scriptSysId" : "193c01308753511089790fe5dabb3521",
-          "target" : null
-        }
+        "type" : "JSON_LITERAL",
+        "value" : null
       },
       "isHero" : false,
       "extensionPoints" : [ ],
@@ -1349,10 +1587,10 @@
       "default" : {
         "children" : null,
         "isInline" : null,
-        "items" : [{"element_id":"toggle_1","styles":{"padding":"var(--now-static-space--sm)"}},{"element_id":"button_1","styles":{"padding":"var(--now-static-space--sm)"}},{"element_id":"button_3","styles":{"padding":"var(--now-static-space--sm)"}},{"element_id":"no_request_set_message","styles":{}}],
+        "items" : [{"element_id":"no_request_set_message","styles":{}}],
         "root" : null,
         "rules" : null,
-        "styles" : {"flex-direction":"row"},
+        "styles" : {"flex-direction":"column"},
         "templateId" : "5832fd4d53c31010e6bcddeeff7b12db",
         "type" : "flex"
       },
@@ -1360,8 +1598,14 @@
     }
   },
   "isHidden" : {
-    "type" : "JSON_LITERAL",
-    "value" : null
+    "type" : "CLIENT_TRANSFORM_SCRIPT",
+    "script" : {
+      "apiVersion" : "2.0.0",
+      "controllerElementId" : null,
+      "inlineScript" : null,
+      "scriptSysId" : "c60cc0dd47f39550552caf52736d43ef",
+      "target" : null
+    }
   },
   "isHero" : false,
   "extensionPoints" : [ ],
@@ -1695,7 +1939,7 @@
   "default" : {
     "children" : null,
     "isInline" : null,
-    "items" : [{"element_id":"container_3","styles":{}},{"element_id":"container_1","styles":{}},{"element_id":"container_2","styles":{}}],
+    "items" : [{"element_id":"container_3","styles":{}},{"element_id":"container_1","styles":{}},{"element_id":"container_4","styles":{}},{"element_id":"container_2","styles":{}}],
     "root" : null,
     "rules" : null,
     "styles" : {"flex-direction":"column"},
@@ -1734,6 +1978,9 @@
 } ]</props>
         <required_translations>[ {
   "message" : "Accessible Label",
+  "comment" : ""
+}, {
+  "message" : "Camera",
   "comment" : ""
 }, {
   "message" : "Create Request",
@@ -1840,6 +2087,28 @@
   "initialValue" : {
     "type" : "JSON_LITERAL",
     "value" : true
+  }
+}, {
+  "name" : "availableCameras",
+  "label" : "availableCameras",
+  "fieldType" : "json",
+  "valueType" : "json",
+  "shape" : "",
+  "description" : "",
+  "initialValue" : {
+    "type" : "JSON_LITERAL",
+    "value" : [ ]
+  }
+}, {
+  "name" : "selectedCameraIds",
+  "label" : "selectedCameraIds",
+  "fieldType" : "json",
+  "valueType" : "json",
+  "shape" : "",
+  "description" : "",
+  "initialValue" : {
+    "type" : "JSON_LITERAL",
+    "value" : [ ]
   }
 } ]</state_properties>
         <sys_class_name>sys_ux_macroponent</sys_class_name>
