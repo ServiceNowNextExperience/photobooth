@@ -1483,12 +1483,82 @@
       "isNonDestructive" : false,
       "items" : [ ],
       "styles" : { }
+    }, {
+      "elementId" : "button_iconic_1",
+      "elementLabel" : "Button iconic 1",
+      "propertyValues" : {
+        "size" : {
+          "type" : "JSON_LITERAL",
+          "value" : "md"
+        },
+        "highContrast" : {
+          "type" : "JSON_LITERAL",
+          "value" : false
+        },
+        "variant" : {
+          "type" : "JSON_LITERAL",
+          "value" : "secondary"
+        },
+        "icon" : {
+          "type" : "JSON_LITERAL",
+          "value" : "save-fill"
+        },
+        "disabled" : {
+          "type" : "JSON_LITERAL",
+          "value" : false
+        },
+        "tooltipContent" : {
+          "type" : "TRANSLATION_LITERAL",
+          "value" : {
+            "code" : null,
+            "message" : "Enter a label",
+            "comment" : ""
+          }
+        },
+        "bare" : {
+          "type" : "JSON_LITERAL",
+          "value" : false
+        },
+        "configAria" : {
+          "type" : "MAP_CONTAINER",
+          "container" : {
+            "aria-label" : {
+              "type" : "TRANSLATION_LITERAL",
+              "value" : {
+                "code" : null,
+                "message" : "Search",
+                "comment" : ""
+              }
+            }
+          }
+        },
+        "hidePadding" : {
+          "type" : "JSON_LITERAL",
+          "value" : false
+        }
+      },
+      "eventMappings" : [ ],
+      "slot" : null,
+      "definition" : {
+        "id" : "844d56291d91b330f2269558e3f47701",
+        "type" : "MACROPONENT"
+      },
+      "overrides" : null,
+      "isHidden" : {
+        "type" : "JSON_LITERAL",
+        "value" : true
+      },
+      "isHero" : false,
+      "extensionPoints" : [ ],
+      "isNonDestructive" : false,
+      "items" : [ ],
+      "styles" : { }
     } ],
     "layout" : {
       "default" : {
         "children" : null,
         "isInline" : null,
-        "items" : [{"element_id":"toggle_1","styles":{"padding":"var(--now-static-space--sm)"}},{"element_id":"button_1","styles":{"padding":"var(--now-static-space--sm)"}},{"element_id":"button_3","styles":{"padding":"var(--now-static-space--sm)"}},{"element_id":"camera_dropdown","styles":{"padding":"var(--now-static-space--sm)"}}],
+        "items" : [{"element_id":"toggle_1","styles":{"padding":"var(--now-static-space--sm)"}},{"element_id":"button_1","styles":{"padding":"var(--now-static-space--sm)"}},{"element_id":"button_3","styles":{"padding":"var(--now-static-space--sm)"}},{"element_id":"camera_dropdown","styles":{"padding":"var(--now-static-space--sm)"}},{"element_id":"button_iconic_1","styles":{"margin":"var(--now-static-space--sm)"}}],
         "root" : null,
         "rules" : null,
         "styles" : {"flex-direction":"row"},
@@ -1785,7 +1855,7 @@
     },
     "returnFields" : {
       "type" : "JSON_LITERAL",
-      "value" : "number,sys_id"
+      "value" : "number,sys_id,camera_device_id"
     },
     "orderBy" : {
       "type" : "JSON_LITERAL",
@@ -1926,6 +1996,17 @@
   } ],
   "inputValues" : { },
   "readEvaluationMode" : "EXPLICIT"
+}, {
+  "definition" : {
+    "id" : "9b4b978353211010cbc2ddeeff7b1245",
+    "type" : "GRAPHQL"
+  },
+  "dependencies" : { },
+  "elementId" : "update_record",
+  "elementLabel" : "Update Record",
+  "eventMappings" : [ ],
+  "inputValues" : { },
+  "readEvaluationMode" : "EXPLICIT"
 } ]</data>
         <description/>
         <dispatched_events>4634e8fb87aa151089790fe5dabb35d2</dispatched_events>
@@ -1999,6 +2080,9 @@
   "comment" : ""
 }, {
   "message" : "Please wait while request is created.",
+  "comment" : ""
+}, {
+  "message" : "Search",
   "comment" : ""
 }, {
   "message" : "Snap!",
@@ -2109,6 +2193,17 @@
   "initialValue" : {
     "type" : "JSON_LITERAL",
     "value" : [ ]
+  }
+}, {
+  "name" : "photoboothSettings",
+  "label" : "photoboothSettings",
+  "fieldType" : "json",
+  "valueType" : "json",
+  "shape" : "",
+  "description" : "",
+  "initialValue" : {
+    "type" : "JSON_LITERAL",
+    "value" : null
   }
 } ]</state_properties>
         <sys_class_name>sys_ux_macroponent</sys_class_name>

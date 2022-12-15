@@ -2,7 +2,7 @@
     <sys_ux_client_script action="INSERT_OR_UPDATE">
         <includes/>
         <macroponent display_value="Home default Copy">24b431ec47a25d10552caf52736d4380</macroponent>
-        <name>Photobooth Looked Up</name>
+        <name>Update Photobooth Settings</name>
         <preset/>
         <required_translations>[ ]</required_translations>
         <script><![CDATA[/**
@@ -12,35 +12,19 @@
 * @param {any} params.imports
 * @param {ApiHelpers} params.helpers
 */
-function handler({api, event, helpers, imports}) {
-    console.log('Photobooths Looked Up!');
-    
-    const results = api.data.look_up_photobooths.results;
-
-    if(results.length <= 0){
-        api.setState('errorMessage', 'No Photobooth record found with name, number or sys_id of ' + api.context.props.photoboothNameOrNumberOrSysId);
-        return;
-    }
-
-    const { _row_data : {uniqueValue, displayValue}, camera_device_id : {displayValue:cameraDeviceId} } = results[0];
-    api.setState('photoboothId', uniqueValue);
-    
-    const photoboothSettings = ({cameraDeviceId, uniqueValue, displayValue});
-
-    api.setState("photoboothSettings", photoboothSettings);
-    
-    console.log(photoboothSettings);
+function handler({api : { state }, event, helpers, imports}) {
+    const settings = {state.};
 }]]></script>
         <script_api_version>2.0.0</script_api_version>
         <sys_class_name>sys_ux_client_script</sys_class_name>
         <sys_created_by>jon.lind</sys_created_by>
-        <sys_created_on>2022-10-14 21:26:57</sys_created_on>
-        <sys_id>f331e9a1872a5d1089790fe5dabb35bb</sys_id>
-        <sys_name>Photobooth Looked Up</sys_name>
+        <sys_created_on>2022-12-15 00:25:03</sys_created_on>
+        <sys_id>eff2589547379550552caf52736d436f</sys_id>
+        <sys_name>Update Photobooth Settings</sys_name>
         <sys_package display_value="Photobooth App" source="x_snc_pb_app">baa73cb74742dd10552caf52736d43f1</sys_package>
         <sys_policy/>
         <sys_scope display_value="Photobooth App">baa73cb74742dd10552caf52736d43f1</sys_scope>
-        <sys_update_name>sys_ux_client_script_f331e9a1872a5d1089790fe5dabb35bb</sys_update_name>
+        <sys_update_name>sys_ux_client_script_eff2589547379550552caf52736d436f</sys_update_name>
         <target>macroponent</target>
         <type>default</type>
     </sys_ux_client_script>
