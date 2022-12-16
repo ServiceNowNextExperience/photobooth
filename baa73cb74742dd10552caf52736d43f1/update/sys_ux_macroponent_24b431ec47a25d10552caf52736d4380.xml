@@ -1065,7 +1065,7 @@
               "type" : "TRANSLATION_LITERAL",
               "value" : {
                 "code" : null,
-                "message" : "Accessible Label",
+                "message" : "Enable camera",
                 "comment" : ""
               }
             }
@@ -1166,13 +1166,27 @@
           "type" : "TRANSLATION_LITERAL",
           "value" : {
             "code" : null,
-            "message" : "Enter a label",
+            "message" : "Initiate taking a snapshot",
             "comment" : ""
           }
         },
         "configAria" : {
           "type" : "MAP_CONTAINER",
-          "container" : { }
+          "container" : {
+            "button" : {
+              "type" : "MAP_CONTAINER",
+              "container" : {
+                "aria-label" : {
+                  "type" : "TRANSLATION_LITERAL",
+                  "value" : {
+                    "code" : null,
+                    "message" : "Take a Snapshot",
+                    "comment" : ""
+                  }
+                }
+              }
+            }
+          }
         }
       },
       "eventMappings" : [ {
@@ -1247,13 +1261,27 @@
           "type" : "TRANSLATION_LITERAL",
           "value" : {
             "code" : null,
-            "message" : "Enter a label",
+            "message" : "Create a new request including email",
             "comment" : ""
           }
         },
         "configAria" : {
           "type" : "MAP_CONTAINER",
-          "container" : { }
+          "container" : {
+            "button" : {
+              "type" : "MAP_CONTAINER",
+              "container" : {
+                "aria-label" : {
+                  "type" : "TRANSLATION_LITERAL",
+                  "value" : {
+                    "code" : null,
+                    "message" : "Create new Request",
+                    "comment" : ""
+                  }
+                }
+              }
+            }
+          }
         }
       },
       "eventMappings" : [ {
@@ -1356,16 +1384,34 @@
           "value" : false
         },
         "tooltipContent" : {
-          "type" : "JSON_LITERAL",
-          "value" : null
+          "type" : "TRANSLATION_LITERAL",
+          "value" : {
+            "code" : null,
+            "message" : "Select which camera to use to take the snapshot",
+            "comment" : ""
+          }
         },
         "panelFitProps" : {
           "type" : "JSON_LITERAL",
           "value" : { }
         },
         "configAria" : {
-          "type" : "JSON_LITERAL",
-          "value" : null
+          "type" : "MAP_CONTAINER",
+          "container" : {
+            "trigger" : {
+              "type" : "MAP_CONTAINER",
+              "container" : {
+                "aria-label" : {
+                  "type" : "TRANSLATION_LITERAL",
+                  "value" : {
+                    "code" : null,
+                    "message" : "Select Camera",
+                    "comment" : ""
+                  }
+                }
+              }
+            }
+          }
         },
         "hideCaret" : {
           "type" : "JSON_LITERAL",
@@ -1511,7 +1557,7 @@
           "type" : "TRANSLATION_LITERAL",
           "value" : {
             "code" : null,
-            "message" : "Enter a label",
+            "message" : "Save the camera selection to the photobooth",
             "comment" : ""
           }
         },
@@ -2209,22 +2255,31 @@
   "disabled" : false
 } ]</props>
         <required_translations>[ {
-  "message" : "Accessible Label",
-  "comment" : ""
-}, {
   "message" : "Camera",
   "comment" : ""
 }, {
   "message" : "Create Request",
   "comment" : ""
 }, {
+  "message" : "Create a new request including email",
+  "comment" : ""
+}, {
+  "message" : "Create new Request",
+  "comment" : ""
+}, {
   "message" : "Email Address",
+  "comment" : ""
+}, {
+  "message" : "Enable camera",
   "comment" : ""
 }, {
   "message" : "Enter a label",
   "comment" : ""
 }, {
   "message" : "Go!",
+  "comment" : ""
+}, {
+  "message" : "Initiate taking a snapshot",
   "comment" : ""
 }, {
   "message" : "No Request ID set yet.  Please use \"Create Request\".",
@@ -2236,10 +2291,22 @@
   "message" : "Save",
   "comment" : ""
 }, {
+  "message" : "Save the camera selection to the photobooth",
+  "comment" : ""
+}, {
   "message" : "Saving camera selection to photobooth",
   "comment" : ""
 }, {
+  "message" : "Select Camera",
+  "comment" : ""
+}, {
+  "message" : "Select which camera to use to take the snapshot",
+  "comment" : ""
+}, {
   "message" : "Snap!",
+  "comment" : ""
+}, {
+  "message" : "Take a Snapshot",
   "comment" : ""
 }, {
   "message" : "uib@rulez.com",
