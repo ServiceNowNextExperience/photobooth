@@ -1599,6 +1599,23 @@
           },
           "targetId" : "clbqqrnhfaabblkddbhhsrjjlifcbbhh",
           "type" : "DATABROKER_OP"
+        }, {
+          "broker" : null,
+          "clientScript" : null,
+          "conditional" : null,
+          "declarativeAction" : null,
+          "event" : null,
+          "operation" : {
+            "dataBrokerId" : "b997a84053021010cbc2ddeeff7b1228",
+            "operationName" : "REFRESH",
+            "parentResourceId" : "look_up_photobooths",
+            "payload" : {
+              "type" : "JSON_LITERAL",
+              "value" : { }
+            }
+          },
+          "targetId" : "clbrbbhhvimaabbffuddbhhsqzccjjaaxbbhh",
+          "type" : "DATABROKER_OP"
         } ]
       } ],
       "slot" : null,
@@ -1608,8 +1625,14 @@
       },
       "overrides" : null,
       "isHidden" : {
-        "type" : "JSON_LITERAL",
-        "value" : null
+        "type" : "CLIENT_TRANSFORM_SCRIPT",
+        "script" : {
+          "apiVersion" : "2.0.0",
+          "controllerElementId" : null,
+          "inlineScript" : null,
+          "scriptSysId" : "b90f3d3d87f3555089790fe5dabb358c",
+          "target" : null
+        }
       },
       "isHero" : false,
       "extensionPoints" : [ ],
