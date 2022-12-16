@@ -1031,7 +1031,7 @@
   "overrides" : {
     "composition" : [ {
       "elementId" : "toggle_1",
-      "elementLabel" : "Toggle 1",
+      "elementLabel" : "Enable Toggle",
       "propertyValues" : {
         "size" : {
           "type" : "JSON_LITERAL",
@@ -1130,7 +1130,7 @@
       "styles" : { }
     }, {
       "elementId" : "button_1",
-      "elementLabel" : "Button 1",
+      "elementLabel" : "Snap Button",
       "propertyValues" : {
         "size" : {
           "type" : "JSON_LITERAL",
@@ -1485,7 +1485,7 @@
       "styles" : { }
     }, {
       "elementId" : "button_iconic_1",
-      "elementLabel" : "Button iconic 1",
+      "elementLabel" : "Save Camera Button",
       "propertyValues" : {
         "size" : {
           "type" : "JSON_LITERAL",
@@ -1550,6 +1550,27 @@
         },
         "sourceEventSysId" : null,
         "targets" : [ {
+          "broker" : null,
+          "clientScript" : null,
+          "conditional" : null,
+          "declarativeAction" : null,
+          "event" : {
+            "apiName" : "sn_uxf_page.NOW_UXF_PAGE#SET_LOADING_STATE",
+            "payload" : {
+              "type" : "JSON_LITERAL",
+              "value" : {
+                "loading" : true,
+                "label" : "Saving camera selection to photobooth",
+                "action" : null,
+                "nonBlocking" : true
+              }
+            },
+            "sysId" : "0404f68486f1baab1dc7ef2a27a3de50"
+          },
+          "operation" : null,
+          "targetId" : "clbrbbckffwaabbggeeddbhhsddmbbnffad",
+          "type" : "EVENT"
+        }, {
           "broker" : null,
           "clientScript" : null,
           "conditional" : null,
@@ -2213,6 +2234,9 @@
   "comment" : ""
 }, {
   "message" : "Save",
+  "comment" : ""
+}, {
+  "message" : "Saving camera selection to photobooth",
   "comment" : ""
 }, {
   "message" : "Snap!",
