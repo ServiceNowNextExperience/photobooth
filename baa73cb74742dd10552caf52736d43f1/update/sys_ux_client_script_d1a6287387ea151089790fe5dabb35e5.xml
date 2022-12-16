@@ -22,8 +22,6 @@ function handler({
         photoboothId,
         emailAddress
     } = api.state;
-    console.log(event);
-    console.log(`${photoboothId} , ${emailAddress}`);
 
     const fields = `photobooth=${photoboothId}^email=${emailAddress}`;
 

@@ -13,7 +13,6 @@
 * @param {ApiHelpers} params.helpers
 */
 function handler({api : {data, state : {requestId}}, event : {payload: {imageData}}, helpers, imports}) {
-    console.log(`Beginning request to save to snapshot api for request id ${requestId} and image data of ${imageData}!`);
     data.post_snapshot.execute({"imageData" : imageData, "requestId" : requestId});
 }]]></script>
         <script_api_version>2.0.0</script_api_version>

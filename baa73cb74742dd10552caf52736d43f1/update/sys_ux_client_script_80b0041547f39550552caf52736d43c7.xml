@@ -12,8 +12,9 @@
 * @param {any} params.imports
 * @param {ApiHelpers} params.helpers
 */
-function handler({api, event : { payload: {cameras, selectedCameraDeviceId}}, helpers, imports}) {
-    console.log("SET AVAILABLE CAMERAS", selectedCameraDeviceId, cameras);
+function handler({api, event : { payload }, helpers, imports}) {
+    const {cameras, selectedCameraDeviceId} = payload;
+    console.log("XX", "B", "SET AVAILABLE CAMERAS", payload, "Selected Camera:", selectedCameraDeviceId);
     api.setState("availableCameras", cameras);
     api.setState("selectedCameraIds", [selectedCameraDeviceId]);
 }]]></script>

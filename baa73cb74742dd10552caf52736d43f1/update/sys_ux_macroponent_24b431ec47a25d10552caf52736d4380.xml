@@ -306,7 +306,7 @@
   }
 }, {
   "elementId" : "email_address_modal",
-  "elementLabel" : "Email Address Modal",
+  "elementLabel" : "Create Request Modal",
   "propertyValues" : {
     "defer" : {
       "type" : "JSON_LITERAL",
@@ -1430,17 +1430,6 @@
         "sourceEventSysId" : null,
         "targets" : [ {
           "broker" : null,
-          "clientScript" : {
-            "sysId" : "63d2042e47229110552caf52736d4327"
-          },
-          "conditional" : null,
-          "declarativeAction" : null,
-          "event" : null,
-          "operation" : null,
-          "targetId" : "clboakftraabbhheddbhhshlahheudp",
-          "type" : "CLIENT_SCRIPT"
-        }, {
-          "broker" : null,
           "clientScript" : null,
           "conditional" : null,
           "declarativeAction" : null,
@@ -1464,8 +1453,19 @@
             "sysId" : "32408b42ff7a10109046e490703bf176"
           },
           "operation" : null,
-          "targetId" : "clboamvvvaabbhhuddbhhsykiiggzikm",
+          "targetId" : "clbqyxzhhggaabbqnddbhhszktmrrne",
           "type" : "EVENT"
+        }, {
+          "broker" : null,
+          "clientScript" : {
+            "sysId" : "63d2042e47229110552caf52736d4327"
+          },
+          "conditional" : null,
+          "declarativeAction" : null,
+          "event" : null,
+          "operation" : null,
+          "targetId" : "clbqyywbdaabbrqddbhhszliaddrsc",
+          "type" : "CLIENT_SCRIPT"
         } ]
       } ],
       "slot" : null,
@@ -1526,7 +1526,7 @@
               "type" : "TRANSLATION_LITERAL",
               "value" : {
                 "code" : null,
-                "message" : "Search",
+                "message" : "Save",
                 "comment" : ""
               }
             }
@@ -1537,7 +1537,70 @@
           "value" : false
         }
       },
-      "eventMappings" : [ ],
+      "eventMappings" : [ {
+        "eventMappingId" : "clbqqrnhfaabbljddbhhsmuzikqibb",
+        "isConfiguration" : false,
+        "offRowStorageId" : null,
+        "sourceEventApiName" : "sn_button.NOW_BUTTON_ICONIC#CLICKED",
+        "sourceEventCorrelationId" : null,
+        "sourceEventDefinition" : {
+          "apiName" : "sn_button.NOW_BUTTON_ICONIC#CLICKED",
+          "id" : null,
+          "type" : "UXEVENT"
+        },
+        "sourceEventSysId" : null,
+        "targets" : [ {
+          "broker" : null,
+          "clientScript" : null,
+          "conditional" : null,
+          "declarativeAction" : null,
+          "event" : null,
+          "operation" : {
+            "dataBrokerId" : "9b4b978353211010cbc2ddeeff7b1245",
+            "operationName" : "EXECUTE",
+            "parentResourceId" : "update_record",
+            "payload" : {
+              "type" : "MAP_CONTAINER",
+              "container" : {
+                "table" : {
+                  "type" : "JSON_LITERAL",
+                  "value" : "x_snc_pb_core_photobooth"
+                },
+                "recordId" : {
+                  "type" : "STATE_BINDING",
+                  "binding" : {
+                    "address" : [ "photoboothId" ]
+                  }
+                },
+                "templateFields" : {
+                  "type" : "CLIENT_TRANSFORM",
+                  "transform" : {
+                    "operands" : {
+                      "type" : "LIST_CONTAINER",
+                      "container" : [ {
+                        "type" : "JSON_LITERAL",
+                        "value" : "camera_device_id="
+                      }, {
+                        "type" : "STATE_BINDING",
+                        "binding" : {
+                          "address" : [ "selectedCameraIds", "0" ]
+                        }
+                      } ]
+                    },
+                    "operator" : "CONCAT"
+                  }
+                },
+                "useSetDisplayValue" : {
+                  "type" : "JSON_LITERAL",
+                  "value" : null
+                }
+              }
+            }
+          },
+          "targetId" : "clbqqrnhfaabblkddbhhsrjjlifcbbhh",
+          "type" : "DATABROKER_OP"
+        } ]
+      } ],
       "slot" : null,
       "definition" : {
         "id" : "844d56291d91b330f2269558e3f47701",
@@ -1546,7 +1609,7 @@
       "overrides" : null,
       "isHidden" : {
         "type" : "JSON_LITERAL",
-        "value" : true
+        "value" : null
       },
       "isHero" : false,
       "extensionPoints" : [ ],
@@ -1558,7 +1621,7 @@
       "default" : {
         "children" : null,
         "isInline" : null,
-        "items" : [{"element_id":"toggle_1","styles":{"padding":"var(--now-static-space--sm)"}},{"element_id":"button_1","styles":{"padding":"var(--now-static-space--sm)"}},{"element_id":"button_3","styles":{"padding":"var(--now-static-space--sm)"}},{"element_id":"camera_dropdown","styles":{"padding":"var(--now-static-space--sm)"}},{"element_id":"button_iconic_1","styles":{"margin":"var(--now-static-space--sm)"}}],
+        "items" : [{"element_id":"toggle_1","styles":{"padding":"var(--now-static-space--sm)"}},{"element_id":"button_1","styles":{"padding":"var(--now-static-space--sm)"}},{"element_id":"button_3","styles":{"padding":"var(--now-static-space--sm)"}},{"element_id":"camera_dropdown","styles":{"padding":"var(--now-static-space--sm)"}},{"element_id":"button_iconic_1","styles":{"padding":"var(--now-static-space--sm)"}}],
         "root" : null,
         "rules" : null,
         "styles" : {"flex-direction":"row"},
@@ -1809,6 +1872,27 @@
       "operation" : null,
       "targetId" : "cljjjjaaddtbkaaggxsddbhhtrhhxdxgguhh",
       "type" : "CLIENT_SCRIPT"
+    }, {
+      "broker" : null,
+      "clientScript" : null,
+      "conditional" : null,
+      "declarativeAction" : null,
+      "event" : {
+        "apiName" : "sn_uxf_page.NOW_UXF_PAGE#SET_LOADING_STATE",
+        "payload" : {
+          "type" : "JSON_LITERAL",
+          "value" : {
+            "loading" : false,
+            "label" : null,
+            "action" : null,
+            "nonBlocking" : false
+          }
+        },
+        "sysId" : "0404f68486f1baab1dc7ef2a27a3de50"
+      },
+      "operation" : null,
+      "targetId" : "clbraakptaaaccfdddbhhsdautaaaaccf",
+      "type" : "EVENT"
     } ]
   } ],
   "inputValues" : {
@@ -1855,7 +1939,7 @@
     },
     "returnFields" : {
       "type" : "JSON_LITERAL",
-      "value" : "number,sys_id,camera_device_id"
+      "value" : "number,sys_id,camera_device_id,name"
     },
     "orderBy" : {
       "type" : "JSON_LITERAL",
@@ -2015,7 +2099,30 @@
         <handled_events/>
         <interactions/>
         <interfaces/>
-        <internal_event_mappings>{ }</internal_event_mappings>
+        <internal_event_mappings>{
+  "MACROPONENT_READY" : [ {
+    "broker" : null,
+    "clientScript" : null,
+    "conditional" : null,
+    "declarativeAction" : null,
+    "event" : {
+      "apiName" : "sn_uxf_page.NOW_UXF_PAGE#SET_LOADING_STATE",
+      "payload" : {
+        "type" : "JSON_LITERAL",
+        "value" : {
+          "loading" : true,
+          "label" : "Retrieving Photobooth Settings",
+          "action" : null,
+          "nonBlocking" : false
+        }
+      },
+      "sysId" : "0404f68486f1baab1dc7ef2a27a3de50"
+    },
+    "operation" : null,
+    "targetId" : "clbraajxffoaaccehddbhhsbefqeefggii",
+    "type" : "EVENT"
+  } ]
+}</internal_event_mappings>
         <layout>{
   "default" : {
     "children" : null,
@@ -2082,7 +2189,7 @@
   "message" : "Please wait while request is created.",
   "comment" : ""
 }, {
-  "message" : "Search",
+  "message" : "Save",
   "comment" : ""
 }, {
   "message" : "Snap!",
