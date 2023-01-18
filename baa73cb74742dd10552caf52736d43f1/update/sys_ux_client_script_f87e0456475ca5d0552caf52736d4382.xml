@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_client_script">
+    <sys_ux_client_script action="INSERT_OR_UPDATE">
+        <includes/>
+        <macroponent display_value="Home default">15610c1a471ca5d0552caf52736d430b</macroponent>
+        <name>Testing Auto Create Request</name>
+        <preset/>
+        <required_translations>[ ]</required_translations>
+        <script><![CDATA[/**
+ * @param {params} params
+ * @param {api} params.api
+ * @param {any} params.event
+ * @param {any} params.imports
+ * @param {ApiHelpers} params.helpers
+ */
+function handler({
+    api,
+    event,
+    helpers,
+    imports
+}) {
+    //    const { context, data: {look_up_photobooths : {results : photobooths}, create_record }} = api.data;
+    const photobooths = api.data.look_up_photobooths.results;
+    console.log(event.name, api.context.props, photobooths, api.context.session.user);
+
+
+    if (photobooths.length && api.context.params.autoCreateReq) {
+        const photobooth = photobooths[0];
+        const newRecord = {
+                table: "x_snc_pb_core_request",
+                photobooth: photobooth._row_data.uniqueValue,
+                first_name: api.context.session.user.firstName,
+                email : api.context.session.user.userName + '@servicenow.com'
+            };
+
+console.log(newRecord);
+//        api.data.create_record.execute(newRecord);
+    }
+}]]></script>
+        <script_api_version>2.0.0</script_api_version>
+        <sys_class_name>sys_ux_client_script</sys_class_name>
+        <sys_created_by>jon.lind</sys_created_by>
+        <sys_created_on>2023-01-11 23:10:31</sys_created_on>
+        <sys_id>f87e0456475ca5d0552caf52736d4382</sys_id>
+        <sys_name>Testing Auto Create Request</sys_name>
+        <sys_package display_value="Photobooth App" source="x_snc_pb_app">baa73cb74742dd10552caf52736d43f1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Photobooth App">baa73cb74742dd10552caf52736d43f1</sys_scope>
+        <sys_update_name>sys_ux_client_script_f87e0456475ca5d0552caf52736d4382</sys_update_name>
+        <target>macroponent</target>
+        <type>default</type>
+    </sys_ux_client_script>
+</record_update>

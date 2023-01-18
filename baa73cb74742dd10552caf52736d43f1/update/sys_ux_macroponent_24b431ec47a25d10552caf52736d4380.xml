@@ -84,6 +84,10 @@
           "type" : "JSON_LITERAL",
           "value" : 0.4
         },
+        "pauseBetweenSnapsSeconds" : {
+          "type" : "JSON_LITERAL",
+          "value" : 0
+        },
         "countdownAnimationCss" : {
           "type" : "JSON_LITERAL",
           "value" : "*,:after,:before{box-sizing:inherit}.countdown #container{animation:background_color 5s cubic-bezier(.9,0,.1,1) .875s forwards}.countdown #counter{font-family:sans-serif;width:50vmin;height:50vmin;box-shadow:0 0 0 1.25vmin,inset 2.5vmin 2.5vmin 5vmin rgba(0,0,0,.125),2.5vmin 2.5vmin 5vmin rgba(0,0,0,.125);font-size:25vmin;text-shadow:2.5vmin 2.5vmin 5vmin rgba(0,0,0,.125);top:50%;left:50%;transform:translate(-50%,-50%);display:flex;align-items:center;justify-content:center;overflow:hidden;color:#fff;opacity:1%;border-radius:50%;font-weight:700;animation:hide_on_complete 5s 1s forwards}@media (min-width:600px){.countdown #counter{width:50vmin;height:50vmin;box-shadow:0 0 0 1.25vmin,inset 2.5vmin 2.5vmin 5vmin rgba(0,0,0,.125),2.5vmin 2.5vmin 5vmin rgba(0,0,0,.125);font-size:25vmin;text-shadow:2.5vmin 2.5vmin 5vmin rgba(0,0,0,.125)}}.countdown #counter:before{content:\"5\";animation:timer_beat 1s .875s 5,timer_countdown 5s 1s}@keyframes timer_beat{50%{transform:scale(1.125)}80%{transform:none}}@keyframes timer_countdown{0%{content:\"5\"}20%{content:\"4\"}40%{content:\"3\"}60%{content:\"2\"}80%{content:\"1\"}to{content:\"0\"}}@keyframes hide_on_complete{0%{opacity:1}90%{opacity:1}to{opacity:0}}.countdown #counter:after{content:\"\";position:absolute;top:0;left:0;z-index:-100;width:100%;height:100%;background-color:rgba(0,0,0,.125);animation:timer_indicator 5s linear 1s forwards}@keyframes timer_indicator{to{transform:translateY(100%)}}"
@@ -161,7 +165,7 @@
         "items" : [{"element_id":"photobooth_camera_1","styles":{}}],
         "root" : null,
         "rules" : null,
-        "styles" : {"flex-direction":"column"},
+        "styles" : {"flex-direction":"column","margin":""},
         "templateId" : "5832fd4d53c31010e6bcddeeff7b12db",
         "type" : "flex"
       },
@@ -173,7 +177,7 @@
     "script" : {
       "apiVersion" : "2.0.0",
       "controllerElementId" : null,
-      "inlineScript" : null,
+      "inlineScript" : "function script({api, event}) {  }",
       "scriptSysId" : "2f4b68b487df111089790fe5dabb35ba",
       "target" : null
     }
@@ -272,7 +276,7 @@
       "default" : {
         "children" : null,
         "isInline" : null,
-        "items" : [{"element_id":"stylized_text_1","styles":{}}],
+        "items" : [{"element_id":"stylized_text_1","styles":{"max-width":""}}],
         "root" : null,
         "rules" : null,
         "styles" : {"flex-direction":"row"},
@@ -1149,7 +1153,7 @@
           "script" : {
             "apiVersion" : "2.0.0",
             "controllerElementId" : null,
-            "inlineScript" : null,
+            "inlineScript" : "/**\n  * @param {params} params\n  * @param {api} params.api\n  * @param {TransformApiHelpers} params.helpers\n  */\nfunction evaluateProperty({api : {state}, helpers}) {\n\treturn !state.requestId || !state.cameraEnabled;\n}",
             "scriptSysId" : "433cf8f08713511089790fe5dabb35e8",
             "target" : null
           }
@@ -1696,7 +1700,7 @@
         "script" : {
           "apiVersion" : "2.0.0",
           "controllerElementId" : null,
-          "inlineScript" : null,
+          "inlineScript" : "/**\n  * @param {params} params\n  * @param {api} params.api\n  * @param {TransformApiHelpers} params.helpers\n  */\nfunction evaluateProperty({api, helpers}) {\n  const [selectedCameraId] = api.state.selectedCameraIds;\n  const savedCameraId = api.state.photoboothSettings.cameraDeviceId;\n\treturn !(selectedCameraId &amp;&amp; (savedCameraId != selectedCameraId));\n}",
           "scriptSysId" : "b90f3d3d87f3555089790fe5dabb358c",
           "target" : null
         }
@@ -1825,7 +1829,7 @@
     "script" : {
       "apiVersion" : "2.0.0",
       "controllerElementId" : null,
-      "inlineScript" : null,
+      "inlineScript" : "/**\n  * @param {params} params\n  * @param {api} params.api\n  * @param {TransformApiHelpers} params.helpers\n  */\nfunction evaluateProperty({api : {state}, helpers}) {\n\treturn state.requestId;\n}",
       "scriptSysId" : "c60cc0dd47f39550552caf52736d43ef",
       "target" : null
     }
