@@ -30,3 +30,6 @@ Once you have installed all three apps you can go test it.  Navigate to UI Build
 
 ## Design Overview
 The main Photobooth App relies on the Photobooth UIC Camera app to take the snapshots and the Photobooth Core app for tables and flows. When a new record is added to the Request table the web application will monitor with an AMB Record Watcher and initiate a snapshot, which is then sent back to the Core app via an API.
+
+## Multi-camera Support
+If you have multiple cameras you may specify the 65 character device id you would prefer to use (it will try to default to one).  To do so create a  Photobooth Instance record, open the URL for that photobooth (e.g. "MyPB" in /now/photobooth/home/MyPB) and open the developer tool inspector and look at the console.  You will see an event logged called "PHOTOBOOTH_CAMERA#AVAILABLE_CAMERAS_UPDATED" with an object having a "cameras" array.  Inspect that and copy and paste the device id to your Photbooth Instance record.
