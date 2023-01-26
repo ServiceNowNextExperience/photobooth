@@ -41,11 +41,14 @@ console.log(newRecord);
         <sys_created_by>jon.lind</sys_created_by>
         <sys_created_on>2023-01-11 23:10:31</sys_created_on>
         <sys_id>f87e0456475ca5d0552caf52736d4382</sys_id>
+        <sys_mod_count>0</sys_mod_count>
         <sys_name>Testing Auto Create Request</sys_name>
         <sys_package display_value="Photobooth App" source="x_snc_pb_app">baa73cb74742dd10552caf52736d43f1</sys_package>
         <sys_policy/>
         <sys_scope display_value="Photobooth App">baa73cb74742dd10552caf52736d43f1</sys_scope>
         <sys_update_name>sys_ux_client_script_f87e0456475ca5d0552caf52736d4382</sys_update_name>
+        <sys_updated_by>jon.lind</sys_updated_by>
+        <sys_updated_on>2023-01-18 23:24:13</sys_updated_on>
         <target>macroponent</target>
         <type>default</type>
     </sys_ux_client_script>
