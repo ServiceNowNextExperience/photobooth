@@ -185,6 +185,55 @@
               "operation" : null,
               "targetId" : "cldccahhodgaabbggjddbhhsfwvrygffhh",
               "type" : "CLIENT_SCRIPT"
+            }, {
+              "broker" : null,
+              "clientScript" : null,
+              "conditional" : null,
+              "declarativeAction" : null,
+              "event" : {
+                "apiName" : "sn_uxf.MACROPONENT_STATE_UPDATE_REQUESTED",
+                "payload" : {
+                  "type" : "JSON_LITERAL",
+                  "value" : {
+                    "propName" : "currentMessage",
+                    "value" : "Looking sharp!"
+                  }
+                },
+                "sysId" : "32408b42ff7a10109046e490703bf176"
+              },
+              "operation" : null,
+              "targetId" : "cldfddjjcbzaacctffddbhhsajnccmjjxbb",
+              "type" : "EVENT"
+            }, {
+              "broker" : null,
+              "clientScript" : null,
+              "conditional" : null,
+              "declarativeAction" : null,
+              "event" : null,
+              "operation" : {
+                "dataBrokerId" : "5f7eda5b8760e11089790fe5dabb3559",
+                "operationName" : "EXECUTE",
+                "parentResourceId" : "post_snapshot",
+                "payload" : {
+                  "type" : "MAP_CONTAINER",
+                  "container" : {
+                    "imageData" : {
+                      "type" : "EVENT_PAYLOAD_BINDING",
+                      "binding" : {
+                        "address" : [ "imageData" ]
+                      }
+                    },
+                    "requestId" : {
+                      "type" : "STATE_BINDING",
+                      "binding" : {
+                        "address" : [ "requestId" ]
+                      }
+                    }
+                  }
+                }
+              },
+              "targetId" : "cldfddsqeeaaccjjkddbhhsluezyluf",
+              "type" : "DATABROKER_OP"
             } ]
           } ],
           "slot" : "",
@@ -211,8 +260,19 @@
               "value" : "camera-fill"
             },
             "disabled" : {
-              "type" : "JSON_LITERAL",
-              "value" : false
+              "type" : "CLIENT_TRANSFORM",
+              "transform" : {
+                "operands" : {
+                  "type" : "LIST_CONTAINER",
+                  "container" : [ {
+                    "type" : "STATE_BINDING",
+                    "binding" : {
+                      "address" : [ "requestId" ]
+                    }
+                  } ]
+                },
+                "operator" : "EMPTY"
+              }
             },
             "tooltipContent" : {
               "type" : "TRANSLATION_LITERAL",
@@ -241,7 +301,7 @@
             }
           },
           "eventMappings" : [ {
-            "eventMappingId" : "clcuyzddgwaabbhhyddbhhsmddkgglke",
+            "eventMappingId" : "cldfddeepnzaaccqaddbhhskbbwwnoel",
             "isConfiguration" : false,
             "offRowStorageId" : null,
             "sourceEventApiName" : "sn_button.NOW_BUTTON_CIRCULAR#CLICKED",
@@ -254,26 +314,15 @@
             "sourceEventSysId" : null,
             "targets" : [ {
               "broker" : null,
-              "clientScript" : null,
+              "clientScript" : {
+                "sysId" : "276ad0c347e4a110552caf52736d43e4"
+              },
               "conditional" : null,
               "declarativeAction" : null,
-              "event" : {
-                "apiName" : "sn_uxf.MACROPONENT_STATE_UPDATE_REQUESTED",
-                "payload" : {
-                  "type" : "CLIENT_TRANSFORM_SCRIPT",
-                  "script" : {
-                    "apiVersion" : "1.0.0",
-                    "controllerElementId" : null,
-                    "inlineScript" : "/**\n* @param {params} params\n* @param {api} params.api\n* @param {any} params.event\n*/\nfunction evaluateEvent({api, event}) {\n\treturn {\n\t\tpropName: \"snapRequested\",\n\t\tvalue: Date.now()\n\t};\n}",
-                    "scriptSysId" : null,
-                    "target" : null
-                  }
-                },
-                "sysId" : "32408b42ff7a10109046e490703bf176"
-              },
+              "event" : null,
               "operation" : null,
-              "targetId" : "clcuyzddgwaabbhhzddbhhsmprddhhxaam",
-              "type" : "EVENT"
+              "targetId" : "cldfddeepnzaaccqbddbhhsafccqyxaat",
+              "type" : "CLIENT_SCRIPT"
             } ]
           } ],
           "slot" : "",
@@ -329,18 +378,16 @@
           "overrides" : {
             "composition" : [ {
               "elementId" : "stylized_text_1",
-              "elementLabel" : "Stylized text 1",
+              "elementLabel" : "Message",
               "propertyValues" : {
                 "css" : {
                   "type" : "JSON_LITERAL",
                   "value" : "* {\n    text-align: center;\n    color: var(--now-color--neutral-21);\n    font-size: 1.5rem;\n    font-family: 'Gilroy', sans-serif;\n    font-weight: bold;\n    position: relative;\n    \n }"
                 },
                 "text" : {
-                  "type" : "TRANSLATION_LITERAL",
-                  "value" : {
-                    "code" : null,
-                    "message" : "Hi Chris! Click the shutter button to take 4 photos.",
-                    "comment" : ""
+                  "type" : "STATE_BINDING",
+                  "binding" : {
+                    "address" : [ "currentMessage" ]
                   }
                 },
                 "tag" : {
@@ -575,7 +622,7 @@
   "elementId" : "look_up_photobooths",
   "elementLabel" : "Look Up Photobooths",
   "eventMappings" : [ {
-    "eventMappingId" : "clcsafbbumaabbneeddbhhsogmpddrbbaa",
+    "eventMappingId" : "cldfccjjxdddaacccccddbhhsdjjeeygqgw",
     "isConfiguration" : false,
     "offRowStorageId" : null,
     "sourceEventApiName" : "sn_uxf.DATA_FETCH_SUCCEEDED",
@@ -588,26 +635,21 @@
     "sourceEventSysId" : null,
     "targets" : [ {
       "broker" : null,
-      "clientScript" : {
-        "sysId" : "583d0416475ca5d0552caf52736d43f9"
-      },
+      "clientScript" : null,
       "conditional" : null,
       "declarativeAction" : null,
       "event" : null,
-      "operation" : null,
-      "targetId" : "clcsafvubaabbnhhddbhhsnggceefjjil",
-      "type" : "CLIENT_SCRIPT"
-    }, {
-      "broker" : null,
-      "clientScript" : {
-        "sysId" : "f87e0456475ca5d0552caf52736d4382"
+      "operation" : {
+        "dataBrokerId" : "b997a84053021010cbc2ddeeff7b1228",
+        "operationName" : "REFRESH",
+        "parentResourceId" : "look_up_request",
+        "payload" : {
+          "type" : "JSON_LITERAL",
+          "value" : { }
+        }
       },
-      "conditional" : null,
-      "declarativeAction" : null,
-      "event" : null,
-      "operation" : null,
-      "targetId" : "clcsafbbumaabbnffddbhhslyeciiccvii",
-      "type" : "CLIENT_SCRIPT"
+      "targetId" : "cldfccjjxdddaacccddddbhhsbbtbbqeereex",
+      "type" : "DATABROKER_OP"
     } ]
   } ],
   "inputValues" : {
@@ -693,6 +735,231 @@
   "eventMappings" : [ ],
   "inputValues" : { },
   "readEvaluationMode" : "EXPLICIT"
+}, {
+  "definition" : {
+    "id" : "b997a84053021010cbc2ddeeff7b1228",
+    "type" : "COMPOSITE"
+  },
+  "dependencies" : { },
+  "elementId" : "look_up_request",
+  "elementLabel" : "Look Up Request",
+  "eventMappings" : [ {
+    "eventMappingId" : "cldfbbrixqaaffceeddbhhsonpzkwggv",
+    "isConfiguration" : false,
+    "offRowStorageId" : null,
+    "sourceEventApiName" : "sn_uxf.DATA_FETCH_SUCCEEDED",
+    "sourceEventCorrelationId" : null,
+    "sourceEventDefinition" : {
+      "apiName" : "sn_uxf.DATA_FETCH_SUCCEEDED",
+      "id" : null,
+      "type" : "UXEVENT"
+    },
+    "sourceEventSysId" : null,
+    "targets" : [ {
+      "broker" : null,
+      "clientScript" : null,
+      "conditional" : {
+        "type" : "BINARY",
+        "operation" : {
+          "left" : {
+            "type" : "DATA_OUTPUT_BINDING",
+            "binding" : {
+              "address" : [ "look_up_request", "results", "length" ]
+            }
+          },
+          "operator" : "&lt;",
+          "right" : {
+            "type" : "JSON_LITERAL",
+            "value" : 1
+          }
+        }
+      },
+      "declarativeAction" : null,
+      "event" : {
+        "apiName" : "sn_uxf_page.NOW_UXF_PAGE#ADD_NOTIFICATIONS",
+        "payload" : {
+          "type" : "CLIENT_TRANSFORM_SCRIPT",
+          "script" : {
+            "apiVersion" : "1.0.0",
+            "controllerElementId" : null,
+            "inlineScript" : "/**\n* @param {params} params\n* @param {api} params.api\n* @param {any} params.event\n*/\nfunction evaluateEvent({api, event}) {\n\treturn {\n\t\titems: [{\"type\" : \"error\", \"message\" : \"No Photobooth Request record created by you found. To use the photobooth in this test mode go to Photobooth Requests in the core UI and create a new record with your first name, email address and referencing this photobooth.\"}]\n\t};\n}",
+            "scriptSysId" : null,
+            "target" : null
+          }
+        },
+        "sysId" : "49fe7d575f983bb3f8eea3fa8d40694c"
+      },
+      "operation" : null,
+      "targetId" : "cldfccdtlhaaccdcddbhhszddhnvrkw",
+      "type" : "EVENT"
+    }, {
+      "broker" : null,
+      "clientScript" : null,
+      "conditional" : {
+        "type" : "BINARY",
+        "operation" : {
+          "left" : {
+            "type" : "DATA_OUTPUT_BINDING",
+            "binding" : {
+              "address" : [ "look_up_request", "results", "length" ]
+            }
+          },
+          "operator" : "&gt;",
+          "right" : {
+            "type" : "JSON_LITERAL",
+            "value" : 0
+          }
+        }
+      },
+      "declarativeAction" : null,
+      "event" : {
+        "apiName" : "sn_uxf.MACROPONENT_STATE_UPDATE_REQUESTED",
+        "payload" : {
+          "type" : "CLIENT_TRANSFORM_SCRIPT",
+          "script" : {
+            "apiVersion" : "1.0.0",
+            "controllerElementId" : null,
+            "inlineScript" : "/**\n* @param {params} params\n* @param {api} params.api\n* @param {any} params.event\n*/\nfunction evaluateEvent({api, event}) {\n\treturn {\n\t\tpropName: \"currentMessage\",\n\t\tvalue: `Hi ${api.data.look_up_request.results[0].first_name.displayValue}. Use the button to take 4 photos.`\n\t};\n}",
+            "scriptSysId" : null,
+            "target" : null
+          }
+        },
+        "sysId" : "32408b42ff7a10109046e490703bf176"
+      },
+      "operation" : null,
+      "targetId" : "cldfccoiaddaacchaaddbhhsbbyduccyph",
+      "type" : "EVENT"
+    }, {
+      "broker" : null,
+      "clientScript" : null,
+      "conditional" : {
+        "type" : "BINARY",
+        "operation" : {
+          "left" : {
+            "type" : "DATA_OUTPUT_BINDING",
+            "binding" : {
+              "address" : [ "look_up_request", "results", "length" ]
+            }
+          },
+          "operator" : "&gt;",
+          "right" : {
+            "type" : "JSON_LITERAL",
+            "value" : 0
+          }
+        }
+      },
+      "declarativeAction" : null,
+      "event" : {
+        "apiName" : "sn_uxf.MACROPONENT_STATE_UPDATE_REQUESTED",
+        "payload" : {
+          "type" : "MAP_CONTAINER",
+          "container" : {
+            "propName" : {
+              "type" : "JSON_LITERAL",
+              "value" : "requestId"
+            },
+            "value" : {
+              "type" : "DATA_OUTPUT_BINDING",
+              "binding" : {
+                "address" : [ "look_up_request", "results", "0", "_row_data", "uniqueValue" ]
+              }
+            }
+          }
+        },
+        "sysId" : "32408b42ff7a10109046e490703bf176"
+      },
+      "operation" : null,
+      "targetId" : "cldfccrtktaacciiddbhhsjbcfiimcchh",
+      "type" : "EVENT"
+    }, {
+      "broker" : null,
+      "clientScript" : {
+        "sysId" : "cfc282524760e910552caf52736d432d"
+      },
+      "conditional" : null,
+      "declarativeAction" : null,
+      "event" : null,
+      "operation" : null,
+      "targetId" : "cldfccuisggaaccjiddbhhsaajjhhpjjrkff",
+      "type" : "CLIENT_SCRIPT"
+    } ]
+  } ],
+  "inputValues" : {
+    "table" : {
+      "type" : "JSON_LITERAL",
+      "value" : "x_snc_pb_core_request"
+    },
+    "encodedQuery" : {
+      "type" : "CLIENT_TRANSFORM",
+      "transform" : {
+        "operands" : {
+          "type" : "LIST_CONTAINER",
+          "container" : [ {
+            "type" : "JSON_LITERAL",
+            "value" : "photobooth="
+          }, {
+            "type" : "DATA_OUTPUT_BINDING",
+            "binding" : {
+              "address" : [ "look_up_photobooths", "results", "0", "_row_data", "uniqueValue" ]
+            }
+          }, {
+            "type" : "JSON_LITERAL",
+            "value" : "^sys_created_by="
+          }, {
+            "type" : "CONTEXT_BINDING",
+            "binding" : {
+              "address" : [ "user", "userName" ],
+              "category" : "session"
+            }
+          }, {
+            "type" : "JSON_LITERAL",
+            "value" : "^first_nameISNOTEMPTY^ORDERBYDESCsys_updated_on"
+          } ]
+        },
+        "operator" : "CONCAT"
+      }
+    },
+    "returnFields" : {
+      "type" : "JSON_LITERAL",
+      "value" : "first_name"
+    },
+    "orderBy" : {
+      "type" : "JSON_LITERAL",
+      "value" : "sys_updated_on"
+    },
+    "sortType" : {
+      "type" : "JSON_LITERAL",
+      "value" : "desc"
+    },
+    "limit" : {
+      "type" : "JSON_LITERAL",
+      "value" : "1"
+    },
+    "offset" : {
+      "type" : "JSON_LITERAL",
+      "value" : null
+    },
+    "queryCategory" : {
+      "type" : "JSON_LITERAL",
+      "value" : ""
+    },
+    "returnFieldMetadata" : {
+      "type" : "JSON_LITERAL",
+      "value" : false
+    }
+  },
+  "readEvaluationMode" : "EXPLICIT"
+}, {
+  "definition" : {
+    "id" : "5f7eda5b8760e11089790fe5dabb3559",
+    "type" : "REST"
+  },
+  "dependencies" : { },
+  "elementId" : "post_snapshot",
+  "elementLabel" : "Post Snapshot",
+  "eventMappings" : [ ],
+  "inputValues" : { },
+  "readEvaluationMode" : "EXPLICIT"
 } ]</data>
         <description/>
         <dispatched_events/>
@@ -744,9 +1011,6 @@
   "disabled" : false
 } ]</props>
         <required_translations>[ {
-  "message" : "Hi Chris! Click the shutter button to take 4 photos.",
-  "comment" : ""
-}, {
   "message" : "Take a snapshot",
   "comment" : ""
 } ]</required_translations>
@@ -776,19 +1040,63 @@
     "type" : "JSON_LITERAL",
     "value" : null
   }
+}, {
+  "name" : "currentMessage",
+  "label" : "currentMessage",
+  "fieldType" : "string",
+  "valueType" : "string",
+  "shape" : "",
+  "description" : "",
+  "initialValue" : {
+    "type" : "JSON_LITERAL",
+    "value" : null
+  }
+}, {
+  "name" : "countdownMessages",
+  "label" : "countdownMessages",
+  "fieldType" : "json",
+  "valueType" : "json",
+  "shape" : "",
+  "description" : "",
+  "initialValue" : {
+    "type" : "JSON_LITERAL",
+    "value" : [ "Begin snapping in 5 seconds", "4", "3", "2", "1", " " ]
+  }
+}, {
+  "name" : "requestId",
+  "label" : "requestId",
+  "fieldType" : "string",
+  "valueType" : "string",
+  "shape" : "",
+  "description" : "",
+  "initialValue" : {
+    "type" : "JSON_LITERAL",
+    "value" : null
+  }
+}, {
+  "name" : "greetingMessage",
+  "label" : "greetingMessage",
+  "fieldType" : "string",
+  "valueType" : "string",
+  "shape" : "",
+  "description" : "",
+  "initialValue" : {
+    "type" : "JSON_LITERAL",
+    "value" : null
+  }
 } ]</state_properties>
         <sys_class_name>sys_ux_macroponent</sys_class_name>
         <sys_created_by>jon.lind</sys_created_by>
         <sys_created_on>2023-01-24 17:54:32</sys_created_on>
         <sys_id>7ac282524760e910552caf52736d4315</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_mod_count>31</sys_mod_count>
         <sys_name>Home Stylized</sys_name>
         <sys_package display_value="Photobooth App" source="x_snc_pb_app">baa73cb74742dd10552caf52736d43f1</sys_package>
         <sys_policy/>
         <sys_scope display_value="Photobooth App">baa73cb74742dd10552caf52736d43f1</sys_scope>
         <sys_update_name>sys_ux_macroponent_7ac282524760e910552caf52736d4315</sys_update_name>
         <sys_updated_by>jon.lind</sys_updated_by>
-        <sys_updated_on>2023-01-24 17:55:03</sys_updated_on>
+        <sys_updated_on>2023-01-27 22:36:56</sys_updated_on>
     </sys_ux_macroponent>
     <sys_translated_text action="delete_multiple" query="documentkey=7ac282524760e910552caf52736d4315"/>
 </record_update>

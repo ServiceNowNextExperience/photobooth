@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_data_broker_rest">
+    <sys_ux_data_broker_rest action="DELETE">
+        <api_name>x_snc_pb_app.Post Snapshot</api_name>
+        <api_url>/api/x_snc_pb_core/photobooth/snapshot</api_url>
+        <description>Post a snapshot to the photobooth API for processing</description>
+        <http_method>POST</http_method>
+        <mutates_server_data>true</mutates_server_data>
+        <name>Post Snapshot</name>
+        <output_schema>[{&#13;
+"name": "status",&#13;
+"description": "Object containing status of snapshot post",&#13;
+"fieldType": "object",&#13;
+"readOnly": false&#13;
+}]</output_schema>
+        <parameters/>
+        <private>false</private>
+        <props>[&#13;
+  {&#13;
+    "name": "imageData",&#13;
+    "label": "Image Data (Base 64 String)",&#13;
+    "description": "Base 64 string that stores the image",&#13;
+    "readOnly": false,&#13;
+    "mandatory": true,&#13;
+    "defaultValue": ""&#13;
+  },&#13;
+{&#13;
+    "name": "requestId",&#13;
+    "label": "Request Sys ID",&#13;
+    "description": "Sys ID of the Photobooth Request that this snapshot is for",&#13;
+    "readOnly": false,&#13;
+    "mandatory": false,&#13;
+    "defaultValue": ""&#13;
+  }&#13;
+]</props>
+        <request_body>{&#13;
+    "imageData": "{{imageData}}",&#13;
+    "requestId": "{{requestId}}"&#13;
+}</request_body>
+        <required_translations>[ {
+  "message" : "Base 64 string that stores the image",
+  "comment" : ""
+}, {
+  "message" : "Image Data (Base 64 String)",
+  "comment" : ""
+}, {
+  "message" : "Request Sys ID",
+  "comment" : ""
+}, {
+  "message" : "Sys ID of the Photobooth Request that this snapshot is for",
+  "comment" : ""
+} ]</required_translations>
+        <schema_version>1.0.0</schema_version>
+        <sys_class_name>sys_ux_data_broker_rest</sys_class_name>
+        <sys_created_by>jon.lind</sys_created_by>
+        <sys_created_on>2022-10-12 20:05:09</sys_created_on>
+        <sys_id>883bf27c47a29d10552caf52736d436e</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>Post Snapshot</sys_name>
+        <sys_package display_value="Photobooth App" source="x_snc_pb_app">baa73cb74742dd10552caf52736d43f1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Photobooth App">baa73cb74742dd10552caf52736d43f1</sys_scope>
+        <sys_update_name>sys_ux_data_broker_rest_883bf27c47a29d10552caf52736d436e</sys_update_name>
+        <sys_updated_by>jon.lind</sys_updated_by>
+        <sys_updated_on>2022-10-12 21:02:32</sys_updated_on>
+    </sys_ux_data_broker_rest>
+    <sys_translated_text action="DELETE" query="documentkey=883bf27c47a29d10552caf52736d436e"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Photobooth App">baa73cb74742dd10552caf52736d43f1</application>
+        <file_path/>
+        <instance_id>634887c3db11915c8aea21c4059619b9</instance_id>
+        <instance_name>tennis</instance_name>
+        <name>sys_ux_data_broker_rest_883bf27c47a29d10552caf52736d436e</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_data_broker_rest"><sys_ux_data_broker_rest action="INSERT_OR_UPDATE"><api_name>x_snc_pb_app.Post Snapshot</api_name><api_url>/api/x_snc_pb_core/photobooth/snapshot</api_url><description>Post a snapshot to the photobooth API for processing</description><http_method>POST</http_method><mutates_server_data>true</mutates_server_data><name>Post Snapshot</name><output_schema>[{&#13;
+"name": "status",&#13;
+"description": "Object containing status of snapshot post",&#13;
+"fieldType": "object",&#13;
+"readOnly": false&#13;
+}]</output_schema><parameters/><private>false</private><props>[&#13;
+  {&#13;
+    "name": "imageData",&#13;
+    "label": "Image Data (Base 64 String)",&#13;
+    "description": "Base 64 string that stores the image",&#13;
+    "readOnly": false,&#13;
+    "mandatory": true,&#13;
+    "defaultValue": ""&#13;
+  },&#13;
+{&#13;
+    "name": "requestId",&#13;
+    "label": "Request Sys ID",&#13;
+    "description": "Sys ID of the Photobooth Request that this snapshot is for",&#13;
+    "readOnly": false,&#13;
+    "mandatory": false,&#13;
+    "defaultValue": ""&#13;
+  }&#13;
+]</props><request_body>{&#13;
+    "imageData": "{{imageData}}",&#13;
+    "requestId": "{{requestId}}"&#13;
+}</request_body><required_translations>[ {
+  "message" : "Base 64 string that stores the image",
+  "comment" : ""
+}, {
+  "message" : "Image Data (Base 64 String)",
+  "comment" : ""
+}, {
+  "message" : "Request Sys ID",
+  "comment" : ""
+}, {
+  "message" : "Sys ID of the Photobooth Request that this snapshot is for",
+  "comment" : ""
+} ]</required_translations><schema_version>1.0.0</schema_version><sys_class_name>sys_ux_data_broker_rest</sys_class_name><sys_created_by>jon.lind</sys_created_by><sys_created_on>2022-10-12 20:05:09</sys_created_on><sys_id>883bf27c47a29d10552caf52736d436e</sys_id><sys_mod_count>3</sys_mod_count><sys_name>Post Snapshot</sys_name><sys_package display_value="Photobooth App" source="x_snc_pb_app">baa73cb74742dd10552caf52736d43f1</sys_package><sys_policy/><sys_scope display_value="Photobooth App">baa73cb74742dd10552caf52736d43f1</sys_scope><sys_update_name>sys_ux_data_broker_rest_883bf27c47a29d10552caf52736d436e</sys_update_name><sys_updated_by>jon.lind</sys_updated_by><sys_updated_on>2022-10-12 21:02:32</sys_updated_on></sys_ux_data_broker_rest><sys_translated_text action="delete_multiple" query="documentkey=883bf27c47a29d10552caf52736d436e"/></record_update>]]></payload>
+        <payload_hash>-1188891000</payload_hash>
+        <record_name>Post Snapshot</record_name>
+        <reverted_from/>
+        <source>739b0ff847e29d10552caf52736d432e</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>jon.lind</sys_created_by>
+        <sys_created_on>2022-10-12 21:16:23</sys_created_on>
+        <sys_id>ddab4ff847e29d10552caf52736d4320</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>183ce0e3d0f0000001</sys_recorded_at>
+        <sys_updated_by>jon.lind</sys_updated_by>
+        <sys_updated_on>2022-10-12 21:16:23</sys_updated_on>
+        <type>REST Data Broker</type>
+        <update_guid>2a788ff495e29d10d0220342b89210c3</update_guid>
+        <update_guid_history>2a788ff495e29d10d0220342b89210c3:-1188891000,709b8bf8f6e29d10df768635ab5a6a7c:1161621372,2a788ff495e29d10d0220342b89210c3:-1188891000,45fe3a30d3e29d101211b8093abeed70:585929927,71dc3abc84a29d1063ae6bcc1c2feeea:-1864363232,4e5bf27c5fa29d105f4b785f8f35c275:-21181847</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>jon.lind</sys_created_by>
+        <sys_created_on>2023-01-27 22:30:52</sys_created_on>
+        <sys_db_object display_value="" name="sys_ux_data_broker_rest">sys_ux_data_broker_rest</sys_db_object>
+        <sys_id>98442f6918ec4c0b903d90deb2f91ac9</sys_id>
+        <sys_metadata>883bf27c47a29d10552caf52736d436e</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Post Snapshot</sys_name>
+        <sys_package display_value="Photobooth App" source="x_snc_pb_app">baa73cb74742dd10552caf52736d43f1</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Photobooth App">baa73cb74742dd10552caf52736d43f1</sys_scope>
+        <sys_scope_delete display_value="">868a264ca04c47ed906cd87c81ce8d11</sys_scope_delete>
+        <sys_update_name>sys_ux_data_broker_rest_883bf27c47a29d10552caf52736d436e</sys_update_name>
+        <sys_update_version display_value="sys_ux_data_broker_rest_883bf27c47a29d10552caf52736d436e">ddab4ff847e29d10552caf52736d4320</sys_update_version>
+        <sys_updated_by>jon.lind</sys_updated_by>
+        <sys_updated_on>2023-01-27 22:30:52</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

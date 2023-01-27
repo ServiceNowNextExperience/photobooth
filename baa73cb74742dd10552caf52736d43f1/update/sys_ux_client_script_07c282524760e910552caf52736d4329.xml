@@ -2,7 +2,7 @@
     <sys_ux_client_script action="INSERT_OR_UPDATE">
         <includes/>
         <macroponent display_value="Home Stylized">7ac282524760e910552caf52736d4315</macroponent>
-        <name>Testing Auto Create Request</name>
+        <name>Test Auto Create Request</name>
         <preset/>
         <required_translations>[ ]</required_translations>
         <script><![CDATA[/**
@@ -13,27 +13,26 @@
  * @param {ApiHelpers} params.helpers
  */
 function handler({
-    api,
+    api : {data, context :{props, session : {user}}},
     event,
     helpers,
     imports
 }) {
     //    const { context, data: {look_up_photobooths : {results : photobooths}, create_record }} = api.data;
-    const photobooths = api.data.look_up_photobooths.results;
-    console.log(event.name, api.context.props, photobooths, api.context.session.user);
+    const photobooths = data.look_up_photobooths.results;
 
-
-    if (photobooths.length && api.context.params.autoCreateReq) {
+    if (photobooths.length) {
         const photobooth = photobooths[0];
         const newRecord = {
-                table: "x_snc_pb_core_request",
+            table: "x_snc_pb_core_request",
+            templateFields: {
                 photobooth: photobooth._row_data.uniqueValue,
-                first_name: api.context.session.user.firstName,
-                email : api.context.session.user.userName + '@servicenow.com'
-            };
-
-console.log(newRecord);
-//        api.data.create_record.execute(newRecord);
+                first_name: user.firstName,
+                email: user.userName + '@servicenow.com'
+            }
+        }; 
+    console.log(event.name, {props, photobooths, user, newRecord});
+        //        api.data.create_record.execute(newRecord);
     }
 }]]></script>
         <script_api_version>2.0.0</script_api_version>
@@ -41,14 +40,14 @@ console.log(newRecord);
         <sys_created_by>jon.lind</sys_created_by>
         <sys_created_on>2023-01-24 17:54:34</sys_created_on>
         <sys_id>07c282524760e910552caf52736d4329</sys_id>
-        <sys_mod_count>1</sys_mod_count>
-        <sys_name>Testing Auto Create Request</sys_name>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>Test Auto Create Request</sys_name>
         <sys_package display_value="Photobooth App" source="x_snc_pb_app">baa73cb74742dd10552caf52736d43f1</sys_package>
         <sys_policy/>
         <sys_scope display_value="Photobooth App">baa73cb74742dd10552caf52736d43f1</sys_scope>
         <sys_update_name>sys_ux_client_script_07c282524760e910552caf52736d4329</sys_update_name>
         <sys_updated_by>jon.lind</sys_updated_by>
-        <sys_updated_on>2023-01-24 22:23:04</sys_updated_on>
+        <sys_updated_on>2023-01-27 21:16:47</sys_updated_on>
         <target>macroponent</target>
         <type>default</type>
     </sys_ux_client_script>

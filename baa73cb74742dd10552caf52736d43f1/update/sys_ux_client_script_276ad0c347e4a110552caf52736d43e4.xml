@@ -15,17 +15,15 @@
 function handler({api : { setState, state }, event, helpers : {timing : {setInterval, clearInterval}}, imports}) {
     console.log(event.name, event);
     const countdownMessages = [...state.countdownMessages];
-    setState("countingDown", true);
 
-    setState("currentCountdownMessage", countdownMessages.shift());
+    setState("currentMessage", countdownMessages.shift());
     const interval = setInterval(()=> {
         const currentCountdownMessage = countdownMessages.shift();
         if(!currentCountdownMessage) {
             clearInterval(interval);
-            setState("countingDown", false);
             setState("snapRequested", Date.now());
         } else {
-            setState("currentCountdownMessage", currentCountdownMessage);
+            setState("currentMessage", currentCountdownMessage);
         }
     }, 1000);
 }]]></script>
@@ -34,14 +32,14 @@ function handler({api : { setState, state }, event, helpers : {timing : {setInte
         <sys_created_by>jon.lind</sys_created_by>
         <sys_created_on>2023-01-26 18:14:01</sys_created_on>
         <sys_id>276ad0c347e4a110552caf52736d43e4</sys_id>
-        <sys_mod_count>9</sys_mod_count>
+        <sys_mod_count>11</sys_mod_count>
         <sys_name>Countdown</sys_name>
         <sys_package display_value="Photobooth App" source="x_snc_pb_app">baa73cb74742dd10552caf52736d43f1</sys_package>
         <sys_policy/>
         <sys_scope display_value="Photobooth App">baa73cb74742dd10552caf52736d43f1</sys_scope>
         <sys_update_name>sys_ux_client_script_276ad0c347e4a110552caf52736d43e4</sys_update_name>
         <sys_updated_by>jon.lind</sys_updated_by>
-        <sys_updated_on>2023-01-26 19:02:29</sys_updated_on>
+        <sys_updated_on>2023-01-27 22:21:06</sys_updated_on>
         <target>macroponent</target>
         <type>default</type>
     </sys_ux_client_script>
