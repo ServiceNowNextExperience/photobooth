@@ -155,18 +155,13 @@
               "event" : {
                 "apiName" : "sn_uxf.MACROPONENT_STATE_UPDATE_REQUESTED",
                 "payload" : {
-                  "type" : "MAP_CONTAINER",
-                  "container" : {
-                    "propName" : {
-                      "type" : "JSON_LITERAL",
-                      "value" : "snapResultImg"
-                    },
-                    "value" : {
-                      "type" : "EVENT_PAYLOAD_BINDING",
-                      "binding" : {
-                        "address" : [ "imageData" ]
-                      }
-                    }
+                  "type" : "CLIENT_TRANSFORM_SCRIPT",
+                  "script" : {
+                    "apiVersion" : "1.0.0",
+                    "controllerElementId" : null,
+                    "inlineScript" : "/**\n* @param {params} params\n* @param {api} params.api\n* @param {any} params.event\n*/\nfunction evaluateEvent({api, event}) {\n\treturn {\n\t\tpropName: \"snapResultImages\",\n\t\tvalue: [event.payload, ...api.state.snapResultImages]\n\t};\n}",
+                    "scriptSysId" : null,
+                    "target" : null
                   }
                 },
                 "sysId" : "32408b42ff7a10109046e490703bf176"
@@ -196,7 +191,7 @@
                   "type" : "JSON_LITERAL",
                   "value" : {
                     "propName" : "currentMessage",
-                    "value" : "Looking sharp!"
+                    "value" : "Looking sharp, IMO, but you can always try again."
                   }
                 },
                 "sysId" : "32408b42ff7a10109046e490703bf176"
@@ -506,43 +501,67 @@
       },
       "overrides" : {
         "composition" : [ {
-          "elementId" : "image_1",
-          "elementLabel" : "Snap Result Image",
-          "propertyValues" : {
-            "fit" : {
-              "type" : "JSON_LITERAL",
-              "value" : "fill"
-            },
-            "src" : {
-              "type" : "STATE_BINDING",
-              "binding" : {
-                "address" : [ "snapResultImg" ]
-              }
-            },
-            "alt" : {
-              "type" : "TRANSLATION_LITERAL",
-              "value" : {
-                "code" : null,
-                "message" : "",
-                "comment" : ""
-              }
-            },
-            "position" : {
-              "type" : "JSON_LITERAL",
-              "value" : "center center"
-            },
-            "height" : {
-              "type" : "JSON_LITERAL",
-              "value" : null
-            }
-          },
+          "elementId" : "repeater_1",
+          "elementLabel" : "Repeater 1",
+          "propertyValues" : { },
           "eventMappings" : [ ],
-          "slot" : "",
+          "slot" : null,
           "definition" : {
-            "id" : "15fe506403f8a98575b6df59008ea8f1",
-            "type" : "MACROPONENT"
+            "id" : "",
+            "type" : "REPEATER"
           },
-          "overrides" : null,
+          "overrides" : {
+            "composition" : [ {
+              "elementId" : "image_1",
+              "elementLabel" : "Snap Result Image",
+              "propertyValues" : {
+                "fit" : {
+                  "type" : "JSON_LITERAL",
+                  "value" : "fill"
+                },
+                "src" : {
+                  "type" : "REPEATER_ITEM_BINDING",
+                  "binding" : {
+                    "address" : [ "imageData" ],
+                    "category" : "value"
+                  }
+                },
+                "alt" : {
+                  "type" : "TRANSLATION_LITERAL",
+                  "value" : {
+                    "code" : null,
+                    "message" : "",
+                    "comment" : ""
+                  }
+                },
+                "position" : {
+                  "type" : "JSON_LITERAL",
+                  "value" : "center center"
+                },
+                "height" : {
+                  "type" : "JSON_LITERAL",
+                  "value" : null
+                }
+              },
+              "eventMappings" : [ ],
+              "slot" : null,
+              "definition" : {
+                "id" : "15fe506403f8a98575b6df59008ea8f1",
+                "type" : "MACROPONENT"
+              },
+              "overrides" : null,
+              "isHidden" : {
+                "type" : "JSON_LITERAL",
+                "value" : null
+              },
+              "isHero" : false,
+              "extensionPoints" : [ ],
+              "isNonDestructive" : false,
+              "items" : [ ],
+              "styles" : { }
+            } ],
+            "layout" : null
+          },
           "isHidden" : {
             "type" : "JSON_LITERAL",
             "value" : null
@@ -551,13 +570,19 @@
           "extensionPoints" : [ ],
           "isNonDestructive" : false,
           "items" : [ ],
+          "repeatWith" : {
+            "type" : "STATE_BINDING",
+            "binding" : {
+              "address" : [ "snapResultImages" ]
+            }
+          },
           "styles" : { }
         } ],
         "layout" : {
           "default" : {
             "children" : null,
             "isInline" : null,
-            "items" : [{"element_id":"image_1","styles":{"min-height":"150px"}}],
+            "items" : [{"element_id":"repeater_1","styles":{}}],
             "root" : null,
             "rules" : null,
             "styles" : {"flex-direction":"column"},
@@ -1030,15 +1055,15 @@
     "value" : null
   }
 }, {
-  "name" : "snapResultImg",
-  "label" : "snapResultImg",
-  "fieldType" : "string",
-  "valueType" : "string",
+  "name" : "snapResultImages",
+  "label" : "snapResultImages",
+  "fieldType" : "json",
+  "valueType" : "json",
   "shape" : "",
   "description" : "",
   "initialValue" : {
     "type" : "JSON_LITERAL",
-    "value" : null
+    "value" : [ ]
   }
 }, {
   "name" : "currentMessage",
@@ -1089,14 +1114,14 @@
         <sys_created_by>jon.lind</sys_created_by>
         <sys_created_on>2023-01-24 17:54:32</sys_created_on>
         <sys_id>7ac282524760e910552caf52736d4315</sys_id>
-        <sys_mod_count>31</sys_mod_count>
+        <sys_mod_count>38</sys_mod_count>
         <sys_name>Home Stylized</sys_name>
         <sys_package display_value="Photobooth App" source="x_snc_pb_app">baa73cb74742dd10552caf52736d43f1</sys_package>
         <sys_policy/>
         <sys_scope display_value="Photobooth App">baa73cb74742dd10552caf52736d43f1</sys_scope>
         <sys_update_name>sys_ux_macroponent_7ac282524760e910552caf52736d4315</sys_update_name>
         <sys_updated_by>jon.lind</sys_updated_by>
-        <sys_updated_on>2023-01-27 22:36:56</sys_updated_on>
+        <sys_updated_on>2023-01-27 22:54:38</sys_updated_on>
     </sys_ux_macroponent>
     <sys_translated_text action="delete_multiple" query="documentkey=7ac282524760e910552caf52736d4315"/>
 </record_update>
