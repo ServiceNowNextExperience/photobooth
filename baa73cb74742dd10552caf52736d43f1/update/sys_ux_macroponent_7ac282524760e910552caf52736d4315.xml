@@ -107,7 +107,7 @@
             },
             "fillStyle" : {
               "type" : "JSON_LITERAL",
-              "value" : "lightgreen"
+              "value" : "white"
             },
             "imageSize" : {
               "type" : "JSON_LITERAL",
@@ -136,6 +136,30 @@
             }
           },
           "eventMappings" : [ {
+            "eventMappingId" : "cldngtxofaaggwoddbhhsqbbiojbbigg",
+            "isConfiguration" : false,
+            "offRowStorageId" : null,
+            "sourceEventApiName" : "x_snc_pb_camera.PHOTOBOOTH_CAMERA#AVAILABLE_CAMERAS_UPDATED",
+            "sourceEventCorrelationId" : null,
+            "sourceEventDefinition" : {
+              "apiName" : "x_snc_pb_camera.PHOTOBOOTH_CAMERA#AVAILABLE_CAMERAS_UPDATED",
+              "id" : null,
+              "type" : "UXEVENT"
+            },
+            "sourceEventSysId" : null,
+            "targets" : [ {
+              "broker" : null,
+              "clientScript" : {
+                "sysId" : "cfc282524760e910552caf52736d432d"
+              },
+              "conditional" : null,
+              "declarativeAction" : null,
+              "event" : null,
+              "operation" : null,
+              "targetId" : "cldngtxofaaggwpddbhhsjhdxueeggaa",
+              "type" : "CLIENT_SCRIPT"
+            } ]
+          }, {
             "eventMappingId" : "cldccaggmsffaabbffnddbhhsggjjuggbbrqp",
             "isConfiguration" : false,
             "offRowStorageId" : null,
@@ -443,10 +467,10 @@
           "default" : {
             "children" : null,
             "isInline" : null,
-            "items" : [{"element_id":"photobooth_camera_1","styles":{"width":"","height":"","overflow":"hidden","background-clip":"border-box","border":"4px solid transparent","background":"#86ED78","border-color":"#86ED78","border-width":"5px","border-style":"solid","border-radius":"16px 16px 0 0"}},{"element_id":"container_1","styles":{}},{"element_id":"button_circular_1","styles":{"align-self":"center","position":"relative","top":"-126px","border-color":"#86ED78","border-width":"5px","border-style":"solid","border-radius":"1000px"}}],
+            "items" : [{"element_id":"photobooth_camera_1","styles":{"width":"","height":"","overflow":"hidden","background-clip":"border-box","border":"4px solid transparent","background":"#86ED78","border-color":"#86ED78","border-width":"5px","border-style":"solid","border-radius":"16px 16px 0 0","max-width":""}},{"element_id":"container_1","styles":{}},{"element_id":"button_circular_1","styles":{"align-self":"center","position":"relative","top":"-126px","border-color":"#86ED78","border-width":"5px","border-style":"solid","border-radius":"1000px"}}],
             "root" : null,
             "rules" : null,
-            "styles" : {"flex-direction":"column"},
+            "styles" : {"flex-direction":"column","flex-wrap":"nowrap"},
             "templateId" : "5832fd4d53c31010e6bcddeeff7b12db",
             "type" : "flex"
           },
@@ -462,7 +486,9 @@
       "isNonDestructive" : false,
       "items" : [ ],
       "styles" : {
-        "width" : ""
+        "width" : "75%",
+        "max-height" : "",
+        "height" : ""
       }
     }, {
       "elementId" : "results_wrapper",
@@ -558,7 +584,13 @@
               "extensionPoints" : [ ],
               "isNonDestructive" : false,
               "items" : [ ],
-              "styles" : { }
+              "styles" : {
+                "padding" : "var(--now-static-space--lg)",
+                "padding-bottom" : "var(--now-static-space--xs)",
+                "padding-top" : "0",
+                "padding-right" : "0",
+                "padding-left" : "0"
+              }
             } ],
             "layout" : null
           },
@@ -577,15 +609,52 @@
             }
           },
           "styles" : { }
+        }, {
+          "elementId" : "stylized_text_2",
+          "elementLabel" : "Powered By",
+          "propertyValues" : {
+            "css" : {
+              "type" : "JSON_LITERAL",
+              "value" : "* {\n    color: #032D42;\n    font-weight: bold;\n    padding: 0.5rem;\n    font-size: 1rem;\n    animation: pulsate 3s ease-out infinite;\n}\n\n@keyframes pulsate {\n    0% {\n        opacity: 0.5;\n    }\n\n    50% {\n        opacity: 1.0;\n    }\n\n    100% {\n        opacity: 0.5;\n    }\n}"
+            },
+            "text" : {
+              "type" : "TRANSLATION_LITERAL",
+              "value" : {
+                "code" : null,
+                "message" : "Powered by Next Experience",
+                "comment" : ""
+              }
+            },
+            "tag" : {
+              "type" : "JSON_LITERAL",
+              "value" : "div"
+            }
+          },
+          "eventMappings" : [ ],
+          "slot" : "",
+          "definition" : {
+            "id" : "4335ba6dca80378f7ba7a67cd6667bec",
+            "type" : "MACROPONENT"
+          },
+          "overrides" : null,
+          "isHidden" : {
+            "type" : "JSON_LITERAL",
+            "value" : null
+          },
+          "isHero" : false,
+          "extensionPoints" : [ ],
+          "isNonDestructive" : false,
+          "items" : [ ],
+          "styles" : { }
         } ],
         "layout" : {
           "default" : {
             "children" : null,
             "isInline" : null,
-            "items" : [{"element_id":"repeater_1","styles":{}}],
+            "items" : [{"element_id":"stylized_text_2","styles":{"align-self":"center"}},{"element_id":"repeater_1","styles":{}}],
             "root" : null,
             "rules" : null,
-            "styles" : {"flex-direction":"column"},
+            "styles" : {"flex-direction":"column","gap":""},
             "templateId" : "5832fd4d53c31010e6bcddeeff7b12db",
             "type" : "flex"
           },
@@ -601,7 +670,7 @@
       "isNonDestructive" : false,
       "items" : [ ],
       "styles" : {
-        "width" : "100%",
+        "width" : "25%",
         "background" : "#86ED78",
         "border-color" : "RGB(var(--now-color--neutral-5))",
         "border-width" : "var(--now-static-space--xxs)",
@@ -616,9 +685,9 @@
         "items" : [{"element_id":"cam_wrapper","styles":{}},{"element_id":"results_wrapper","styles":{}}],
         "root" : null,
         "rules" : null,
-        "styles" : {"box-sizing":"border-box","flex-direction":"column","display":"grid","grid-template-columns":"2fr 1fr","grid-template-rows":"minmax(auto, calc(100vh - 100px))","grid-auto-rows":"1fr","grid-auto-columns":"1fr","justify-items":"stretch","align-items":"stretch","gap":"16px"},
+        "styles" : {"box-sizing":"border-box","flex-direction":"row","display":"flex","grid-template-columns":"2fr 1fr","grid-template-rows":"minmax(auto, calc(100vh - 100px))","grid-auto-rows":"1fr","grid-auto-columns":"1fr","justify-items":"stretch","align-items":"stretch","gap":"16px","grid-auto-flow":"column","justify-content":"space-around"},
         "templateId" : "5832fd4d53c31010e6bcddeeff7b12db",
-        "type" : "grid"
+        "type" : "flex"
       },
       "version" : "3.0.0"
     }
@@ -634,7 +703,8 @@
   "styles" : {
     "box-sizing" : "border-box",
     "width" : "auto",
-    "height" : "auto"
+    "height" : "auto",
+    "max-height" : ""
   }
 } ]</composition>
         <da_relay_models/>
@@ -1001,9 +1071,9 @@
     "items" : [{"element_id":"main_grid","styles":{}}],
     "root" : null,
     "rules" : null,
-    "styles" : {"flex-direction":"column","background":"#032D42","display":"grid","grid-template-columns":"1fr","grid-template-rows":"1fr","height":"100%","width":"100%","padding":"24px","box-sizing":"border-box"},
+    "styles" : {"flex-direction":"column","background":"#032D42","display":"flex","grid-template-columns":"1fr","grid-template-rows":"1fr","height":"100%","width":"100%","padding":"24px","box-sizing":"border-box"},
     "templateId" : "5832fd4d53c31010e6bcddeeff7b12db",
-    "type" : "grid"
+    "type" : "flex"
   },
   "version" : "3.0.0"
 }</layout>
@@ -1036,6 +1106,9 @@
   "disabled" : false
 } ]</props>
         <required_translations>[ {
+  "message" : "Powered by Next Experience",
+  "comment" : ""
+}, {
   "message" : "Take a snapshot",
   "comment" : ""
 } ]</required_translations>
@@ -1114,14 +1187,14 @@
         <sys_created_by>jon.lind</sys_created_by>
         <sys_created_on>2023-01-24 17:54:32</sys_created_on>
         <sys_id>7ac282524760e910552caf52736d4315</sys_id>
-        <sys_mod_count>38</sys_mod_count>
+        <sys_mod_count>71</sys_mod_count>
         <sys_name>Home Stylized</sys_name>
         <sys_package display_value="Photobooth App" source="x_snc_pb_app">baa73cb74742dd10552caf52736d43f1</sys_package>
         <sys_policy/>
         <sys_scope display_value="Photobooth App">baa73cb74742dd10552caf52736d43f1</sys_scope>
         <sys_update_name>sys_ux_macroponent_7ac282524760e910552caf52736d4315</sys_update_name>
         <sys_updated_by>jon.lind</sys_updated_by>
-        <sys_updated_on>2023-01-27 22:54:38</sys_updated_on>
+        <sys_updated_on>2023-02-02 19:36:47</sys_updated_on>
     </sys_ux_macroponent>
     <sys_translated_text action="delete_multiple" query="documentkey=7ac282524760e910552caf52736d4315"/>
 </record_update>

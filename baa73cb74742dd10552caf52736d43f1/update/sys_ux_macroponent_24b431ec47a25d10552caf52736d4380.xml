@@ -47,11 +47,9 @@
           "type" : "JSON_LITERAL",
           "value" : "x_snc_pb_camera.servicenow_flat.png"
         },
-        "cameraDeviceId" : {
-          "type" : "STATE_BINDING",
-          "binding" : {
-            "address" : [ "selectedCameraIds", "0" ]
-          }
+        "chin" : {
+          "type" : "JSON_LITERAL",
+          "value" : 50
         },
         "watermarkImagePosition" : {
           "type" : "JSON_LITERAL",
@@ -60,13 +58,6 @@
         "countdownDurationSeconds" : {
           "type" : "JSON_LITERAL",
           "value" : "5"
-        },
-        "imageSize" : {
-          "type" : "JSON_LITERAL",
-          "value" : {
-            "width" : 800,
-            "height" : 600
-          }
         },
         "snapRequested" : {
           "type" : "STATE_BINDING",
@@ -84,13 +75,34 @@
           "type" : "JSON_LITERAL",
           "value" : 0.4
         },
-        "pauseBetweenSnapsSeconds" : {
-          "type" : "JSON_LITERAL",
-          "value" : 0
-        },
         "countdownAnimationCss" : {
           "type" : "JSON_LITERAL",
           "value" : "*,:after,:before{box-sizing:inherit}.countdown #container{animation:background_color 5s cubic-bezier(.9,0,.1,1) .875s forwards}.countdown #counter{font-family:sans-serif;width:50vmin;height:50vmin;box-shadow:0 0 0 1.25vmin,inset 2.5vmin 2.5vmin 5vmin rgba(0,0,0,.125),2.5vmin 2.5vmin 5vmin rgba(0,0,0,.125);font-size:25vmin;text-shadow:2.5vmin 2.5vmin 5vmin rgba(0,0,0,.125);top:50%;left:50%;transform:translate(-50%,-50%);display:flex;align-items:center;justify-content:center;overflow:hidden;color:#fff;opacity:1%;border-radius:50%;font-weight:700;animation:hide_on_complete 5s 1s forwards}@media (min-width:600px){.countdown #counter{width:50vmin;height:50vmin;box-shadow:0 0 0 1.25vmin,inset 2.5vmin 2.5vmin 5vmin rgba(0,0,0,.125),2.5vmin 2.5vmin 5vmin rgba(0,0,0,.125);font-size:25vmin;text-shadow:2.5vmin 2.5vmin 5vmin rgba(0,0,0,.125)}}.countdown #counter:before{content:\"5\";animation:timer_beat 1s .875s 5,timer_countdown 5s 1s}@keyframes timer_beat{50%{transform:scale(1.125)}80%{transform:none}}@keyframes timer_countdown{0%{content:\"5\"}20%{content:\"4\"}40%{content:\"3\"}60%{content:\"2\"}80%{content:\"1\"}to{content:\"0\"}}@keyframes hide_on_complete{0%{opacity:1}90%{opacity:1}to{opacity:0}}.countdown #counter:after{content:\"\";position:absolute;top:0;left:0;z-index:-100;width:100%;height:100%;background-color:rgba(0,0,0,.125);animation:timer_indicator 5s linear 1s forwards}@keyframes timer_indicator{to{transform:translateY(100%)}}"
+        },
+        "pauseDurationSeconds" : {
+          "type" : "JSON_LITERAL",
+          "value" : 1
+        },
+        "cameraDeviceId" : {
+          "type" : "STATE_BINDING",
+          "binding" : {
+            "address" : [ "selectedCameraIds", "0" ]
+          }
+        },
+        "gap" : {
+          "type" : "JSON_LITERAL",
+          "value" : 10
+        },
+        "fillStyle" : {
+          "type" : "JSON_LITERAL",
+          "value" : "lightgreen"
+        },
+        "imageSize" : {
+          "type" : "JSON_LITERAL",
+          "value" : {
+            "width" : 800,
+            "height" : 600
+          }
         }
       },
       "eventMappings" : [ {
@@ -165,9 +177,9 @@
         "items" : [{"element_id":"photobooth_camera_1","styles":{}}],
         "root" : null,
         "rules" : null,
-        "styles" : {"flex-direction":"column","margin":""},
+        "styles" : {"flex-direction":"column","margin":"","display":"grid","grid-template-columns":"1fr 1fr","grid-template-rows":"1fr","grid-auto-rows":"1fr","grid-auto-columns":"1fr"},
         "templateId" : "5832fd4d53c31010e6bcddeeff7b12db",
-        "type" : "flex"
+        "type" : "grid"
       },
       "version" : "3.0.0"
     }
@@ -177,8 +189,8 @@
     "script" : {
       "apiVersion" : "2.0.0",
       "controllerElementId" : null,
-      "inlineScript" : "function script({api, event}) {  }",
-      "scriptSysId" : "2f4b68b487df111089790fe5dabb35ba",
+      "inlineScript" : null,
+      "scriptSysId" : "2f2bfb4b8738ad1089790fe5dabb35a9",
       "target" : null
     }
   },
@@ -1153,8 +1165,8 @@
           "script" : {
             "apiVersion" : "2.0.0",
             "controllerElementId" : null,
-            "inlineScript" : "/**\n  * @param {params} params\n  * @param {api} params.api\n  * @param {TransformApiHelpers} params.helpers\n  */\nfunction evaluateProperty({api : {state}, helpers}) {\n\treturn !state.requestId || !state.cameraEnabled;\n}",
-            "scriptSysId" : "433cf8f08713511089790fe5dabb35e8",
+            "inlineScript" : null,
+            "scriptSysId" : "b72bfb4b8738ad1089790fe5dabb35c3",
             "target" : null
           }
         },
@@ -1700,8 +1712,8 @@
         "script" : {
           "apiVersion" : "2.0.0",
           "controllerElementId" : null,
-          "inlineScript" : "/**\n  * @param {params} params\n  * @param {api} params.api\n  * @param {TransformApiHelpers} params.helpers\n  */\nfunction evaluateProperty({api, helpers}) {\n  const [selectedCameraId] = api.state.selectedCameraIds;\n  const savedCameraId = api.state.photoboothSettings.cameraDeviceId;\n\treturn !(selectedCameraId &amp;&amp; (savedCameraId != selectedCameraId));\n}",
-          "scriptSysId" : "b90f3d3d87f3555089790fe5dabb358c",
+          "inlineScript" : null,
+          "scriptSysId" : "483bfb4b8738ad1089790fe5dabb35de",
           "target" : null
         }
       },
@@ -1829,8 +1841,8 @@
     "script" : {
       "apiVersion" : "2.0.0",
       "controllerElementId" : null,
-      "inlineScript" : "/**\n  * @param {params} params\n  * @param {api} params.api\n  * @param {TransformApiHelpers} params.helpers\n  */\nfunction evaluateProperty({api : {state}, helpers}) {\n\treturn state.requestId;\n}",
-      "scriptSysId" : "c60cc0dd47f39550552caf52736d43ef",
+      "inlineScript" : null,
+      "scriptSysId" : "843bfb4b8738ad1089790fe5dabb35ee",
       "target" : null
     }
   },
@@ -2435,11 +2447,14 @@
         <sys_created_by>jon.lind</sys_created_by>
         <sys_created_on>2022-10-11 20:18:01</sys_created_on>
         <sys_id>24b431ec47a25d10552caf52736d4380</sys_id>
+        <sys_mod_count>2</sys_mod_count>
         <sys_name>Home default Copy</sys_name>
         <sys_package display_value="Photobooth App" source="x_snc_pb_app">baa73cb74742dd10552caf52736d43f1</sys_package>
         <sys_policy/>
         <sys_scope display_value="Photobooth App">baa73cb74742dd10552caf52736d43f1</sys_scope>
         <sys_update_name>sys_ux_macroponent_24b431ec47a25d10552caf52736d4380</sys_update_name>
+        <sys_updated_by>jon.lind</sys_updated_by>
+        <sys_updated_on>2023-02-08 20:54:28</sys_updated_on>
     </sys_ux_macroponent>
     <sys_translated_text action="delete_multiple" query="documentkey=24b431ec47a25d10552caf52736d4380"/>
 </record_update>

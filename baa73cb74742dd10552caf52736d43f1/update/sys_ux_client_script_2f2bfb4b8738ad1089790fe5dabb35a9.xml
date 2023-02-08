@@ -2,33 +2,24 @@
     <sys_ux_client_script action="INSERT_OR_UPDATE">
         <includes/>
         <macroponent display_value="Home default Copy">24b431ec47a25d10552caf52736d4380</macroponent>
-        <name>Debug Events</name>
+        <name>container_1/NODE__isHidden</name>
         <preset/>
-        <required_translations>[ ]</required_translations>
-        <script><![CDATA[/**
-* @param {params} params
-* @param {api} params.api
-* @param {any} params.event
-* @param {any} params.imports
-* @param {ApiHelpers} params.helpers
-*/
-function handler({ api, event, helpers, imports }) {
-    console.log(event.name, event, api.state);
-}]]></script>
+        <required_translations/>
+        <script><![CDATA[function script({api, event}) {  }]]></script>
         <script_api_version>2.0.0</script_api_version>
         <sys_class_name>sys_ux_client_script</sys_class_name>
         <sys_created_by>jon.lind</sys_created_by>
-        <sys_created_on>2022-10-17 17:08:32</sys_created_on>
-        <sys_id>63d2042e47229110552caf52736d4327</sys_id>
+        <sys_created_on>2023-02-08 20:51:40</sys_created_on>
+        <sys_id>2f2bfb4b8738ad1089790fe5dabb35a9</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name>Debug Events</sys_name>
+        <sys_name>container_1/NODE__isHidden</sys_name>
         <sys_package display_value="Photobooth App" source="x_snc_pb_app">baa73cb74742dd10552caf52736d43f1</sys_package>
         <sys_policy/>
         <sys_scope display_value="Photobooth App">baa73cb74742dd10552caf52736d43f1</sys_scope>
-        <sys_update_name>sys_ux_client_script_63d2042e47229110552caf52736d4327</sys_update_name>
+        <sys_update_name>sys_ux_client_script_2f2bfb4b8738ad1089790fe5dabb35a9</sys_update_name>
         <sys_updated_by>jon.lind</sys_updated_by>
-        <sys_updated_on>2022-12-16 21:27:38</sys_updated_on>
+        <sys_updated_on>2023-02-08 20:51:40</sys_updated_on>
         <target>macroponent</target>
-        <type>default</type>
+        <type>transform</type>
     </sys_ux_client_script>
 </record_update>
