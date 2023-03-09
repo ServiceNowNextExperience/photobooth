@@ -12,11 +12,14 @@
         <sys_created_by>jon.lind</sys_created_by>
         <sys_created_on>2022-09-26 21:43:30</sys_created_on>
         <sys_id>a668bcf74742dd10552caf52736d4330</sys_id>
-        <sys_name>Photobooth</sys_name>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>Photobooth App</sys_name>
         <sys_package display_value="Photobooth App" source="x_snc_pb_app">baa73cb74742dd10552caf52736d43f1</sys_package>
         <sys_policy/>
         <sys_scope display_value="Photobooth App">baa73cb74742dd10552caf52736d43f1</sys_scope>
         <sys_update_name>sys_ux_page_registry_a668bcf74742dd10552caf52736d4330</sys_update_name>
-        <title>Photobooth</title>
+        <sys_updated_by>jon.lind</sys_updated_by>
+        <sys_updated_on>2023-03-02 23:35:06</sys_updated_on>
+        <title>Photobooth App</title>
     </sys_ux_page_registry>
 </record_update>
