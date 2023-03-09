@@ -624,66 +624,12 @@
               "isNonDestructive" : false,
               "items" : [ ],
               "styles" : { }
-            }, {
-              "elementId" : "button_circular_2",
-              "elementLabel" : "Share Snapshot Button",
-              "propertyValues" : {
-                "icon" : {
-                  "type" : "JSON_LITERAL",
-                  "value" : "send-fill"
-                },
-                "disabled" : {
-                  "type" : "JSON_LITERAL",
-                  "value" : false
-                },
-                "tooltipContent" : {
-                  "type" : "TRANSLATION_LITERAL",
-                  "value" : {
-                    "code" : null,
-                    "message" : "Open chat window",
-                    "comment" : ""
-                  }
-                },
-                "configAria" : {
-                  "type" : "MAP_CONTAINER",
-                  "container" : {
-                    "aria-label" : {
-                      "type" : "TRANSLATION_LITERAL",
-                      "value" : {
-                        "code" : null,
-                        "message" : "Chat",
-                        "comment" : ""
-                      }
-                    }
-                  }
-                },
-                "hasShadow" : {
-                  "type" : "JSON_LITERAL",
-                  "value" : false
-                }
-              },
-              "eventMappings" : [ ],
-              "slot" : null,
-              "definition" : {
-                "id" : "35a44d929eb09776cebd167707481125",
-                "type" : "MACROPONENT"
-              },
-              "overrides" : null,
-              "isHidden" : {
-                "type" : "JSON_LITERAL",
-                "value" : true
-              },
-              "isHero" : false,
-              "extensionPoints" : [ ],
-              "isNonDestructive" : false,
-              "items" : [ ],
-              "styles" : { }
             } ],
             "layout" : {
               "default" : {
                 "children" : null,
                 "isInline" : null,
-                "items" : [{"element_id":"image_1","styles":{"padding":"var(--now-static-space--lg)","padding-bottom":"var(--now-static-space--xs)","padding-top":"0","padding-right":"0","padding-left":"0"}},{"element_id":"button_circular_2","styles":{"align-self":"left","position":"relative","top":"-126px","border-color":"white","border-width":"5px","border-style":"solid","border-radius":"1000px"}}],
+                "items" : [{"element_id":"image_1","styles":{"padding":"var(--now-static-space--lg)","padding-bottom":"var(--now-static-space--xs)","padding-top":"0","padding-right":"0","padding-left":"0"}}],
                 "root" : null,
                 "rules" : null,
                 "styles" : {"flex-direction":"column","align-items":"center"},
@@ -1344,12 +1290,6 @@
   "disabled" : false
 } ]</props>
         <required_translations>[ {
-  "message" : "Chat",
-  "comment" : ""
-}, {
-  "message" : "Open chat window",
-  "comment" : ""
-}, {
   "message" : "Powered by Next Experience",
   "comment" : ""
 }, {
@@ -1431,14 +1371,14 @@
         <sys_created_by>jon.lind</sys_created_by>
         <sys_created_on>2023-03-09 17:44:48</sys_created_on>
         <sys_id>c58628648721ad1089790fe5dabb3528</sys_id>
-        <sys_mod_count>9</sys_mod_count>
+        <sys_mod_count>10</sys_mod_count>
         <sys_name>Home Stylized Copy Copy</sys_name>
         <sys_package display_value="Photobooth App" source="x_snc_pb_app">baa73cb74742dd10552caf52736d43f1</sys_package>
         <sys_policy/>
         <sys_scope display_value="Photobooth App">baa73cb74742dd10552caf52736d43f1</sys_scope>
         <sys_update_name>sys_ux_macroponent_c58628648721ad1089790fe5dabb3528</sys_update_name>
         <sys_updated_by>jon.lind</sys_updated_by>
-        <sys_updated_on>2023-03-09 20:48:18</sys_updated_on>
+        <sys_updated_on>2023-03-09 23:07:36</sys_updated_on>
     </sys_ux_macroponent>
     <sys_translated_text action="delete_multiple" query="documentkey=c58628648721ad1089790fe5dabb3528"/>
 </record_update>
