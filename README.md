@@ -26,6 +26,8 @@ https://github.com/ServiceNowNextExperience/photobooth/
 Install the app from the repo you are in right now. 
 
 ## Try It
+The main Photbooth App Home will be found at the path /now/photobooth/home/MyPB after installation.  "MyPB" refers to a record in the *Photobooth Instances* table.  If you don't have a record with a matching name then create one, again, matching the name in the path of the URL.
+
 Once you have installed all three apps you can go test it.  Navigate to UI Builder and open the "Photobooth" app.  Click the "Open" icon in the URL bar at the top of the canvas.  You should see the Photobooth page with a blank image.  Click "Create Request" and enter a valid email address to enable the session, then use the slider to turn the camera on and take your first snap.
 
 ## Design Overview
