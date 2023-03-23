@@ -3,7 +3,79 @@
         <active>true</active>
         <app_config display_value="Photobooth">aa68bcf74742dd10552caf52736d432d</app_config>
         <description/>
-        <event_mappings>[ ]</event_mappings>
+        <event_mappings>[ {
+  "eventMappingId" : "clfldooevaaaacbbddbhhvffeaaieeuygg",
+  "isConfiguration" : false,
+  "offRowStorageId" : null,
+  "sourceEventApiName" : "x_snc_pb_app.MODAL_SELECTED_RELAY_c58628648721ad1089790fe5dabb3528",
+  "sourceEventCorrelationId" : null,
+  "sourceEventDefinition" : {
+    "apiName" : "x_snc_pb_app.MODAL_SELECTED_RELAY_c58628648721ad1089790fe5dabb3528",
+    "id" : null,
+    "type" : "UXEVENT"
+  },
+  "sourceEventSysId" : null,
+  "targets" : [ {
+    "broker" : null,
+    "clientScript" : null,
+    "conditional" : null,
+    "declarativeAction" : null,
+    "event" : {
+      "apiName" : "sn_canvas_core.MODAL_SELECTED",
+      "payload" : {
+        "type" : "MAP_CONTAINER",
+        "container" : {
+          "modalId" : {
+            "type" : "EVENT_PAYLOAD_BINDING",
+            "binding" : {
+              "address" : [ "modalId" ]
+            }
+          },
+          "showModal" : {
+            "type" : "EVENT_PAYLOAD_BINDING",
+            "binding" : {
+              "address" : [ "showModal" ]
+            }
+          },
+          "displayOptions" : {
+            "type" : "EVENT_PAYLOAD_BINDING",
+            "binding" : {
+              "address" : [ "displayOptions" ]
+            }
+          },
+          "bare" : {
+            "type" : "EVENT_PAYLOAD_BINDING",
+            "binding" : {
+              "address" : [ "bare" ]
+            }
+          },
+          "viewportElementId" : {
+            "type" : "EVENT_PAYLOAD_BINDING",
+            "binding" : {
+              "address" : [ "viewportElementId" ]
+            }
+          },
+          "viewportRoute" : {
+            "type" : "EVENT_PAYLOAD_BINDING",
+            "binding" : {
+              "address" : [ "viewportRoute" ]
+            }
+          },
+          "viewportFields" : {
+            "type" : "EVENT_PAYLOAD_BINDING",
+            "binding" : {
+              "address" : [ "viewportFields" ]
+            }
+          }
+        }
+      },
+      "sysId" : "882eed4091382d3a41f1bb3f382ae089"
+    },
+    "operation" : null,
+    "targetId" : "clfldooeuaaaacaaddbhhvflutnfyy",
+    "type" : "EVENT"
+  } ]
+} ]</event_mappings>
         <macroponent display_value="Home Stylized Copy Copy">c58628648721ad1089790fe5dabb3528</macroponent>
         <macroponent_config>{
   "photoboothNameOrNumberOrSysId" : {
@@ -60,7 +132,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>518628648721ad1089790fe5dabb354c</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>2</sys_mod_count>
         <sys_name>Home Stylized Copy Copy</sys_name>
         <sys_overrides/>
         <sys_package display_value="Photobooth App" source="x_snc_pb_app">baa73cb74742dd10552caf52736d43f1</sys_package>
@@ -68,7 +140,7 @@
         <sys_scope display_value="Photobooth App">baa73cb74742dd10552caf52736d43f1</sys_scope>
         <sys_update_name>sys_ux_screen_518628648721ad1089790fe5dabb354c</sys_update_name>
         <sys_updated_by>jon.lind</sys_updated_by>
-        <sys_updated_on>2023-03-09 17:45:20</sys_updated_on>
+        <sys_updated_on>2023-03-23 17:19:18</sys_updated_on>
     </sys_ux_screen>
     <sys_translated_text action="delete_multiple" query="documentkey=518628648721ad1089790fe5dabb354c"/>
 </record_update>

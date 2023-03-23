@@ -88,9 +88,9 @@
               "value" : 1
             },
             "cameraDeviceId" : {
-              "type" : "DATA_OUTPUT_BINDING",
+              "type" : "STATE_BINDING",
               "binding" : {
-                "address" : [ "look_up_photobooths", "results", "0", "camera_device_id", "value" ]
+                "address" : [ "selectedCameraDeviceId" ]
               }
             },
             "chin" : {
@@ -136,6 +136,43 @@
             }
           },
           "eventMappings" : [ {
+            "eventMappingId" : "clfldoeeesaaaabpddbhhvqnpgcjce",
+            "isConfiguration" : false,
+            "offRowStorageId" : null,
+            "sourceEventApiName" : "x_snc_pb_camera.PHOTOBOOTH_CAMERA#DBLCLICK",
+            "sourceEventCorrelationId" : null,
+            "sourceEventDefinition" : {
+              "apiName" : "x_snc_pb_camera.PHOTOBOOTH_CAMERA#DBLCLICK",
+              "id" : null,
+              "type" : "UXEVENT"
+            },
+            "sourceEventSysId" : null,
+            "targets" : [ {
+              "broker" : null,
+              "clientScript" : null,
+              "conditional" : null,
+              "declarativeAction" : null,
+              "event" : {
+                "apiName" : "x_snc_pb_app.MODAL_SELECTED_RELAY_c58628648721ad1089790fe5dabb3528",
+                "payload" : {
+                  "type" : "JSON_LITERAL",
+                  "value" : {
+                    "modalId" : "[component-id$='settings_modal']",
+                    "showModal" : true,
+                    "displayOptions" : null,
+                    "bare" : true,
+                    "viewportElementId" : null,
+                    "viewportRoute" : null,
+                    "viewportFields" : null
+                  }
+                },
+                "sysId" : "e7e6e0c54775a510552caf52736d437e"
+              },
+              "operation" : null,
+              "targetId" : "clfldoeeesaaaabqddbhhvdvoaazbbffq",
+              "type" : "EVENT"
+            } ]
+          }, {
             "eventMappingId" : "clfbbegqkzaaddejjddbhhvkaauiitcczdd",
             "isConfiguration" : false,
             "offRowStorageId" : null,
@@ -193,6 +230,28 @@
               "operation" : null,
               "targetId" : "cldngtxofaaggwpddbhhsjhdxueeggaa",
               "type" : "CLIENT_SCRIPT"
+            }, {
+              "broker" : null,
+              "clientScript" : null,
+              "conditional" : null,
+              "declarativeAction" : null,
+              "event" : {
+                "apiName" : "sn_uxf.MACROPONENT_STATE_UPDATE_REQUESTED",
+                "payload" : {
+                  "type" : "CLIENT_TRANSFORM_SCRIPT",
+                  "script" : {
+                    "apiVersion" : "1.0.0",
+                    "controllerElementId" : null,
+                    "inlineScript" : "/**\n* @param {params} params\n* @param {api} params.api\n* @param {any} params.event\n*/\nfunction evaluateEvent({api, event}) {\n\treturn {\n\t\tpropName: \"availableCameras\",\n\t\tvalue: event.payload\n\t};\n}",
+                    "scriptSysId" : null,
+                    "target" : null
+                  }
+                },
+                "sysId" : "32408b42ff7a10109046e490703bf176"
+              },
+              "operation" : null,
+              "targetId" : "clfldbdddyaaaaeecddbhhvsuyzbaaaac",
+              "type" : "EVENT"
             } ]
           }, {
             "eventMappingId" : "cldccaggmsffaabbffnddbhhsggjjuggbbrqp",
@@ -751,6 +810,591 @@
     "height" : "auto",
     "max-height" : "90vh"
   }
+}, {
+  "elementId" : "settings_modal",
+  "elementLabel" : "Settings Modal",
+  "propertyValues" : {
+    "defer" : {
+      "type" : "JSON_LITERAL",
+      "value" : true
+    },
+    "size" : {
+      "type" : "JSON_LITERAL",
+      "value" : "md"
+    },
+    "disableDismiss" : {
+      "type" : "JSON_LITERAL",
+      "value" : false
+    },
+    "bare" : {
+      "type" : "JSON_LITERAL",
+      "value" : false
+    }
+  },
+  "eventMappings" : [ ],
+  "slot" : null,
+  "definition" : {
+    "id" : "9c2e3b0978b3250ef3081204f151026a",
+    "type" : "MACROPONENT"
+  },
+  "overrides" : {
+    "composition" : [ {
+      "elementId" : "header_1",
+      "elementLabel" : "Header 1",
+      "propertyValues" : {
+        "ariaRegionHeadingLevel" : {
+          "type" : "JSON_LITERAL",
+          "value" : "1"
+        },
+        "ariaRegionName" : {
+          "type" : "TRANSLATION_LITERAL",
+          "value" : {
+            "code" : null,
+            "message" : "",
+            "comment" : ""
+          }
+        },
+        "includeAriaHeading" : {
+          "type" : "JSON_LITERAL",
+          "value" : false
+        },
+        "type" : {
+          "type" : "JSON_LITERAL",
+          "value" : "section"
+        },
+        "ariaRole" : {
+          "type" : "JSON_LITERAL",
+          "value" : ""
+        }
+      },
+      "eventMappings" : [ ],
+      "slot" : null,
+      "definition" : {
+        "id" : "d356d14b6e293a3020a244b63d278d8f",
+        "type" : "MACROPONENT"
+      },
+      "overrides" : {
+        "composition" : [ {
+          "elementId" : "stylized_text_3",
+          "elementLabel" : "Stylized text 3",
+          "propertyValues" : {
+            "css" : {
+              "type" : "JSON_LITERAL",
+              "value" : "* { }"
+            },
+            "text" : {
+              "type" : "TRANSLATION_LITERAL",
+              "value" : {
+                "code" : null,
+                "message" : "Photobooth Settings",
+                "comment" : ""
+              }
+            },
+            "tag" : {
+              "type" : "JSON_LITERAL",
+              "value" : "h2"
+            }
+          },
+          "eventMappings" : [ ],
+          "slot" : null,
+          "definition" : {
+            "id" : "4335ba6dca80378f7ba7a67cd6667bec",
+            "type" : "MACROPONENT"
+          },
+          "overrides" : null,
+          "isHidden" : {
+            "type" : "JSON_LITERAL",
+            "value" : null
+          },
+          "isHero" : false,
+          "extensionPoints" : [ ],
+          "isNonDestructive" : false,
+          "items" : [ ],
+          "styles" : { }
+        } ],
+        "layout" : {
+          "default" : {
+            "children" : null,
+            "isInline" : null,
+            "items" : [{"element_id":"stylized_text_3","styles":{}}],
+            "root" : null,
+            "rules" : null,
+            "styles" : {"flex-direction":"column"},
+            "templateId" : "5832fd4d53c31010e6bcddeeff7b12db",
+            "type" : "flex"
+          },
+          "version" : "3.0.0"
+        }
+      },
+      "isHidden" : {
+        "type" : "JSON_LITERAL",
+        "value" : null
+      },
+      "isHero" : false,
+      "extensionPoints" : [ ],
+      "isNonDestructive" : false,
+      "items" : [ ],
+      "styles" : {
+        "width" : "100%"
+      }
+    }, {
+      "elementId" : "body_1",
+      "elementLabel" : "Body 1",
+      "propertyValues" : {
+        "ariaRegionHeadingLevel" : {
+          "type" : "JSON_LITERAL",
+          "value" : "1"
+        },
+        "ariaRegionName" : {
+          "type" : "TRANSLATION_LITERAL",
+          "value" : {
+            "code" : null,
+            "message" : "",
+            "comment" : ""
+          }
+        },
+        "includeAriaHeading" : {
+          "type" : "JSON_LITERAL",
+          "value" : false
+        },
+        "type" : {
+          "type" : "JSON_LITERAL",
+          "value" : "section"
+        },
+        "ariaRole" : {
+          "type" : "JSON_LITERAL",
+          "value" : ""
+        }
+      },
+      "eventMappings" : [ ],
+      "slot" : null,
+      "definition" : {
+        "id" : "d356d14b6e293a3020a244b63d278d8f",
+        "type" : "MACROPONENT"
+      },
+      "overrides" : {
+        "composition" : [ {
+          "elementId" : "container_2",
+          "elementLabel" : "Cameras Container",
+          "propertyValues" : {
+            "ariaRegionHeadingLevel" : {
+              "type" : "JSON_LITERAL",
+              "value" : "1"
+            },
+            "ariaRegionName" : {
+              "type" : "TRANSLATION_LITERAL",
+              "value" : {
+                "code" : null,
+                "message" : "",
+                "comment" : ""
+              }
+            },
+            "includeAriaHeading" : {
+              "type" : "JSON_LITERAL",
+              "value" : false
+            },
+            "type" : {
+              "type" : "JSON_LITERAL",
+              "value" : "section"
+            },
+            "ariaRole" : {
+              "type" : "JSON_LITERAL",
+              "value" : ""
+            }
+          },
+          "eventMappings" : [ ],
+          "slot" : null,
+          "definition" : {
+            "id" : "d356d14b6e293a3020a244b63d278d8f",
+            "type" : "MACROPONENT"
+          },
+          "overrides" : {
+            "composition" : [ {
+              "elementId" : "stylized_text_4",
+              "elementLabel" : "Stylized text 4",
+              "propertyValues" : {
+                "css" : {
+                  "type" : "JSON_LITERAL",
+                  "value" : "* { }"
+                },
+                "text" : {
+                  "type" : "TRANSLATION_LITERAL",
+                  "value" : {
+                    "code" : null,
+                    "message" : "Select Camera",
+                    "comment" : ""
+                  }
+                },
+                "tag" : {
+                  "type" : "JSON_LITERAL",
+                  "value" : "p"
+                }
+              },
+              "eventMappings" : [ ],
+              "slot" : null,
+              "definition" : {
+                "id" : "4335ba6dca80378f7ba7a67cd6667bec",
+                "type" : "MACROPONENT"
+              },
+              "overrides" : null,
+              "isHidden" : {
+                "type" : "JSON_LITERAL",
+                "value" : null
+              },
+              "isHero" : false,
+              "extensionPoints" : [ ],
+              "isNonDestructive" : false,
+              "items" : [ ],
+              "styles" : { }
+            }, {
+              "elementId" : "dropdown_1",
+              "elementLabel" : "Cameras Dropdown",
+              "propertyValues" : {
+                "select" : {
+                  "type" : "JSON_LITERAL",
+                  "value" : "single"
+                },
+                "showPadding" : {
+                  "type" : "JSON_LITERAL",
+                  "value" : false
+                },
+                "showPresencePattern" : {
+                  "type" : "JSON_LITERAL",
+                  "value" : false
+                },
+                "icon" : {
+                  "type" : "JSON_LITERAL",
+                  "value" : null
+                },
+                "opened" : {
+                  "type" : "JSON_LITERAL",
+                  "value" : false
+                },
+                "tooltipContent" : {
+                  "type" : "JSON_LITERAL",
+                  "value" : null
+                },
+                "panelFitProps" : {
+                  "type" : "JSON_LITERAL",
+                  "value" : { }
+                },
+                "configAria" : {
+                  "type" : "MAP_CONTAINER",
+                  "container" : { }
+                },
+                "hideCaret" : {
+                  "type" : "JSON_LITERAL",
+                  "value" : false
+                },
+                "search" : {
+                  "type" : "JSON_LITERAL",
+                  "value" : "none"
+                },
+                "size" : {
+                  "type" : "JSON_LITERAL",
+                  "value" : "md"
+                },
+                "variant" : {
+                  "type" : "JSON_LITERAL",
+                  "value" : "secondary"
+                },
+                "disabled" : {
+                  "type" : "JSON_LITERAL",
+                  "value" : false
+                },
+                "placeholder" : {
+                  "type" : "TRANSLATION_LITERAL",
+                  "value" : {
+                    "code" : null,
+                    "message" : "Available Cameras",
+                    "comment" : ""
+                  }
+                },
+                "bare" : {
+                  "type" : "JSON_LITERAL",
+                  "value" : false
+                },
+                "items" : {
+                  "type" : "STATE_BINDING",
+                  "binding" : {
+                    "address" : [ "availableCameras", "cameras" ]
+                  }
+                },
+                "selectedItems" : {
+                  "type" : "LIST_CONTAINER",
+                  "container" : [ {
+                    "type" : "STATE_BINDING",
+                    "binding" : {
+                      "address" : [ "selectedCameraDeviceId" ]
+                    }
+                  } ]
+                },
+                "hideLabel" : {
+                  "type" : "JSON_LITERAL",
+                  "value" : false
+                }
+              },
+              "eventMappings" : [ {
+                "eventMappingId" : "clflfddxccbbaaaaslddbhhvwjjeeereedcc",
+                "isConfiguration" : false,
+                "offRowStorageId" : null,
+                "sourceEventApiName" : "sn_dropdown.NOW_DROPDOWN#SELECTED_ITEMS_SET",
+                "sourceEventCorrelationId" : null,
+                "sourceEventDefinition" : {
+                  "apiName" : "sn_dropdown.NOW_DROPDOWN#SELECTED_ITEMS_SET",
+                  "id" : null,
+                  "type" : "UXEVENT"
+                },
+                "sourceEventSysId" : null,
+                "targets" : [ {
+                  "broker" : null,
+                  "clientScript" : null,
+                  "conditional" : null,
+                  "declarativeAction" : null,
+                  "event" : {
+                    "apiName" : "sn_uxf.MACROPONENT_STATE_UPDATE_REQUESTED",
+                    "payload" : {
+                      "type" : "MAP_CONTAINER",
+                      "container" : {
+                        "propName" : {
+                          "type" : "JSON_LITERAL",
+                          "value" : "selectedCameraDeviceId"
+                        },
+                        "value" : {
+                          "type" : "EVENT_PAYLOAD_BINDING",
+                          "binding" : {
+                            "address" : [ "value", "0" ]
+                          }
+                        }
+                      }
+                    },
+                    "sysId" : "32408b42ff7a10109046e490703bf176"
+                  },
+                  "operation" : null,
+                  "targetId" : "clflfddxccbbaaaasmddbhhvgcoiiniiru",
+                  "type" : "EVENT"
+                }, {
+                  "broker" : null,
+                  "clientScript" : {
+                    "sysId" : "8e8628648721ad1089790fe5dabb3592"
+                  },
+                  "conditional" : null,
+                  "declarativeAction" : null,
+                  "event" : null,
+                  "operation" : null,
+                  "targetId" : "clflfeeutoaaaataddbhhvffiitrpbbvv",
+                  "type" : "CLIENT_SCRIPT"
+                }, {
+                  "broker" : null,
+                  "clientScript" : null,
+                  "conditional" : null,
+                  "declarativeAction" : null,
+                  "event" : null,
+                  "operation" : {
+                    "dataBrokerId" : "9b4b978353211010cbc2ddeeff7b1245",
+                    "operationName" : "EXECUTE",
+                    "parentResourceId" : "update_record",
+                    "payload" : {
+                      "type" : "MAP_CONTAINER",
+                      "container" : {
+                        "table" : {
+                          "type" : "JSON_LITERAL",
+                          "value" : "x_snc_pb_core_photobooth"
+                        },
+                        "recordId" : {
+                          "type" : "STATE_BINDING",
+                          "binding" : {
+                            "address" : [ "photoboothInstanceId" ]
+                          }
+                        },
+                        "templateFields" : {
+                          "type" : "CLIENT_TRANSFORM",
+                          "transform" : {
+                            "operands" : {
+                              "type" : "LIST_CONTAINER",
+                              "container" : [ {
+                                "type" : "JSON_LITERAL",
+                                "value" : "camera_device_id="
+                              }, {
+                                "type" : "EVENT_PAYLOAD_BINDING",
+                                "binding" : {
+                                  "address" : [ "value", "0" ]
+                                }
+                              } ]
+                            },
+                            "operator" : "CONCAT"
+                          }
+                        },
+                        "useSetDisplayValue" : {
+                          "type" : "JSON_LITERAL",
+                          "value" : null
+                        }
+                      }
+                    }
+                  },
+                  "targetId" : "clflfffijlaaaatcddbhhvbqvddtssg",
+                  "type" : "DATABROKER_OP"
+                } ]
+              } ],
+              "slot" : null,
+              "definition" : {
+                "id" : "22c67d9a1e515fef66442e1469bed3a2",
+                "type" : "MACROPONENT"
+              },
+              "overrides" : null,
+              "isHidden" : {
+                "type" : "JSON_LITERAL",
+                "value" : null
+              },
+              "isHero" : false,
+              "extensionPoints" : [ ],
+              "isNonDestructive" : false,
+              "items" : [ ],
+              "styles" : { }
+            } ],
+            "layout" : {
+              "default" : {
+                "children" : null,
+                "isInline" : null,
+                "items" : [{"element_id":"stylized_text_4","styles":{}},{"element_id":"dropdown_1","styles":{}}],
+                "root" : null,
+                "rules" : null,
+                "styles" : {"flex-direction":"column","margin":"var(--now-static-space--lg)"},
+                "templateId" : "5832fd4d53c31010e6bcddeeff7b12db",
+                "type" : "flex"
+              },
+              "version" : "3.0.0"
+            }
+          },
+          "isHidden" : {
+            "type" : "JSON_LITERAL",
+            "value" : null
+          },
+          "isHero" : false,
+          "extensionPoints" : [ ],
+          "isNonDestructive" : false,
+          "items" : [ ],
+          "styles" : {
+            "width" : "100%"
+          }
+        } ],
+        "layout" : {
+          "default" : {
+            "children" : null,
+            "isInline" : null,
+            "items" : [{"element_id":"container_2","styles":{}}],
+            "root" : null,
+            "rules" : null,
+            "styles" : {"flex-direction":"column"},
+            "templateId" : "5832fd4d53c31010e6bcddeeff7b12db",
+            "type" : "flex"
+          },
+          "version" : "3.0.0"
+        }
+      },
+      "isHidden" : {
+        "type" : "JSON_LITERAL",
+        "value" : null
+      },
+      "isHero" : false,
+      "extensionPoints" : [ ],
+      "isNonDestructive" : false,
+      "items" : [ ],
+      "styles" : {
+        "width" : "100%"
+      }
+    }, {
+      "elementId" : "footer_1",
+      "elementLabel" : "Footer 1",
+      "propertyValues" : {
+        "ariaRegionHeadingLevel" : {
+          "type" : "JSON_LITERAL",
+          "value" : "1"
+        },
+        "ariaRegionName" : {
+          "type" : "TRANSLATION_LITERAL",
+          "value" : {
+            "code" : null,
+            "message" : "",
+            "comment" : ""
+          }
+        },
+        "includeAriaHeading" : {
+          "type" : "JSON_LITERAL",
+          "value" : false
+        },
+        "type" : {
+          "type" : "JSON_LITERAL",
+          "value" : "section"
+        },
+        "ariaRole" : {
+          "type" : "JSON_LITERAL",
+          "value" : ""
+        }
+      },
+      "eventMappings" : [ ],
+      "slot" : null,
+      "definition" : {
+        "id" : "d356d14b6e293a3020a244b63d278d8f",
+        "type" : "MACROPONENT"
+      },
+      "overrides" : {
+        "composition" : [ ],
+        "layout" : {
+          "default" : {
+            "children" : null,
+            "isInline" : null,
+            "items" : [],
+            "root" : null,
+            "rules" : null,
+            "styles" : {"flex-direction":"column"},
+            "templateId" : "5832fd4d53c31010e6bcddeeff7b12db",
+            "type" : "flex"
+          },
+          "version" : "3.0.0"
+        }
+      },
+      "isHidden" : {
+        "type" : "JSON_LITERAL",
+        "value" : true
+      },
+      "isHero" : false,
+      "extensionPoints" : [ ],
+      "isNonDestructive" : false,
+      "items" : [ ],
+      "styles" : {
+        "width" : "100%"
+      }
+    } ],
+    "layout" : {
+      "default" : {
+        "children" : null,
+        "isInline" : null,
+        "items" : [{"element_id":"header_1","rules":null,"styles":{"display":"flex","flex-direction":"column"}},{"element_id":"body_1","rules":null,"styles":{"display":"flex","flex-direction":"column","flex-grow":1.5}},{"element_id":"footer_1","rules":null,"styles":{"display":"flex","flex-direction":"column"}}],
+        "root" : null,
+        "rules" : null,
+        "styles" : {"flex-direction":"column","gap":"var(--now-static-space--lg)"},
+        "templateId" : "5832fd4d53c31010e6bcddeeff7b12db",
+        "type" : "flex"
+      },
+      "version" : "3.0.0"
+    }
+  },
+  "isHidden" : {
+    "type" : "JSON_LITERAL",
+    "value" : null
+  },
+  "isHero" : false,
+  "extensionPoints" : [ ],
+  "isNonDestructive" : false,
+  "items" : [ ],
+  "styles" : {
+    "width" : "100%",
+    "border-color" : "RGB(var(--now-color--neutral-5))",
+    "border-width" : "var(--now-static-space--xxs)",
+    "border-style" : "solid",
+    "border-radius" : "16px"
+  }
 } ]</composition>
         <da_relay_models/>
         <data>[ {
@@ -801,6 +1445,60 @@
       "operation" : null,
       "targetId" : "cleddevaeeaaccawddbhhvkbbtgbjjkff",
       "type" : "CLIENT_SCRIPT"
+    }, {
+      "broker" : null,
+      "clientScript" : null,
+      "conditional" : null,
+      "declarativeAction" : null,
+      "event" : {
+        "apiName" : "sn_uxf.MACROPONENT_STATE_UPDATE_REQUESTED",
+        "payload" : {
+          "type" : "MAP_CONTAINER",
+          "container" : {
+            "propName" : {
+              "type" : "JSON_LITERAL",
+              "value" : "selectedCameraDeviceId"
+            },
+            "value" : {
+              "type" : "DATA_OUTPUT_BINDING",
+              "binding" : {
+                "address" : [ "look_up_photobooths", "results", "0", "camera_device_id", "value" ]
+              }
+            }
+          }
+        },
+        "sysId" : "32408b42ff7a10109046e490703bf176"
+      },
+      "operation" : null,
+      "targetId" : "clfledcfggaaaakjddbhhvutgqajngg",
+      "type" : "EVENT"
+    }, {
+      "broker" : null,
+      "clientScript" : null,
+      "conditional" : null,
+      "declarativeAction" : null,
+      "event" : {
+        "apiName" : "sn_uxf.MACROPONENT_STATE_UPDATE_REQUESTED",
+        "payload" : {
+          "type" : "MAP_CONTAINER",
+          "container" : {
+            "propName" : {
+              "type" : "JSON_LITERAL",
+              "value" : "photoboothInstanceId"
+            },
+            "value" : {
+              "type" : "DATA_OUTPUT_BINDING",
+              "binding" : {
+                "address" : [ "look_up_photobooths", "results", "0", "_row_data", "uniqueValue" ]
+              }
+            }
+          }
+        },
+        "sysId" : "32408b42ff7a10109046e490703bf176"
+      },
+      "operation" : null,
+      "targetId" : "clflfaaitvaaaaqoddbhhviulsrfin",
+      "type" : "EVENT"
     } ]
   } ],
   "inputValues" : {
@@ -1049,9 +1747,9 @@
             "type" : "JSON_LITERAL",
             "value" : "photobooth="
           }, {
-            "type" : "DATA_OUTPUT_BINDING",
+            "type" : "STATE_BINDING",
             "binding" : {
-              "address" : [ "look_up_photobooths", "results", "0", "_row_data", "uniqueValue" ]
+              "address" : [ "photoboothInstanceId" ]
             }
           }, {
             "type" : "JSON_LITERAL",
@@ -1239,9 +1937,20 @@
     }
   },
   "readEvaluationMode" : "EAGER"
+}, {
+  "definition" : {
+    "id" : "9b4b978353211010cbc2ddeeff7b1245",
+    "type" : "GRAPHQL"
+  },
+  "dependencies" : { },
+  "elementId" : "update_record",
+  "elementLabel" : "Update Record",
+  "eventMappings" : [ ],
+  "inputValues" : { },
+  "readEvaluationMode" : "EXPLICIT"
 } ]</data>
         <description/>
-        <dispatched_events/>
+        <dispatched_events>e7e6e0c54775a510552caf52736d437e</dispatched_events>
         <ext_controller_dep/>
         <extends display_value="Page Template">19be392623033300f4b4c50947bf65ba</extends>
         <handled_events/>
@@ -1290,7 +1999,16 @@
   "disabled" : false
 } ]</props>
         <required_translations>[ {
+  "message" : "Available Cameras",
+  "comment" : ""
+}, {
+  "message" : "Photobooth Settings",
+  "comment" : ""
+}, {
   "message" : "Powered by Next Experience",
+  "comment" : ""
+}, {
+  "message" : "Select Camera",
   "comment" : ""
 }, {
   "message" : "Take a snapshot",
@@ -1366,19 +2084,52 @@
     "type" : "JSON_LITERAL",
     "value" : null
   }
+}, {
+  "name" : "availableCameras",
+  "label" : "availableCameras",
+  "fieldType" : "json",
+  "valueType" : "json",
+  "shape" : "",
+  "description" : "",
+  "initialValue" : {
+    "type" : "JSON_LITERAL",
+    "value" : [ ]
+  }
+}, {
+  "name" : "selectedCameraDeviceId",
+  "label" : "selectedCameraDeviceId",
+  "fieldType" : "string",
+  "valueType" : "string",
+  "shape" : "",
+  "description" : "",
+  "initialValue" : {
+    "type" : "JSON_LITERAL",
+    "value" : null
+  }
+}, {
+  "name" : "photoboothInstanceId",
+  "label" : "photoboothInstanceId",
+  "fieldType" : "string",
+  "valueType" : "string",
+  "shape" : "",
+  "description" : "",
+  "initialValue" : {
+    "type" : "JSON_LITERAL",
+    "value" : null
+  }
 } ]</state_properties>
         <sys_class_name>sys_ux_macroponent</sys_class_name>
         <sys_created_by>jon.lind</sys_created_by>
         <sys_created_on>2023-03-09 17:44:48</sys_created_on>
         <sys_id>c58628648721ad1089790fe5dabb3528</sys_id>
-        <sys_mod_count>10</sys_mod_count>
+        <sys_mod_count>43</sys_mod_count>
         <sys_name>Home Stylized Copy Copy</sys_name>
         <sys_package display_value="Photobooth App" source="x_snc_pb_app">baa73cb74742dd10552caf52736d43f1</sys_package>
         <sys_policy/>
         <sys_scope display_value="Photobooth App">baa73cb74742dd10552caf52736d43f1</sys_scope>
         <sys_update_name>sys_ux_macroponent_c58628648721ad1089790fe5dabb3528</sys_update_name>
         <sys_updated_by>jon.lind</sys_updated_by>
-        <sys_updated_on>2023-03-09 23:07:36</sys_updated_on>
+        <sys_updated_on>2023-03-23 18:12:51</sys_updated_on>
     </sys_ux_macroponent>
     <sys_translated_text action="delete_multiple" query="documentkey=c58628648721ad1089790fe5dabb3528"/>
 </record_update>
