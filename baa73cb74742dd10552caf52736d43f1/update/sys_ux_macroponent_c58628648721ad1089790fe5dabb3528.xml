@@ -1121,13 +1121,14 @@
                   }
                 },
                 "selectedItems" : {
-                  "type" : "LIST_CONTAINER",
-                  "container" : [ {
-                    "type" : "STATE_BINDING",
-                    "binding" : {
-                      "address" : [ "selectedCameraDeviceId" ]
-                    }
-                  } ]
+                  "type" : "CLIENT_TRANSFORM_SCRIPT",
+                  "script" : {
+                    "apiVersion" : "2.0.0",
+                    "controllerElementId" : null,
+                    "inlineScript" : null,
+                    "scriptSysId" : "d045f84547b5a510552caf52736d4377",
+                    "target" : null
+                  }
                 },
                 "hideLabel" : {
                   "type" : "JSON_LITERAL",
@@ -1147,33 +1148,6 @@
                 },
                 "sourceEventSysId" : null,
                 "targets" : [ {
-                  "broker" : null,
-                  "clientScript" : null,
-                  "conditional" : null,
-                  "declarativeAction" : null,
-                  "event" : {
-                    "apiName" : "sn_uxf.MACROPONENT_STATE_UPDATE_REQUESTED",
-                    "payload" : {
-                      "type" : "MAP_CONTAINER",
-                      "container" : {
-                        "propName" : {
-                          "type" : "JSON_LITERAL",
-                          "value" : "selectedCameraDeviceId"
-                        },
-                        "value" : {
-                          "type" : "EVENT_PAYLOAD_BINDING",
-                          "binding" : {
-                            "address" : [ "value", "0" ]
-                          }
-                        }
-                      }
-                    },
-                    "sysId" : "32408b42ff7a10109046e490703bf176"
-                  },
-                  "operation" : null,
-                  "targetId" : "clflfddxccbbaaaasmddbhhvgcoiiniiru",
-                  "type" : "EVENT"
-                }, {
                   "broker" : null,
                   "clientScript" : {
                     "sysId" : "8e8628648721ad1089790fe5dabb3592"
@@ -1233,6 +1207,23 @@
                     }
                   },
                   "targetId" : "clflfffijlaaaatcddbhhvbqvddtssg",
+                  "type" : "DATABROKER_OP"
+                }, {
+                  "broker" : null,
+                  "clientScript" : null,
+                  "conditional" : null,
+                  "declarativeAction" : null,
+                  "event" : null,
+                  "operation" : {
+                    "dataBrokerId" : "b997a84053021010cbc2ddeeff7b1228",
+                    "operationName" : "REFRESH",
+                    "parentResourceId" : "look_up_photobooths",
+                    "payload" : {
+                      "type" : "JSON_LITERAL",
+                      "value" : { }
+                    }
+                  },
+                  "targetId" : "clflfuiiizaaaactddbhhveeeeccybbyng",
                   "type" : "DATABROKER_OP"
                 } ]
               } ],
@@ -2122,14 +2113,14 @@
         <sys_created_by>jon.lind</sys_created_by>
         <sys_created_on>2023-03-09 17:44:48</sys_created_on>
         <sys_id>c58628648721ad1089790fe5dabb3528</sys_id>
-        <sys_mod_count>43</sys_mod_count>
+        <sys_mod_count>45</sys_mod_count>
         <sys_name>Home Stylized Copy Copy</sys_name>
         <sys_package display_value="Photobooth App" source="x_snc_pb_app">baa73cb74742dd10552caf52736d43f1</sys_package>
         <sys_policy/>
         <sys_scope display_value="Photobooth App">baa73cb74742dd10552caf52736d43f1</sys_scope>
         <sys_update_name>sys_ux_macroponent_c58628648721ad1089790fe5dabb3528</sys_update_name>
         <sys_updated_by>jon.lind</sys_updated_by>
-        <sys_updated_on>2023-03-23 18:12:51</sys_updated_on>
+        <sys_updated_on>2023-03-23 18:21:52</sys_updated_on>
     </sys_ux_macroponent>
     <sys_translated_text action="delete_multiple" query="documentkey=c58628648721ad1089790fe5dabb3528"/>
 </record_update>
