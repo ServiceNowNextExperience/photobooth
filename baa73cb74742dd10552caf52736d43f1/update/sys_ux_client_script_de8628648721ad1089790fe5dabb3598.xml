@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_client_script">
     <sys_ux_client_script action="INSERT_OR_UPDATE">
         <includes/>
-        <macroponent display_value="Home Stylized Copy Copy">c58628648721ad1089790fe5dabb3528</macroponent>
+        <macroponent display_value="Home Stylized">c58628648721ad1089790fe5dabb3528</macroponent>
         <name>Countdown</name>
         <preset/>
         <required_translations>[ ]</required_translations>
