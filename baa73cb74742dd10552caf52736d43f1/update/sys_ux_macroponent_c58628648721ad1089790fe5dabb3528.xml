@@ -97,7 +97,7 @@
             },
             "shutterSoundFile" : {
               "type" : "JSON_LITERAL",
-              "value" : ""
+              "value" : "/sys_attachment.do?sys_id=bf954e6e8735615089790fe5dabb3579&amp;sysparm_this_url=x_snc_pb_core_photobooth.do%3Fsys_id%3D6e22456d87a65d1089790fe5dabb3592%26sysparm_record_target%3Dx_snc_pb_core_photobooth%26sysparm_record_row%3D1%26sysparm_record_rows%3D1%26sysparm_record_list%3DORDERBYnumber"
             },
             "snapRequested" : {
               "type" : "STATE_BINDING",
@@ -2152,14 +2152,14 @@
         <sys_created_by>jon.lind</sys_created_by>
         <sys_created_on>2023-03-09 17:44:48</sys_created_on>
         <sys_id>c58628648721ad1089790fe5dabb3528</sys_id>
-        <sys_mod_count>51</sys_mod_count>
+        <sys_mod_count>52</sys_mod_count>
         <sys_name>Home Stylized</sys_name>
         <sys_package display_value="Photobooth App" source="x_snc_pb_app">baa73cb74742dd10552caf52736d43f1</sys_package>
         <sys_policy/>
         <sys_scope display_value="Photobooth App">baa73cb74742dd10552caf52736d43f1</sys_scope>
         <sys_update_name>sys_ux_macroponent_c58628648721ad1089790fe5dabb3528</sys_update_name>
         <sys_updated_by>jon.lind</sys_updated_by>
-        <sys_updated_on>2023-03-27 22:32:38</sys_updated_on>
+        <sys_updated_on>2023-03-28 16:05:52</sys_updated_on>
     </sys_ux_macroponent>
     <sys_translated_text action="delete_multiple" query="documentkey=c58628648721ad1089790fe5dabb3528"/>
 </record_update>
