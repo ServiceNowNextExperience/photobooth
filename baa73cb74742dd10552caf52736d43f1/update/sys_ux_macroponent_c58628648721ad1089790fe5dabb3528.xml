@@ -883,6 +883,57 @@
     }
   },
   "eventMappings" : [ {
+    "eventMappingId" : "clgccuqlzqaaccfnddbhhvalffdnccia",
+    "isConfiguration" : false,
+    "offRowStorageId" : null,
+    "sourceEventApiName" : "sn_uxf_page.CANVAS_MODAL#CLOSED",
+    "sourceEventCorrelationId" : null,
+    "sourceEventDefinition" : {
+      "apiName" : "sn_uxf_page.CANVAS_MODAL#CLOSED",
+      "id" : null,
+      "type" : "UXEVENT"
+    },
+    "sourceEventSysId" : null,
+    "targets" : [ {
+      "broker" : null,
+      "clientScript" : null,
+      "conditional" : null,
+      "declarativeAction" : null,
+      "event" : {
+        "apiName" : "sn_uxf.MACROPONENT_STATE_UPDATE_REQUESTED",
+        "payload" : {
+          "type" : "JSON_LITERAL",
+          "value" : {
+            "propName" : "saveDisabled",
+            "value" : true
+          }
+        },
+        "sysId" : "32408b42ff7a10109046e490703bf176"
+      },
+      "operation" : null,
+      "targetId" : "clgccuqlzqaaccfoddbhhvggeeedkbrs",
+      "type" : "EVENT"
+    }, {
+      "broker" : null,
+      "clientScript" : null,
+      "conditional" : null,
+      "declarativeAction" : null,
+      "event" : {
+        "apiName" : "sn_uxf.MACROPONENT_STATE_UPDATE_REQUESTED",
+        "payload" : {
+          "type" : "JSON_LITERAL",
+          "value" : {
+            "propName" : "createNew",
+            "value" : false
+          }
+        },
+        "sysId" : "32408b42ff7a10109046e490703bf176"
+      },
+      "operation" : null,
+      "targetId" : "clgccuqvaxaaccfwddbhhveebsxjjbbaa",
+      "type" : "EVENT"
+    } ]
+  }, {
     "eventMappingId" : "clgccikurddaabbfqddbhhvddwccaccebbff",
     "isConfiguration" : false,
     "offRowStorageId" : null,
@@ -1067,7 +1118,7 @@
                 },
                 "required" : {
                   "type" : "JSON_LITERAL",
-                  "value" : false
+                  "value" : true
                 },
                 "min" : {
                   "type" : "JSON_LITERAL",
@@ -1158,11 +1209,11 @@
               "propertyValues" : {
                 "minlength" : {
                   "type" : "JSON_LITERAL",
-                  "value" : null
+                  "value" : 3
                 },
                 "maxlength" : {
                   "type" : "JSON_LITERAL",
-                  "value" : null
+                  "value" : 20
                 },
                 "max" : {
                   "type" : "JSON_LITERAL",
@@ -1215,7 +1266,7 @@
                 },
                 "required" : {
                   "type" : "JSON_LITERAL",
-                  "value" : false
+                  "value" : true
                 },
                 "min" : {
                   "type" : "JSON_LITERAL",
@@ -1238,8 +1289,16 @@
                   "container" : [ ]
                 },
                 "disabled" : {
-                  "type" : "JSON_LITERAL",
-                  "value" : true
+                  "type" : "UNARY",
+                  "operation" : {
+                    "operand" : {
+                      "type" : "STATE_BINDING",
+                      "binding" : {
+                        "address" : [ "createNew" ]
+                      }
+                    },
+                    "operator" : "NOT"
+                  }
                 },
                 "step" : {
                   "type" : "JSON_LITERAL",
@@ -1734,8 +1793,16 @@
               },
               "overrides" : null,
               "isHidden" : {
-                "type" : "JSON_LITERAL",
-                "value" : null
+                "type" : "UNARY",
+                "operation" : {
+                  "operand" : {
+                    "type" : "STATE_BINDING",
+                    "binding" : {
+                      "address" : [ "watermarkImage" ]
+                    }
+                  },
+                  "operator" : "NOT"
+                }
               },
               "isHero" : false,
               "extensionPoints" : [ ],
@@ -3048,8 +3115,480 @@
               },
               "overrides" : null,
               "isHidden" : {
-                "type" : "JSON_LITERAL",
-                "value" : null
+                "type" : "STATE_BINDING",
+                "binding" : {
+                  "address" : [ "createNew" ]
+                }
+              },
+              "isHero" : false,
+              "extensionPoints" : [ ],
+              "isNonDestructive" : false,
+              "items" : [ ],
+              "styles" : { }
+            }, {
+              "elementId" : "button_2",
+              "elementLabel" : "Button 2",
+              "propertyValues" : {
+                "size" : {
+                  "type" : "JSON_LITERAL",
+                  "value" : "md"
+                },
+                "variant" : {
+                  "type" : "JSON_LITERAL",
+                  "value" : "tertiary"
+                },
+                "icon" : {
+                  "type" : "JSON_LITERAL",
+                  "value" : null
+                },
+                "disabled" : {
+                  "type" : "JSON_LITERAL",
+                  "value" : false
+                },
+                "label" : {
+                  "type" : "TRANSLATION_LITERAL",
+                  "value" : {
+                    "code" : null,
+                    "message" : "New",
+                    "comment" : ""
+                  }
+                },
+                "tooltipContent" : {
+                  "type" : "TRANSLATION_LITERAL",
+                  "value" : {
+                    "code" : null,
+                    "message" : "Click \"New\" and change the Name and Long Name to create a new photobooth instance.",
+                    "comment" : ""
+                  }
+                },
+                "configAria" : {
+                  "type" : "MAP_CONTAINER",
+                  "container" : { }
+                }
+              },
+              "eventMappings" : [ {
+                "eventMappingId" : "clgccubbnxqaabbuxddbhhvmhhrhoeeur",
+                "isConfiguration" : false,
+                "offRowStorageId" : null,
+                "sourceEventApiName" : "sn_button.NOW_BUTTON#CLICKED",
+                "sourceEventCorrelationId" : null,
+                "sourceEventDefinition" : {
+                  "apiName" : "sn_button.NOW_BUTTON#CLICKED",
+                  "id" : null,
+                  "type" : "UXEVENT"
+                },
+                "sourceEventSysId" : null,
+                "targets" : [ {
+                  "broker" : null,
+                  "clientScript" : null,
+                  "conditional" : null,
+                  "declarativeAction" : null,
+                  "event" : {
+                    "apiName" : "sn_uxf_page.NOW_UXF_PAGE#ADD_NOTIFICATIONS",
+                    "payload" : {
+                      "type" : "JSON_LITERAL",
+                      "value" : {
+                        "items" : [ {
+                          "type" : "info",
+                          "message" : "Create a new Short Name (no spaces) and a new Long Name then save this new photobooth."
+                        } ]
+                      }
+                    },
+                    "sysId" : "49fe7d575f983bb3f8eea3fa8d40694c"
+                  },
+                  "operation" : null,
+                  "targetId" : "clgccubbnxqaabbuyddbhhvvnckqyse",
+                  "type" : "EVENT"
+                }, {
+                  "broker" : null,
+                  "clientScript" : null,
+                  "conditional" : null,
+                  "declarativeAction" : null,
+                  "event" : {
+                    "apiName" : "sn_uxf.MACROPONENT_STATE_UPDATE_REQUESTED",
+                    "payload" : {
+                      "type" : "JSON_LITERAL",
+                      "value" : {
+                        "propName" : "createNew",
+                        "value" : true
+                      }
+                    },
+                    "sysId" : "32408b42ff7a10109046e490703bf176"
+                  },
+                  "operation" : null,
+                  "targetId" : "clgccueehafaabbwaaddbhhvzaiplihi",
+                  "type" : "EVENT"
+                }, {
+                  "broker" : null,
+                  "clientScript" : null,
+                  "conditional" : null,
+                  "declarativeAction" : null,
+                  "event" : {
+                    "apiName" : "sn_uxf.MACROPONENT_STATE_UPDATE_REQUESTED",
+                    "payload" : {
+                      "type" : "JSON_LITERAL",
+                      "value" : {
+                        "propName" : "photoboothName",
+                        "value" : ""
+                      }
+                    },
+                    "sysId" : "32408b42ff7a10109046e490703bf176"
+                  },
+                  "operation" : null,
+                  "targetId" : "clgccufffeqaabbweddbhhvffddsiibzju",
+                  "type" : "EVENT"
+                }, {
+                  "broker" : null,
+                  "clientScript" : null,
+                  "conditional" : null,
+                  "declarativeAction" : null,
+                  "event" : {
+                    "apiName" : "sn_uxf.MACROPONENT_STATE_UPDATE_REQUESTED",
+                    "payload" : {
+                      "type" : "JSON_LITERAL",
+                      "value" : {
+                        "propName" : "photoboothLongName",
+                        "value" : null
+                      }
+                    },
+                    "sysId" : "32408b42ff7a10109046e490703bf176"
+                  },
+                  "operation" : null,
+                  "targetId" : "clgccuivffbaaccbjddbhhvccbffbnuojj",
+                  "type" : "EVENT"
+                } ]
+              } ],
+              "slot" : null,
+              "definition" : {
+                "id" : "d37ce8abca89d02905fed903c8e34d8e",
+                "type" : "MACROPONENT"
+              },
+              "overrides" : null,
+              "isHidden" : {
+                "type" : "STATE_BINDING",
+                "binding" : {
+                  "address" : [ "createNew" ]
+                }
+              },
+              "isHero" : false,
+              "extensionPoints" : [ ],
+              "isNonDestructive" : false,
+              "items" : [ ],
+              "styles" : { }
+            }, {
+              "elementId" : "button_3",
+              "elementLabel" : "Button 3",
+              "propertyValues" : {
+                "size" : {
+                  "type" : "JSON_LITERAL",
+                  "value" : "md"
+                },
+                "variant" : {
+                  "type" : "JSON_LITERAL",
+                  "value" : "primary"
+                },
+                "icon" : {
+                  "type" : "JSON_LITERAL",
+                  "value" : null
+                },
+                "disabled" : {
+                  "type" : "BINARY",
+                  "operation" : {
+                    "left" : {
+                      "type" : "UNARY",
+                      "operation" : {
+                        "operand" : {
+                          "type" : "STATE_BINDING",
+                          "binding" : {
+                            "address" : [ "photoboothName" ]
+                          }
+                        },
+                        "operator" : "NOT"
+                      }
+                    },
+                    "operator" : "OR",
+                    "right" : {
+                      "type" : "UNARY",
+                      "operation" : {
+                        "operand" : {
+                          "type" : "STATE_BINDING",
+                          "binding" : {
+                            "address" : [ "photoboothLongName" ]
+                          }
+                        },
+                        "operator" : "NOT"
+                      }
+                    }
+                  }
+                },
+                "label" : {
+                  "type" : "TRANSLATION_LITERAL",
+                  "value" : {
+                    "code" : null,
+                    "message" : "Insert",
+                    "comment" : ""
+                  }
+                },
+                "tooltipContent" : {
+                  "type" : "TRANSLATION_LITERAL",
+                  "value" : {
+                    "code" : null,
+                    "message" : "Enter a label",
+                    "comment" : ""
+                  }
+                },
+                "configAria" : {
+                  "type" : "MAP_CONTAINER",
+                  "container" : { }
+                }
+              },
+              "eventMappings" : [ {
+                "eventMappingId" : "clgccucggmaaccccccddbhhvmvbwiahhjj",
+                "isConfiguration" : false,
+                "offRowStorageId" : null,
+                "sourceEventApiName" : "sn_button.NOW_BUTTON#CLICKED",
+                "sourceEventCorrelationId" : null,
+                "sourceEventDefinition" : {
+                  "apiName" : "sn_button.NOW_BUTTON#CLICKED",
+                  "id" : null,
+                  "type" : "UXEVENT"
+                },
+                "sourceEventSysId" : null,
+                "targets" : [ {
+                  "broker" : null,
+                  "clientScript" : null,
+                  "conditional" : null,
+                  "declarativeAction" : null,
+                  "event" : null,
+                  "operation" : {
+                    "dataBrokerId" : "beda4252770300108d070d74c810618f",
+                    "operationName" : "EXECUTE",
+                    "parentResourceId" : "create_record",
+                    "payload" : {
+                      "type" : "MAP_CONTAINER",
+                      "container" : {
+                        "table" : {
+                          "type" : "JSON_LITERAL",
+                          "value" : "x_snc_pb_core_photobooth"
+                        },
+                        "templateFields" : {
+                          "type" : "CLIENT_TRANSFORM",
+                          "transform" : {
+                            "operands" : {
+                              "type" : "LIST_CONTAINER",
+                              "container" : [ {
+                                "type" : "JSON_LITERAL",
+                                "value" : "active=true^camera_device_id="
+                              }, {
+                                "type" : "STATE_BINDING",
+                                "binding" : {
+                                  "address" : [ "selectedCameraDeviceId" ]
+                                }
+                              }, {
+                                "type" : "JSON_LITERAL",
+                                "value" : "^chin_height="
+                              }, {
+                                "type" : "STATE_BINDING",
+                                "binding" : {
+                                  "address" : [ "chinHeight" ]
+                                }
+                              }, {
+                                "type" : "JSON_LITERAL",
+                                "value" : "^gap="
+                              }, {
+                                "type" : "STATE_BINDING",
+                                "binding" : {
+                                  "address" : [ "gap" ]
+                                }
+                              }, {
+                                "type" : "JSON_LITERAL",
+                                "value" : "^long_name="
+                              }, {
+                                "type" : "STATE_BINDING",
+                                "binding" : {
+                                  "address" : [ "photoboothLongName" ]
+                                }
+                              }, {
+                                "type" : "JSON_LITERAL",
+                                "value" : "^name="
+                              }, {
+                                "type" : "STATE_BINDING",
+                                "binding" : {
+                                  "address" : [ "photoboothName" ]
+                                }
+                              }, {
+                                "type" : "JSON_LITERAL",
+                                "value" : "^watermark_image="
+                              }, {
+                                "type" : "STATE_BINDING",
+                                "binding" : {
+                                  "address" : [ "watermarkImage" ]
+                                }
+                              }, {
+                                "type" : "JSON_LITERAL",
+                                "value" : "^watermark_image_height="
+                              }, {
+                                "type" : "STATE_BINDING",
+                                "binding" : {
+                                  "address" : [ "watermarkImageHeight" ]
+                                }
+                              }, {
+                                "type" : "JSON_LITERAL",
+                                "value" : "^watermark_image_position="
+                              }, {
+                                "type" : "STATE_BINDING",
+                                "binding" : {
+                                  "address" : [ "watermarkImagePosition" ]
+                                }
+                              } ]
+                            },
+                            "operator" : "CONCAT"
+                          }
+                        },
+                        "useSetDisplayValue" : {
+                          "type" : "JSON_LITERAL",
+                          "value" : null
+                        }
+                      }
+                    }
+                  },
+                  "targetId" : "clgccucggmaaccccddddbhhvffelxqyx",
+                  "type" : "DATABROKER_OP"
+                }, {
+                  "broker" : null,
+                  "clientScript" : null,
+                  "conditional" : null,
+                  "declarativeAction" : null,
+                  "event" : {
+                    "apiName" : "sn_uxf.MACROPONENT_STATE_UPDATE_REQUESTED",
+                    "payload" : {
+                      "type" : "JSON_LITERAL",
+                      "value" : {
+                        "propName" : "saveDisabled",
+                        "value" : true
+                      }
+                    },
+                    "sysId" : "32408b42ff7a10109046e490703bf176"
+                  },
+                  "operation" : null,
+                  "targetId" : "clgccugafkaacciixddbhhvdebbjehnl",
+                  "type" : "EVENT"
+                }, {
+                  "broker" : null,
+                  "clientScript" : null,
+                  "conditional" : null,
+                  "declarativeAction" : null,
+                  "event" : {
+                    "apiName" : "sn_uxf.MACROPONENT_STATE_UPDATE_REQUESTED",
+                    "payload" : {
+                      "type" : "JSON_LITERAL",
+                      "value" : {
+                        "propName" : "createNew",
+                        "value" : false
+                      }
+                    },
+                    "sysId" : "32408b42ff7a10109046e490703bf176"
+                  },
+                  "operation" : null,
+                  "targetId" : "clgccugnaaeaaccjjffddbhhvecffzffsqg",
+                  "type" : "EVENT"
+                }, {
+                  "broker" : null,
+                  "clientScript" : null,
+                  "conditional" : null,
+                  "declarativeAction" : null,
+                  "event" : {
+                    "apiName" : "x_snc_pb_app.MODAL_SELECTED_RELAY_c58628648721ad1089790fe5dabb3528",
+                    "payload" : {
+                      "type" : "JSON_LITERAL",
+                      "value" : {
+                        "modalId" : "[component-id$='settings_modal']",
+                        "showModal" : false,
+                        "displayOptions" : null,
+                        "bare" : true,
+                        "viewportElementId" : null,
+                        "viewportRoute" : null,
+                        "viewportFields" : null
+                      }
+                    },
+                    "sysId" : "e7e6e0c54775a510552caf52736d437e"
+                  },
+                  "operation" : null,
+                  "targetId" : "clgccuhccyzaaccjjdddbhhvuctxhhhhff",
+                  "type" : "EVENT"
+                }, {
+                  "broker" : null,
+                  "clientScript" : null,
+                  "conditional" : null,
+                  "declarativeAction" : null,
+                  "event" : {
+                    "apiName" : "x_snc_pb_app.NAV_ITEM_SELECTED_RELAY_c58628648721ad1089790fe5dabb3528",
+                    "payload" : {
+                      "type" : "MAP_CONTAINER",
+                      "container" : {
+                        "route" : {
+                          "type" : "JSON_LITERAL",
+                          "value" : "home"
+                        },
+                        "fields" : {
+                          "type" : "MAP_CONTAINER",
+                          "container" : {
+                            "photoboothNameOrNumberOrSysId" : {
+                              "type" : "STATE_BINDING",
+                              "binding" : {
+                                "address" : [ "photoboothName" ]
+                              }
+                            }
+                          }
+                        },
+                        "params" : null,
+                        "redirect" : {
+                          "type" : "JSON_LITERAL",
+                          "value" : null
+                        },
+                        "passiveNavigation" : {
+                          "type" : "JSON_LITERAL",
+                          "value" : null
+                        },
+                        "title" : {
+                          "type" : "JSON_LITERAL",
+                          "value" : null
+                        },
+                        "multiInstField" : {
+                          "type" : "JSON_LITERAL",
+                          "value" : null
+                        },
+                        "targetRoute" : {
+                          "type" : "JSON_LITERAL",
+                          "value" : null
+                        },
+                        "external" : null
+                      }
+                    },
+                    "sysId" : "9d2e9ffc870a651089790fe5dabb35bd"
+                  },
+                  "operation" : null,
+                  "targetId" : "clgccumiiynaaccdmddbhhvaababbeeggab",
+                  "type" : "EVENT"
+                } ]
+              } ],
+              "slot" : null,
+              "definition" : {
+                "id" : "d37ce8abca89d02905fed903c8e34d8e",
+                "type" : "MACROPONENT"
+              },
+              "overrides" : null,
+              "isHidden" : {
+                "type" : "UNARY",
+                "operation" : {
+                  "operand" : {
+                    "type" : "STATE_BINDING",
+                    "binding" : {
+                      "address" : [ "createNew" ]
+                    }
+                  },
+                  "operator" : "NOT"
+                }
               },
               "isHero" : false,
               "extensionPoints" : [ ],
@@ -3061,10 +3600,10 @@
               "default" : {
                 "children" : null,
                 "isInline" : null,
-                "items" : [{"element_id":"button_1","styles":{}}],
+                "items" : [{"element_id":"button_1","styles":{}},{"element_id":"button_2","styles":{}},{"element_id":"button_3","styles":{}}],
                 "root" : null,
                 "rules" : null,
-                "styles" : {"flex-direction":"column"},
+                "styles" : {"flex-direction":"row","gap":"var(--now-static-space--sm)"},
                 "templateId" : "5832fd4d53c31010e6bcddeeff7b12db",
                 "type" : "flex"
               },
@@ -3690,6 +4229,12 @@
   "message" : "Chin Height Pixels",
   "comment" : ""
 }, {
+  "message" : "Click \"New\" and change the Name and Long Name to create a new photobooth instance.",
+  "comment" : ""
+}, {
+  "message" : "Enter a label",
+  "comment" : ""
+}, {
   "message" : "Fill Style (Background Color)",
   "comment" : ""
 }, {
@@ -3699,10 +4244,16 @@
   "message" : "Image Path",
   "comment" : ""
 }, {
+  "message" : "Insert",
+  "comment" : ""
+}, {
   "message" : "Long Name",
   "comment" : ""
 }, {
   "message" : "Name",
+  "comment" : ""
+}, {
+  "message" : "New",
   "comment" : ""
 }, {
   "message" : "Path to local image (does not work with third party urls due to cross-origin rules).  Go the System UI &gt; Images and upload your image. Copy the name of the image here.",
@@ -3964,19 +4515,30 @@
     "type" : "JSON_LITERAL",
     "value" : true
   }
+}, {
+  "name" : "createNew",
+  "label" : "createNew",
+  "fieldType" : "boolean",
+  "valueType" : "boolean",
+  "shape" : "",
+  "description" : "",
+  "initialValue" : {
+    "type" : "JSON_LITERAL",
+    "value" : false
+  }
 } ]</state_properties>
         <sys_class_name>sys_ux_macroponent</sys_class_name>
         <sys_created_by>jon.lind</sys_created_by>
         <sys_created_on>2023-03-09 17:44:48</sys_created_on>
         <sys_id>c58628648721ad1089790fe5dabb3528</sys_id>
-        <sys_mod_count>155</sys_mod_count>
+        <sys_mod_count>168</sys_mod_count>
         <sys_name>Home Stylized</sys_name>
         <sys_package display_value="Photobooth App" source="x_snc_pb_app">baa73cb74742dd10552caf52736d43f1</sys_package>
         <sys_policy/>
         <sys_scope display_value="Photobooth App">baa73cb74742dd10552caf52736d43f1</sys_scope>
         <sys_update_name>sys_ux_macroponent_c58628648721ad1089790fe5dabb3528</sys_update_name>
         <sys_updated_by>jon.lind</sys_updated_by>
-        <sys_updated_on>2023-04-04 22:17:54</sys_updated_on>
+        <sys_updated_on>2023-04-04 22:51:50</sys_updated_on>
     </sys_ux_macroponent>
     <sys_translated_text action="delete_multiple" query="documentkey=c58628648721ad1089790fe5dabb3528"/>
 </record_update>
