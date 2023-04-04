@@ -80,16 +80,22 @@
           "elementLabel" : "Photobooth Camera 1",
           "propertyValues" : {
             "watermarkImageUrl" : {
-              "type" : "JSON_LITERAL",
-              "value" : "x_snc_pb_camera.servicenow_flat.png"
+              "type" : "STATE_BINDING",
+              "binding" : {
+                "address" : [ "watermarkImage" ]
+              }
             },
             "chin" : {
-              "type" : "JSON_LITERAL",
-              "value" : 50
+              "type" : "STATE_BINDING",
+              "binding" : {
+                "address" : [ "chinHeight" ]
+              }
             },
             "watermarkImagePosition" : {
-              "type" : "JSON_LITERAL",
-              "value" : "bottom-center"
+              "type" : "STATE_BINDING",
+              "binding" : {
+                "address" : [ "watermarkImagePosition" ]
+              }
             },
             "countdownDurationSeconds" : {
               "type" : "JSON_LITERAL",
@@ -109,10 +115,6 @@
               "type" : "JSON_LITERAL",
               "value" : true
             },
-            "watermarkImageScale" : {
-              "type" : "JSON_LITERAL",
-              "value" : 0.3
-            },
             "pauseDurationSeconds" : {
               "type" : "JSON_LITERAL",
               "value" : 1
@@ -124,18 +126,28 @@
               }
             },
             "gap" : {
-              "type" : "JSON_LITERAL",
-              "value" : 10
+              "type" : "STATE_BINDING",
+              "binding" : {
+                "address" : [ "gap" ]
+              }
             },
             "fillStyle" : {
-              "type" : "JSON_LITERAL",
-              "value" : "white"
+              "type" : "STATE_BINDING",
+              "binding" : {
+                "address" : [ "fillStyle" ]
+              }
             },
             "imageSize" : {
               "type" : "JSON_LITERAL",
               "value" : {
                 "width" : 800,
                 "height" : 600
+              }
+            },
+            "watermarkImageHeight" : {
+              "type" : "STATE_BINDING",
+              "binding" : {
+                "address" : [ "watermarkImageHeight" ]
               }
             }
           },
@@ -859,7 +871,7 @@
     },
     "size" : {
       "type" : "JSON_LITERAL",
-      "value" : "md"
+      "value" : "lg"
     },
     "disableDismiss" : {
       "type" : "JSON_LITERAL",
@@ -870,7 +882,50 @@
       "value" : false
     }
   },
-  "eventMappings" : [ ],
+  "eventMappings" : [ {
+    "eventMappingId" : "clgccikurddaabbfqddbhhvddwccaccebbff",
+    "isConfiguration" : false,
+    "offRowStorageId" : null,
+    "sourceEventApiName" : "sn_uxf_page.CANVAS_MODAL#OPENED",
+    "sourceEventCorrelationId" : null,
+    "sourceEventDefinition" : {
+      "apiName" : "sn_uxf_page.CANVAS_MODAL#OPENED",
+      "id" : null,
+      "type" : "UXEVENT"
+    },
+    "sourceEventSysId" : null,
+    "targets" : [ {
+      "broker" : null,
+      "clientScript" : {
+        "sysId" : "8e8628648721ad1089790fe5dabb3592"
+      },
+      "conditional" : null,
+      "declarativeAction" : null,
+      "event" : null,
+      "operation" : null,
+      "targetId" : "clgccikurddaabbfrddbhhvaaaautaazpii",
+      "type" : "CLIENT_SCRIPT"
+    }, {
+      "broker" : null,
+      "clientScript" : null,
+      "conditional" : null,
+      "declarativeAction" : null,
+      "event" : {
+        "apiName" : "sn_uxf.MACROPONENT_STATE_UPDATE_REQUESTED",
+        "payload" : {
+          "type" : "JSON_LITERAL",
+          "value" : {
+            "propName" : "settingsClean",
+            "value" : true
+          }
+        },
+        "sysId" : "32408b42ff7a10109046e490703bf176"
+      },
+      "operation" : null,
+      "targetId" : "clgccreeggpddaaaaaffddbhhvbdggutsfy",
+      "type" : "EVENT"
+    } ]
+  } ],
   "slot" : null,
   "definition" : {
     "id" : "9c2e3b0978b3250ef3081204f151026a",
@@ -914,8 +969,366 @@
       },
       "overrides" : {
         "composition" : [ {
-          "elementId" : "stylized_text_3",
-          "elementLabel" : "Stylized text 3",
+          "elementId" : "container_5",
+          "elementLabel" : "Photobooth Name Container",
+          "propertyValues" : {
+            "ariaRegionHeadingLevel" : {
+              "type" : "JSON_LITERAL",
+              "value" : "1"
+            },
+            "ariaRegionName" : {
+              "type" : "TRANSLATION_LITERAL",
+              "value" : {
+                "code" : null,
+                "message" : "",
+                "comment" : ""
+              }
+            },
+            "includeAriaHeading" : {
+              "type" : "JSON_LITERAL",
+              "value" : false
+            },
+            "type" : {
+              "type" : "JSON_LITERAL",
+              "value" : "section"
+            },
+            "ariaRole" : {
+              "type" : "JSON_LITERAL",
+              "value" : ""
+            }
+          },
+          "eventMappings" : [ ],
+          "slot" : null,
+          "definition" : {
+            "id" : "d356d14b6e293a3020a244b63d278d8f",
+            "type" : "MACROPONENT"
+          },
+          "overrides" : {
+            "composition" : [ {
+              "elementId" : "photoboothLongName",
+              "elementLabel" : "Long Name Input",
+              "propertyValues" : {
+                "minlength" : {
+                  "type" : "JSON_LITERAL",
+                  "value" : null
+                },
+                "maxlength" : {
+                  "type" : "JSON_LITERAL",
+                  "value" : null
+                },
+                "max" : {
+                  "type" : "JSON_LITERAL",
+                  "value" : null
+                },
+                "multiple" : {
+                  "type" : "JSON_LITERAL",
+                  "value" : null
+                },
+                "helperContent" : {
+                  "type" : "TRANSLATION_LITERAL",
+                  "value" : {
+                    "code" : null,
+                    "message" : "The long, descriptive name of the photobooth, e.g. \"CreatorCon 2023 Showroom Floor\"",
+                    "comment" : ""
+                  }
+                },
+                "pattern" : {
+                  "type" : "JSON_LITERAL",
+                  "value" : null
+                },
+                "optional" : {
+                  "type" : "JSON_LITERAL",
+                  "value" : false
+                },
+                "label" : {
+                  "type" : "TRANSLATION_LITERAL",
+                  "value" : {
+                    "code" : null,
+                    "message" : "Long Name",
+                    "comment" : ""
+                  }
+                },
+                "type" : {
+                  "type" : "JSON_LITERAL",
+                  "value" : "text"
+                },
+                "autofocus" : {
+                  "type" : "JSON_LITERAL",
+                  "value" : false
+                },
+                "configAria" : {
+                  "type" : "MAP_CONTAINER",
+                  "container" : {
+                    "input" : {
+                      "type" : "MAP_CONTAINER",
+                      "container" : { }
+                    }
+                  }
+                },
+                "required" : {
+                  "type" : "JSON_LITERAL",
+                  "value" : false
+                },
+                "min" : {
+                  "type" : "JSON_LITERAL",
+                  "value" : null
+                },
+                "readonly" : {
+                  "type" : "JSON_LITERAL",
+                  "value" : false
+                },
+                "name" : {
+                  "type" : "JSON_LITERAL",
+                  "value" : null
+                },
+                "invalid" : {
+                  "type" : "JSON_LITERAL",
+                  "value" : false
+                },
+                "messages" : {
+                  "type" : "LIST_CONTAINER",
+                  "container" : [ ]
+                },
+                "disabled" : {
+                  "type" : "JSON_LITERAL",
+                  "value" : false
+                },
+                "step" : {
+                  "type" : "JSON_LITERAL",
+                  "value" : "any"
+                },
+                "placeholder" : {
+                  "type" : "JSON_LITERAL",
+                  "value" : null
+                },
+                "value" : {
+                  "type" : "STATE_BINDING",
+                  "binding" : {
+                    "address" : [ "photoboothLongName" ]
+                  }
+                },
+                "hideRequiredIndicator" : {
+                  "type" : "JSON_LITERAL",
+                  "value" : false
+                }
+              },
+              "eventMappings" : [ {
+                "eventMappingId" : "clgcciyxtaaaabbndddbhhvdaggjjeetir",
+                "isConfiguration" : false,
+                "offRowStorageId" : null,
+                "sourceEventApiName" : "sn_input.NOW_INPUT#INPUT",
+                "sourceEventCorrelationId" : null,
+                "sourceEventDefinition" : {
+                  "apiName" : "sn_input.NOW_INPUT#INPUT",
+                  "id" : null,
+                  "type" : "UXEVENT"
+                },
+                "sourceEventSysId" : null,
+                "targets" : [ {
+                  "broker" : null,
+                  "clientScript" : {
+                    "sysId" : "56a90fbc87c6651089790fe5dabb35b9"
+                  },
+                  "conditional" : null,
+                  "declarativeAction" : null,
+                  "event" : null,
+                  "operation" : null,
+                  "targetId" : "clgccqxhheenaaaahhhhddbhhvcsaataacxw",
+                  "type" : "CLIENT_SCRIPT"
+                } ]
+              } ],
+              "slot" : null,
+              "definition" : {
+                "id" : "bb0f92e8d7eff1590624bfe69d316f23",
+                "type" : "MACROPONENT"
+              },
+              "overrides" : null,
+              "isHidden" : {
+                "type" : "JSON_LITERAL",
+                "value" : null
+              },
+              "isHero" : false,
+              "extensionPoints" : [ ],
+              "isNonDestructive" : false,
+              "items" : [ ],
+              "styles" : { }
+            }, {
+              "elementId" : "photoboothName",
+              "elementLabel" : "Name Input",
+              "propertyValues" : {
+                "minlength" : {
+                  "type" : "JSON_LITERAL",
+                  "value" : null
+                },
+                "maxlength" : {
+                  "type" : "JSON_LITERAL",
+                  "value" : null
+                },
+                "max" : {
+                  "type" : "JSON_LITERAL",
+                  "value" : null
+                },
+                "multiple" : {
+                  "type" : "JSON_LITERAL",
+                  "value" : null
+                },
+                "helperContent" : {
+                  "type" : "TRANSLATION_LITERAL",
+                  "value" : {
+                    "code" : null,
+                    "message" : "Short name, no spaces, used in the URL of your photobooth, e.g. \"CC23\" instead of \"CreatorCon 2023\". ",
+                    "comment" : ""
+                  }
+                },
+                "pattern" : {
+                  "type" : "JSON_LITERAL",
+                  "value" : "\\w"
+                },
+                "optional" : {
+                  "type" : "JSON_LITERAL",
+                  "value" : false
+                },
+                "label" : {
+                  "type" : "TRANSLATION_LITERAL",
+                  "value" : {
+                    "code" : null,
+                    "message" : "Name",
+                    "comment" : ""
+                  }
+                },
+                "type" : {
+                  "type" : "JSON_LITERAL",
+                  "value" : "text"
+                },
+                "autofocus" : {
+                  "type" : "JSON_LITERAL",
+                  "value" : false
+                },
+                "configAria" : {
+                  "type" : "MAP_CONTAINER",
+                  "container" : {
+                    "input" : {
+                      "type" : "MAP_CONTAINER",
+                      "container" : { }
+                    }
+                  }
+                },
+                "required" : {
+                  "type" : "JSON_LITERAL",
+                  "value" : false
+                },
+                "min" : {
+                  "type" : "JSON_LITERAL",
+                  "value" : null
+                },
+                "readonly" : {
+                  "type" : "JSON_LITERAL",
+                  "value" : false
+                },
+                "name" : {
+                  "type" : "JSON_LITERAL",
+                  "value" : null
+                },
+                "invalid" : {
+                  "type" : "JSON_LITERAL",
+                  "value" : false
+                },
+                "messages" : {
+                  "type" : "LIST_CONTAINER",
+                  "container" : [ ]
+                },
+                "disabled" : {
+                  "type" : "JSON_LITERAL",
+                  "value" : true
+                },
+                "step" : {
+                  "type" : "JSON_LITERAL",
+                  "value" : "any"
+                },
+                "placeholder" : {
+                  "type" : "JSON_LITERAL",
+                  "value" : null
+                },
+                "value" : {
+                  "type" : "STATE_BINDING",
+                  "binding" : {
+                    "address" : [ "photoboothName" ]
+                  }
+                },
+                "hideRequiredIndicator" : {
+                  "type" : "JSON_LITERAL",
+                  "value" : false
+                }
+              },
+              "eventMappings" : [ {
+                "eventMappingId" : "clgccizhuiiaabbnmddbhhvwhzbbosmz",
+                "isConfiguration" : false,
+                "offRowStorageId" : null,
+                "sourceEventApiName" : "sn_input.NOW_INPUT#INPUT",
+                "sourceEventCorrelationId" : null,
+                "sourceEventDefinition" : {
+                  "apiName" : "sn_input.NOW_INPUT#INPUT",
+                  "id" : null,
+                  "type" : "UXEVENT"
+                },
+                "sourceEventSysId" : null,
+                "targets" : [ {
+                  "broker" : null,
+                  "clientScript" : {
+                    "sysId" : "56a90fbc87c6651089790fe5dabb35b9"
+                  },
+                  "conditional" : null,
+                  "declarativeAction" : null,
+                  "event" : null,
+                  "operation" : null,
+                  "targetId" : "clgccqxjpwaaaahhdddbhhvggddbbhhuede",
+                  "type" : "CLIENT_SCRIPT"
+                } ]
+              } ],
+              "slot" : null,
+              "definition" : {
+                "id" : "bb0f92e8d7eff1590624bfe69d316f23",
+                "type" : "MACROPONENT"
+              },
+              "overrides" : null,
+              "isHidden" : {
+                "type" : "JSON_LITERAL",
+                "value" : null
+              },
+              "isHero" : false,
+              "extensionPoints" : [ ],
+              "isNonDestructive" : false,
+              "items" : [ ],
+              "styles" : { }
+            } ],
+            "layout" : {
+              "default" : {
+                "children" : null,
+                "isInline" : null,
+                "items" : [{"element_id":"photoboothLongName","styles":{}},{"element_id":"photoboothName","styles":{}}],
+                "root" : null,
+                "rules" : null,
+                "styles" : {"flex-direction":"column","display":"grid","grid-template-columns":"1fr 1fr","grid-template-rows":"1fr","grid-auto-rows":"1fr","grid-auto-columns":"1fr"},
+                "templateId" : "5832fd4d53c31010e6bcddeeff7b12db",
+                "type" : "grid"
+              },
+              "version" : "3.0.0"
+            }
+          },
+          "isHidden" : {
+            "type" : "JSON_LITERAL",
+            "value" : null
+          },
+          "isHero" : false,
+          "extensionPoints" : [ ],
+          "isNonDestructive" : false,
+          "items" : [ ],
+          "styles" : {
+            "width" : "100%"
+          }
+        }, {
+          "elementId" : "stylized_text_6",
+          "elementLabel" : "Stylized text 6",
           "propertyValues" : {
             "css" : {
               "type" : "JSON_LITERAL",
@@ -931,7 +1344,7 @@
             },
             "tag" : {
               "type" : "JSON_LITERAL",
-              "value" : "h2"
+              "value" : "h1"
             }
           },
           "eventMappings" : [ ],
@@ -955,7 +1368,7 @@
           "default" : {
             "children" : null,
             "isInline" : null,
-            "items" : [{"element_id":"stylized_text_3","styles":{}}],
+            "items" : [{"element_id":"stylized_text_6","styles":{}},{"element_id":"container_5","styles":{}}],
             "root" : null,
             "rules" : null,
             "styles" : {"flex-direction":"column"},
@@ -1049,44 +1462,7 @@
           },
           "overrides" : {
             "composition" : [ {
-              "elementId" : "stylized_text_4",
-              "elementLabel" : "Stylized text 4",
-              "propertyValues" : {
-                "css" : {
-                  "type" : "JSON_LITERAL",
-                  "value" : "* { }"
-                },
-                "text" : {
-                  "type" : "TRANSLATION_LITERAL",
-                  "value" : {
-                    "code" : null,
-                    "message" : "Select Camera",
-                    "comment" : ""
-                  }
-                },
-                "tag" : {
-                  "type" : "JSON_LITERAL",
-                  "value" : "p"
-                }
-              },
-              "eventMappings" : [ ],
-              "slot" : null,
-              "definition" : {
-                "id" : "4335ba6dca80378f7ba7a67cd6667bec",
-                "type" : "MACROPONENT"
-              },
-              "overrides" : null,
-              "isHidden" : {
-                "type" : "JSON_LITERAL",
-                "value" : null
-              },
-              "isHero" : false,
-              "extensionPoints" : [ ],
-              "isNonDestructive" : false,
-              "items" : [ ],
-              "styles" : { }
-            }, {
-              "elementId" : "dropdown_1",
+              "elementId" : "selectedCameraDeviceId",
               "elementLabel" : "Cameras Dropdown",
               "propertyValues" : {
                 "select" : {
@@ -1110,8 +1486,12 @@
                   "value" : false
                 },
                 "tooltipContent" : {
-                  "type" : "JSON_LITERAL",
-                  "value" : null
+                  "type" : "TRANSLATION_LITERAL",
+                  "value" : {
+                    "code" : null,
+                    "message" : "Please select a camera",
+                    "comment" : ""
+                  }
                 },
                 "panelFitProps" : {
                   "type" : "JSON_LITERAL",
@@ -1160,13 +1540,9 @@
                   }
                 },
                 "selectedItems" : {
-                  "type" : "CLIENT_TRANSFORM_SCRIPT",
-                  "script" : {
-                    "apiVersion" : "2.0.0",
-                    "controllerElementId" : null,
-                    "inlineScript" : null,
-                    "scriptSysId" : "d045f84547b5a510552caf52736d4377",
-                    "target" : null
+                  "type" : "STATE_BINDING",
+                  "binding" : {
+                    "address" : [ "selectedCameraDeviceId" ]
                   }
                 },
                 "hideLabel" : {
@@ -1175,7 +1551,7 @@
                 }
               },
               "eventMappings" : [ {
-                "eventMappingId" : "clflfddxccbbaaaaslddbhhvwjjeeereedcc",
+                "eventMappingId" : "clgccgchhnhhaaaalmddbhhvpijwbncc",
                 "isConfiguration" : false,
                 "offRowStorageId" : null,
                 "sourceEventApiName" : "sn_dropdown.NOW_DROPDOWN#SELECTED_ITEMS_SET",
@@ -1189,81 +1565,14 @@
                 "targets" : [ {
                   "broker" : null,
                   "clientScript" : {
-                    "sysId" : "8e8628648721ad1089790fe5dabb3592"
+                    "sysId" : "56a90fbc87c6651089790fe5dabb35b9"
                   },
                   "conditional" : null,
                   "declarativeAction" : null,
                   "event" : null,
                   "operation" : null,
-                  "targetId" : "clflfeeutoaaaataddbhhvffiitrpbbvv",
+                  "targetId" : "clgccqyfflwaaaahhjddbhhvpxffaacrgc",
                   "type" : "CLIENT_SCRIPT"
-                }, {
-                  "broker" : null,
-                  "clientScript" : null,
-                  "conditional" : null,
-                  "declarativeAction" : null,
-                  "event" : null,
-                  "operation" : {
-                    "dataBrokerId" : "9b4b978353211010cbc2ddeeff7b1245",
-                    "operationName" : "EXECUTE",
-                    "parentResourceId" : "update_record",
-                    "payload" : {
-                      "type" : "MAP_CONTAINER",
-                      "container" : {
-                        "table" : {
-                          "type" : "JSON_LITERAL",
-                          "value" : "x_snc_pb_core_photobooth"
-                        },
-                        "recordId" : {
-                          "type" : "STATE_BINDING",
-                          "binding" : {
-                            "address" : [ "photoboothInstanceId" ]
-                          }
-                        },
-                        "templateFields" : {
-                          "type" : "CLIENT_TRANSFORM",
-                          "transform" : {
-                            "operands" : {
-                              "type" : "LIST_CONTAINER",
-                              "container" : [ {
-                                "type" : "JSON_LITERAL",
-                                "value" : "camera_device_id="
-                              }, {
-                                "type" : "EVENT_PAYLOAD_BINDING",
-                                "binding" : {
-                                  "address" : [ "value", "0" ]
-                                }
-                              } ]
-                            },
-                            "operator" : "CONCAT"
-                          }
-                        },
-                        "useSetDisplayValue" : {
-                          "type" : "JSON_LITERAL",
-                          "value" : null
-                        }
-                      }
-                    }
-                  },
-                  "targetId" : "clflfffijlaaaatcddbhhvbqvddtssg",
-                  "type" : "DATABROKER_OP"
-                }, {
-                  "broker" : null,
-                  "clientScript" : null,
-                  "conditional" : null,
-                  "declarativeAction" : null,
-                  "event" : null,
-                  "operation" : {
-                    "dataBrokerId" : "b997a84053021010cbc2ddeeff7b1228",
-                    "operationName" : "REFRESH",
-                    "parentResourceId" : "look_up_photobooths",
-                    "payload" : {
-                      "type" : "JSON_LITERAL",
-                      "value" : { }
-                    }
-                  },
-                  "targetId" : "clflfuiiizaaaactddbhhveeeeccybbyng",
-                  "type" : "DATABROKER_OP"
                 } ]
               } ],
               "slot" : null,
@@ -1286,10 +1595,10 @@
               "default" : {
                 "children" : null,
                 "isInline" : null,
-                "items" : [{"element_id":"stylized_text_4","styles":{}},{"element_id":"dropdown_1","styles":{}}],
+                "items" : [{"element_id":"selectedCameraDeviceId","styles":{}}],
                 "root" : null,
                 "rules" : null,
-                "styles" : {"flex-direction":"column","margin":"var(--now-static-space--lg)"},
+                "styles" : {"flex-direction":"column","padding":"","padding-top":"","padding-bottom":"var(--now-static-space--sm)"},
                 "templateId" : "5832fd4d53c31010e6bcddeeff7b12db",
                 "type" : "flex"
               },
@@ -1307,12 +1616,1122 @@
           "styles" : {
             "width" : "100%"
           }
+        }, {
+          "elementId" : "container_3",
+          "elementLabel" : "Watermark Image Container",
+          "propertyValues" : {
+            "ariaRegionHeadingLevel" : {
+              "type" : "JSON_LITERAL",
+              "value" : "1"
+            },
+            "ariaRegionName" : {
+              "type" : "TRANSLATION_LITERAL",
+              "value" : {
+                "code" : null,
+                "message" : "",
+                "comment" : ""
+              }
+            },
+            "includeAriaHeading" : {
+              "type" : "JSON_LITERAL",
+              "value" : false
+            },
+            "type" : {
+              "type" : "JSON_LITERAL",
+              "value" : "section"
+            },
+            "ariaRole" : {
+              "type" : "JSON_LITERAL",
+              "value" : ""
+            }
+          },
+          "eventMappings" : [ ],
+          "slot" : null,
+          "definition" : {
+            "id" : "d356d14b6e293a3020a244b63d278d8f",
+            "type" : "MACROPONENT"
+          },
+          "overrides" : {
+            "composition" : [ {
+              "elementId" : "stylized_text_5",
+              "elementLabel" : "Stylized text 5",
+              "propertyValues" : {
+                "css" : {
+                  "type" : "JSON_LITERAL",
+                  "value" : "* { }"
+                },
+                "text" : {
+                  "type" : "TRANSLATION_LITERAL",
+                  "value" : {
+                    "code" : null,
+                    "message" : "Watermark and Image Output",
+                    "comment" : ""
+                  }
+                },
+                "tag" : {
+                  "type" : "JSON_LITERAL",
+                  "value" : "p"
+                }
+              },
+              "eventMappings" : [ ],
+              "slot" : null,
+              "definition" : {
+                "id" : "4335ba6dca80378f7ba7a67cd6667bec",
+                "type" : "MACROPONENT"
+              },
+              "overrides" : null,
+              "isHidden" : {
+                "type" : "JSON_LITERAL",
+                "value" : null
+              },
+              "isHero" : false,
+              "extensionPoints" : [ ],
+              "isNonDestructive" : false,
+              "items" : [ ],
+              "styles" : { }
+            }, {
+              "elementId" : "image_2",
+              "elementLabel" : "Watermark Image Preview",
+              "propertyValues" : {
+                "fit" : {
+                  "type" : "JSON_LITERAL",
+                  "value" : "contain"
+                },
+                "src" : {
+                  "type" : "STATE_BINDING",
+                  "binding" : {
+                    "address" : [ "watermarkImage" ]
+                  }
+                },
+                "alt" : {
+                  "type" : "TRANSLATION_LITERAL",
+                  "value" : {
+                    "code" : null,
+                    "message" : "Watermark Image URL or Path",
+                    "comment" : ""
+                  }
+                },
+                "position" : {
+                  "type" : "JSON_LITERAL",
+                  "value" : "center center"
+                },
+                "height" : {
+                  "type" : "CLIENT_TRANSFORM_SCRIPT",
+                  "script" : {
+                    "apiVersion" : "2.0.0",
+                    "controllerElementId" : null,
+                    "inlineScript" : null,
+                    "scriptSysId" : "ebafb9f44702a510552caf52736d4359",
+                    "target" : null
+                  }
+                }
+              },
+              "eventMappings" : [ ],
+              "slot" : "",
+              "definition" : {
+                "id" : "15fe506403f8a98575b6df59008ea8f1",
+                "type" : "MACROPONENT"
+              },
+              "overrides" : null,
+              "isHidden" : {
+                "type" : "JSON_LITERAL",
+                "value" : null
+              },
+              "isHero" : false,
+              "extensionPoints" : [ ],
+              "isNonDestructive" : false,
+              "items" : [ ],
+              "styles" : { }
+            }, {
+              "elementId" : "container_4",
+              "elementLabel" : "Container 4",
+              "propertyValues" : {
+                "ariaRegionHeadingLevel" : {
+                  "type" : "JSON_LITERAL",
+                  "value" : "1"
+                },
+                "ariaRegionName" : {
+                  "type" : "TRANSLATION_LITERAL",
+                  "value" : {
+                    "code" : null,
+                    "message" : "",
+                    "comment" : ""
+                  }
+                },
+                "includeAriaHeading" : {
+                  "type" : "JSON_LITERAL",
+                  "value" : false
+                },
+                "type" : {
+                  "type" : "JSON_LITERAL",
+                  "value" : "section"
+                },
+                "ariaRole" : {
+                  "type" : "JSON_LITERAL",
+                  "value" : ""
+                }
+              },
+              "eventMappings" : [ ],
+              "slot" : null,
+              "definition" : {
+                "id" : "d356d14b6e293a3020a244b63d278d8f",
+                "type" : "MACROPONENT"
+              },
+              "overrides" : {
+                "composition" : [ {
+                  "elementId" : "chinHeight",
+                  "elementLabel" : "Chin Height Input",
+                  "propertyValues" : {
+                    "minlength" : {
+                      "type" : "JSON_LITERAL",
+                      "value" : null
+                    },
+                    "maxlength" : {
+                      "type" : "JSON_LITERAL",
+                      "value" : null
+                    },
+                    "max" : {
+                      "type" : "JSON_LITERAL",
+                      "value" : null
+                    },
+                    "multiple" : {
+                      "type" : "JSON_LITERAL",
+                      "value" : null
+                    },
+                    "helperContent" : {
+                      "type" : "TRANSLATION_LITERAL",
+                      "value" : {
+                        "code" : null,
+                        "message" : "The height of the additional space at the bottom of the image.  This is added to the gap, and can be used to hold the watermark.",
+                        "comment" : ""
+                      }
+                    },
+                    "pattern" : {
+                      "type" : "JSON_LITERAL",
+                      "value" : null
+                    },
+                    "optional" : {
+                      "type" : "JSON_LITERAL",
+                      "value" : false
+                    },
+                    "label" : {
+                      "type" : "TRANSLATION_LITERAL",
+                      "value" : {
+                        "code" : null,
+                        "message" : "Chin Height Pixels",
+                        "comment" : ""
+                      }
+                    },
+                    "type" : {
+                      "type" : "JSON_LITERAL",
+                      "value" : "text"
+                    },
+                    "autofocus" : {
+                      "type" : "JSON_LITERAL",
+                      "value" : false
+                    },
+                    "configAria" : {
+                      "type" : "MAP_CONTAINER",
+                      "container" : {
+                        "input" : {
+                          "type" : "MAP_CONTAINER",
+                          "container" : { }
+                        }
+                      }
+                    },
+                    "required" : {
+                      "type" : "JSON_LITERAL",
+                      "value" : false
+                    },
+                    "min" : {
+                      "type" : "JSON_LITERAL",
+                      "value" : null
+                    },
+                    "readonly" : {
+                      "type" : "JSON_LITERAL",
+                      "value" : false
+                    },
+                    "name" : {
+                      "type" : "JSON_LITERAL",
+                      "value" : null
+                    },
+                    "invalid" : {
+                      "type" : "JSON_LITERAL",
+                      "value" : false
+                    },
+                    "messages" : {
+                      "type" : "LIST_CONTAINER",
+                      "container" : [ ]
+                    },
+                    "disabled" : {
+                      "type" : "JSON_LITERAL",
+                      "value" : false
+                    },
+                    "step" : {
+                      "type" : "JSON_LITERAL",
+                      "value" : "any"
+                    },
+                    "placeholder" : {
+                      "type" : "JSON_LITERAL",
+                      "value" : null
+                    },
+                    "value" : {
+                      "type" : "STATE_BINDING",
+                      "binding" : {
+                        "address" : [ "chinHeight" ]
+                      }
+                    },
+                    "hideRequiredIndicator" : {
+                      "type" : "JSON_LITERAL",
+                      "value" : false
+                    }
+                  },
+                  "eventMappings" : [ {
+                    "eventMappingId" : "clgccjddobfaabbpvddbhhvxhhyrfuzs",
+                    "isConfiguration" : false,
+                    "offRowStorageId" : null,
+                    "sourceEventApiName" : "sn_input.NOW_INPUT#INPUT",
+                    "sourceEventCorrelationId" : null,
+                    "sourceEventDefinition" : {
+                      "apiName" : "sn_input.NOW_INPUT#INPUT",
+                      "id" : null,
+                      "type" : "UXEVENT"
+                    },
+                    "sourceEventSysId" : null,
+                    "targets" : [ {
+                      "broker" : null,
+                      "clientScript" : {
+                        "sysId" : "56a90fbc87c6651089790fe5dabb35b9"
+                      },
+                      "conditional" : null,
+                      "declarativeAction" : null,
+                      "event" : null,
+                      "operation" : null,
+                      "targetId" : "clgccscpdkaaaatggddbhhvgpvyfkjee",
+                      "type" : "CLIENT_SCRIPT"
+                    } ]
+                  } ],
+                  "slot" : null,
+                  "definition" : {
+                    "id" : "bb0f92e8d7eff1590624bfe69d316f23",
+                    "type" : "MACROPONENT"
+                  },
+                  "overrides" : null,
+                  "isHidden" : {
+                    "type" : "JSON_LITERAL",
+                    "value" : null
+                  },
+                  "isHero" : false,
+                  "extensionPoints" : [ ],
+                  "isNonDestructive" : false,
+                  "items" : [ ],
+                  "styles" : { }
+                }, {
+                  "elementId" : "gap",
+                  "elementLabel" : "Gap Input",
+                  "propertyValues" : {
+                    "minlength" : {
+                      "type" : "JSON_LITERAL",
+                      "value" : null
+                    },
+                    "maxlength" : {
+                      "type" : "JSON_LITERAL",
+                      "value" : null
+                    },
+                    "max" : {
+                      "type" : "JSON_LITERAL",
+                      "value" : null
+                    },
+                    "multiple" : {
+                      "type" : "JSON_LITERAL",
+                      "value" : null
+                    },
+                    "helperContent" : {
+                      "type" : "TRANSLATION_LITERAL",
+                      "value" : {
+                        "code" : null,
+                        "message" : "The number of pixels around the edge and between each pixel.",
+                        "comment" : ""
+                      }
+                    },
+                    "pattern" : {
+                      "type" : "JSON_LITERAL",
+                      "value" : null
+                    },
+                    "optional" : {
+                      "type" : "JSON_LITERAL",
+                      "value" : false
+                    },
+                    "label" : {
+                      "type" : "TRANSLATION_LITERAL",
+                      "value" : {
+                        "code" : null,
+                        "message" : "Gap in Pixels",
+                        "comment" : ""
+                      }
+                    },
+                    "type" : {
+                      "type" : "JSON_LITERAL",
+                      "value" : "text"
+                    },
+                    "autofocus" : {
+                      "type" : "JSON_LITERAL",
+                      "value" : false
+                    },
+                    "configAria" : {
+                      "type" : "MAP_CONTAINER",
+                      "container" : {
+                        "input" : {
+                          "type" : "MAP_CONTAINER",
+                          "container" : { }
+                        }
+                      }
+                    },
+                    "required" : {
+                      "type" : "JSON_LITERAL",
+                      "value" : false
+                    },
+                    "min" : {
+                      "type" : "JSON_LITERAL",
+                      "value" : null
+                    },
+                    "readonly" : {
+                      "type" : "JSON_LITERAL",
+                      "value" : false
+                    },
+                    "name" : {
+                      "type" : "JSON_LITERAL",
+                      "value" : null
+                    },
+                    "invalid" : {
+                      "type" : "JSON_LITERAL",
+                      "value" : false
+                    },
+                    "messages" : {
+                      "type" : "LIST_CONTAINER",
+                      "container" : [ ]
+                    },
+                    "disabled" : {
+                      "type" : "JSON_LITERAL",
+                      "value" : false
+                    },
+                    "step" : {
+                      "type" : "JSON_LITERAL",
+                      "value" : "any"
+                    },
+                    "placeholder" : {
+                      "type" : "JSON_LITERAL",
+                      "value" : null
+                    },
+                    "value" : {
+                      "type" : "STATE_BINDING",
+                      "binding" : {
+                        "address" : [ "gap" ]
+                      }
+                    },
+                    "hideRequiredIndicator" : {
+                      "type" : "JSON_LITERAL",
+                      "value" : false
+                    }
+                  },
+                  "eventMappings" : [ {
+                    "eventMappingId" : "clgccsyphhpaabbhhqddbhhvgddffubbkmbb",
+                    "isConfiguration" : false,
+                    "offRowStorageId" : null,
+                    "sourceEventApiName" : "sn_input.NOW_INPUT#INPUT",
+                    "sourceEventCorrelationId" : null,
+                    "sourceEventDefinition" : {
+                      "apiName" : "sn_input.NOW_INPUT#INPUT",
+                      "id" : null,
+                      "type" : "UXEVENT"
+                    },
+                    "sourceEventSysId" : null,
+                    "targets" : [ {
+                      "broker" : null,
+                      "clientScript" : {
+                        "sysId" : "56a90fbc87c6651089790fe5dabb35b9"
+                      },
+                      "conditional" : null,
+                      "declarativeAction" : null,
+                      "event" : null,
+                      "operation" : null,
+                      "targetId" : "clgccsyphhpaabbhhrddbhhvpwnccdcqff",
+                      "type" : "CLIENT_SCRIPT"
+                    } ]
+                  } ],
+                  "slot" : null,
+                  "definition" : {
+                    "id" : "bb0f92e8d7eff1590624bfe69d316f23",
+                    "type" : "MACROPONENT"
+                  },
+                  "overrides" : null,
+                  "isHidden" : {
+                    "type" : "JSON_LITERAL",
+                    "value" : null
+                  },
+                  "isHero" : false,
+                  "extensionPoints" : [ ],
+                  "isNonDestructive" : false,
+                  "items" : [ ],
+                  "styles" : { }
+                }, {
+                  "elementId" : "watermarkImageHeight",
+                  "elementLabel" : "Watermark Image Height Input",
+                  "propertyValues" : {
+                    "minlength" : {
+                      "type" : "JSON_LITERAL",
+                      "value" : null
+                    },
+                    "maxlength" : {
+                      "type" : "JSON_LITERAL",
+                      "value" : null
+                    },
+                    "max" : {
+                      "type" : "JSON_LITERAL",
+                      "value" : null
+                    },
+                    "multiple" : {
+                      "type" : "JSON_LITERAL",
+                      "value" : null
+                    },
+                    "helperContent" : {
+                      "type" : "TRANSLATION_LITERAL",
+                      "value" : {
+                        "code" : null,
+                        "message" : "The number of pixels to scale the watermark image to. Will scale proportionally based on height. Leave blank for no scale.",
+                        "comment" : ""
+                      }
+                    },
+                    "pattern" : {
+                      "type" : "JSON_LITERAL",
+                      "value" : null
+                    },
+                    "optional" : {
+                      "type" : "JSON_LITERAL",
+                      "value" : false
+                    },
+                    "label" : {
+                      "type" : "TRANSLATION_LITERAL",
+                      "value" : {
+                        "code" : null,
+                        "message" : "Watermark Image Height in Pixels",
+                        "comment" : ""
+                      }
+                    },
+                    "type" : {
+                      "type" : "JSON_LITERAL",
+                      "value" : "text"
+                    },
+                    "autofocus" : {
+                      "type" : "JSON_LITERAL",
+                      "value" : false
+                    },
+                    "configAria" : {
+                      "type" : "MAP_CONTAINER",
+                      "container" : {
+                        "input" : {
+                          "type" : "MAP_CONTAINER",
+                          "container" : { }
+                        }
+                      }
+                    },
+                    "required" : {
+                      "type" : "JSON_LITERAL",
+                      "value" : false
+                    },
+                    "min" : {
+                      "type" : "JSON_LITERAL",
+                      "value" : null
+                    },
+                    "readonly" : {
+                      "type" : "JSON_LITERAL",
+                      "value" : false
+                    },
+                    "name" : {
+                      "type" : "JSON_LITERAL",
+                      "value" : null
+                    },
+                    "invalid" : {
+                      "type" : "JSON_LITERAL",
+                      "value" : false
+                    },
+                    "messages" : {
+                      "type" : "LIST_CONTAINER",
+                      "container" : [ ]
+                    },
+                    "disabled" : {
+                      "type" : "JSON_LITERAL",
+                      "value" : false
+                    },
+                    "step" : {
+                      "type" : "JSON_LITERAL",
+                      "value" : "any"
+                    },
+                    "placeholder" : {
+                      "type" : "JSON_LITERAL",
+                      "value" : null
+                    },
+                    "value" : {
+                      "type" : "STATE_BINDING",
+                      "binding" : {
+                        "address" : [ "watermarkImageHeight" ]
+                      }
+                    },
+                    "hideRequiredIndicator" : {
+                      "type" : "JSON_LITERAL",
+                      "value" : false
+                    }
+                  },
+                  "eventMappings" : [ {
+                    "eventMappingId" : "clgcctaahffpaabbjjaaddbhhvliiifddhujj",
+                    "isConfiguration" : false,
+                    "offRowStorageId" : null,
+                    "sourceEventApiName" : "sn_input.NOW_INPUT#INPUT",
+                    "sourceEventCorrelationId" : null,
+                    "sourceEventDefinition" : {
+                      "apiName" : "sn_input.NOW_INPUT#INPUT",
+                      "id" : null,
+                      "type" : "UXEVENT"
+                    },
+                    "sourceEventSysId" : null,
+                    "targets" : [ {
+                      "broker" : null,
+                      "clientScript" : {
+                        "sysId" : "56a90fbc87c6651089790fe5dabb35b9"
+                      },
+                      "conditional" : null,
+                      "declarativeAction" : null,
+                      "event" : null,
+                      "operation" : null,
+                      "targetId" : "clgcctaahffpaabbjjbbddbhhvzadrbtjw",
+                      "type" : "CLIENT_SCRIPT"
+                    } ]
+                  } ],
+                  "slot" : "",
+                  "definition" : {
+                    "id" : "bb0f92e8d7eff1590624bfe69d316f23",
+                    "type" : "MACROPONENT"
+                  },
+                  "overrides" : null,
+                  "isHidden" : {
+                    "type" : "JSON_LITERAL",
+                    "value" : null
+                  },
+                  "isHero" : false,
+                  "extensionPoints" : [ ],
+                  "isNonDestructive" : false,
+                  "items" : [ ],
+                  "styles" : { }
+                }, {
+                  "elementId" : "watermarkImagePosition",
+                  "elementLabel" : "Watermark Image Position Input",
+                  "propertyValues" : {
+                    "minlength" : {
+                      "type" : "JSON_LITERAL",
+                      "value" : null
+                    },
+                    "maxlength" : {
+                      "type" : "JSON_LITERAL",
+                      "value" : null
+                    },
+                    "max" : {
+                      "type" : "JSON_LITERAL",
+                      "value" : null
+                    },
+                    "multiple" : {
+                      "type" : "JSON_LITERAL",
+                      "value" : null
+                    },
+                    "helperContent" : {
+                      "type" : "TRANSLATION_LITERAL",
+                      "value" : {
+                        "code" : null,
+                        "message" : "The position of the watermark image on the output snapshot. Choices are \"top-left\", \"top-center\", \"top-right\", \"bottom-left\", \"bottom-center\" (default), \"bottom-right\" and \"center\".",
+                        "comment" : ""
+                      }
+                    },
+                    "pattern" : {
+                      "type" : "JSON_LITERAL",
+                      "value" : null
+                    },
+                    "optional" : {
+                      "type" : "JSON_LITERAL",
+                      "value" : false
+                    },
+                    "label" : {
+                      "type" : "TRANSLATION_LITERAL",
+                      "value" : {
+                        "code" : null,
+                        "message" : "Watermark Image Position",
+                        "comment" : ""
+                      }
+                    },
+                    "type" : {
+                      "type" : "JSON_LITERAL",
+                      "value" : "text"
+                    },
+                    "autofocus" : {
+                      "type" : "JSON_LITERAL",
+                      "value" : false
+                    },
+                    "configAria" : {
+                      "type" : "MAP_CONTAINER",
+                      "container" : {
+                        "input" : {
+                          "type" : "MAP_CONTAINER",
+                          "container" : { }
+                        }
+                      }
+                    },
+                    "required" : {
+                      "type" : "JSON_LITERAL",
+                      "value" : false
+                    },
+                    "min" : {
+                      "type" : "JSON_LITERAL",
+                      "value" : null
+                    },
+                    "readonly" : {
+                      "type" : "JSON_LITERAL",
+                      "value" : false
+                    },
+                    "name" : {
+                      "type" : "JSON_LITERAL",
+                      "value" : null
+                    },
+                    "invalid" : {
+                      "type" : "JSON_LITERAL",
+                      "value" : false
+                    },
+                    "messages" : {
+                      "type" : "LIST_CONTAINER",
+                      "container" : [ ]
+                    },
+                    "disabled" : {
+                      "type" : "JSON_LITERAL",
+                      "value" : false
+                    },
+                    "step" : {
+                      "type" : "JSON_LITERAL",
+                      "value" : "any"
+                    },
+                    "placeholder" : {
+                      "type" : "JSON_LITERAL",
+                      "value" : null
+                    },
+                    "value" : {
+                      "type" : "STATE_BINDING",
+                      "binding" : {
+                        "address" : [ "watermarkImagePosition" ]
+                      }
+                    },
+                    "hideRequiredIndicator" : {
+                      "type" : "JSON_LITERAL",
+                      "value" : false
+                    }
+                  },
+                  "eventMappings" : [ {
+                    "eventMappingId" : "clgccszffqggaabbiiffddbhhvmgiiaamjzjj",
+                    "isConfiguration" : false,
+                    "offRowStorageId" : null,
+                    "sourceEventApiName" : "sn_input.NOW_INPUT#INPUT",
+                    "sourceEventCorrelationId" : null,
+                    "sourceEventDefinition" : {
+                      "apiName" : "sn_input.NOW_INPUT#INPUT",
+                      "id" : null,
+                      "type" : "UXEVENT"
+                    },
+                    "sourceEventSysId" : null,
+                    "targets" : [ {
+                      "broker" : null,
+                      "clientScript" : {
+                        "sysId" : "56a90fbc87c6651089790fe5dabb35b9"
+                      },
+                      "conditional" : null,
+                      "declarativeAction" : null,
+                      "event" : null,
+                      "operation" : null,
+                      "targetId" : "clgccszffqggaabbiiggddbhhvaaalbbdglhh",
+                      "type" : "CLIENT_SCRIPT"
+                    } ]
+                  } ],
+                  "slot" : "",
+                  "definition" : {
+                    "id" : "bb0f92e8d7eff1590624bfe69d316f23",
+                    "type" : "MACROPONENT"
+                  },
+                  "overrides" : null,
+                  "isHidden" : {
+                    "type" : "JSON_LITERAL",
+                    "value" : null
+                  },
+                  "isHero" : false,
+                  "extensionPoints" : [ ],
+                  "isNonDestructive" : false,
+                  "items" : [ ],
+                  "styles" : { }
+                }, {
+                  "elementId" : "watermarkImage",
+                  "elementLabel" : "Watermark Image Input",
+                  "propertyValues" : {
+                    "minlength" : {
+                      "type" : "JSON_LITERAL",
+                      "value" : null
+                    },
+                    "maxlength" : {
+                      "type" : "JSON_LITERAL",
+                      "value" : null
+                    },
+                    "max" : {
+                      "type" : "JSON_LITERAL",
+                      "value" : null
+                    },
+                    "multiple" : {
+                      "type" : "JSON_LITERAL",
+                      "value" : null
+                    },
+                    "helperContent" : {
+                      "type" : "TRANSLATION_LITERAL",
+                      "value" : {
+                        "code" : null,
+                        "message" : "Path to local image (does not work with third party urls due to cross-origin rules).  Go the System UI &gt; Images and upload your image. Copy the name of the image here.",
+                        "comment" : ""
+                      }
+                    },
+                    "pattern" : {
+                      "type" : "JSON_LITERAL",
+                      "value" : null
+                    },
+                    "optional" : {
+                      "type" : "JSON_LITERAL",
+                      "value" : false
+                    },
+                    "label" : {
+                      "type" : "TRANSLATION_LITERAL",
+                      "value" : {
+                        "code" : null,
+                        "message" : "Image Path",
+                        "comment" : ""
+                      }
+                    },
+                    "type" : {
+                      "type" : "JSON_LITERAL",
+                      "value" : "text"
+                    },
+                    "autofocus" : {
+                      "type" : "JSON_LITERAL",
+                      "value" : false
+                    },
+                    "configAria" : {
+                      "type" : "MAP_CONTAINER",
+                      "container" : {
+                        "input" : {
+                          "type" : "MAP_CONTAINER",
+                          "container" : { }
+                        }
+                      }
+                    },
+                    "required" : {
+                      "type" : "JSON_LITERAL",
+                      "value" : false
+                    },
+                    "min" : {
+                      "type" : "JSON_LITERAL",
+                      "value" : null
+                    },
+                    "readonly" : {
+                      "type" : "JSON_LITERAL",
+                      "value" : false
+                    },
+                    "name" : {
+                      "type" : "JSON_LITERAL",
+                      "value" : null
+                    },
+                    "invalid" : {
+                      "type" : "JSON_LITERAL",
+                      "value" : false
+                    },
+                    "messages" : {
+                      "type" : "LIST_CONTAINER",
+                      "container" : [ ]
+                    },
+                    "disabled" : {
+                      "type" : "JSON_LITERAL",
+                      "value" : false
+                    },
+                    "step" : {
+                      "type" : "JSON_LITERAL",
+                      "value" : "any"
+                    },
+                    "placeholder" : {
+                      "type" : "JSON_LITERAL",
+                      "value" : null
+                    },
+                    "value" : {
+                      "type" : "STATE_BINDING",
+                      "binding" : {
+                        "address" : [ "watermarkImage" ]
+                      }
+                    },
+                    "hideRequiredIndicator" : {
+                      "type" : "JSON_LITERAL",
+                      "value" : false
+                    }
+                  },
+                  "eventMappings" : [ {
+                    "eventMappingId" : "clgccszhmwaabbiilddbhhvjjjjiieekybee",
+                    "isConfiguration" : false,
+                    "offRowStorageId" : null,
+                    "sourceEventApiName" : "sn_input.NOW_INPUT#INPUT",
+                    "sourceEventCorrelationId" : null,
+                    "sourceEventDefinition" : {
+                      "apiName" : "sn_input.NOW_INPUT#INPUT",
+                      "id" : null,
+                      "type" : "UXEVENT"
+                    },
+                    "sourceEventSysId" : null,
+                    "targets" : [ {
+                      "broker" : null,
+                      "clientScript" : {
+                        "sysId" : "56a90fbc87c6651089790fe5dabb35b9"
+                      },
+                      "conditional" : null,
+                      "declarativeAction" : null,
+                      "event" : null,
+                      "operation" : null,
+                      "targetId" : "clgccszhmwaabbiimddbhhvffxrxqggaaa",
+                      "type" : "CLIENT_SCRIPT"
+                    } ]
+                  } ],
+                  "slot" : "",
+                  "definition" : {
+                    "id" : "bb0f92e8d7eff1590624bfe69d316f23",
+                    "type" : "MACROPONENT"
+                  },
+                  "overrides" : null,
+                  "isHidden" : {
+                    "type" : "JSON_LITERAL",
+                    "value" : null
+                  },
+                  "isHero" : false,
+                  "extensionPoints" : [ ],
+                  "isNonDestructive" : false,
+                  "items" : [ ],
+                  "styles" : { }
+                }, {
+                  "elementId" : "fillStyle",
+                  "elementLabel" : "Fill Style Input",
+                  "propertyValues" : {
+                    "minlength" : {
+                      "type" : "JSON_LITERAL",
+                      "value" : null
+                    },
+                    "maxlength" : {
+                      "type" : "JSON_LITERAL",
+                      "value" : null
+                    },
+                    "max" : {
+                      "type" : "JSON_LITERAL",
+                      "value" : null
+                    },
+                    "multiple" : {
+                      "type" : "JSON_LITERAL",
+                      "value" : null
+                    },
+                    "helperContent" : {
+                      "type" : "TRANSLATION_LITERAL",
+                      "value" : {
+                        "code" : null,
+                        "message" : "The canvas fill style for the rendered the image.  Usually a color, e.g. \"white\". https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/fillStyle",
+                        "comment" : ""
+                      }
+                    },
+                    "pattern" : {
+                      "type" : "JSON_LITERAL",
+                      "value" : null
+                    },
+                    "optional" : {
+                      "type" : "JSON_LITERAL",
+                      "value" : false
+                    },
+                    "label" : {
+                      "type" : "TRANSLATION_LITERAL",
+                      "value" : {
+                        "code" : null,
+                        "message" : "Fill Style (Background Color)",
+                        "comment" : ""
+                      }
+                    },
+                    "type" : {
+                      "type" : "JSON_LITERAL",
+                      "value" : "text"
+                    },
+                    "autofocus" : {
+                      "type" : "JSON_LITERAL",
+                      "value" : false
+                    },
+                    "configAria" : {
+                      "type" : "MAP_CONTAINER",
+                      "container" : {
+                        "input" : {
+                          "type" : "MAP_CONTAINER",
+                          "container" : { }
+                        }
+                      }
+                    },
+                    "required" : {
+                      "type" : "JSON_LITERAL",
+                      "value" : false
+                    },
+                    "min" : {
+                      "type" : "JSON_LITERAL",
+                      "value" : null
+                    },
+                    "readonly" : {
+                      "type" : "JSON_LITERAL",
+                      "value" : false
+                    },
+                    "name" : {
+                      "type" : "JSON_LITERAL",
+                      "value" : null
+                    },
+                    "invalid" : {
+                      "type" : "JSON_LITERAL",
+                      "value" : false
+                    },
+                    "messages" : {
+                      "type" : "LIST_CONTAINER",
+                      "container" : [ ]
+                    },
+                    "disabled" : {
+                      "type" : "JSON_LITERAL",
+                      "value" : false
+                    },
+                    "step" : {
+                      "type" : "JSON_LITERAL",
+                      "value" : "any"
+                    },
+                    "placeholder" : {
+                      "type" : "TRANSLATION_LITERAL",
+                      "value" : {
+                        "code" : null,
+                        "message" : "e.g. \"white\" or \"green\"",
+                        "comment" : ""
+                      }
+                    },
+                    "value" : {
+                      "type" : "STATE_BINDING",
+                      "binding" : {
+                        "address" : [ "fillStyle" ]
+                      }
+                    },
+                    "hideRequiredIndicator" : {
+                      "type" : "JSON_LITERAL",
+                      "value" : false
+                    }
+                  },
+                  "eventMappings" : [ {
+                    "eventMappingId" : "clgccjccreegaabbpjddbhhvbpaauoffhc",
+                    "isConfiguration" : false,
+                    "offRowStorageId" : null,
+                    "sourceEventApiName" : "sn_input.NOW_INPUT#INPUT",
+                    "sourceEventCorrelationId" : null,
+                    "sourceEventDefinition" : {
+                      "apiName" : "sn_input.NOW_INPUT#INPUT",
+                      "id" : null,
+                      "type" : "UXEVENT"
+                    },
+                    "sourceEventSysId" : null,
+                    "targets" : [ {
+                      "broker" : null,
+                      "clientScript" : {
+                        "sysId" : "56a90fbc87c6651089790fe5dabb35b9"
+                      },
+                      "conditional" : null,
+                      "declarativeAction" : null,
+                      "event" : null,
+                      "operation" : null,
+                      "targetId" : "clgccrvzffiaaaaosddbhhvntdddvyhhbb",
+                      "type" : "CLIENT_SCRIPT"
+                    } ]
+                  } ],
+                  "slot" : null,
+                  "definition" : {
+                    "id" : "bb0f92e8d7eff1590624bfe69d316f23",
+                    "type" : "MACROPONENT"
+                  },
+                  "overrides" : null,
+                  "isHidden" : {
+                    "type" : "JSON_LITERAL",
+                    "value" : null
+                  },
+                  "isHero" : false,
+                  "extensionPoints" : [ ],
+                  "isNonDestructive" : false,
+                  "items" : [ ],
+                  "styles" : { }
+                } ],
+                "layout" : {
+                  "default" : {
+                    "children" : null,
+                    "isInline" : null,
+                    "items" : [{"element_id":"fillStyle","styles":{}},{"element_id":"chinHeight","styles":{}},{"element_id":"gap","styles":{}},{"element_id":"watermarkImagePosition","styles":{}},{"element_id":"watermarkImage","styles":{}},{"element_id":"watermarkImageHeight","styles":{}}],
+                    "root" : null,
+                    "rules" : null,
+                    "styles" : {"flex-direction":"row","display":"grid","grid-template-columns":"1fr 1fr","grid-template-rows":"1fr 1fr 1fr","grid-auto-rows":"1fr","grid-auto-columns":"1fr"},
+                    "templateId" : "5832fd4d53c31010e6bcddeeff7b12db",
+                    "type" : "grid"
+                  },
+                  "version" : "3.0.0"
+                }
+              },
+              "isHidden" : {
+                "type" : "JSON_LITERAL",
+                "value" : null
+              },
+              "isHero" : false,
+              "extensionPoints" : [ ],
+              "isNonDestructive" : false,
+              "items" : [ ],
+              "styles" : {
+                "width" : "100%"
+              }
+            } ],
+            "layout" : {
+              "default" : {
+                "children" : null,
+                "isInline" : null,
+                "items" : [{"element_id":"stylized_text_5","styles":{}},{"element_id":"container_4","styles":{}},{"element_id":"image_2","styles":{"min-width":"800","min-height":"70"}}],
+                "root" : null,
+                "rules" : null,
+                "styles" : {"flex-direction":"column","padding":"var(--now-static-space--sm)"},
+                "templateId" : "5832fd4d53c31010e6bcddeeff7b12db",
+                "type" : "flex"
+              },
+              "version" : "3.0.0"
+            }
+          },
+          "isHidden" : {
+            "type" : "JSON_LITERAL",
+            "value" : null
+          },
+          "isHero" : false,
+          "extensionPoints" : [ ],
+          "isNonDestructive" : false,
+          "items" : [ ],
+          "styles" : {
+            "width" : "100%",
+            "border-color" : "RGB(var(--now-color--neutral-5))",
+            "border-width" : "var(--now-static-space--xxs)",
+            "border-style" : "solid",
+            "border-radius" : "var(--now-static-border-radius--md)"
+          }
         } ],
         "layout" : {
           "default" : {
             "children" : null,
             "isInline" : null,
-            "items" : [{"element_id":"container_2","styles":{}}],
+            "items" : [{"element_id":"container_2","styles":{}},{"element_id":"container_3","styles":{}}],
             "root" : null,
             "rules" : null,
             "styles" : {"flex-direction":"column"},
@@ -1369,15 +2788,309 @@
         "type" : "MACROPONENT"
       },
       "overrides" : {
-        "composition" : [ ],
+        "composition" : [ {
+          "elementId" : "container_6",
+          "elementLabel" : "Buttons Container",
+          "propertyValues" : {
+            "ariaRegionHeadingLevel" : {
+              "type" : "JSON_LITERAL",
+              "value" : "1"
+            },
+            "ariaRegionName" : {
+              "type" : "TRANSLATION_LITERAL",
+              "value" : {
+                "code" : null,
+                "message" : "",
+                "comment" : ""
+              }
+            },
+            "includeAriaHeading" : {
+              "type" : "JSON_LITERAL",
+              "value" : false
+            },
+            "type" : {
+              "type" : "JSON_LITERAL",
+              "value" : "section"
+            },
+            "ariaRole" : {
+              "type" : "JSON_LITERAL",
+              "value" : ""
+            }
+          },
+          "eventMappings" : [ ],
+          "slot" : null,
+          "definition" : {
+            "id" : "d356d14b6e293a3020a244b63d278d8f",
+            "type" : "MACROPONENT"
+          },
+          "overrides" : {
+            "composition" : [ {
+              "elementId" : "button_1",
+              "elementLabel" : "Save Button",
+              "propertyValues" : {
+                "size" : {
+                  "type" : "JSON_LITERAL",
+                  "value" : "md"
+                },
+                "variant" : {
+                  "type" : "JSON_LITERAL",
+                  "value" : "primary"
+                },
+                "icon" : {
+                  "type" : "JSON_LITERAL",
+                  "value" : null
+                },
+                "disabled" : {
+                  "type" : "STATE_BINDING",
+                  "binding" : {
+                    "address" : [ "saveDisabled" ]
+                  }
+                },
+                "label" : {
+                  "type" : "TRANSLATION_LITERAL",
+                  "value" : {
+                    "code" : null,
+                    "message" : "Save",
+                    "comment" : ""
+                  }
+                },
+                "tooltipContent" : {
+                  "type" : "TRANSLATION_LITERAL",
+                  "value" : {
+                    "code" : null,
+                    "message" : "Save to the Photobooth Instance",
+                    "comment" : ""
+                  }
+                },
+                "configAria" : {
+                  "type" : "MAP_CONTAINER",
+                  "container" : { }
+                }
+              },
+              "eventMappings" : [ {
+                "eventMappingId" : "clgccgmophaaaasgddbhhveegozceefu",
+                "isConfiguration" : false,
+                "offRowStorageId" : null,
+                "sourceEventApiName" : "sn_button.NOW_BUTTON#CLICKED",
+                "sourceEventCorrelationId" : null,
+                "sourceEventDefinition" : {
+                  "apiName" : "sn_button.NOW_BUTTON#CLICKED",
+                  "id" : null,
+                  "type" : "UXEVENT"
+                },
+                "sourceEventSysId" : null,
+                "targets" : [ {
+                  "broker" : null,
+                  "clientScript" : null,
+                  "conditional" : null,
+                  "declarativeAction" : null,
+                  "event" : null,
+                  "operation" : {
+                    "dataBrokerId" : "9b4b978353211010cbc2ddeeff7b1245",
+                    "operationName" : "EXECUTE",
+                    "parentResourceId" : "update_record",
+                    "payload" : {
+                      "type" : "MAP_CONTAINER",
+                      "container" : {
+                        "table" : {
+                          "type" : "JSON_LITERAL",
+                          "value" : "x_snc_pb_core_photobooth"
+                        },
+                        "recordId" : {
+                          "type" : "STATE_BINDING",
+                          "binding" : {
+                            "address" : [ "photoboothInstanceId" ]
+                          }
+                        },
+                        "templateFields" : {
+                          "type" : "CLIENT_TRANSFORM",
+                          "transform" : {
+                            "operands" : {
+                              "type" : "LIST_CONTAINER",
+                              "container" : [ {
+                                "type" : "JSON_LITERAL",
+                                "value" : "camera_device_id="
+                              }, {
+                                "type" : "STATE_BINDING",
+                                "binding" : {
+                                  "address" : [ "selectedCameraDeviceId" ]
+                                }
+                              }, {
+                                "type" : "JSON_LITERAL",
+                                "value" : "^chin_height="
+                              }, {
+                                "type" : "STATE_BINDING",
+                                "binding" : {
+                                  "address" : [ "chinHeight" ]
+                                }
+                              }, {
+                                "type" : "JSON_LITERAL",
+                                "value" : "^fill_style="
+                              }, {
+                                "type" : "STATE_BINDING",
+                                "binding" : {
+                                  "address" : [ "fillStyle" ]
+                                }
+                              }, {
+                                "type" : "JSON_LITERAL",
+                                "value" : "^gap="
+                              }, {
+                                "type" : "STATE_BINDING",
+                                "binding" : {
+                                  "address" : [ "gap" ]
+                                }
+                              }, {
+                                "type" : "JSON_LITERAL",
+                                "value" : "^watermark_image="
+                              }, {
+                                "type" : "STATE_BINDING",
+                                "binding" : {
+                                  "address" : [ "watermarkImage" ]
+                                }
+                              }, {
+                                "type" : "JSON_LITERAL",
+                                "value" : "^watermark_image_position="
+                              }, {
+                                "type" : "STATE_BINDING",
+                                "binding" : {
+                                  "address" : [ "watermarkImagePosition" ]
+                                }
+                              }, {
+                                "type" : "JSON_LITERAL",
+                                "value" : "^long_name="
+                              }, {
+                                "type" : "STATE_BINDING",
+                                "binding" : {
+                                  "address" : [ "photoboothLongName" ]
+                                }
+                              }, {
+                                "type" : "JSON_LITERAL",
+                                "value" : "^watermark_image_height="
+                              }, {
+                                "type" : "STATE_BINDING",
+                                "binding" : {
+                                  "address" : [ "watermarkImageHeight" ]
+                                }
+                              } ]
+                            },
+                            "operator" : "CONCAT"
+                          }
+                        },
+                        "useSetDisplayValue" : {
+                          "type" : "JSON_LITERAL",
+                          "value" : null
+                        }
+                      }
+                    }
+                  },
+                  "targetId" : "clgccgmophaaaashddbhhvdhhlddeepiig",
+                  "type" : "DATABROKER_OP"
+                }, {
+                  "broker" : null,
+                  "clientScript" : {
+                    "sysId" : "8e8628648721ad1089790fe5dabb3592"
+                  },
+                  "conditional" : null,
+                  "declarativeAction" : null,
+                  "event" : null,
+                  "operation" : null,
+                  "targetId" : "clgccivvikaabbmjjddbhhvffzbzsrgggg",
+                  "type" : "CLIENT_SCRIPT"
+                }, {
+                  "broker" : null,
+                  "clientScript" : null,
+                  "conditional" : null,
+                  "declarativeAction" : null,
+                  "event" : {
+                    "apiName" : "x_snc_pb_app.MODAL_SELECTED_RELAY_c58628648721ad1089790fe5dabb3528",
+                    "payload" : {
+                      "type" : "JSON_LITERAL",
+                      "value" : {
+                        "modalId" : "[component-id$='settings_modal']",
+                        "showModal" : null,
+                        "displayOptions" : null,
+                        "bare" : true,
+                        "viewportElementId" : null,
+                        "viewportRoute" : null,
+                        "viewportFields" : null
+                      }
+                    },
+                    "sysId" : "e7e6e0c54775a510552caf52736d437e"
+                  },
+                  "operation" : null,
+                  "targetId" : "clgccppgiioaaaafjddbhhvbvdwmley",
+                  "type" : "EVENT"
+                }, {
+                  "broker" : null,
+                  "clientScript" : null,
+                  "conditional" : null,
+                  "declarativeAction" : null,
+                  "event" : {
+                    "apiName" : "sn_uxf.MACROPONENT_STATE_UPDATE_REQUESTED",
+                    "payload" : {
+                      "type" : "JSON_LITERAL",
+                      "value" : {
+                        "propName" : "saveDisabled",
+                        "value" : true
+                      }
+                    },
+                    "sysId" : "32408b42ff7a10109046e490703bf176"
+                  },
+                  "operation" : null,
+                  "targetId" : "clgcctmmiivaabbniddbhhvpccvhhvungg",
+                  "type" : "EVENT"
+                } ]
+              } ],
+              "slot" : null,
+              "definition" : {
+                "id" : "d37ce8abca89d02905fed903c8e34d8e",
+                "type" : "MACROPONENT"
+              },
+              "overrides" : null,
+              "isHidden" : {
+                "type" : "JSON_LITERAL",
+                "value" : null
+              },
+              "isHero" : false,
+              "extensionPoints" : [ ],
+              "isNonDestructive" : false,
+              "items" : [ ],
+              "styles" : { }
+            } ],
+            "layout" : {
+              "default" : {
+                "children" : null,
+                "isInline" : null,
+                "items" : [{"element_id":"button_1","styles":{}}],
+                "root" : null,
+                "rules" : null,
+                "styles" : {"flex-direction":"column"},
+                "templateId" : "5832fd4d53c31010e6bcddeeff7b12db",
+                "type" : "flex"
+              },
+              "version" : "3.0.0"
+            }
+          },
+          "isHidden" : {
+            "type" : "JSON_LITERAL",
+            "value" : null
+          },
+          "isHero" : false,
+          "extensionPoints" : [ ],
+          "isNonDestructive" : false,
+          "items" : [ ],
+          "styles" : {
+            "width" : "100%"
+          }
+        } ],
         "layout" : {
           "default" : {
             "children" : null,
             "isInline" : null,
-            "items" : [],
+            "items" : [{"element_id":"container_6","styles":{}}],
             "root" : null,
             "rules" : null,
-            "styles" : {"flex-direction":"column"},
+            "styles" : {"flex-direction":"row"},
             "templateId" : "5832fd4d53c31010e6bcddeeff7b12db",
             "type" : "flex"
           },
@@ -1386,7 +3099,7 @@
       },
       "isHidden" : {
         "type" : "JSON_LITERAL",
-        "value" : true
+        "value" : false
       },
       "isHero" : false,
       "extensionPoints" : [ ],
@@ -1423,7 +3136,9 @@
     "border-color" : "RGB(var(--now-color--neutral-5))",
     "border-width" : "var(--now-static-space--xxs)",
     "border-style" : "solid",
-    "border-radius" : "16px"
+    "border-radius" : "16px",
+    "min-height" : "",
+    "min-width" : ""
   }
 } ]</composition>
         <da_relay_models/>
@@ -1449,23 +3164,6 @@
     "sourceEventSysId" : null,
     "targets" : [ {
       "broker" : null,
-      "clientScript" : null,
-      "conditional" : null,
-      "declarativeAction" : null,
-      "event" : null,
-      "operation" : {
-        "dataBrokerId" : "b997a84053021010cbc2ddeeff7b1228",
-        "operationName" : "REFRESH",
-        "parentResourceId" : "look_up_request",
-        "payload" : {
-          "type" : "JSON_LITERAL",
-          "value" : { }
-        }
-      },
-      "targetId" : "cldfccjjxdddaacccddddbhhsbbtbbqeereex",
-      "type" : "DATABROKER_OP"
-    }, {
-      "broker" : null,
       "clientScript" : {
         "sysId" : "cfc282524760e910552caf52736d432d"
       },
@@ -1477,58 +3175,15 @@
       "type" : "CLIENT_SCRIPT"
     }, {
       "broker" : null,
-      "clientScript" : null,
+      "clientScript" : {
+        "sysId" : "f4406a6647b12d10552caf52736d43ef"
+      },
       "conditional" : null,
       "declarativeAction" : null,
-      "event" : {
-        "apiName" : "sn_uxf.MACROPONENT_STATE_UPDATE_REQUESTED",
-        "payload" : {
-          "type" : "MAP_CONTAINER",
-          "container" : {
-            "propName" : {
-              "type" : "JSON_LITERAL",
-              "value" : "selectedCameraDeviceId"
-            },
-            "value" : {
-              "type" : "DATA_OUTPUT_BINDING",
-              "binding" : {
-                "address" : [ "look_up_photobooths", "results", "0", "camera_device_id", "value" ]
-              }
-            }
-          }
-        },
-        "sysId" : "32408b42ff7a10109046e490703bf176"
-      },
+      "event" : null,
       "operation" : null,
-      "targetId" : "clfledcfggaaaakjddbhhvutgqajngg",
-      "type" : "EVENT"
-    }, {
-      "broker" : null,
-      "clientScript" : null,
-      "conditional" : null,
-      "declarativeAction" : null,
-      "event" : {
-        "apiName" : "sn_uxf.MACROPONENT_STATE_UPDATE_REQUESTED",
-        "payload" : {
-          "type" : "MAP_CONTAINER",
-          "container" : {
-            "propName" : {
-              "type" : "JSON_LITERAL",
-              "value" : "photoboothInstanceId"
-            },
-            "value" : {
-              "type" : "DATA_OUTPUT_BINDING",
-              "binding" : {
-                "address" : [ "look_up_photobooths", "results", "0", "_row_data", "uniqueValue" ]
-              }
-            }
-          }
-        },
-        "sysId" : "32408b42ff7a10109046e490703bf176"
-      },
-      "operation" : null,
-      "targetId" : "clflfaaitvaaaaqoddbhhviulsrfin",
-      "type" : "EVENT"
+      "targetId" : "clfskduyqaaaaddddbhhvjcpahszhh",
+      "type" : "CLIENT_SCRIPT"
     } ]
   } ],
   "inputValues" : {
@@ -1575,7 +3230,7 @@
     },
     "returnFields" : {
       "type" : "JSON_LITERAL",
-      "value" : "camera_device_id"
+      "value" : "camera_device_id,watermark_image,gap,watermark_image_position,chin_height,fill_style,name,watermark_image_height"
     },
     "orderBy" : {
       "type" : "JSON_LITERAL",
@@ -1980,7 +3635,7 @@
   "readEvaluationMode" : "EXPLICIT"
 } ]</data>
         <description/>
-        <dispatched_events>e7e6e0c54775a510552caf52736d437e</dispatched_events>
+        <dispatched_events>9d2e9ffc870a651089790fe5dabb35bd,e7e6e0c54775a510552caf52736d437e</dispatched_events>
         <ext_controller_dep/>
         <extends display_value="Page Template">19be392623033300f4b4c50947bf65ba</extends>
         <handled_events/>
@@ -2032,16 +3687,79 @@
   "message" : "Available Cameras",
   "comment" : ""
 }, {
+  "message" : "Chin Height Pixels",
+  "comment" : ""
+}, {
+  "message" : "Fill Style (Background Color)",
+  "comment" : ""
+}, {
+  "message" : "Gap in Pixels",
+  "comment" : ""
+}, {
+  "message" : "Image Path",
+  "comment" : ""
+}, {
+  "message" : "Long Name",
+  "comment" : ""
+}, {
+  "message" : "Name",
+  "comment" : ""
+}, {
+  "message" : "Path to local image (does not work with third party urls due to cross-origin rules).  Go the System UI &gt; Images and upload your image. Copy the name of the image here.",
+  "comment" : ""
+}, {
   "message" : "Photobooth Settings",
+  "comment" : ""
+}, {
+  "message" : "Please select a camera",
   "comment" : ""
 }, {
   "message" : "Powered by Next Experience",
   "comment" : ""
 }, {
-  "message" : "Select Camera",
+  "message" : "Save",
+  "comment" : ""
+}, {
+  "message" : "Save to the Photobooth Instance",
+  "comment" : ""
+}, {
+  "message" : "Short name, no spaces, used in the URL of your photobooth, e.g. \"CC23\" instead of \"CreatorCon 2023\". ",
   "comment" : ""
 }, {
   "message" : "Take a snapshot",
+  "comment" : ""
+}, {
+  "message" : "The canvas fill style for the rendered the image.  Usually a color, e.g. \"white\". https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/fillStyle",
+  "comment" : ""
+}, {
+  "message" : "The height of the additional space at the bottom of the image.  This is added to the gap, and can be used to hold the watermark.",
+  "comment" : ""
+}, {
+  "message" : "The long, descriptive name of the photobooth, e.g. \"CreatorCon 2023 Showroom Floor\"",
+  "comment" : ""
+}, {
+  "message" : "The number of pixels around the edge and between each pixel.",
+  "comment" : ""
+}, {
+  "message" : "The number of pixels to scale the watermark image to. Will scale proportionally based on height. Leave blank for no scale.",
+  "comment" : ""
+}, {
+  "message" : "The position of the watermark image on the output snapshot. Choices are \"top-left\", \"top-center\", \"top-right\", \"bottom-left\", \"bottom-center\" (default), \"bottom-right\" and \"center\".",
+  "comment" : ""
+}, {
+  "message" : "Watermark Image Height in Pixels",
+  "comment" : ""
+}, {
+  "message" : "Watermark Image Position",
+  "comment" : ""
+}, {
+  "message" : "Watermark Image URL or Path",
+  "comment" : ""
+}, {
+  "message" : "Watermark and Image Output",
+  "comment" : ""
+}, {
+  "message" : "e.g. \"white\" or \"green\"",
   "comment" : ""
 } ]</required_translations>
         <root_component/>
@@ -2128,13 +3846,13 @@
 }, {
   "name" : "selectedCameraDeviceId",
   "label" : "selectedCameraDeviceId",
-  "fieldType" : "string",
-  "valueType" : "string",
+  "fieldType" : "json",
+  "valueType" : "json",
   "shape" : "",
   "description" : "",
   "initialValue" : {
     "type" : "JSON_LITERAL",
-    "value" : null
+    "value" : [ ]
   }
 }, {
   "name" : "photoboothInstanceId",
@@ -2145,21 +3863,120 @@
   "description" : "",
   "initialValue" : {
     "type" : "JSON_LITERAL",
+    "value" : ""
+  }
+}, {
+  "name" : "watermarkImage",
+  "label" : "watermarkImage",
+  "fieldType" : "string",
+  "valueType" : "string",
+  "shape" : "",
+  "description" : "",
+  "initialValue" : {
+    "type" : "JSON_LITERAL",
+    "value" : "/x_snc_pb_camera.servicenow_flat.png"
+  }
+}, {
+  "name" : "watermarkImageHeight",
+  "label" : "watermarkImageHeight",
+  "fieldType" : "number",
+  "valueType" : "number",
+  "shape" : "",
+  "description" : "",
+  "initialValue" : {
+    "type" : "JSON_LITERAL",
+    "value" : 50
+  }
+}, {
+  "name" : "chinHeight",
+  "label" : "chinHeight",
+  "fieldType" : "number",
+  "valueType" : "number",
+  "shape" : "",
+  "description" : "",
+  "initialValue" : {
+    "type" : "JSON_LITERAL",
+    "value" : 50
+  }
+}, {
+  "name" : "gap",
+  "label" : "gap",
+  "fieldType" : "number",
+  "valueType" : "number",
+  "shape" : "",
+  "description" : "",
+  "initialValue" : {
+    "type" : "JSON_LITERAL",
+    "value" : 10
+  }
+}, {
+  "name" : "watermarkImagePosition",
+  "label" : "watermarkImagePosition",
+  "fieldType" : "string",
+  "valueType" : "string",
+  "shape" : "",
+  "description" : "",
+  "initialValue" : {
+    "type" : "JSON_LITERAL",
+    "value" : "bottom-center"
+  }
+}, {
+  "name" : "fillStyle",
+  "label" : "fillStyle",
+  "fieldType" : "string",
+  "valueType" : "string",
+  "shape" : "",
+  "description" : "",
+  "initialValue" : {
+    "type" : "JSON_LITERAL",
     "value" : null
+  }
+}, {
+  "name" : "photoboothName",
+  "label" : "photoboothName",
+  "fieldType" : "string",
+  "valueType" : "string",
+  "shape" : "",
+  "description" : "",
+  "initialValue" : {
+    "type" : "JSON_LITERAL",
+    "value" : null
+  }
+}, {
+  "name" : "photoboothLongName",
+  "label" : "photoboothLongName",
+  "fieldType" : "string",
+  "valueType" : "string",
+  "shape" : "",
+  "description" : "",
+  "initialValue" : {
+    "type" : "JSON_LITERAL",
+    "value" : null
+  }
+}, {
+  "name" : "saveDisabled",
+  "label" : "saveDisabled",
+  "fieldType" : "boolean",
+  "valueType" : "boolean",
+  "shape" : "",
+  "description" : "",
+  "initialValue" : {
+    "type" : "JSON_LITERAL",
+    "value" : true
   }
 } ]</state_properties>
         <sys_class_name>sys_ux_macroponent</sys_class_name>
         <sys_created_by>jon.lind</sys_created_by>
         <sys_created_on>2023-03-09 17:44:48</sys_created_on>
         <sys_id>c58628648721ad1089790fe5dabb3528</sys_id>
-        <sys_mod_count>52</sys_mod_count>
+        <sys_mod_count>155</sys_mod_count>
         <sys_name>Home Stylized</sys_name>
         <sys_package display_value="Photobooth App" source="x_snc_pb_app">baa73cb74742dd10552caf52736d43f1</sys_package>
         <sys_policy/>
         <sys_scope display_value="Photobooth App">baa73cb74742dd10552caf52736d43f1</sys_scope>
         <sys_update_name>sys_ux_macroponent_c58628648721ad1089790fe5dabb3528</sys_update_name>
         <sys_updated_by>jon.lind</sys_updated_by>
-        <sys_updated_on>2023-03-28 16:05:52</sys_updated_on>
+        <sys_updated_on>2023-04-04 22:17:54</sys_updated_on>
     </sys_ux_macroponent>
     <sys_translated_text action="delete_multiple" query="documentkey=c58628648721ad1089790fe5dabb3528"/>
 </record_update>
