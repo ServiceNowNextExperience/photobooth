@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_client_script">
     <sys_ux_client_script action="INSERT_OR_UPDATE">
-        <includes/>
+        <includes>ac98005d87c6a51089790fe5dabb35bd</includes>
         <macroponent display_value="Home Stylized">c58628648721ad1089790fe5dabb3528</macroponent>
         <name>Setting Updated</name>
         <preset/>
@@ -18,36 +18,63 @@ function handler({
         data,
         setState
     },
-    event : { elementId, payload }
+    event: {
+        elementId,
+        payload
+    }
 }) {
-    console.log("SETTINGS CHANGED!", state, {elementId, payload});
+    console.log("SETTINGS CHANGED!", state, {
+        elementId,
+        payload
+    });
+
+    // The name (elementId) of the form elements are the same as
+    // the client state parameters.  They also match the database
+    // field names in snake case, e.g. chinHeight == chin_height
+
+    const dbFieldName = toSnakeCase(elementId);
 
     // FieldValue is used by text fields, value by drop downs. Check undefined instead of
     // falsey to account for empty string
-    const value = payload.fieldValue !== undefined ? payload.fieldValue : (payload.value || "");
-
-    // Save either one to state based on the elementId (ID of the component matches state property name)
-    setState(elementId, value);
+    const payloadValue = payload.fieldValue !== undefined ? payload.fieldValue : (payload.value || "");
 
     const pb = data.look_up_photobooths.results[0];
 
-    const whenNoneAreChanged = isSame("selectedCameraDeviceId", pb.camera_device_id.value) &&
-        isSame("watermarkImage", pb.watermark_image.value) &&
-        isSame("watermarkImagePosition", pb.watermark_image_position.value) &&
-        isSame("watermarkImageHeight", pb.watermark_image_height.value) &&
-        isSame("gap", pb.gap.value) &&
-        isSame("fillStyle", pb.fill_style.value) &&
-        isSame("chinHeight", pb.chin_height.value) &&
-        isSame("photoboothLongName", pb.long_name.value);
+    const dbValue = pb[dbFieldName].value;
 
-    console.log("saveDisabled!!!!!", whenNoneAreChanged)
-    setState("saveDisabled", whenNoneAreChanged);
+    // Keep track of the number of settings changes. If the new value is different from the db
+    // the increment it.  If it's the same, decrement the count.
+    var changedSettings = state.changedSettings.filter(e => e !== elementId);
 
-    function isSame(statePropName, dbValue) {
-        const stateValue = statePropName == elementId ? (value || "") : state[statePropName];
-        console.log("Is Same?", stateValue, `${stateValue} == ${dbValue} =  ${state[statePropName] == dbValue}`);
-        // Use the passed in Value if when comparing the currently changing field, otherwise check state
-        return stateValue == dbValue;
+    if (dbValue != payloadValue) {
+        changedSettings.push(elementId);
+    }
+
+    setState("changedSettings", changedSettings);
+    setState("saveDisabled", (changedSettings.length === 0));
+    setState(elementId, payloadValue);
+
+    /*    const whenNoneAreChanged = isSame("selectedCameraDeviceId", pb.camera_device_id.value) &&
+            isSame("watermarkImage", pb.watermark_image.value) &&
+            isSame("watermarkImagePosition", pb.watermark_image_position.value) &&
+            isSame("watermarkImageHeight", pb.watermark_image_height.value) &&
+            isSame("gap", pb.gap.value) &&
+            isSame("fillStyle", pb.fill_style.value) &&
+            isSame("chinHeight", pb.chin_height.value) &&
+            isSame("photoboothLongName", pb.long_name.value);
+
+        console.log("saveDisabled!!!!!", whenNoneAreChanged)
+        setState("saveDisabled", whenNoneAreChanged);*/
+
+    /*    function isSame(statePropName, dbValue) {
+            const stateValue = statePropName == elementId ? (payloadValue || "") : state[statePropName];
+            console.log("Is Same?", stateValue, `${stateValue} == ${dbValue} =  ${state[statePropName] == dbValue}`);
+            // Use the passed in Value if when comparing the currently changing field, otherwise check state
+            return stateValue == dbValue;
+        }*/
+
+    function toSnakeCase(str) {
+        return str.replace(/[A-Z]/g, (letter) => `_${letter.toLowerCase()}`);
     }
 }]]></script>
         <script_api_version>2.0.0</script_api_version>
@@ -55,14 +82,14 @@ function handler({
         <sys_created_by>jon.lind</sys_created_by>
         <sys_created_on>2023-04-04 20:47:27</sys_created_on>
         <sys_id>56a90fbc87c6651089790fe5dabb35b9</sys_id>
-        <sys_mod_count>18</sys_mod_count>
+        <sys_mod_count>28</sys_mod_count>
         <sys_name>Setting Updated</sys_name>
         <sys_package display_value="Photobooth App" source="x_snc_pb_app">baa73cb74742dd10552caf52736d43f1</sys_package>
         <sys_policy/>
         <sys_scope display_value="Photobooth App">baa73cb74742dd10552caf52736d43f1</sys_scope>
         <sys_update_name>sys_ux_client_script_56a90fbc87c6651089790fe5dabb35b9</sys_update_name>
         <sys_updated_by>jon.lind</sys_updated_by>
-        <sys_updated_on>2023-04-04 22:19:20</sys_updated_on>
+        <sys_updated_on>2023-04-05 20:58:30</sys_updated_on>
         <target>macroponent</target>
         <type>default</type>
     </sys_ux_client_script>

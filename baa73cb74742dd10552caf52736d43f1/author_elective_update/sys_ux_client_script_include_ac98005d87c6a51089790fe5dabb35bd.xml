@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_client_script_include">
+    <sys_ux_client_script_include action="DELETE">
+        <access>package_private</access>
+        <api_name>x_snc_pb_app.ToSnakeCase</api_name>
+        <includes/>
+        <name>ToSnakeCase</name>
+        <required_translations/>
+        <script><![CDATA[function include({ imports }) {
+    const toSnakeCase = (str) => str.replace(/[A-Z]/g, (letter) => `_${letter.toLowerCase()}`);
+    return {
+        toSnakeCase
+    }
+}]]></script>
+        <script_api_version>2.0.0</script_api_version>
+        <sys_class_name>sys_ux_client_script_include</sys_class_name>
+        <sys_created_by>jon.lind</sys_created_by>
+        <sys_created_on>2023-04-05 20:01:28</sys_created_on>
+        <sys_id>ac98005d87c6a51089790fe5dabb35bd</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>ToSnakeCase</sys_name>
+        <sys_package display_value="Photobooth App" source="x_snc_pb_app">baa73cb74742dd10552caf52736d43f1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Photobooth App">baa73cb74742dd10552caf52736d43f1</sys_scope>
+        <sys_update_name>sys_ux_client_script_include_ac98005d87c6a51089790fe5dabb35bd</sys_update_name>
+        <sys_updated_by>jon.lind</sys_updated_by>
+        <sys_updated_on>2023-04-05 20:03:37</sys_updated_on>
+    </sys_ux_client_script_include>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Photobooth App">baa73cb74742dd10552caf52736d43f1</application>
+        <file_path/>
+        <instance_id>634887c3db11915c8aea21c4059619b9</instance_id>
+        <instance_name>tennis</instance_name>
+        <name>sys_ux_client_script_include_ac98005d87c6a51089790fe5dabb35bd</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sys_ux_client_script_include"&gt;&lt;sys_ux_client_script_include action="INSERT_OR_UPDATE"&gt;&lt;access&gt;package_private&lt;/access&gt;&lt;api_name&gt;x_snc_pb_app.ToSnakeCase&lt;/api_name&gt;&lt;includes/&gt;&lt;name&gt;ToSnakeCase&lt;/name&gt;&lt;required_translations/&gt;&lt;script&gt;&lt;![CDATA[function include({ imports }) {
+    const toSnakeCase = (str) =&gt; str.replace(/[A-Z]/g, (letter) =&gt; `_${letter.toLowerCase()}`);
+    return {
+        toSnakeCase
+    }
+}]]&gt;&lt;/script&gt;&lt;script_api_version&gt;2.0.0&lt;/script_api_version&gt;&lt;sys_class_name&gt;sys_ux_client_script_include&lt;/sys_class_name&gt;&lt;sys_created_by&gt;jon.lind&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2023-04-05 20:01:28&lt;/sys_created_on&gt;&lt;sys_id&gt;ac98005d87c6a51089790fe5dabb35bd&lt;/sys_id&gt;&lt;sys_mod_count&gt;1&lt;/sys_mod_count&gt;&lt;sys_name&gt;ToSnakeCase&lt;/sys_name&gt;&lt;sys_package display_value="Photobooth App" source="x_snc_pb_app"&gt;baa73cb74742dd10552caf52736d43f1&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Photobooth App"&gt;baa73cb74742dd10552caf52736d43f1&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_ux_client_script_include_ac98005d87c6a51089790fe5dabb35bd&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;jon.lind&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2023-04-05 20:03:37&lt;/sys_updated_on&gt;&lt;/sys_ux_client_script_include&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>-1536487806</payload_hash>
+        <record_name>ToSnakeCase</record_name>
+        <reverted_from/>
+        <source>53f29a6a47712d10552caf52736d4364</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>jon.lind</sys_created_by>
+        <sys_created_on>2023-04-05 20:03:37</sys_created_on>
+        <sys_id>b9394c5d87c6a51089790fe5dabb35be</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>187530484de0000001</sys_recorded_at>
+        <sys_updated_by>jon.lind</sys_updated_by>
+        <sys_updated_on>2023-04-05 20:03:37</sys_updated_on>
+        <type>UX Client Script Include</type>
+        <update_guid>bd394c5d66c6a5100bbfce2b931ed6bd</update_guid>
+        <update_guid_history>bd394c5d66c6a5100bbfce2b931ed6bd:-1536487806,12b8485d8fc6a5109bb1216b639cfe1d:1216921905</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>jon.lind</sys_created_by>
+        <sys_created_on>2023-04-05 20:16:46</sys_created_on>
+        <sys_db_object display_value="" name="sys_ux_client_script_include">sys_ux_client_script_include</sys_db_object>
+        <sys_id>008858fc4ad948a4801f465997ee4281</sys_id>
+        <sys_metadata>ac98005d87c6a51089790fe5dabb35bd</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>ToSnakeCase</sys_name>
+        <sys_package display_value="Photobooth App" source="x_snc_pb_app">baa73cb74742dd10552caf52736d43f1</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Photobooth App">baa73cb74742dd10552caf52736d43f1</sys_scope>
+        <sys_scope_delete display_value="">868a264ca04c47ed906cd87c81ce8d11</sys_scope_delete>
+        <sys_update_name>sys_ux_client_script_include_ac98005d87c6a51089790fe5dabb35bd</sys_update_name>
+        <sys_update_version display_value="sys_ux_client_script_include_ac98005d87c6a51089790fe5dabb35bd">b9394c5d87c6a51089790fe5dabb35be</sys_update_version>
+        <sys_updated_by>jon.lind</sys_updated_by>
+        <sys_updated_on>2023-04-05 20:16:46</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>
