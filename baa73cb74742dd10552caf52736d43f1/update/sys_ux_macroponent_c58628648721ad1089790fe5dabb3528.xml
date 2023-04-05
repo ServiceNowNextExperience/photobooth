@@ -1233,7 +1233,7 @@
                 },
                 "pattern" : {
                   "type" : "JSON_LITERAL",
-                  "value" : "\\w"
+                  "value" : ""
                 },
                 "optional" : {
                   "type" : "JSON_LITERAL",
@@ -1334,6 +1334,26 @@
                   "operation" : null,
                   "targetId" : "clgccqxjpwaaaahhdddbhhvggddbbhhuede",
                   "type" : "CLIENT_SCRIPT"
+                }, {
+                  "broker" : null,
+                  "clientScript" : null,
+                  "conditional" : null,
+                  "declarativeAction" : null,
+                  "event" : {
+                    "apiName" : "sn_uxf_page.NOW_UXF_PAGE#REMOVE_NOTIFICATIONS",
+                    "payload" : {
+                      "type" : "JSON_LITERAL",
+                      "value" : {
+                        "items" : [ {
+                          "id" : "BadShortName"
+                        } ]
+                      }
+                    },
+                    "sysId" : "1ec283e2d558a88b2ffcb09147b04e70"
+                  },
+                  "operation" : null,
+                  "targetId" : "clgeeacddrhaaccsdddbhhvhhmvaabbiv",
+                  "type" : "EVENT"
                 } ]
               } ],
               "slot" : null,
@@ -3642,28 +3662,40 @@
                       "type" : "BINARY",
                       "operation" : {
                         "left" : {
-                          "type" : "UNARY",
+                          "type" : "BINARY",
                           "operation" : {
-                            "operand" : {
-                              "type" : "STATE_BINDING",
-                              "binding" : {
-                                "address" : [ "name" ]
+                            "left" : {
+                              "type" : "UNARY",
+                              "operation" : {
+                                "operand" : {
+                                  "type" : "STATE_BINDING",
+                                  "binding" : {
+                                    "address" : [ "name" ]
+                                  }
+                                },
+                                "operator" : "NOT"
                               }
                             },
-                            "operator" : "NOT"
+                            "operator" : "OR",
+                            "right" : {
+                              "type" : "UNARY",
+                              "operation" : {
+                                "operand" : {
+                                  "type" : "STATE_BINDING",
+                                  "binding" : {
+                                    "address" : [ "longName" ]
+                                  }
+                                },
+                                "operator" : "NOT"
+                              }
+                            }
                           }
                         },
                         "operator" : "OR",
                         "right" : {
-                          "type" : "UNARY",
-                          "operation" : {
-                            "operand" : {
-                              "type" : "STATE_BINDING",
-                              "binding" : {
-                                "address" : [ "longName" ]
-                              }
-                            },
-                            "operator" : "NOT"
+                          "type" : "STATE_BINDING",
+                          "binding" : {
+                            "address" : [ "saveDisabled" ]
                           }
                         }
                       }
@@ -3828,25 +3860,6 @@
                   "conditional" : null,
                   "declarativeAction" : null,
                   "event" : {
-                    "apiName" : "sn_uxf.MACROPONENT_STATE_UPDATE_REQUESTED",
-                    "payload" : {
-                      "type" : "JSON_LITERAL",
-                      "value" : {
-                        "propName" : "createNew",
-                        "value" : false
-                      }
-                    },
-                    "sysId" : "32408b42ff7a10109046e490703bf176"
-                  },
-                  "operation" : null,
-                  "targetId" : "clgccugnaaeaaccjjffddbhhvecffzffsqg",
-                  "type" : "EVENT"
-                }, {
-                  "broker" : null,
-                  "clientScript" : null,
-                  "conditional" : null,
-                  "declarativeAction" : null,
-                  "event" : {
                     "apiName" : "x_snc_pb_app.MODAL_SELECTED_RELAY_c58628648721ad1089790fe5dabb3528",
                     "payload" : {
                       "type" : "JSON_LITERAL",
@@ -3952,7 +3965,7 @@
                 },
                 "variant" : {
                   "type" : "JSON_LITERAL",
-                  "value" : "primary-negative"
+                  "value" : "secondary-negative"
                 },
                 "icon" : {
                   "type" : "JSON_LITERAL",
@@ -4059,27 +4072,9 @@
               },
               "overrides" : null,
               "isHidden" : {
-                "type" : "BINARY",
-                "operation" : {
-                  "left" : {
-                    "type" : "STATE_BINDING",
-                    "binding" : {
-                      "address" : [ "saveDisabled" ]
-                    }
-                  },
-                  "operator" : "OR",
-                  "right" : {
-                    "type" : "UNARY",
-                    "operation" : {
-                      "operand" : {
-                        "type" : "STATE_BINDING",
-                        "binding" : {
-                          "address" : [ "saveDisabled" ]
-                        }
-                      },
-                      "operator" : "NOT"
-                    }
-                  }
+                "type" : "STATE_BINDING",
+                "binding" : {
+                  "address" : [ "saveDisabled" ]
                 }
               },
               "isHero" : false,
@@ -5152,14 +5147,14 @@
         <sys_created_by>jon.lind</sys_created_by>
         <sys_created_on>2023-03-09 17:44:48</sys_created_on>
         <sys_id>c58628648721ad1089790fe5dabb3528</sys_id>
-        <sys_mod_count>216</sys_mod_count>
+        <sys_mod_count>228</sys_mod_count>
         <sys_name>Home Stylized</sys_name>
         <sys_package display_value="Photobooth App" source="x_snc_pb_app">baa73cb74742dd10552caf52736d43f1</sys_package>
         <sys_policy/>
         <sys_scope display_value="Photobooth App">baa73cb74742dd10552caf52736d43f1</sys_scope>
         <sys_update_name>sys_ux_macroponent_c58628648721ad1089790fe5dabb3528</sys_update_name>
         <sys_updated_by>jon.lind</sys_updated_by>
-        <sys_updated_on>2023-04-05 22:41:28</sys_updated_on>
+        <sys_updated_on>2023-04-05 23:18:24</sys_updated_on>
     </sys_ux_macroponent>
     <sys_translated_text action="delete_multiple" query="documentkey=c58628648721ad1089790fe5dabb3528"/>
 </record_update>
