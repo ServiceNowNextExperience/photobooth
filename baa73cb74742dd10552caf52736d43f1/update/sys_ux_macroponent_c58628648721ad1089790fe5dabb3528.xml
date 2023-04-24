@@ -76,6 +76,315 @@
       },
       "overrides" : {
         "composition" : [ {
+          "elementId" : "button_circular_1",
+          "elementLabel" : "Take Snapshot Button",
+          "propertyValues" : {
+            "icon" : {
+              "type" : "JSON_LITERAL",
+              "value" : "camera-fill"
+            },
+            "disabled" : {
+              "type" : "BINARY",
+              "operation" : {
+                "left" : {
+                  "type" : "CLIENT_TRANSFORM",
+                  "transform" : {
+                    "operands" : {
+                      "type" : "LIST_CONTAINER",
+                      "container" : [ {
+                        "type" : "STATE_BINDING",
+                        "binding" : {
+                          "address" : [ "requestId" ]
+                        }
+                      } ]
+                    },
+                    "operator" : "EMPTY"
+                  }
+                },
+                "operator" : "OR",
+                "right" : {
+                  "type" : "UNARY",
+                  "operation" : {
+                    "operand" : {
+                      "type" : "STATE_BINDING",
+                      "binding" : {
+                        "address" : [ "enabled" ]
+                      }
+                    },
+                    "operator" : "NOT"
+                  }
+                }
+              }
+            },
+            "tooltipContent" : {
+              "type" : "TRANSLATION_LITERAL",
+              "value" : {
+                "code" : null,
+                "message" : "Take a snapshot",
+                "comment" : ""
+              }
+            },
+            "configAria" : {
+              "type" : "MAP_CONTAINER",
+              "container" : {
+                "aria-label" : {
+                  "type" : "TRANSLATION_LITERAL",
+                  "value" : {
+                    "code" : null,
+                    "message" : "Take a snapshot",
+                    "comment" : ""
+                  }
+                }
+              }
+            },
+            "hasShadow" : {
+              "type" : "JSON_LITERAL",
+              "value" : false
+            }
+          },
+          "eventMappings" : [ {
+            "eventMappingId" : "cldfddeepnzaaccqaddbhhskbbwwnoel",
+            "isConfiguration" : false,
+            "offRowStorageId" : null,
+            "sourceEventApiName" : "sn_button.NOW_BUTTON_CIRCULAR#CLICKED",
+            "sourceEventCorrelationId" : null,
+            "sourceEventDefinition" : {
+              "apiName" : "sn_button.NOW_BUTTON_CIRCULAR#CLICKED",
+              "id" : null,
+              "type" : "UXEVENT"
+            },
+            "sourceEventSysId" : null,
+            "targets" : [ {
+              "broker" : null,
+              "clientScript" : {
+                "sysId" : "276ad0c347e4a110552caf52736d43e4"
+              },
+              "conditional" : null,
+              "declarativeAction" : null,
+              "event" : null,
+              "operation" : null,
+              "targetId" : "cldfddeepnzaaccqbddbhhsafccqyxaat",
+              "type" : "CLIENT_SCRIPT"
+            } ]
+          } ],
+          "slot" : "",
+          "definition" : {
+            "id" : "35a44d929eb09776cebd167707481125",
+            "type" : "MACROPONENT"
+          },
+          "overrides" : null,
+          "isHidden" : {
+            "type" : "JSON_LITERAL",
+            "value" : null
+          },
+          "isHero" : false,
+          "extensionPoints" : [ ],
+          "isNonDestructive" : false,
+          "items" : [ ],
+          "styles" : { }
+        }, {
+          "elementId" : "container_1",
+          "elementLabel" : "Container 1",
+          "propertyValues" : {
+            "ariaRegionHeadingLevel" : {
+              "type" : "JSON_LITERAL",
+              "value" : "1"
+            },
+            "ariaRegionName" : {
+              "type" : "TRANSLATION_LITERAL",
+              "value" : {
+                "code" : null,
+                "message" : "",
+                "comment" : ""
+              }
+            },
+            "includeAriaHeading" : {
+              "type" : "JSON_LITERAL",
+              "value" : false
+            },
+            "type" : {
+              "type" : "JSON_LITERAL",
+              "value" : "section"
+            },
+            "ariaRole" : {
+              "type" : "JSON_LITERAL",
+              "value" : ""
+            }
+          },
+          "eventMappings" : [ ],
+          "slot" : null,
+          "definition" : {
+            "id" : "d356d14b6e293a3020a244b63d278d8f",
+            "type" : "MACROPONENT"
+          },
+          "overrides" : {
+            "composition" : [ {
+              "elementId" : "stylized_text_1",
+              "elementLabel" : "Message",
+              "propertyValues" : {
+                "css" : {
+                  "type" : "JSON_LITERAL",
+                  "value" : "* {\n    text-align: center;\n    color: var(--now-color--neutral-21);\n    font-size: 1.5rem;\n    font-family: 'Gilroy', sans-serif;\n    font-weight: bold;\n    position: relative;\n    \n }"
+                },
+                "text" : {
+                  "type" : "STATE_BINDING",
+                  "binding" : {
+                    "address" : [ "currentMessage" ]
+                  }
+                },
+                "tag" : {
+                  "type" : "JSON_LITERAL",
+                  "value" : "div"
+                }
+              },
+              "eventMappings" : [ ],
+              "slot" : "",
+              "definition" : {
+                "id" : "4335ba6dca80378f7ba7a67cd6667bec",
+                "type" : "MACROPONENT"
+              },
+              "overrides" : null,
+              "isHidden" : {
+                "type" : "UNARY",
+                "operation" : {
+                  "operand" : {
+                    "type" : "STATE_BINDING",
+                    "binding" : {
+                      "address" : [ "enabled" ]
+                    }
+                  },
+                  "operator" : "NOT"
+                }
+              },
+              "isHero" : false,
+              "extensionPoints" : [ ],
+              "isNonDestructive" : false,
+              "items" : [ ],
+              "styles" : { }
+            }, {
+              "elementId" : "button_6",
+              "elementLabel" : "Enable Button",
+              "propertyValues" : {
+                "size" : {
+                  "type" : "JSON_LITERAL",
+                  "value" : "md"
+                },
+                "variant" : {
+                  "type" : "JSON_LITERAL",
+                  "value" : "secondary"
+                },
+                "icon" : {
+                  "type" : "JSON_LITERAL",
+                  "value" : null
+                },
+                "disabled" : {
+                  "type" : "JSON_LITERAL",
+                  "value" : false
+                },
+                "label" : {
+                  "type" : "TRANSLATION_LITERAL",
+                  "value" : {
+                    "code" : null,
+                    "message" : "Enable Camera",
+                    "comment" : ""
+                  }
+                },
+                "tooltipContent" : {
+                  "type" : "TRANSLATION_LITERAL",
+                  "value" : {
+                    "code" : null,
+                    "message" : "Enable the camera",
+                    "comment" : ""
+                  }
+                },
+                "configAria" : {
+                  "type" : "MAP_CONTAINER",
+                  "container" : { }
+                }
+              },
+              "eventMappings" : [ {
+                "eventMappingId" : "clgggxrdddfaaaaizddbhhvieegaauqwff",
+                "isConfiguration" : false,
+                "offRowStorageId" : null,
+                "sourceEventApiName" : "sn_button.NOW_BUTTON#CLICKED",
+                "sourceEventCorrelationId" : null,
+                "sourceEventDefinition" : {
+                  "apiName" : "sn_button.NOW_BUTTON#CLICKED",
+                  "id" : null,
+                  "type" : "UXEVENT"
+                },
+                "sourceEventSysId" : null,
+                "targets" : [ {
+                  "broker" : null,
+                  "clientScript" : null,
+                  "conditional" : null,
+                  "declarativeAction" : null,
+                  "event" : {
+                    "apiName" : "sn_uxf.MACROPONENT_STATE_UPDATE_REQUESTED",
+                    "payload" : {
+                      "type" : "JSON_LITERAL",
+                      "value" : {
+                        "propName" : "enabled",
+                        "value" : true
+                      }
+                    },
+                    "sysId" : "32408b42ff7a10109046e490703bf176"
+                  },
+                  "operation" : null,
+                  "targetId" : "clgggxrdddfaaaajaaddbhhviukdfedo",
+                  "type" : "EVENT"
+                } ]
+              } ],
+              "slot" : null,
+              "definition" : {
+                "id" : "d37ce8abca89d02905fed903c8e34d8e",
+                "type" : "MACROPONENT"
+              },
+              "overrides" : null,
+              "isHidden" : {
+                "type" : "STATE_BINDING",
+                "binding" : {
+                  "address" : [ "enabled" ]
+                }
+              },
+              "isHero" : false,
+              "extensionPoints" : [ ],
+              "isNonDestructive" : false,
+              "items" : [ ],
+              "styles" : { }
+            } ],
+            "layout" : {
+              "default" : {
+                "children" : null,
+                "isInline" : null,
+                "items" : [{"element_id":"stylized_text_1","styles":{"height":""}},{"element_id":"button_6","styles":{}}],
+                "root" : null,
+                "rules" : null,
+                "styles" : {"height":"100%","flex-direction":"column","display":"grid","grid-template-columns":"1fr","grid-template-rows":"1fr","grid-auto-rows":"1fr","grid-auto-columns":"1fr","grid-auto-flow":"column","align-items":"center","justify-items":"center"},
+                "templateId" : "5832fd4d53c31010e6bcddeeff7b12db",
+                "type" : "grid"
+              },
+              "version" : "3.0.0"
+            }
+          },
+          "isHidden" : {
+            "type" : "JSON_LITERAL",
+            "value" : null
+          },
+          "isHero" : false,
+          "extensionPoints" : [ ],
+          "isNonDestructive" : false,
+          "items" : [ ],
+          "styles" : {
+            "height" : "82px",
+            "width" : "100%",
+            "background" : "#86ED78",
+            "border-color" : "",
+            "border-width" : "",
+            "border-style" : "id",
+            "border-radius" : "0 0 16px 16px"
+          }
+        }, {
           "elementId" : "photobooth_camera_1",
           "elementLabel" : "Photobooth Camera 1",
           "propertyValues" : {
@@ -92,14 +401,18 @@
               }
             },
             "watermarkImagePosition" : {
-              "type" : "STATE_BINDING",
-              "binding" : {
-                "address" : [ "watermarkImagePosition" ]
-              }
+              "type" : "JSON_LITERAL",
+              "value" : "bottom-right"
             },
             "countdownDurationSeconds" : {
               "type" : "JSON_LITERAL",
               "value" : "0"
+            },
+            "refreshRequested" : {
+              "type" : "STATE_BINDING",
+              "binding" : {
+                "address" : [ "refreshRequested" ]
+              }
             },
             "shutterSoundFile" : {
               "type" : "JSON_LITERAL",
@@ -112,8 +425,10 @@
               }
             },
             "enabled" : {
-              "type" : "JSON_LITERAL",
-              "value" : true
+              "type" : "STATE_BINDING",
+              "binding" : {
+                "address" : [ "enabled" ]
+              }
             },
             "pauseDurationSeconds" : {
               "type" : "JSON_LITERAL",
@@ -258,6 +573,102 @@
               },
               "operation" : null,
               "targetId" : "clfldoeeesaaaabqddbhhvdvoaazbbffq",
+              "type" : "EVENT"
+            }, {
+              "broker" : null,
+              "clientScript" : null,
+              "conditional" : {
+                "type" : "BINARY",
+                "operation" : {
+                  "left" : {
+                    "type" : "BINARY",
+                    "operation" : {
+                      "left" : {
+                        "type" : "EVENT_PAYLOAD_BINDING",
+                        "binding" : {
+                          "address" : [ "clientX" ]
+                        }
+                      },
+                      "operator" : "&gt;",
+                      "right" : {
+                        "type" : "JSON_LITERAL",
+                        "value" : 250
+                      }
+                    }
+                  },
+                  "operator" : "AND",
+                  "right" : {
+                    "type" : "BINARY",
+                    "operation" : {
+                      "left" : {
+                        "type" : "EVENT_PAYLOAD_BINDING",
+                        "binding" : {
+                          "address" : [ "clientY" ]
+                        }
+                      },
+                      "operator" : "&lt;",
+                      "right" : {
+                        "type" : "JSON_LITERAL",
+                        "value" : 250
+                      }
+                    }
+                  }
+                }
+              },
+              "declarativeAction" : null,
+              "event" : {
+                "apiName" : "sn_uxf.MACROPONENT_STATE_UPDATE_REQUESTED",
+                "payload" : {
+                  "type" : "CLIENT_TRANSFORM_SCRIPT",
+                  "script" : {
+                    "apiVersion" : "1.0.0",
+                    "controllerElementId" : null,
+                    "inlineScript" : "/**\n* @param {params} params\n* @param {api} params.api\n* @param {any} params.event\n*/\nfunction evaluateEvent({api, event}) {\n\treturn {\n\t\tpropName: \"refreshRequested\",\n\t\tvalue: Date.now()\n\t};\n}",
+                    "scriptSysId" : null,
+                    "target" : null
+                  }
+                },
+                "sysId" : "32408b42ff7a10109046e490703bf176"
+              },
+              "operation" : null,
+              "targetId" : "clgggoiioqvaaaaeepddbhhvrtefctbbr",
+              "type" : "EVENT"
+            }, {
+              "broker" : null,
+              "clientScript" : null,
+              "conditional" : {
+                "type" : "BINARY",
+                "operation" : {
+                  "left" : {
+                    "type" : "EVENT_PAYLOAD_BINDING",
+                    "binding" : {
+                      "address" : [ "clientY" ]
+                    }
+                  },
+                  "operator" : "&gt;",
+                  "right" : {
+                    "type" : "JSON_LITERAL",
+                    "value" : 250
+                  }
+                }
+              },
+              "declarativeAction" : null,
+              "event" : {
+                "apiName" : "sn_uxf.MACROPONENT_STATE_UPDATE_REQUESTED",
+                "payload" : {
+                  "type" : "CLIENT_TRANSFORM_SCRIPT",
+                  "script" : {
+                    "apiVersion" : "1.0.0",
+                    "controllerElementId" : null,
+                    "inlineScript" : "/**\n* @param {params} params\n* @param {api} params.api\n* @param {any} params.event\n*/\nfunction evaluateEvent({api, event}) {\n\treturn {\n\t\tpropName: \"enabled\",\n\t\tvalue: !api.state.enabled\n\t};\n}",
+                    "scriptSysId" : null,
+                    "target" : null
+                  }
+                },
+                "sysId" : "32408b42ff7a10109046e490703bf176"
+              },
+              "operation" : null,
+              "targetId" : "clgggwajeraaaadkddbhhvhhyffntsae",
               "type" : "EVENT"
             } ]
           }, {
@@ -456,204 +867,12 @@
           "isNonDestructive" : false,
           "items" : [ ],
           "styles" : { }
-        }, {
-          "elementId" : "button_circular_1",
-          "elementLabel" : "Take Snapshot Button",
-          "propertyValues" : {
-            "icon" : {
-              "type" : "JSON_LITERAL",
-              "value" : "camera-fill"
-            },
-            "disabled" : {
-              "type" : "CLIENT_TRANSFORM",
-              "transform" : {
-                "operands" : {
-                  "type" : "LIST_CONTAINER",
-                  "container" : [ {
-                    "type" : "STATE_BINDING",
-                    "binding" : {
-                      "address" : [ "requestId" ]
-                    }
-                  } ]
-                },
-                "operator" : "EMPTY"
-              }
-            },
-            "tooltipContent" : {
-              "type" : "TRANSLATION_LITERAL",
-              "value" : {
-                "code" : null,
-                "message" : "Take a snapshot",
-                "comment" : ""
-              }
-            },
-            "configAria" : {
-              "type" : "MAP_CONTAINER",
-              "container" : {
-                "aria-label" : {
-                  "type" : "TRANSLATION_LITERAL",
-                  "value" : {
-                    "code" : null,
-                    "message" : "Take a snapshot",
-                    "comment" : ""
-                  }
-                }
-              }
-            },
-            "hasShadow" : {
-              "type" : "JSON_LITERAL",
-              "value" : false
-            }
-          },
-          "eventMappings" : [ {
-            "eventMappingId" : "cldfddeepnzaaccqaddbhhskbbwwnoel",
-            "isConfiguration" : false,
-            "offRowStorageId" : null,
-            "sourceEventApiName" : "sn_button.NOW_BUTTON_CIRCULAR#CLICKED",
-            "sourceEventCorrelationId" : null,
-            "sourceEventDefinition" : {
-              "apiName" : "sn_button.NOW_BUTTON_CIRCULAR#CLICKED",
-              "id" : null,
-              "type" : "UXEVENT"
-            },
-            "sourceEventSysId" : null,
-            "targets" : [ {
-              "broker" : null,
-              "clientScript" : {
-                "sysId" : "276ad0c347e4a110552caf52736d43e4"
-              },
-              "conditional" : null,
-              "declarativeAction" : null,
-              "event" : null,
-              "operation" : null,
-              "targetId" : "cldfddeepnzaaccqbddbhhsafccqyxaat",
-              "type" : "CLIENT_SCRIPT"
-            } ]
-          } ],
-          "slot" : "",
-          "definition" : {
-            "id" : "35a44d929eb09776cebd167707481125",
-            "type" : "MACROPONENT"
-          },
-          "overrides" : null,
-          "isHidden" : {
-            "type" : "JSON_LITERAL",
-            "value" : null
-          },
-          "isHero" : false,
-          "extensionPoints" : [ ],
-          "isNonDestructive" : false,
-          "items" : [ ],
-          "styles" : { }
-        }, {
-          "elementId" : "container_1",
-          "elementLabel" : "Container 1",
-          "propertyValues" : {
-            "ariaRegionHeadingLevel" : {
-              "type" : "JSON_LITERAL",
-              "value" : "1"
-            },
-            "ariaRegionName" : {
-              "type" : "TRANSLATION_LITERAL",
-              "value" : {
-                "code" : null,
-                "message" : "",
-                "comment" : ""
-              }
-            },
-            "includeAriaHeading" : {
-              "type" : "JSON_LITERAL",
-              "value" : false
-            },
-            "type" : {
-              "type" : "JSON_LITERAL",
-              "value" : "section"
-            },
-            "ariaRole" : {
-              "type" : "JSON_LITERAL",
-              "value" : ""
-            }
-          },
-          "eventMappings" : [ ],
-          "slot" : null,
-          "definition" : {
-            "id" : "d356d14b6e293a3020a244b63d278d8f",
-            "type" : "MACROPONENT"
-          },
-          "overrides" : {
-            "composition" : [ {
-              "elementId" : "stylized_text_1",
-              "elementLabel" : "Message",
-              "propertyValues" : {
-                "css" : {
-                  "type" : "JSON_LITERAL",
-                  "value" : "* {\n    text-align: center;\n    color: var(--now-color--neutral-21);\n    font-size: 1.5rem;\n    font-family: 'Gilroy', sans-serif;\n    font-weight: bold;\n    position: relative;\n    \n }"
-                },
-                "text" : {
-                  "type" : "STATE_BINDING",
-                  "binding" : {
-                    "address" : [ "currentMessage" ]
-                  }
-                },
-                "tag" : {
-                  "type" : "JSON_LITERAL",
-                  "value" : "div"
-                }
-              },
-              "eventMappings" : [ ],
-              "slot" : "",
-              "definition" : {
-                "id" : "4335ba6dca80378f7ba7a67cd6667bec",
-                "type" : "MACROPONENT"
-              },
-              "overrides" : null,
-              "isHidden" : {
-                "type" : "JSON_LITERAL",
-                "value" : null
-              },
-              "isHero" : false,
-              "extensionPoints" : [ ],
-              "isNonDestructive" : false,
-              "items" : [ ],
-              "styles" : { }
-            } ],
-            "layout" : {
-              "default" : {
-                "children" : null,
-                "isInline" : null,
-                "items" : [{"element_id":"stylized_text_1","styles":{"height":""}}],
-                "root" : null,
-                "rules" : null,
-                "styles" : {"height":"100%","flex-direction":"column","display":"grid","grid-template-columns":"1fr","grid-template-rows":"1fr","grid-auto-rows":"1fr","grid-auto-columns":"1fr","grid-auto-flow":"column","align-items":"center"},
-                "templateId" : "5832fd4d53c31010e6bcddeeff7b12db",
-                "type" : "grid"
-              },
-              "version" : "3.0.0"
-            }
-          },
-          "isHidden" : {
-            "type" : "JSON_LITERAL",
-            "value" : null
-          },
-          "isHero" : false,
-          "extensionPoints" : [ ],
-          "isNonDestructive" : false,
-          "items" : [ ],
-          "styles" : {
-            "height" : "82px",
-            "width" : "100%",
-            "background" : "#86ED78",
-            "border-color" : "",
-            "border-width" : "",
-            "border-style" : "id",
-            "border-radius" : "0 0 16px 16px"
-          }
         } ],
         "layout" : {
           "default" : {
             "children" : null,
             "isInline" : null,
-            "items" : [{"element_id":"photobooth_camera_1","styles":{"width":"","height":"","overflow":"hidden","background-clip":"border-box","border":"4px solid transparent","background":"#86ED78","border-color":"#86ED78","border-width":"5px","border-style":"solid","border-radius":"16px 16px 0 0","max-width":""}},{"element_id":"container_1","styles":{}},{"element_id":"button_circular_1","styles":{"align-self":"center","position":"relative","top":"-126px","border-color":"#86ED78","border-width":"5px","border-style":"solid","border-radius":"1000px"}}],
+            "items" : [{"element_id":"photobooth_camera_1","styles":{"width":"","height":"","overflow":"hidden","background-clip":"border-box","border":"4px solid transparent","background":"#86ED78","border-color":"#86ED78","border-width":"5px","border-style":"solid","border-radius":"16px 16px 0 0","max-width":"","flex":"","max-height":"90vh"}},{"element_id":"container_1","styles":{}},{"element_id":"button_circular_1","styles":{"align-self":"center","position":"relative","top":"-126px","border-color":"#86ED78","border-width":"5px","border-style":"solid","border-radius":"1000px"}}],
             "root" : null,
             "rules" : null,
             "styles" : {"flex-direction":"column","flex-wrap":"nowrap"},
@@ -673,8 +892,9 @@
       "items" : [ ],
       "styles" : {
         "width" : "75%",
-        "max-height" : "100vh",
-        "height" : ""
+        "max-height" : "",
+        "height" : "",
+        "align-self" : "flex-end"
       }
     }, {
       "elementId" : "results_wrapper",
@@ -867,7 +1087,9 @@
         "border-color" : "RGB(var(--now-color--neutral-5))",
         "border-width" : "var(--now-static-space--xxs)",
         "border-style" : "id",
-        "border-radius" : "16px"
+        "border-radius" : "16px",
+        "max-height" : "97vh",
+        "min-height" : ""
       }
     } ],
     "layout" : {
@@ -896,7 +1118,8 @@
     "box-sizing" : "border-box",
     "width" : "auto",
     "height" : "auto",
-    "max-height" : "90vh"
+    "max-height" : "",
+    "min-height" : "97vh"
   }
 }, {
   "elementId" : "settings_modal",
@@ -1473,7 +1696,7 @@
           "styles" : { }
         }, {
           "elementId" : "container_7",
-          "elementLabel" : "Container 7",
+          "elementLabel" : "Button Container",
           "propertyValues" : {
             "ariaRegionHeadingLevel" : {
               "type" : "JSON_LITERAL",
@@ -1711,7 +1934,7 @@
               "styles" : { }
             }, {
               "elementId" : "button_5",
-              "elementLabel" : "Button 5",
+              "elementLabel" : "New Request Button",
               "propertyValues" : {
                 "size" : {
                   "type" : "JSON_LITERAL",
@@ -1874,12 +2097,117 @@
               "isNonDestructive" : false,
               "items" : [ ],
               "styles" : { }
+            }, {
+              "elementId" : "button_iconic_1",
+              "elementLabel" : "Refresh Button",
+              "propertyValues" : {
+                "size" : {
+                  "type" : "JSON_LITERAL",
+                  "value" : "md"
+                },
+                "highContrast" : {
+                  "type" : "JSON_LITERAL",
+                  "value" : false
+                },
+                "variant" : {
+                  "type" : "JSON_LITERAL",
+                  "value" : "secondary"
+                },
+                "icon" : {
+                  "type" : "JSON_LITERAL",
+                  "value" : "loader-fill"
+                },
+                "disabled" : {
+                  "type" : "JSON_LITERAL",
+                  "value" : false
+                },
+                "tooltipContent" : {
+                  "type" : "TRANSLATION_LITERAL",
+                  "value" : {
+                    "code" : null,
+                    "message" : "Refresh the page",
+                    "comment" : ""
+                  }
+                },
+                "bare" : {
+                  "type" : "JSON_LITERAL",
+                  "value" : false
+                },
+                "configAria" : {
+                  "type" : "MAP_CONTAINER",
+                  "container" : {
+                    "aria-label" : {
+                      "type" : "TRANSLATION_LITERAL",
+                      "value" : {
+                        "code" : null,
+                        "message" : "Refresh",
+                        "comment" : ""
+                      }
+                    }
+                  }
+                },
+                "hidePadding" : {
+                  "type" : "JSON_LITERAL",
+                  "value" : false
+                }
+              },
+              "eventMappings" : [ {
+                "eventMappingId" : "clgggopeeveaaaaggxddbhhvaatbcxffuii",
+                "isConfiguration" : false,
+                "offRowStorageId" : null,
+                "sourceEventApiName" : "sn_button.NOW_BUTTON_ICONIC#CLICKED",
+                "sourceEventCorrelationId" : null,
+                "sourceEventDefinition" : {
+                  "apiName" : "sn_button.NOW_BUTTON_ICONIC#CLICKED",
+                  "id" : null,
+                  "type" : "UXEVENT"
+                },
+                "sourceEventSysId" : null,
+                "targets" : [ {
+                  "broker" : null,
+                  "clientScript" : null,
+                  "conditional" : null,
+                  "declarativeAction" : null,
+                  "event" : {
+                    "apiName" : "sn_uxf.MACROPONENT_STATE_UPDATE_REQUESTED",
+                    "payload" : {
+                      "type" : "CLIENT_TRANSFORM_SCRIPT",
+                      "script" : {
+                        "apiVersion" : "1.0.0",
+                        "controllerElementId" : null,
+                        "inlineScript" : "/**\n* @param {params} params\n* @param {api} params.api\n* @param {any} params.event\n*/\nfunction evaluateEvent({api, event}) {\n\treturn {\n\t\tpropName: \"refreshRequested\",\n\t\tvalue: Date.now()\n\t};\n}",
+                        "scriptSysId" : null,
+                        "target" : null
+                      }
+                    },
+                    "sysId" : "32408b42ff7a10109046e490703bf176"
+                  },
+                  "operation" : null,
+                  "targetId" : "clgggopeeveaaaaggyddbhhvtiihggzlqt",
+                  "type" : "EVENT"
+                } ]
+              } ],
+              "slot" : null,
+              "definition" : {
+                "id" : "844d56291d91b330f2269558e3f47701",
+                "type" : "MACROPONENT"
+              },
+              "overrides" : null,
+              "isHidden" : {
+                "type" : "JSON_LITERAL",
+                "value" : null
+              },
+              "isHero" : false,
+              "extensionPoints" : [ ],
+              "isNonDestructive" : false,
+              "items" : [ ],
+              "styles" : { }
             } ],
             "layout" : {
               "default" : {
                 "children" : null,
                 "isInline" : null,
-                "items" : [{"element_id":"dropdown_1","styles":{}},{"element_id":"button_5","styles":{}}],
+                "items" : [{"element_id":"dropdown_1","styles":{}},{"element_id":"button_iconic_1","styles":{}},{"element_id":"button_5","styles":{}}],
                 "root" : null,
                 "rules" : null,
                 "styles" : {"flex-direction":"row","gap":"var(--now-static-space--sm)","justify-content":"space-between"},
@@ -2167,6 +2495,17 @@
                   "operation" : null,
                   "targetId" : "clgeehhaaygggaabbggggddbhhvbyqocggaaj",
                   "type" : "EVENT"
+                }, {
+                  "broker" : null,
+                  "clientScript" : {
+                    "sysId" : "8e8628648721ad1089790fe5dabb3592"
+                  },
+                  "conditional" : null,
+                  "declarativeAction" : null,
+                  "event" : null,
+                  "operation" : null,
+                  "targetId" : "clgffizlguaaaaffiiddbhhvoqiioybbto",
+                  "type" : "CLIENT_SCRIPT"
                 } ]
               } ],
               "slot" : null,
@@ -4871,6 +5210,12 @@
   "message" : "Create a new photobooth instance by changing the Name and inserting.",
   "comment" : ""
 }, {
+  "message" : "Enable Camera",
+  "comment" : ""
+}, {
+  "message" : "Enable the camera",
+  "comment" : ""
+}, {
   "message" : "Enter a label",
   "comment" : ""
 }, {
@@ -4905,6 +5250,12 @@
   "comment" : ""
 }, {
   "message" : "Powered by Next Experience",
+  "comment" : ""
+}, {
+  "message" : "Refresh",
+  "comment" : ""
+}, {
+  "message" : "Refresh the page",
   "comment" : ""
 }, {
   "message" : "Save",
@@ -5179,19 +5530,41 @@
     "type" : "JSON_LITERAL",
     "value" : [ ]
   }
+}, {
+  "name" : "refreshRequested",
+  "label" : "refreshRequested",
+  "fieldType" : "string",
+  "valueType" : "string",
+  "shape" : "",
+  "description" : "",
+  "initialValue" : {
+    "type" : "JSON_LITERAL",
+    "value" : null
+  }
+}, {
+  "name" : "enabled",
+  "label" : "enabled",
+  "fieldType" : "boolean",
+  "valueType" : "boolean",
+  "shape" : "",
+  "description" : "",
+  "initialValue" : {
+    "type" : "JSON_LITERAL",
+    "value" : true
+  }
 } ]</state_properties>
         <sys_class_name>sys_ux_macroponent</sys_class_name>
         <sys_created_by>jon.lind</sys_created_by>
         <sys_created_on>2023-03-09 17:44:48</sys_created_on>
         <sys_id>c58628648721ad1089790fe5dabb3528</sys_id>
-        <sys_mod_count>233</sys_mod_count>
+        <sys_mod_count>287</sys_mod_count>
         <sys_name>Home Stylized</sys_name>
         <sys_package display_value="Photobooth App" source="x_snc_pb_app">baa73cb74742dd10552caf52736d43f1</sys_package>
         <sys_policy/>
         <sys_scope display_value="Photobooth App">baa73cb74742dd10552caf52736d43f1</sys_scope>
         <sys_update_name>sys_ux_macroponent_c58628648721ad1089790fe5dabb3528</sys_update_name>
         <sys_updated_by>jon.lind</sys_updated_by>
-        <sys_updated_on>2023-04-06 19:31:14</sys_updated_on>
+        <sys_updated_on>2023-04-24 19:23:05</sys_updated_on>
     </sys_ux_macroponent>
     <sys_translated_text action="delete_multiple" query="documentkey=c58628648721ad1089790fe5dabb3528"/>
 </record_update>
