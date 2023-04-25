@@ -376,7 +376,7 @@
           "isNonDestructive" : false,
           "items" : [ ],
           "styles" : {
-            "height" : "82px",
+            "height" : "5rem",
             "width" : "100%",
             "background" : "#86ED78",
             "border-color" : "",
@@ -872,7 +872,7 @@
           "default" : {
             "children" : null,
             "isInline" : null,
-            "items" : [{"element_id":"photobooth_camera_1","styles":{"width":"","height":"","overflow":"hidden","background-clip":"border-box","border":"4px solid transparent","background":"#86ED78","border-color":"#86ED78","border-width":"5px","border-style":"solid","border-radius":"16px 16px 0 0","max-width":"","flex":"","max-height":"90vh"}},{"element_id":"container_1","styles":{}},{"element_id":"button_circular_1","styles":{"align-self":"center","position":"relative","top":"-126px","border-color":"#86ED78","border-width":"5px","border-style":"solid","border-radius":"1000px"}}],
+            "items" : [{"element_id":"photobooth_camera_1","styles":{"width":"","height":"","overflow":"hidden","background-clip":"border-box","border":"4px solid transparent","background":"#86ED78","border-color":"#86ED78","border-width":"5px","border-style":"solid","border-radius":"16px 16px 0 0","max-width":"","flex":"","max-height":"calc(100vh - 5rem - (2 * var(--now-static-space--xl)))"}},{"element_id":"container_1","styles":{}},{"element_id":"button_circular_1","styles":{"align-self":"center","position":"relative","top":"-126px","border-color":"#86ED78","border-width":"5px","border-style":"solid","border-radius":"1000px"}}],
             "root" : null,
             "rules" : null,
             "styles" : {"flex-direction":"column","flex-wrap":"nowrap"},
@@ -1088,7 +1088,7 @@
         "border-width" : "var(--now-static-space--xxs)",
         "border-style" : "id",
         "border-radius" : "16px",
-        "max-height" : "97vh",
+        "max-height" : "calc(100vh - (2 * var(--now-static-space--xl)))",
         "min-height" : ""
       }
     } ],
@@ -1119,7 +1119,7 @@
     "width" : "auto",
     "height" : "auto",
     "max-height" : "",
-    "min-height" : "97vh"
+    "min-height" : ""
   }
 }, {
   "elementId" : "settings_modal",
@@ -5557,14 +5557,14 @@
         <sys_created_by>jon.lind</sys_created_by>
         <sys_created_on>2023-03-09 17:44:48</sys_created_on>
         <sys_id>c58628648721ad1089790fe5dabb3528</sys_id>
-        <sys_mod_count>287</sys_mod_count>
+        <sys_mod_count>309</sys_mod_count>
         <sys_name>Home Stylized</sys_name>
         <sys_package display_value="Photobooth App" source="x_snc_pb_app">baa73cb74742dd10552caf52736d43f1</sys_package>
         <sys_policy/>
         <sys_scope display_value="Photobooth App">baa73cb74742dd10552caf52736d43f1</sys_scope>
         <sys_update_name>sys_ux_macroponent_c58628648721ad1089790fe5dabb3528</sys_update_name>
         <sys_updated_by>jon.lind</sys_updated_by>
-        <sys_updated_on>2023-04-24 19:23:05</sys_updated_on>
+        <sys_updated_on>2023-04-25 14:41:53</sys_updated_on>
     </sys_ux_macroponent>
     <sys_translated_text action="delete_multiple" query="documentkey=c58628648721ad1089790fe5dabb3528"/>
 </record_update>
