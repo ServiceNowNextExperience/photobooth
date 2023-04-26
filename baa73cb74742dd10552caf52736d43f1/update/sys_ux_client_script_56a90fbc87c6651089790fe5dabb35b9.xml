@@ -53,9 +53,8 @@ function handler({
             if (dbValue != payloadValue) {
                 changedSettings.push(elementId);
             }
-        }
+        } 
     }
-
 
     // Run the changedSettings and saveDisabled logic every time, even if the state or db value doesn't
     // exist, so that you can use this method to update saveDisabled on any event.
@@ -71,14 +70,14 @@ function handler({
         <sys_created_by>jon.lind</sys_created_by>
         <sys_created_on>2023-04-04 20:47:27</sys_created_on>
         <sys_id>56a90fbc87c6651089790fe5dabb35b9</sys_id>
-        <sys_mod_count>33</sys_mod_count>
+        <sys_mod_count>37</sys_mod_count>
         <sys_name>Setting Updated</sys_name>
         <sys_package display_value="Photobooth App" source="x_snc_pb_app">baa73cb74742dd10552caf52736d43f1</sys_package>
         <sys_policy/>
         <sys_scope display_value="Photobooth App">baa73cb74742dd10552caf52736d43f1</sys_scope>
         <sys_update_name>sys_ux_client_script_56a90fbc87c6651089790fe5dabb35b9</sys_update_name>
         <sys_updated_by>jon.lind</sys_updated_by>
-        <sys_updated_on>2023-04-06 18:00:47</sys_updated_on>
+        <sys_updated_on>2023-04-25 17:39:58</sys_updated_on>
         <target>macroponent</target>
         <type>default</type>
     </sys_ux_client_script>

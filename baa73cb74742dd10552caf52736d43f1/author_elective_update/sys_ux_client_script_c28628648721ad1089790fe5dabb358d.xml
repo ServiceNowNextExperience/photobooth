@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_client_script">
+    <sys_ux_client_script action="DELETE">
+        <includes/>
+        <macroponent display_value="Home Stylized">c58628648721ad1089790fe5dabb3528</macroponent>
+        <name>Test Auto Create Request</name>
+        <preset/>
+        <required_translations>[ ]</required_translations>
+        <script><![CDATA[/**
+ * @param {params} params
+ * @param {api} params.api
+ * @param {any} params.event
+ * @param {any} params.imports
+ * @param {ApiHelpers} params.helpers
+ */
+function handler({
+    api : {data, context :{props, session : {user}}},
+    event,
+    helpers,
+    imports
+}) {
+    //    const { context, data: {look_up_photobooths : {results : photobooths}, create_record }} = api.data;
+    const photobooths = data.look_up_photobooths.results;
+
+    if (photobooths.length) {
+        const photobooth = photobooths[0];
+        const newRecord = {
+            table: "x_snc_pb_core_request",
+            templateFields: {
+                photobooth: photobooth._row_data.uniqueValue,
+                first_name: user.firstName,
+                email: user.userName + '@servicenow.com'
+            }
+        }; 
+    console.log(event.name, {props, photobooths, user, newRecord});
+        //        api.data.create_record.execute(newRecord);
+    }
+}]]></script>
+        <script_api_version>2.0.0</script_api_version>
+        <sys_class_name>sys_ux_client_script</sys_class_name>
+        <sys_created_by>jon.lind</sys_created_by>
+        <sys_created_on>2023-03-09 17:44:52</sys_created_on>
+        <sys_id>c28628648721ad1089790fe5dabb358d</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>Test Auto Create Request</sys_name>
+        <sys_package display_value="Photobooth App" source="x_snc_pb_app">baa73cb74742dd10552caf52736d43f1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Photobooth App">baa73cb74742dd10552caf52736d43f1</sys_scope>
+        <sys_update_name>sys_ux_client_script_c28628648721ad1089790fe5dabb358d</sys_update_name>
+        <sys_updated_by>jon.lind</sys_updated_by>
+        <sys_updated_on>2023-03-09 17:45:53</sys_updated_on>
+        <target>macroponent</target>
+        <type>default</type>
+    </sys_ux_client_script>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Photobooth App">baa73cb74742dd10552caf52736d43f1</application>
+        <file_path/>
+        <instance_id>634887c3db11915c8aea21c4059619b9</instance_id>
+        <instance_name>tennis</instance_name>
+        <name>sys_ux_client_script_c28628648721ad1089790fe5dabb358d</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sys_ux_client_script"&gt;&lt;sys_ux_client_script action="INSERT_OR_UPDATE"&gt;&lt;includes/&gt;&lt;macroponent display_value="Home Stylized"&gt;c58628648721ad1089790fe5dabb3528&lt;/macroponent&gt;&lt;name&gt;Test Auto Create Request&lt;/name&gt;&lt;preset/&gt;&lt;required_translations&gt;[ ]&lt;/required_translations&gt;&lt;script&gt;&lt;![CDATA[/**
+ * @param {params} params
+ * @param {api} params.api
+ * @param {any} params.event
+ * @param {any} params.imports
+ * @param {ApiHelpers} params.helpers
+ */
+function handler({
+    api : {data, context :{props, session : {user}}},
+    event,
+    helpers,
+    imports
+}) {
+    //    const { context, data: {look_up_photobooths : {results : photobooths}, create_record }} = api.data;
+    const photobooths = data.look_up_photobooths.results;
+
+    if (photobooths.length) {
+        const photobooth = photobooths[0];
+        const newRecord = {
+            table: "x_snc_pb_core_request",
+            templateFields: {
+                photobooth: photobooth._row_data.uniqueValue,
+                first_name: user.firstName,
+                email: user.userName + '@servicenow.com'
+            }
+        }; 
+    console.log(event.name, {props, photobooths, user, newRecord});
+        //        api.data.create_record.execute(newRecord);
+    }
+}]]&gt;&lt;/script&gt;&lt;script_api_version&gt;2.0.0&lt;/script_api_version&gt;&lt;sys_class_name&gt;sys_ux_client_script&lt;/sys_class_name&gt;&lt;sys_created_by&gt;jon.lind&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2023-03-09 17:44:52&lt;/sys_created_on&gt;&lt;sys_id&gt;c28628648721ad1089790fe5dabb358d&lt;/sys_id&gt;&lt;sys_mod_count&gt;1&lt;/sys_mod_count&gt;&lt;sys_name&gt;Test Auto Create Request&lt;/sys_name&gt;&lt;sys_package display_value="Photobooth App" source="x_snc_pb_app"&gt;baa73cb74742dd10552caf52736d43f1&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Photobooth App"&gt;baa73cb74742dd10552caf52736d43f1&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_ux_client_script_c28628648721ad1089790fe5dabb358d&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;jon.lind&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2023-03-09 17:45:53&lt;/sys_updated_on&gt;&lt;target&gt;macroponent&lt;/target&gt;&lt;type&gt;default&lt;/type&gt;&lt;/sys_ux_client_script&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>2142095750</payload_hash>
+        <record_name>Test Auto Create Request</record_name>
+        <reverted_from/>
+        <source>2c7c1d1147f5e510552caf52736d43d6</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>jon.lind</sys_created_by>
+        <sys_created_on>2023-03-24 15:51:46</sys_created_on>
+        <sys_id>a77c5d1147f5e510552caf52736d43c1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1871451a1e80000001</sys_recorded_at>
+        <sys_updated_by>jon.lind</sys_updated_by>
+        <sys_updated_on>2023-03-24 15:51:46</sys_updated_on>
+        <type>UX Client Script</type>
+        <update_guid>b142e5c1cbb52d108a775bb1cc7b6da8</update_guid>
+        <update_guid_history>b142e5c1cbb52d108a775bb1cc7b6da8:2142095750,835c5911a7f5e5102a6f9e9ec1ffb86a:0,b142e5c1cbb52d108a775bb1cc7b6da8:2142095750,d8a7f009f1b5a510bde0994316684f2d:0,643338c199b5a5109c05841579575663:2130721446,2ed3340532b5a5106183632c2c330e94:0,796035243125ad10d42009a5bfd01861:2130721446,d4efe9e01e25ad10d4da80a6e5ae856b:0,41c62c649921ad10abb4557dc451391e:2130721446,b0c62c64ac21ad10a44b37e823503801:-1607113920,8a8628648721ad107afeff6b0b3a6490:-39421867,4a86e0a88625615022eeab28e6f15b18:-1607113920</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>jon.lind</sys_created_by>
+        <sys_created_on>2023-04-25 16:27:28</sys_created_on>
+        <sys_db_object display_value="" name="sys_ux_client_script">sys_ux_client_script</sys_db_object>
+        <sys_id>5acbbefcb16f44a0b441d2295d416a40</sys_id>
+        <sys_metadata>c28628648721ad1089790fe5dabb358d</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Test Auto Create Request</sys_name>
+        <sys_package display_value="Photobooth App" source="x_snc_pb_app">baa73cb74742dd10552caf52736d43f1</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Photobooth App">baa73cb74742dd10552caf52736d43f1</sys_scope>
+        <sys_scope_delete display_value="">868a264ca04c47ed906cd87c81ce8d11</sys_scope_delete>
+        <sys_update_name>sys_ux_client_script_c28628648721ad1089790fe5dabb358d</sys_update_name>
+        <sys_update_version display_value="sys_ux_client_script_c28628648721ad1089790fe5dabb358d">a77c5d1147f5e510552caf52736d43c1</sys_update_version>
+        <sys_updated_by>jon.lind</sys_updated_by>
+        <sys_updated_on>2023-04-25 16:27:28</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>
