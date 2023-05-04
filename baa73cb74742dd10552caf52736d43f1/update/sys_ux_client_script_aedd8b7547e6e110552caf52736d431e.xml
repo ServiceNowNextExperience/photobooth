@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_client_script">
     <sys_ux_client_script action="INSERT_OR_UPDATE">
         <includes/>
-        <macroponent display_value="Home Stylized - Backup">c58628648721ad1089790fe5dabb3528</macroponent>
+        <macroponent display_value="Home Stylized">11dd4b7547e6e110552caf52736d4361</macroponent>
         <name>Map Photobooth From DB to State</name>
         <preset/>
         <required_translations>[ ]</required_translations>
@@ -64,16 +64,16 @@ function handler({
         <script_api_version>2.0.0</script_api_version>
         <sys_class_name>sys_ux_client_script</sys_class_name>
         <sys_created_by>jon.lind</sys_created_by>
-        <sys_created_on>2023-03-28 18:00:16</sys_created_on>
-        <sys_id>f4406a6647b12d10552caf52736d43ef</sys_id>
-        <sys_mod_count>33</sys_mod_count>
+        <sys_created_on>2023-05-02 20:11:05</sys_created_on>
+        <sys_id>aedd8b7547e6e110552caf52736d431e</sys_id>
+        <sys_mod_count>1</sys_mod_count>
         <sys_name>Map Photobooth From DB to State</sys_name>
         <sys_package display_value="Photobooth App" source="x_snc_pb_app">baa73cb74742dd10552caf52736d43f1</sys_package>
         <sys_policy/>
         <sys_scope display_value="Photobooth App">baa73cb74742dd10552caf52736d43f1</sys_scope>
-        <sys_update_name>sys_ux_client_script_f4406a6647b12d10552caf52736d43ef</sys_update_name>
+        <sys_update_name>sys_ux_client_script_aedd8b7547e6e110552caf52736d431e</sys_update_name>
         <sys_updated_by>jon.lind</sys_updated_by>
-        <sys_updated_on>2023-04-26 14:19:32</sys_updated_on>
+        <sys_updated_on>2023-05-02 20:13:56</sys_updated_on>
         <target>macroponent</target>
         <type>default</type>
     </sys_ux_client_script>

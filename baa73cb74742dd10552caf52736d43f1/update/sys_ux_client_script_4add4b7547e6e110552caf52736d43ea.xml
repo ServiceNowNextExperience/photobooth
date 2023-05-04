@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_client_script">
     <sys_ux_client_script action="INSERT_OR_UPDATE">
         <includes/>
-        <macroponent display_value="Home Stylized - Backup">c58628648721ad1089790fe5dabb3528</macroponent>
-        <name>Create List of Photobooths</name>
+        <macroponent display_value="Home Stylized">11dd4b7547e6e110552caf52736d4361</macroponent>
+        <name>Debug Events</name>
         <preset/>
         <required_translations>[ ]</required_translations>
         <script><![CDATA[/**
@@ -12,25 +12,22 @@
 * @param {any} params.imports
 * @param {ApiHelpers} params.helpers
 */
-function handler({api, event, helpers, imports}) {
-    const photoboothChoices = api.data.look_up_all_photobooths.results.map((
-        {name : {value : name}, long_name : {value : longName}}) => ({ id : name, label : `${longName} (${name})`}));
-
-    api.setState("photoboothChoices", photoboothChoices);
+function handler({api : { state }, event, helpers, imports}) {
+    console.log(event.name, {event, state});
 }]]></script>
         <script_api_version>2.0.0</script_api_version>
         <sys_class_name>sys_ux_client_script</sys_class_name>
         <sys_created_by>jon.lind</sys_created_by>
-        <sys_created_on>2023-04-05 21:43:39</sys_created_on>
-        <sys_id>8f106051874aa51089790fe5dabb351c</sys_id>
-        <sys_mod_count>2</sys_mod_count>
-        <sys_name>Create List of Photobooths</sys_name>
+        <sys_created_on>2023-05-02 20:11:03</sys_created_on>
+        <sys_id>4add4b7547e6e110552caf52736d43ea</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>Debug Events</sys_name>
         <sys_package display_value="Photobooth App" source="x_snc_pb_app">baa73cb74742dd10552caf52736d43f1</sys_package>
         <sys_policy/>
         <sys_scope display_value="Photobooth App">baa73cb74742dd10552caf52736d43f1</sys_scope>
-        <sys_update_name>sys_ux_client_script_8f106051874aa51089790fe5dabb351c</sys_update_name>
+        <sys_update_name>sys_ux_client_script_4add4b7547e6e110552caf52736d43ea</sys_update_name>
         <sys_updated_by>jon.lind</sys_updated_by>
-        <sys_updated_on>2023-04-25 16:48:22</sys_updated_on>
+        <sys_updated_on>2023-05-02 20:13:55</sys_updated_on>
         <target>macroponent</target>
         <type>default</type>
     </sys_ux_client_script>

@@ -1,18 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="sys_uib_screen_test_values">
     <sys_uib_screen_test_values action="INSERT_OR_UPDATE">
-        <macroponent_config>{ }</macroponent_config>
-        <screen display_value="List of Booths">65537248875aed1089790fe5dabb350b</screen>
+        <macroponent_config>{
+  "photoboothNameOrNumberOrSysId" : "K23"
+}</macroponent_config>
+        <screen display_value="Home Stylized">addd4b7547e6e110552caf52736d436f</screen>
         <sys_class_name>sys_uib_screen_test_values</sys_class_name>
         <sys_created_by>jon.lind</sys_created_by>
-        <sys_created_on>2023-04-14 21:30:11</sys_created_on>
-        <sys_id>65537248875aed1089790fe5dabb35fb</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_created_on>2023-05-02 20:11:02</sys_created_on>
+        <sys_id>3ddd4b7547e6e110552caf52736d438a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
         <sys_name/>
         <sys_package display_value="Photobooth App" source="x_snc_pb_app">baa73cb74742dd10552caf52736d43f1</sys_package>
         <sys_policy/>
         <sys_scope display_value="Photobooth App">baa73cb74742dd10552caf52736d43f1</sys_scope>
-        <sys_update_name>sys_uib_screen_test_values_65537248875aed1089790fe5dabb35fb</sys_update_name>
+        <sys_update_name>sys_uib_screen_test_values_3ddd4b7547e6e110552caf52736d438a</sys_update_name>
         <sys_updated_by>jon.lind</sys_updated_by>
-        <sys_updated_on>2023-05-02 20:01:45</sys_updated_on>
+        <sys_updated_on>2023-05-02 20:11:02</sys_updated_on>
     </sys_uib_screen_test_values>
 </record_update>

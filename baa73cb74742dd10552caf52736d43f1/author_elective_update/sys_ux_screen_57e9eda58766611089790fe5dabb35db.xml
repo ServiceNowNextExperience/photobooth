@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ux_screen">
+    <sys_ux_screen action="DELETE">
+        <active>true</active>
+        <app_config/>
+        <description/>
+        <event_mappings>[ {
+  "eventMappingId" : "ckhffjjisfyaaaabboddhhhmwraaxeeaft",
+  "isConfiguration" : false,
+  "offRowStorageId" : null,
+  "sourceEventApiName" : "x_snc_pb_core.NAV_ITEM_SELECTED_RELAY_bd9e556b46c8ad10cbe85bb6a87c8e33",
+  "sourceEventCorrelationId" : null,
+  "sourceEventDefinition" : {
+    "apiName" : "x_snc_pb_core.NAV_ITEM_SELECTED_RELAY_bd9e556b46c8ad10cbe85bb6a87c8e33",
+    "id" : null,
+    "type" : "UXEVENT"
+  },
+  "sourceEventSysId" : null,
+  "targets" : [ {
+    "broker" : null,
+    "clientScript" : null,
+    "conditional" : null,
+    "declarativeAction" : null,
+    "event" : {
+      "apiName" : "sn_canvas_core.NAV_ITEM_SELECTED",
+      "payload" : {
+        "type" : "MAP_CONTAINER",
+        "container" : {
+          "route" : {
+            "type" : "EVENT_PAYLOAD_BINDING",
+            "binding" : {
+              "address" : [ "route" ]
+            }
+          },
+          "fields" : {
+            "type" : "EVENT_PAYLOAD_BINDING",
+            "binding" : {
+              "address" : [ "fields" ]
+            }
+          },
+          "params" : {
+            "type" : "EVENT_PAYLOAD_BINDING",
+            "binding" : {
+              "address" : [ "params" ]
+            }
+          },
+          "redirect" : {
+            "type" : "EVENT_PAYLOAD_BINDING",
+            "binding" : {
+              "address" : [ "redirect" ]
+            }
+          },
+          "passiveNavigation" : {
+            "type" : "EVENT_PAYLOAD_BINDING",
+            "binding" : {
+              "address" : [ "passiveNavigation" ]
+            }
+          },
+          "title" : {
+            "type" : "EVENT_PAYLOAD_BINDING",
+            "binding" : {
+              "address" : [ "title" ]
+            }
+          },
+          "multiInstField" : {
+            "type" : "EVENT_PAYLOAD_BINDING",
+            "binding" : {
+              "address" : [ "multiInstField" ]
+            }
+          },
+          "targetRoute" : {
+            "type" : "EVENT_PAYLOAD_BINDING",
+            "binding" : {
+              "address" : [ "targetRoute" ]
+            }
+          },
+          "external" : {
+            "type" : "EVENT_PAYLOAD_BINDING",
+            "binding" : {
+              "address" : [ "external" ]
+            }
+          }
+        }
+      },
+      "sysId" : "8b82bf18e5276c8e423b6e4e0889b463"
+    },
+    "operation" : null,
+    "targetId" : "ckhffjjisfyaaaabbnddhhhmsoffggkjjsjj",
+    "type" : "EVENT"
+  } ]
+} ]</event_mappings>
+        <macroponent display_value="Home default Copy">c7e9eda58766611089790fe5dabb35c4</macroponent>
+        <macroponent_config>{
+  "sysId" : {
+    "type" : "JSON_LITERAL",
+    "value" : ""
+  },
+  "openInEditMode" : {
+    "type" : "JSON_LITERAL",
+    "value" : ""
+  },
+  "label" : {
+    "type" : "TRANSLATION_LITERAL",
+    "value" : {
+      "code" : null,
+      "message" : "",
+      "comment" : ""
+    }
+  },
+  "bare" : {
+    "type" : "JSON_LITERAL",
+    "value" : true
+  },
+  "scrollable" : {
+    "type" : "JSON_LITERAL",
+    "value" : "y"
+  },
+  "headerLevel" : {
+    "type" : "JSON_LITERAL",
+    "value" : "1"
+  },
+  "headingOnlyVisibleToScreenReaders" : {
+    "type" : "JSON_LITERAL",
+    "value" : false
+  },
+  "interceptNotifications" : {
+    "type" : "JSON_LITERAL",
+    "value" : false
+  },
+  "propagateNotifications" : {
+    "type" : "JSON_LITERAL",
+    "value" : false
+  }
+}</macroponent_config>
+        <name>Home default Copy</name>
+        <order>0</order>
+        <parent_macroponent display_value="Workspace App Shell">c276387cc331101080d6d3658940ddd2</parent_macroponent>
+        <required_translations>[ ]</required_translations>
+        <rollback_screen/>
+        <screen_condition/>
+        <screen_type display_value="Home">319e556ba6c8ad102bc7d77c1ad15330</screen_type>
+        <sys_class_name>sys_ux_screen</sys_class_name>
+        <sys_created_by>jon.lind</sys_created_by>
+        <sys_created_on>2023-05-01 18:16:02</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>57e9eda58766611089790fe5dabb35db</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Home default Copy</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Photobooth App" source="x_snc_pb_app">baa73cb74742dd10552caf52736d43f1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Photobooth App">baa73cb74742dd10552caf52736d43f1</sys_scope>
+        <sys_update_name>sys_ux_screen_57e9eda58766611089790fe5dabb35db</sys_update_name>
+        <sys_updated_by>jon.lind</sys_updated_by>
+        <sys_updated_on>2023-05-01 18:16:02</sys_updated_on>
+    </sys_ux_screen>
+    <sys_translated_text action="DELETE" query="documentkey=57e9eda58766611089790fe5dabb35db"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Photobooth App">baa73cb74742dd10552caf52736d43f1</application>
+        <file_path/>
+        <instance_id>634887c3db11915c8aea21c4059619b9</instance_id>
+        <instance_name>tennis</instance_name>
+        <name>sys_ux_screen_57e9eda58766611089790fe5dabb35db</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ux_screen"><sys_ux_screen action="INSERT_OR_UPDATE"><active>true</active><app_config/><description/><event_mappings>[ {
+  "eventMappingId" : "ckhffjjisfyaaaabboddhhhmwraaxeeaft",
+  "isConfiguration" : false,
+  "offRowStorageId" : null,
+  "sourceEventApiName" : "x_snc_pb_core.NAV_ITEM_SELECTED_RELAY_bd9e556b46c8ad10cbe85bb6a87c8e33",
+  "sourceEventCorrelationId" : null,
+  "sourceEventDefinition" : {
+    "apiName" : "x_snc_pb_core.NAV_ITEM_SELECTED_RELAY_bd9e556b46c8ad10cbe85bb6a87c8e33",
+    "id" : null,
+    "type" : "UXEVENT"
+  },
+  "sourceEventSysId" : null,
+  "targets" : [ {
+    "broker" : null,
+    "clientScript" : null,
+    "conditional" : null,
+    "declarativeAction" : null,
+    "event" : {
+      "apiName" : "sn_canvas_core.NAV_ITEM_SELECTED",
+      "payload" : {
+        "type" : "MAP_CONTAINER",
+        "container" : {
+          "route" : {
+            "type" : "EVENT_PAYLOAD_BINDING",
+            "binding" : {
+              "address" : [ "route" ]
+            }
+          },
+          "fields" : {
+            "type" : "EVENT_PAYLOAD_BINDING",
+            "binding" : {
+              "address" : [ "fields" ]
+            }
+          },
+          "params" : {
+            "type" : "EVENT_PAYLOAD_BINDING",
+            "binding" : {
+              "address" : [ "params" ]
+            }
+          },
+          "redirect" : {
+            "type" : "EVENT_PAYLOAD_BINDING",
+            "binding" : {
+              "address" : [ "redirect" ]
+            }
+          },
+          "passiveNavigation" : {
+            "type" : "EVENT_PAYLOAD_BINDING",
+            "binding" : {
+              "address" : [ "passiveNavigation" ]
+            }
+          },
+          "title" : {
+            "type" : "EVENT_PAYLOAD_BINDING",
+            "binding" : {
+              "address" : [ "title" ]
+            }
+          },
+          "multiInstField" : {
+            "type" : "EVENT_PAYLOAD_BINDING",
+            "binding" : {
+              "address" : [ "multiInstField" ]
+            }
+          },
+          "targetRoute" : {
+            "type" : "EVENT_PAYLOAD_BINDING",
+            "binding" : {
+              "address" : [ "targetRoute" ]
+            }
+          },
+          "external" : {
+            "type" : "EVENT_PAYLOAD_BINDING",
+            "binding" : {
+              "address" : [ "external" ]
+            }
+          }
+        }
+      },
+      "sysId" : "8b82bf18e5276c8e423b6e4e0889b463"
+    },
+    "operation" : null,
+    "targetId" : "ckhffjjisfyaaaabbnddhhhmsoffggkjjsjj",
+    "type" : "EVENT"
+  } ]
+} ]</event_mappings><macroponent display_value="Home default Copy">c7e9eda58766611089790fe5dabb35c4</macroponent><macroponent_config>{
+  "sysId" : {
+    "type" : "JSON_LITERAL",
+    "value" : ""
+  },
+  "openInEditMode" : {
+    "type" : "JSON_LITERAL",
+    "value" : ""
+  },
+  "label" : {
+    "type" : "TRANSLATION_LITERAL",
+    "value" : {
+      "code" : null,
+      "message" : "",
+      "comment" : ""
+    }
+  },
+  "bare" : {
+    "type" : "JSON_LITERAL",
+    "value" : true
+  },
+  "scrollable" : {
+    "type" : "JSON_LITERAL",
+    "value" : "y"
+  },
+  "headerLevel" : {
+    "type" : "JSON_LITERAL",
+    "value" : "1"
+  },
+  "headingOnlyVisibleToScreenReaders" : {
+    "type" : "JSON_LITERAL",
+    "value" : false
+  },
+  "interceptNotifications" : {
+    "type" : "JSON_LITERAL",
+    "value" : false
+  },
+  "propagateNotifications" : {
+    "type" : "JSON_LITERAL",
+    "value" : false
+  }
+}</macroponent_config><name>Home default Copy</name><order>0</order><parent_macroponent display_value="Workspace App Shell">c276387cc331101080d6d3658940ddd2</parent_macroponent><required_translations>[ ]</required_translations><rollback_screen/><screen_condition/><screen_type display_value="Home">319e556ba6c8ad102bc7d77c1ad15330</screen_type><sys_class_name>sys_ux_screen</sys_class_name><sys_created_by>jon.lind</sys_created_by><sys_created_on>2023-05-01 18:16:02</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>57e9eda58766611089790fe5dabb35db</sys_id><sys_mod_count>0</sys_mod_count><sys_name>Home default Copy</sys_name><sys_overrides/><sys_package display_value="Photobooth App" source="x_snc_pb_app">baa73cb74742dd10552caf52736d43f1</sys_package><sys_policy/><sys_scope display_value="Photobooth App">baa73cb74742dd10552caf52736d43f1</sys_scope><sys_update_name>sys_ux_screen_57e9eda58766611089790fe5dabb35db</sys_update_name><sys_updated_by>jon.lind</sys_updated_by><sys_updated_on>2023-05-01 18:16:02</sys_updated_on></sys_ux_screen><sys_translated_text action="delete_multiple" query="documentkey=57e9eda58766611089790fe5dabb35db"/></record_update>]]></payload>
+        <payload_hash>1329373800</payload_hash>
+        <record_name>Home default Copy</record_name>
+        <reverted_from/>
+        <source>0c8069db87d6695089790fe5dabb35b8</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>jon.lind</sys_created_by>
+        <sys_created_on>2023-05-01 18:46:27</sys_created_on>
+        <sys_id>b8e0f16d8766611089790fe5dabb35ab</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>187d8a3341d0000001</sys_recorded_at>
+        <sys_updated_by>jon.lind</sys_updated_by>
+        <sys_updated_on>2023-05-01 18:46:27</sys_updated_on>
+        <type>UX Screen</type>
+        <update_guid>f4e0f16d8c666110fcd324d51f530dab</update_guid>
+        <update_guid_history>f4e0f16d8c666110fcd324d51f530dab:0,13e9eda5f466611050120cb6ef92bdde:-207094438</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>jon.lind</sys_created_by>
+        <sys_created_on>2023-05-01 18:48:10</sys_created_on>
+        <sys_db_object display_value="" name="sys_ux_screen">sys_ux_screen</sys_db_object>
+        <sys_id>330ae33c76974698928ee554a1cc0404</sys_id>
+        <sys_metadata>57e9eda58766611089790fe5dabb35db</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Home default Copy</sys_name>
+        <sys_package display_value="Photobooth App" source="x_snc_pb_app">baa73cb74742dd10552caf52736d43f1</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Photobooth App">baa73cb74742dd10552caf52736d43f1</sys_scope>
+        <sys_scope_delete display_value="">868a264ca04c47ed906cd87c81ce8d11</sys_scope_delete>
+        <sys_update_name>sys_ux_screen_57e9eda58766611089790fe5dabb35db</sys_update_name>
+        <sys_update_version display_value="sys_ux_screen_57e9eda58766611089790fe5dabb35db">b8e0f16d8766611089790fe5dabb35ab</sys_update_version>
+        <sys_updated_by>jon.lind</sys_updated_by>
+        <sys_updated_on>2023-05-01 18:48:10</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

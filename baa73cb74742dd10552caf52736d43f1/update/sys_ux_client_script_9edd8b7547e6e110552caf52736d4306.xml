@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_client_script">
     <sys_ux_client_script action="INSERT_OR_UPDATE">
         <includes/>
-        <macroponent display_value="Home Stylized - Backup">c58628648721ad1089790fe5dabb3528</macroponent>
+        <macroponent display_value="Home Stylized">11dd4b7547e6e110552caf52736d4361</macroponent>
         <name>Countdown</name>
         <preset/>
         <required_translations>[ ]</required_translations>
@@ -34,16 +34,16 @@ function handler({api : { setState, state }, event, helpers : {timing : {setTime
         <script_api_version>2.0.0</script_api_version>
         <sys_class_name>sys_ux_client_script</sys_class_name>
         <sys_created_by>jon.lind</sys_created_by>
-        <sys_created_on>2023-03-09 17:44:53</sys_created_on>
-        <sys_id>de8628648721ad1089790fe5dabb3598</sys_id>
-        <sys_mod_count>5</sys_mod_count>
+        <sys_created_on>2023-05-02 20:11:04</sys_created_on>
+        <sys_id>9edd8b7547e6e110552caf52736d4306</sys_id>
+        <sys_mod_count>3</sys_mod_count>
         <sys_name>Countdown</sys_name>
         <sys_package display_value="Photobooth App" source="x_snc_pb_app">baa73cb74742dd10552caf52736d43f1</sys_package>
         <sys_policy/>
         <sys_scope display_value="Photobooth App">baa73cb74742dd10552caf52736d43f1</sys_scope>
-        <sys_update_name>sys_ux_client_script_de8628648721ad1089790fe5dabb3598</sys_update_name>
+        <sys_update_name>sys_ux_client_script_9edd8b7547e6e110552caf52736d4306</sys_update_name>
         <sys_updated_by>jon.lind</sys_updated_by>
-        <sys_updated_on>2023-04-27 17:38:10</sys_updated_on>
+        <sys_updated_on>2023-05-04 22:17:57</sys_updated_on>
         <target>macroponent</target>
         <type>default</type>
     </sys_ux_client_script>
