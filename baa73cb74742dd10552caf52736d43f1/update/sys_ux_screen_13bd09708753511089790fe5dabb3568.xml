@@ -137,19 +137,22 @@
         <required_translations>[ ]</required_translations>
         <rollback_screen/>
         <screen_condition/>
-        <screen_type display_value="List">0fbd81708753511089790fe5dabb355a</screen_type>
+        <screen_type/>
         <sys_class_name>sys_ux_screen</sys_class_name>
         <sys_created_by>jon.lind</sys_created_by>
         <sys_created_on>2022-11-18 18:53:22</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>13bd09708753511089790fe5dabb3568</sys_id>
+        <sys_mod_count>0</sys_mod_count>
         <sys_name>List of Requests default</sys_name>
         <sys_overrides/>
         <sys_package display_value="Photobooth App" source="x_snc_pb_app">baa73cb74742dd10552caf52736d43f1</sys_package>
         <sys_policy/>
         <sys_scope display_value="Photobooth App">baa73cb74742dd10552caf52736d43f1</sys_scope>
         <sys_update_name>sys_ux_screen_13bd09708753511089790fe5dabb3568</sys_update_name>
+        <sys_updated_by>jon.lind</sys_updated_by>
+        <sys_updated_on>2022-11-28 17:52:53</sys_updated_on>
     </sys_ux_screen>
     <sys_translated_text action="delete_multiple" query="documentkey=13bd09708753511089790fe5dabb3568"/>
 </record_update>

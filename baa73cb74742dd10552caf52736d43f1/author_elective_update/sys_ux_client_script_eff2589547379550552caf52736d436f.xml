@@ -73,6 +73,7 @@ function handler({api : { state }, event, helpers, imports}) {
         <sys_db_object display_value="" name="sys_ux_client_script">sys_ux_client_script</sys_db_object>
         <sys_id>37fb2cab4d8b4cefb8f5d63e5faa63e9</sys_id>
         <sys_metadata>eff2589547379550552caf52736d436f</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
         <sys_name>Update Photobooth Settings</sys_name>
         <sys_package display_value="Photobooth App" source="x_snc_pb_app">baa73cb74742dd10552caf52736d43f1</sys_package>
         <sys_parent/>
@@ -81,5 +82,7 @@ function handler({api : { state }, event, helpers, imports}) {
         <sys_scope_delete display_value="">868a264ca04c47ed906cd87c81ce8d11</sys_scope_delete>
         <sys_update_name>sys_ux_client_script_eff2589547379550552caf52736d436f</sys_update_name>
         <sys_update_version display_value="sys_ux_client_script_eff2589547379550552caf52736d436f">04b74da98737155089790fe5dabb35dd</sys_update_version>
+        <sys_updated_by>jon.lind</sys_updated_by>
+        <sys_updated_on>2023-01-11 23:00:19</sys_updated_on>
     </sys_metadata_delete>
 </record_update>

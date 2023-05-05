@@ -59,6 +59,7 @@
         <sys_db_object display_value="" name="sys_ux_app_route">sys_ux_app_route</sys_db_object>
         <sys_id>0fd95d9996144478a8c196a36113ce44</sys_id>
         <sys_metadata>c29e15a1872a5d1089790fe5dabb3586</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
         <sys_name>Home Record</sys_name>
         <sys_package display_value="Photobooth App" source="x_snc_pb_app">baa73cb74742dd10552caf52736d43f1</sys_package>
         <sys_parent/>
@@ -67,5 +68,7 @@
         <sys_scope_delete display_value="">868a264ca04c47ed906cd87c81ce8d11</sys_scope_delete>
         <sys_update_name>sys_ux_app_route_c29e15a1872a5d1089790fe5dabb3586</sys_update_name>
         <sys_update_version display_value="sys_ux_app_route_c29e15a1872a5d1089790fe5dabb3586">c29e15a1872a5d1089790fe5dabb3588</sys_update_version>
+        <sys_updated_by>jon.lind</sys_updated_by>
+        <sys_updated_on>2022-10-14 21:16:14</sys_updated_on>
     </sys_metadata_delete>
 </record_update>

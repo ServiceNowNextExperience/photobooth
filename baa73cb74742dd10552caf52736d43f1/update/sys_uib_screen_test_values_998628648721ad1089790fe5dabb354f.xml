@@ -3,7 +3,7 @@
         <macroponent_config>{
   "photoboothNameOrNumberOrSysId" : "MyPB"
 }</macroponent_config>
-        <screen display_value="Home Stylized Copy Copy">518628648721ad1089790fe5dabb354c</screen>
+        <screen/>
         <sys_class_name>sys_uib_screen_test_values</sys_class_name>
         <sys_created_by>jon.lind</sys_created_by>
         <sys_created_on>2023-03-09 17:44:49</sys_created_on>

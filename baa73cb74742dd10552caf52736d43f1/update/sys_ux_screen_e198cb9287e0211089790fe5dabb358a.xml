@@ -53,7 +53,7 @@
         <required_translations>[ ]</required_translations>
         <rollback_screen/>
         <screen_condition/>
-        <screen_type display_value="Chris page">2998cb9287e0211089790fe5dabb3582</screen_type>
+        <screen_type/>
         <sys_class_name>sys_ux_screen</sys_class_name>
         <sys_created_by>christopher.johnson@snc</sys_created_by>
         <sys_created_on>2023-01-24 22:59:29</sys_created_on>

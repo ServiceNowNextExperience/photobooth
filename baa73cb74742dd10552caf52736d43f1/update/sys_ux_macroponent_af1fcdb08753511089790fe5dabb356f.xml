@@ -468,11 +468,14 @@
         <sys_created_by>jon.lind</sys_created_by>
         <sys_created_on>2022-11-18 18:59:24</sys_created_on>
         <sys_id>af1fcdb08753511089790fe5dabb356f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
         <sys_name>Simple List</sys_name>
         <sys_package display_value="Photobooth App" source="x_snc_pb_app">baa73cb74742dd10552caf52736d43f1</sys_package>
         <sys_policy/>
         <sys_scope display_value="Photobooth App">baa73cb74742dd10552caf52736d43f1</sys_scope>
         <sys_update_name>sys_ux_macroponent_af1fcdb08753511089790fe5dabb356f</sys_update_name>
+        <sys_updated_by>jon.lind</sys_updated_by>
+        <sys_updated_on>2022-11-28 17:52:53</sys_updated_on>
     </sys_ux_macroponent>
     <sys_translated_text action="delete_multiple" query="documentkey=af1fcdb08753511089790fe5dabb356f"/>
 </record_update>

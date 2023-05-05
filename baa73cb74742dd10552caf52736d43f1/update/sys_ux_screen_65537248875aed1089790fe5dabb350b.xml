@@ -45,7 +45,7 @@
         <required_translations>[ ]</required_translations>
         <rollback_screen/>
         <screen_condition/>
-        <screen_type display_value="Booths">b902bac4875aed1089790fe5dabb3528</screen_type>
+        <screen_type display_value="List">b902bac4875aed1089790fe5dabb3528</screen_type>
         <sys_class_name>sys_ux_screen</sys_class_name>
         <sys_created_by>jon.lind</sys_created_by>
         <sys_created_on>2023-04-14 21:30:11</sys_created_on>

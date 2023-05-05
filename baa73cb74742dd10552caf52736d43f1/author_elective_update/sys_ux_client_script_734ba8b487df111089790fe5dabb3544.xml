@@ -55,6 +55,7 @@
         <sys_db_object display_value="" name="sys_ux_client_script">sys_ux_client_script</sys_db_object>
         <sys_id>1769532f239c4522b38910f010bbdd29</sys_id>
         <sys_metadata>734ba8b487df111089790fe5dabb3544</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
         <sys_name>stylized_text_1/NODE__isHidden</sys_name>
         <sys_package display_value="Photobooth App" source="x_snc_pb_app">baa73cb74742dd10552caf52736d43f1</sys_package>
         <sys_parent/>
@@ -63,5 +64,7 @@
         <sys_scope_delete display_value="">868a264ca04c47ed906cd87c81ce8d11</sys_scope_delete>
         <sys_update_name>sys_ux_client_script_734ba8b487df111089790fe5dabb3544</sys_update_name>
         <sys_update_version display_value="sys_ux_client_script_734ba8b487df111089790fe5dabb3544">885ba8b487df111089790fe5dabb354b</sys_update_version>
+        <sys_updated_by>jon.lind</sys_updated_by>
+        <sys_updated_on>2022-11-18 16:27:44</sys_updated_on>
     </sys_metadata_delete>
 </record_update>

@@ -71,6 +71,7 @@ function handler({api, event, helpers, imports}) {
         <sys_db_object display_value="" name="sys_ux_client_script">sys_ux_client_script</sys_db_object>
         <sys_id>1418ce77215c4f568916bb1173477344</sys_id>
         <sys_metadata>cbc2549547379550552caf52736d43a1</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
         <sys_name>New client script 1</sys_name>
         <sys_package display_value="Photobooth App" source="x_snc_pb_app">baa73cb74742dd10552caf52736d43f1</sys_package>
         <sys_parent/>
@@ -79,5 +80,7 @@ function handler({api, event, helpers, imports}) {
         <sys_scope_delete display_value="">868a264ca04c47ed906cd87c81ce8d11</sys_scope_delete>
         <sys_update_name>sys_ux_client_script_cbc2549547379550552caf52736d43a1</sys_update_name>
         <sys_update_version display_value="sys_ux_client_script_cbc2549547379550552caf52736d43a1">57c2949547379550552caf52736d4337</sys_update_version>
+        <sys_updated_by>jon.lind</sys_updated_by>
+        <sys_updated_on>2022-12-15 00:24:59</sys_updated_on>
     </sys_metadata_delete>
 </record_update>

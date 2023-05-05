@@ -11,11 +11,14 @@
         <sys_created_by>jon.lind</sys_created_by>
         <sys_created_on>2022-11-08 23:53:07</sys_created_on>
         <sys_id>f76236ed470f1110552caf52736d438f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
         <sys_name>x_snc_pb_camera.servicenow_flat.png</sys_name>
         <sys_package display_value="Photobooth App" source="x_snc_pb_app">baa73cb74742dd10552caf52736d43f1</sys_package>
         <sys_policy/>
         <sys_scope display_value="Photobooth App">baa73cb74742dd10552caf52736d43f1</sys_scope>
         <sys_update_name>db_image_f76236ed470f1110552caf52736d438f</sys_update_name>
+        <sys_updated_by>jon.lind</sys_updated_by>
+        <sys_updated_on>2022-11-09 00:03:59</sys_updated_on>
         <thumbnail/>
         <width>925</width>
     </db_image>
@@ -24,6 +27,7 @@
         <chunk_size_bytes>700000</chunk_size_bytes>
         <compressed>true</compressed>
         <content_type>image/png</content_type>
+        <encryption_context/>
         <file_name>image</file_name>
         <hash>860df85ad39080bdaec16e75a44b2250dda99a92092f8794db4b967dbfd86178</hash>
         <image_height>161</image_height>

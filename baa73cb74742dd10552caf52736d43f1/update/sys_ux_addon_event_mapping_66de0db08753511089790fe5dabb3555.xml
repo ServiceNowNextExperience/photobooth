@@ -14,12 +14,15 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>66de0db08753511089790fe5dabb3555</sys_id>
+        <sys_mod_count>0</sys_mod_count>
         <sys_name>List of Requests default - 3.0.0 preview. List of Requests default New Asset Modal</sys_name>
         <sys_overrides/>
         <sys_package display_value="Asset Management Workspace" source="sn_itam_workspace">54b90b435d70f410f87728dca52fcfea</sys_package>
         <sys_policy/>
         <sys_scope display_value="Photobooth App">baa73cb74742dd10552caf52736d43f1</sys_scope>
         <sys_update_name>sys_ux_addon_event_mapping_66de0db08753511089790fe5dabb3555</sys_update_name>
+        <sys_updated_by>jon.lind</sys_updated_by>
+        <sys_updated_on>2022-11-28 17:52:53</sys_updated_on>
         <target_event display_value="SIMPLE_LIST#OPEN_MODAL">31a6f26db3163010bf6680bd26a8dcf1</target_event>
         <target_payload_mapping>{&#13;
     "type": "MAP_CONTAINER",&#13;

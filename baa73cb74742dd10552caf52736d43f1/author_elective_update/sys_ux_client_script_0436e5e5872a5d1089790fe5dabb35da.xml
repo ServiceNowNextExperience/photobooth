@@ -69,6 +69,7 @@ function evaluateProperty({api, helpers}) {
         <sys_db_object display_value="" name="sys_ux_client_script">sys_ux_client_script</sys_db_object>
         <sys_id>287b4cdf69774ce086d4b3c88d5f4400</sys_id>
         <sys_metadata>0436e5e5872a5d1089790fe5dabb35da</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
         <sys_name>container_3/NODE__isHidden</sys_name>
         <sys_package display_value="Photobooth App" source="x_snc_pb_app">baa73cb74742dd10552caf52736d43f1</sys_package>
         <sys_parent/>
@@ -77,5 +78,7 @@ function evaluateProperty({api, helpers}) {
         <sys_scope_delete display_value="">868a264ca04c47ed906cd87c81ce8d11</sys_scope_delete>
         <sys_update_name>sys_ux_client_script_0436e5e5872a5d1089790fe5dabb35da</sys_update_name>
         <sys_update_version display_value="sys_ux_client_script_0436e5e5872a5d1089790fe5dabb35da">5164f2a1474f1110552caf52736d435c</sys_update_version>
+        <sys_updated_by>jon.lind</sys_updated_by>
+        <sys_updated_on>2022-11-18 16:17:56</sys_updated_on>
     </sys_metadata_delete>
 </record_update>
