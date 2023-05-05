@@ -1075,7 +1075,7 @@
             "items" : [{"element_id":"stylized_text_2","styles":{"align-self":"center"}},{"element_id":"repeater_1","styles":{}}],
             "root" : null,
             "rules" : null,
-            "styles" : {"flex-direction":"column","gap":"","margin":"var(--now-static-space--sm)"},
+            "styles" : {"flex-direction":"column","gap":"","margin":"var(--now-static-space--xs)"},
             "templateId" : "5832fd4d53c31010e6bcddeeff7b12db",
             "type" : "flex"
           },
@@ -1090,7 +1090,7 @@
       "extensionPoints" : [ ],
       "isNonDestructive" : false,
       "items" : [ ],
-      "styles" : null
+      "styles" : { }
     } ],
     "layout" : {
       "default" : {
@@ -7253,14 +7253,14 @@
         <sys_created_by>jon.lind</sys_created_by>
         <sys_created_on>2023-05-02 20:11:01</sys_created_on>
         <sys_id>11dd4b7547e6e110552caf52736d4361</sys_id>
-        <sys_mod_count>15</sys_mod_count>
+        <sys_mod_count>16</sys_mod_count>
         <sys_name>Home Stylized</sys_name>
         <sys_package display_value="Photobooth App" source="x_snc_pb_app">baa73cb74742dd10552caf52736d43f1</sys_package>
         <sys_policy/>
         <sys_scope display_value="Photobooth App">baa73cb74742dd10552caf52736d43f1</sys_scope>
         <sys_update_name>sys_ux_macroponent_11dd4b7547e6e110552caf52736d4361</sys_update_name>
         <sys_updated_by>jon.lind</sys_updated_by>
-        <sys_updated_on>2023-05-05 21:59:14</sys_updated_on>
+        <sys_updated_on>2023-05-05 22:12:39</sys_updated_on>
     </sys_ux_macroponent>
     <sys_translated_text action="delete_multiple" query="documentkey=11dd4b7547e6e110552caf52736d4361"/>
 </record_update>
