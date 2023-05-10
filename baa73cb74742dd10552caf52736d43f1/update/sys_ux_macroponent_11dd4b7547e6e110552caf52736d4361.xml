@@ -864,6 +864,17 @@
               "operation" : null,
               "targetId" : "clhgghbbbjiiaaaaffoddbhhvoryeeyaarff",
               "type" : "CLIENT_SCRIPT"
+            }, {
+              "broker" : null,
+              "clientScript" : {
+                "sysId" : "96dd4b7547e6e110552caf52736d43fc"
+              },
+              "conditional" : null,
+              "declarativeAction" : null,
+              "event" : null,
+              "operation" : null,
+              "targetId" : "clhfbnkobbaabbjjnddbbpqfxteesbaa",
+              "type" : "CLIENT_SCRIPT"
             } ]
           } ],
           "slot" : "",
@@ -1067,12 +1078,49 @@
           "isNonDestructive" : false,
           "items" : [ ],
           "styles" : null
+        }, {
+          "elementId" : "brought_to_you_by_stylized_text",
+          "elementLabel" : "Brought to you By",
+          "propertyValues" : {
+            "css" : {
+              "type" : "JSON_LITERAL",
+              "value" : "* { }"
+            },
+            "text" : {
+              "type" : "TRANSLATION_LITERAL",
+              "value" : {
+                "code" : null,
+                "message" : "Brought to you by Jarod Mundt, Daniel Draes, Alex Russian, Paige Duffey and Jon Lind.",
+                "comment" : ""
+              }
+            },
+            "tag" : {
+              "type" : "JSON_LITERAL",
+              "value" : "div"
+            }
+          },
+          "eventMappings" : [ ],
+          "slot" : null,
+          "definition" : {
+            "id" : "4335ba6dca80378f7ba7a67cd6667bec",
+            "type" : "MACROPONENT"
+          },
+          "overrides" : null,
+          "isHidden" : {
+            "type" : "JSON_LITERAL",
+            "value" : null
+          },
+          "isHero" : false,
+          "extensionPoints" : [ ],
+          "isNonDestructive" : false,
+          "items" : [ ],
+          "styles" : null
         } ],
         "layout" : {
           "default" : {
             "children" : null,
             "isInline" : null,
-            "items" : [{"element_id":"stylized_text_2","styles":{"align-self":"center"}},{"element_id":"repeater_1","styles":{}}],
+            "items" : [{"element_id":"stylized_text_2","styles":{"align-self":"center","width":""}},{"element_id":"repeater_1","styles":{}},{"element_id":"brought_to_you_by_stylized_text","styles":{"color":"#032D42","padding":"0.5rem","font-size":"1rem"}}],
             "root" : null,
             "rules" : null,
             "styles" : {"flex-direction":"column","gap":"","margin":"var(--now-static-space--xs)"},
@@ -1090,7 +1138,7 @@
       "extensionPoints" : [ ],
       "isNonDestructive" : false,
       "items" : [ ],
-      "styles" : { }
+      "styles" : null
     } ],
     "layout" : {
       "default" : {
@@ -3935,7 +3983,7 @@
                       "type" : "EVENT"
                     } ]
                   } ],
-                  "slot" : null,
+                  "slot" : "",
                   "definition" : {
                     "id" : "bb0f92e8d7eff1590624bfe69d316f23",
                     "type" : "MACROPONENT"
@@ -4123,7 +4171,7 @@
                   "default" : {
                     "children" : null,
                     "isInline" : null,
-                    "items" : [{"element_id":"completionMessage","styles":{}},{"element_id":"idleMessage","styles":{}}],
+                    "items" : [{"element_id":"idleMessage","styles":{}},{"element_id":"completionMessage","styles":{}}],
                     "root" : null,
                     "rules" : null,
                     "styles" : {"flex-direction":"column"},
@@ -5233,7 +5281,7 @@
       },
       "overrides" : {
         "composition" : [ {
-          "elementId" : "input_1",
+          "elementId" : "email_input",
           "elementLabel" : "Request Email Input",
           "propertyValues" : {
             "minlength" : {
@@ -5383,17 +5431,6 @@
               "operation" : null,
               "targetId" : "clgybojaawaabbfffddbhhvhhtjldqfo",
               "type" : "EVENT"
-            }, {
-              "broker" : null,
-              "clientScript" : {
-                "sysId" : "4add4b7547e6e110552caf52736d43ea"
-              },
-              "conditional" : null,
-              "declarativeAction" : null,
-              "event" : null,
-              "operation" : null,
-              "targetId" : "clhffhhiivjaaaaaaffjjddbhhvlxvpjjiikm",
-              "type" : "CLIENT_SCRIPT"
             } ]
           }, {
             "eventMappingId" : "clgyaaaxfaaaaaaaiddbhhvlggviqaffl",
@@ -5581,7 +5618,7 @@
           "items" : [ ],
           "styles" : null
         }, {
-          "elementId" : "input_2",
+          "elementId" : "first_name_input",
           "elementLabel" : "First Name Input",
           "propertyValues" : {
             "minlength" : {
@@ -5693,30 +5730,6 @@
             }
           },
           "eventMappings" : [ {
-            "eventMappingId" : "clgyboaamvaabbffiiddbhhvccbbeefffaags",
-            "isConfiguration" : false,
-            "offRowStorageId" : null,
-            "sourceEventApiName" : "sn_input.NOW_INPUT#INPUT",
-            "sourceEventCorrelationId" : null,
-            "sourceEventDefinition" : {
-              "apiName" : "sn_input.NOW_INPUT#INPUT",
-              "id" : null,
-              "type" : "UXEVENT"
-            },
-            "sourceEventSysId" : null,
-            "targets" : [ {
-              "broker" : null,
-              "clientScript" : {
-                "sysId" : "4add4b7547e6e110552caf52736d43ea"
-              },
-              "conditional" : null,
-              "declarativeAction" : null,
-              "event" : null,
-              "operation" : null,
-              "targetId" : "clhggizxjhaaaajjaddbhhvcczacddrpaa",
-              "type" : "CLIENT_SCRIPT"
-            } ]
-          }, {
             "eventMappingId" : "clgwvrabbhaaaaglddbhhvwdjddhrddx",
             "isConfiguration" : false,
             "offRowStorageId" : null,
@@ -5755,6 +5768,17 @@
               "operation" : null,
               "targetId" : "clgwvrabbhaaaagmddbhhvddcctjteebd",
               "type" : "EVENT"
+            }, {
+              "broker" : null,
+              "clientScript" : {
+                "sysId" : "4add4b7547e6e110552caf52736d43ea"
+              },
+              "conditional" : null,
+              "declarativeAction" : null,
+              "event" : null,
+              "operation" : null,
+              "targetId" : "clhfawggxkaaaawpddbbpbbffbaybbau",
+              "type" : "CLIENT_SCRIPT"
             } ]
           } ],
           "slot" : null,
@@ -5777,7 +5801,7 @@
           "default" : {
             "children" : null,
             "isInline" : null,
-            "items" : [{"element_id":"input_1","styles":{"align-self":"center","min-width":"100%"}},{"element_id":"input_2","styles":{"width":"","min-width":"100%"}}],
+            "items" : [{"element_id":"email_input","styles":{"align-self":"center","min-width":"100%"}},{"element_id":"first_name_input","styles":{"width":"","min-width":"100%"}}],
             "root" : null,
             "rules" : null,
             "styles" : {"flex-direction":"column"},
@@ -5841,16 +5865,8 @@
               "value" : "camera-fill"
             },
             "disabled" : {
-              "type" : "UNARY",
-              "operation" : {
-                "operand" : {
-                  "type" : "STATE_BINDING",
-                  "binding" : {
-                    "address" : [ "requestIsValid" ]
-                  }
-                },
-                "operator" : "NOT"
-              }
+              "type" : "JSON_LITERAL",
+              "value" : false
             },
             "tooltipContent" : {
               "type" : "TRANSLATION_LITERAL",
@@ -5893,31 +5909,24 @@
             "targets" : [ {
               "broker" : null,
               "clientScript" : null,
-              "conditional" : null,
-              "declarativeAction" : null,
-              "event" : {
-                "apiName" : "x_snc_pb_app.MODAL_SELECTED_RELAY_11dd4b7547e6e110552caf52736d4361",
-                "payload" : {
-                  "type" : "JSON_LITERAL",
-                  "value" : {
-                    "modalId" : "[component-id$='snapshot_modal']",
-                    "showModal" : null,
-                    "displayOptions" : null,
-                    "bare" : true,
-                    "viewportElementId" : null,
-                    "viewportRoute" : null,
-                    "viewportFields" : null
+              "conditional" : {
+                "type" : "BINARY",
+                "operation" : {
+                  "left" : {
+                    "type" : "STATE_BINDING",
+                    "binding" : {
+                      "address" : [ "requestIsValid" ]
+                    }
+                  },
+                  "operator" : "AND",
+                  "right" : {
+                    "type" : "STATE_BINDING",
+                    "binding" : {
+                      "address" : [ "requestFirstName" ]
+                    }
                   }
-                },
-                "sysId" : "5f7e8b7547e6e110552caf52736d439e"
+                }
               },
-              "operation" : null,
-              "targetId" : "clgybkairaabbccxddbhhvifknbjjwx",
-              "type" : "EVENT"
-            }, {
-              "broker" : null,
-              "clientScript" : null,
-              "conditional" : null,
               "declarativeAction" : null,
               "event" : null,
               "operation" : {
@@ -5977,6 +5986,70 @@
               },
               "targetId" : "clgybrkylaabbhhiiddbhhvggctddjqak",
               "type" : "DATABROKER_OP"
+            }, {
+              "broker" : null,
+              "clientScript" : null,
+              "conditional" : {
+                "type" : "BINARY",
+                "operation" : {
+                  "left" : {
+                    "type" : "UNARY",
+                    "operation" : {
+                      "operand" : {
+                        "type" : "STATE_BINDING",
+                        "binding" : {
+                          "address" : [ "requestIsValid" ]
+                        }
+                      },
+                      "operator" : "NOT"
+                    }
+                  },
+                  "operator" : "OR",
+                  "right" : {
+                    "type" : "UNARY",
+                    "operation" : {
+                      "operand" : {
+                        "type" : "STATE_BINDING",
+                        "binding" : {
+                          "address" : [ "requestFirstName" ]
+                        }
+                      },
+                      "operator" : "NOT"
+                    }
+                  }
+                }
+              },
+              "declarativeAction" : null,
+              "event" : {
+                "apiName" : "x_snc_pb_app.MODAL_SELECTED_RELAY_11dd4b7547e6e110552caf52736d4361",
+                "payload" : {
+                  "type" : "JSON_LITERAL",
+                  "value" : {
+                    "modalId" : "[component-id$='invalid_request_alert']",
+                    "showModal" : true,
+                    "displayOptions" : null,
+                    "bare" : false,
+                    "viewportElementId" : null,
+                    "viewportRoute" : null,
+                    "viewportFields" : null
+                  }
+                },
+                "sysId" : "5f7e8b7547e6e110552caf52736d439e"
+              },
+              "operation" : null,
+              "targetId" : "clhfggaazbhhaaaabaddbbpccfnbbkggvj",
+              "type" : "EVENT"
+            }, {
+              "broker" : null,
+              "clientScript" : {
+                "sysId" : "4add4b7547e6e110552caf52736d43ea"
+              },
+              "conditional" : null,
+              "declarativeAction" : null,
+              "event" : null,
+              "operation" : null,
+              "targetId" : "clhfbbbgcccaaaayccddbbpcddnnybbddp",
+              "type" : "CLIENT_SCRIPT"
             } ]
           } ],
           "slot" : null,
@@ -6033,6 +6106,63 @@
       "version" : "3.0.0"
     }
   },
+  "isHidden" : {
+    "type" : "JSON_LITERAL",
+    "value" : null
+  },
+  "isHero" : false,
+  "extensionPoints" : [ ],
+  "isNonDestructive" : false,
+  "items" : [ ],
+  "styles" : null
+}, {
+  "elementId" : "invalid_request_alert",
+  "elementLabel" : "Invalid Request Alert",
+  "propertyValues" : {
+    "preventDefaultAction" : {
+      "type" : "JSON_LITERAL",
+      "value" : false
+    },
+    "defer" : {
+      "type" : "JSON_LITERAL",
+      "value" : false
+    },
+    "size" : {
+      "type" : "JSON_LITERAL",
+      "value" : "md"
+    },
+    "headerLabel" : {
+      "type" : "TRANSLATION_LITERAL",
+      "value" : {
+        "code" : null,
+        "message" : "Please Check Email and Name",
+        "comment" : ""
+      }
+    },
+    "content" : {
+      "type" : "TRANSLATION_LITERAL",
+      "value" : {
+        "code" : null,
+        "message" : "Please enter a valid email address and first name before requesting a snapshot.",
+        "comment" : ""
+      }
+    },
+    "buttonLabel" : {
+      "type" : "TRANSLATION_LITERAL",
+      "value" : {
+        "code" : null,
+        "message" : "Got it",
+        "comment" : ""
+      }
+    }
+  },
+  "eventMappings" : [ ],
+  "slot" : null,
+  "definition" : {
+    "id" : "05d8b1515b230010b913cbd59b81c71a",
+    "type" : "MACROPONENT"
+  },
+  "overrides" : null,
   "isHidden" : {
     "type" : "JSON_LITERAL",
     "value" : null
@@ -6606,6 +6736,30 @@
       "operation" : null,
       "targetId" : "clhggpveejmaaaaffpddbhhvfbgggghycff",
       "type" : "EVENT"
+    }, {
+      "broker" : null,
+      "clientScript" : null,
+      "conditional" : null,
+      "declarativeAction" : null,
+      "event" : {
+        "apiName" : "x_snc_pb_app.MODAL_SELECTED_RELAY_11dd4b7547e6e110552caf52736d4361",
+        "payload" : {
+          "type" : "JSON_LITERAL",
+          "value" : {
+            "modalId" : "[component-id$='snapshot_modal']",
+            "showModal" : null,
+            "displayOptions" : null,
+            "bare" : true,
+            "viewportElementId" : null,
+            "viewportRoute" : null,
+            "viewportFields" : null
+          }
+        },
+        "sysId" : "5f7e8b7547e6e110552caf52736d439e"
+      },
+      "operation" : null,
+      "targetId" : "clhfbiiiuccaabbiibbddbbpiixybuddbb",
+      "type" : "EVENT"
     } ]
   } ],
   "inputValues" : {
@@ -6635,6 +6789,9 @@
               "address" : [ "user", "userName" ],
               "category" : "session"
             }
+          }, {
+            "type" : "JSON_LITERAL",
+            "value" : "^ORsys_created_by=badge.scanner"
           } ]
         },
         "operator" : "CONCAT"
@@ -6809,6 +6966,9 @@
   "message" : "Begin Taking Snapshots",
   "comment" : ""
 }, {
+  "message" : "Brought to you by Jarod Mundt, Daniel Draes, Alex Russian, Paige Duffey and Jon Lind.",
+  "comment" : ""
+}, {
   "message" : "Cancel",
   "comment" : ""
 }, {
@@ -6854,6 +7014,9 @@
   "message" : "Get ready to snap!",
   "comment" : ""
 }, {
+  "message" : "Got it",
+  "comment" : ""
+}, {
   "message" : "Idle Message",
   "comment" : ""
 }, {
@@ -6879,6 +7042,12 @@
   "comment" : ""
 }, {
   "message" : "Photobooth Settings",
+  "comment" : ""
+}, {
+  "message" : "Please Check Email and Name",
+  "comment" : ""
+}, {
+  "message" : "Please enter a valid email address and first name before requesting a snapshot.",
   "comment" : ""
 }, {
   "message" : "Please select a camera",
@@ -7253,14 +7422,14 @@
         <sys_created_by>jon.lind</sys_created_by>
         <sys_created_on>2023-05-02 20:11:01</sys_created_on>
         <sys_id>11dd4b7547e6e110552caf52736d4361</sys_id>
-        <sys_mod_count>16</sys_mod_count>
+        <sys_mod_count>44</sys_mod_count>
         <sys_name>Home Stylized</sys_name>
         <sys_package display_value="Photobooth App" source="x_snc_pb_app">baa73cb74742dd10552caf52736d43f1</sys_package>
         <sys_policy/>
         <sys_scope display_value="Photobooth App">baa73cb74742dd10552caf52736d43f1</sys_scope>
         <sys_update_name>sys_ux_macroponent_11dd4b7547e6e110552caf52736d4361</sys_update_name>
         <sys_updated_by>jon.lind</sys_updated_by>
-        <sys_updated_on>2023-05-05 22:12:39</sys_updated_on>
+        <sys_updated_on>2023-05-10 21:04:43</sys_updated_on>
     </sys_ux_macroponent>
     <sys_translated_text action="delete_multiple" query="documentkey=11dd4b7547e6e110552caf52736d4361"/>
 </record_update>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_client_script">
+    <sys_ux_client_script action="DELETE">
+        <includes/>
+        <macroponent display_value="Next Experience Landing Page">80d185bf97ea6510ef32312e6253afce</macroponent>
+        <name>empty_state_1/NODE__isHidden</name>
+        <preset/>
+        <required_translations>[ ]</required_translations>
+        <script><![CDATA[/**
+  * @param {params} params
+  * @param {api} params.api
+  * @param {any} params.imports
+  */
+function evaluateProperty({api}) {
+	return !api.state.favoriteListEmpty;
+}]]></script>
+        <script_api_version>2.0.0</script_api_version>
+        <sys_class_name>sys_ux_client_script</sys_class_name>
+        <sys_created_by>jon.lind</sys_created_by>
+        <sys_created_on>2023-05-08 15:07:06</sys_created_on>
+        <sys_id>4cd185bf97ea6510ef32312e6253afe1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>empty_state_1/NODE__isHidden</sys_name>
+        <sys_package display_value="Photobooth App" source="x_snc_pb_app">baa73cb74742dd10552caf52736d43f1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Photobooth App">baa73cb74742dd10552caf52736d43f1</sys_scope>
+        <sys_update_name>sys_ux_client_script_4cd185bf97ea6510ef32312e6253afe1</sys_update_name>
+        <sys_updated_by>jon.lind</sys_updated_by>
+        <sys_updated_on>2023-05-08 15:07:06</sys_updated_on>
+        <target>macroponent</target>
+        <type>transform</type>
+    </sys_ux_client_script>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Photobooth App">baa73cb74742dd10552caf52736d43f1</application>
+        <file_path/>
+        <instance_id>5d86ffd5db0ea55491232f17d49619ce</instance_id>
+        <instance_name>nextphotobooth</instance_name>
+        <name>sys_ux_client_script_4cd185bf97ea6510ef32312e6253afe1</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sys_ux_client_script"&gt;&lt;sys_ux_client_script action="INSERT_OR_UPDATE"&gt;&lt;includes/&gt;&lt;macroponent display_value="Next Experience Landing Page"&gt;80d185bf97ea6510ef32312e6253afce&lt;/macroponent&gt;&lt;name&gt;empty_state_1/NODE__isHidden&lt;/name&gt;&lt;preset/&gt;&lt;required_translations&gt;[ ]&lt;/required_translations&gt;&lt;script&gt;&lt;![CDATA[/**
+  * @param {params} params
+  * @param {api} params.api
+  * @param {any} params.imports
+  */
+function evaluateProperty({api}) {
+	return !api.state.favoriteListEmpty;
+}]]&gt;&lt;/script&gt;&lt;script_api_version&gt;2.0.0&lt;/script_api_version&gt;&lt;sys_class_name&gt;sys_ux_client_script&lt;/sys_class_name&gt;&lt;sys_created_by&gt;jon.lind&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2023-05-08 15:07:06&lt;/sys_created_on&gt;&lt;sys_id&gt;4cd185bf97ea6510ef32312e6253afe1&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name&gt;empty_state_1/NODE__isHidden&lt;/sys_name&gt;&lt;sys_package display_value="Photobooth App" source="x_snc_pb_app"&gt;baa73cb74742dd10552caf52736d43f1&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Photobooth App"&gt;baa73cb74742dd10552caf52736d43f1&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_ux_client_script_4cd185bf97ea6510ef32312e6253afe1&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;jon.lind&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2023-05-08 15:07:06&lt;/sys_updated_on&gt;&lt;target&gt;macroponent&lt;/target&gt;&lt;type&gt;transform&lt;/type&gt;&lt;/sys_ux_client_script&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>1194319915</payload_hash>
+        <record_name>empty_state_1/NODE__isHidden</record_name>
+        <reverted_from/>
+        <source>27fc94a583062110c0da9d55eeaad389</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>jon.lind</sys_created_by>
+        <sys_created_on>2023-05-08 15:07:09</sys_created_on>
+        <sys_id>b0d1c5bf97ea6510ef32312e6253af38</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>187fbe6f3ed0000001</sys_recorded_at>
+        <sys_updated_by>jon.lind</sys_updated_by>
+        <sys_updated_on>2023-05-08 15:07:09</sys_updated_on>
+        <type>UX Client Script</type>
+        <update_guid>38d1c5bf88ea6510f96644694cec5137</update_guid>
+        <update_guid_history>38d1c5bf88ea6510f96644694cec5137:1194319915,34d1cd3f6b2a2510e49a65a49801627c:-1194940209,90d185bff6ea651022f12b300f7a37f9:1194319915,80d185bf0cea6510facfcba8845b8ae5:1684894412</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>jon.lind</sys_created_by>
+        <sys_created_on>2023-05-08 16:15:37</sys_created_on>
+        <sys_db_object display_value="" name="sys_ux_client_script">sys_ux_client_script</sys_db_object>
+        <sys_id>3030c271989c4d78bc3e004306793d19</sys_id>
+        <sys_metadata>4cd185bf97ea6510ef32312e6253afe1</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>empty_state_1/NODE__isHidden</sys_name>
+        <sys_package display_value="Photobooth App" source="x_snc_pb_app">baa73cb74742dd10552caf52736d43f1</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Photobooth App">baa73cb74742dd10552caf52736d43f1</sys_scope>
+        <sys_scope_delete display_value="">868a264ca04c47ed906cd87c81ce8d11</sys_scope_delete>
+        <sys_update_name>sys_ux_client_script_4cd185bf97ea6510ef32312e6253afe1</sys_update_name>
+        <sys_update_version display_value="sys_ux_client_script_4cd185bf97ea6510ef32312e6253afe1">b0d1c5bf97ea6510ef32312e6253af38</sys_update_version>
+        <sys_updated_by>jon.lind</sys_updated_by>
+        <sys_updated_on>2023-05-08 16:15:37</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

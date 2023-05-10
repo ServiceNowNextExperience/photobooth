@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_client_script">
+    <sys_ux_client_script action="INSERT_OR_UPDATE">
+        <includes/>
+        <macroponent display_value="Next Experience Landing Page">80d185bf97ea6510ef32312e6253afce</macroponent>
+        <name>Set favorites</name>
+        <preset/>
+        <required_translations>[ ]</required_translations>
+        <script><![CDATA[/**
+ * @param {params} params
+ * @param {api} params.api
+ * @param {any} params.event
+ * @param {any} params.imports
+ * @param {ApiHelpers} params.helpers
+ */
+function handler({api, event, helpers, imports}) {
+    let index = 0;
+    const normalizedFavorites =  [];
+
+    const flattenMenuItems = (head, returnArray = [], prefix = '') => {
+	    if (head) {
+		    returnArray.push({...head, label: prefix + head.label});
+		    head['subItems'] && head['subItems'].forEach((item) => flattenMenuItems(item, returnArray, `${prefix}${head.label} > `));
+	    }
+	    return returnArray.map((item) => ({...item, label: item.label.replace("Favorites > ", "")}));
+    };
+
+    const menus = api.data.landing_page_favorites_getter_1.output.result;
+    if  (menus && menus.length)  { 
+        const favorites = menus.find(({ id }) =>  id === '1b682fe1c3133010cbd77096e940dd18');
+        if (favorites && favorites.subItems && favorites.subItems.length) { 
+            const filteredFavorites  = flattenMenuItems(favorites).filter(({ subItems, route }) => route && (!subItems || !subItems.length));
+            if (filteredFavorites && filteredFavorites.length) { 
+                while (index < 6 && index < filteredFavorites.length) { 
+                    normalizedFavorites.push({
+                        label: filteredFavorites[index].label, 
+                        type: filteredFavorites[index].route.url ? 'external' : 'route',
+                        value: {...filteredFavorites[index].route, href: `/${filteredFavorites[index].route.url}`},
+                        opensWindow: false,
+                        startsWith: { 
+                            icon: api.state.iconMap[filteredFavorites[index].icon]
+                        }
+                    });
+                    index++;
+                }
+                api.setState('favoriteList', normalizedFavorites);
+            }
+        }
+    }
+    if (normalizedFavorites.length === 0) { 
+        api.setState('favoriteListEmpty', true); 
+    }
+}]]></script>
+        <script_api_version>2.0.0</script_api_version>
+        <sys_class_name>sys_ux_client_script</sys_class_name>
+        <sys_created_by>jon.lind</sys_created_by>
+        <sys_created_on>2023-05-08 15:07:08</sys_created_on>
+        <sys_id>60d1c5bf97ea6510ef32312e6253af1b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Set favorites</sys_name>
+        <sys_package display_value="Photobooth App" source="x_snc_pb_app">baa73cb74742dd10552caf52736d43f1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Photobooth App">baa73cb74742dd10552caf52736d43f1</sys_scope>
+        <sys_update_name>sys_ux_client_script_60d1c5bf97ea6510ef32312e6253af1b</sys_update_name>
+        <sys_updated_by>jon.lind</sys_updated_by>
+        <sys_updated_on>2023-05-08 15:07:08</sys_updated_on>
+        <target>macroponent</target>
+        <type>default</type>
+    </sys_ux_client_script>
+</record_update>
