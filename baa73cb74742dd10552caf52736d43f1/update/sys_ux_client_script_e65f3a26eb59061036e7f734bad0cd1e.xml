@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_client_script">
+    <sys_ux_client_script action="INSERT_OR_UPDATE">
+        <controller_preset/>
+        <includes/>
+        <macroponent display_value="Default">4f26ae62ebd5061036e7f734bad0cde9</macroponent>
+        <name>Navigate to Next Snapshot</name>
+        <preset/>
+        <required_translations>[
+    
+]</required_translations>
+        <script><![CDATA[/**
+* @param {params} params
+* @param {api} params.api
+* @param {any} params.event
+* @param {any} params.imports
+* @param {ApiHelpers} params.helpers
+*/
+function handler({api: { state, data, setState, context : {props}}, event, helpers, imports}) {
+    console.log("NAVIGATE TO NEXT SNAPSHOT");
+    const snaps = data.look_up_snaps.results;
+    const currentSnapshotId = props.snapshot;
+	
+	const currentIndex = parseInt(props.snapshotIndex);
+    const nextSnapIndex = currentIndex + 1 >= snaps.length ? 0 : currentIndex + 1;
+    const nextSnapshot = snaps[nextSnapIndex];
+
+    console.log("NAVIGATE TO NEXT SNAPSHOT", {nextSnapIndex, nextSnapshot});
+
+    helpers.navigate.setRouteParams({
+		route: "results",
+		fields: {sysId: props.sysId, snapshotIndex: nextSnapIndex},
+		params: {snapshot: nextSnapshot._row_data.uniqueValue},
+		redirect: null,
+		passiveNavigation: null,
+		title: null,
+		multiInstField: null,
+		targetRoute: null,
+		external: null,
+		navigationOptions: null
+    });
+}]]></script>
+        <script_api_version>2.0.0</script_api_version>
+        <sys_class_name>sys_ux_client_script</sys_class_name>
+        <sys_created_by>jon.lind</sys_created_by>
+        <sys_created_on>2024-04-04 16:13:16</sys_created_on>
+        <sys_id>e65f3a26eb59061036e7f734bad0cd1e</sys_id>
+        <sys_mod_count>46</sys_mod_count>
+        <sys_name>Navigate to Next Snapshot</sys_name>
+        <sys_package display_value="Photobooth App" source="x_snc_pb_app">baa73cb74742dd10552caf52736d43f1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Photobooth App">baa73cb74742dd10552caf52736d43f1</sys_scope>
+        <sys_update_name>sys_ux_client_script_e65f3a26eb59061036e7f734bad0cd1e</sys_update_name>
+        <sys_updated_by>jon.lind</sys_updated_by>
+        <sys_updated_on>2024-04-15 16:41:56</sys_updated_on>
+        <target>macroponent</target>
+        <type>default</type>
+    </sys_ux_client_script>
+</record_update>
