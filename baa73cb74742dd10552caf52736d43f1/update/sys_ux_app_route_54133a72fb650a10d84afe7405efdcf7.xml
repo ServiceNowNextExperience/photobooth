@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_app_route">
+    <sys_ux_app_route action="INSERT_OR_UPDATE">
+        <app_config display_value="CMDB Workspace App Config">6825d0ae8f312010960c53ac37bdee72</app_config>
+        <description/>
+        <extension_point/>
+        <fields>modalId</fields>
+        <icon/>
+        <name>Cloud chart latest updates</name>
+        <optional_parameters/>
+        <order>0</order>
+        <parent_macroponent display_value="Home copy">5bf2be32fb650a10d84afe7405efdc44</parent_macroponent>
+        <parent_macroponent_composition_element_id>viewport_ais</parent_macroponent_composition_element_id>
+        <route_type>cloud-chart-latest-updates</route_type>
+        <screen_type display_value="Cloud chart latest updates">04133a72fb650a10d84afe7405efdcf4</screen_type>
+        <sys_class_name>sys_ux_app_route</sys_class_name>
+        <sys_created_by>system</sys_created_by>
+        <sys_created_on>2024-04-17 20:07:30</sys_created_on>
+        <sys_id>54133a72fb650a10d84afe7405efdcf7</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Cloud chart latest updates</sys_name>
+        <sys_package display_value="Photobooth App" source="x_snc_pb_app">baa73cb74742dd10552caf52736d43f1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Photobooth App">baa73cb74742dd10552caf52736d43f1</sys_scope>
+        <sys_update_name>sys_ux_app_route_54133a72fb650a10d84afe7405efdcf7</sys_update_name>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2024-04-17 20:07:30</sys_updated_on>
+    </sys_ux_app_route>
+    <sys_translated_text action="delete_multiple" query="documentkey=54133a72fb650a10d84afe7405efdcf7"/>
+</record_update>

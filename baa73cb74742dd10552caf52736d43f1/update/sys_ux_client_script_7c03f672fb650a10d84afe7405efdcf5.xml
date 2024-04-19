@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_client_script">
+    <sys_ux_client_script action="INSERT_OR_UPDATE">
+        <controller_preset/>
+        <includes>1d9e83750742111017b703767cd30056</includes>
+        <macroponent display_value="Home copy">5bf2be32fb650a10d84afe7405efdc44</macroponent>
+        <name>dataFetchSucceededNlqQbRest</name>
+        <preset/>
+        <required_translations>[
+    
+]</required_translations>
+        <script><![CDATA[/**
+ * @param {params} params
+ * @param {api} params.api
+ * @param {any} params.event
+ * @param {any} params.imports
+ * @param {ApiHelpers} params.helpers
+ */
+async function handler({
+    api,
+    event,
+    helpers,
+    imports
+}) {
+
+    const {
+        genericError,
+        queryRunningWarning
+    } = imports['sn_cmdb_ws.cmdbNlqSearchUtil']();
+    const genericErrorMsg = await genericError(helpers);
+    const queryRunningWarningMsg = await queryRunningWarning(helpers);
+
+    const result = api.data.nlq_to_qb_rest.output.result;
+    const currentNlqQueryLogId = api.state.nlqQueryLogId;
+    const currentUserQuestion = api.state.userQuestion;
+
+    const _clearState = () => {
+        helpers.timing.clearInterval(isQueryLoadedPoller);
+        api.setState('isLoading', false);
+        api.setState('workerId', null);
+        api.setState('isQueryLoadedPoller', null);
+    };
+
+    // handle error checking
+    if (!result) {
+        api.setState('showNlqSearchNotification', true);
+        api.setState('nlqSearchNotificationContent', genericErrorMsg);
+        console.error('Execute query failed');
+        _clearState();
+        return;
+    }
+    if (result.status == 'FAILED') {
+        if (result.worker_id == -1) {
+            console.warn('Execute query failed - another query in progress');
+            api.setState('nlqSearchNotificationContent', queryRunningWarningMsg);
+        } else {
+            console.error('Execute query failed');
+            api.setState('nlqSearchNotificationContent', genericErrorMsg);
+
+        }
+        api.setState('showNlqSearchNotification', true);
+        _clearState();
+        return;
+    }
+
+    // valid qb query
+    const resultTable = result.result_table;
+    const savedQueryId = result.saved_query_id;
+    const queryStatusId = result.query_status_id;
+
+    // update workerId and queryStatusId to trigger cancel button
+    api.setState('workerId', result.worker_id);
+    api.setState('queryStatusId', queryStatusId);
+
+    // get the current status of the query
+    const isQueryLoadedPoller = helpers.timing.setInterval(() => {
+        helpers.snHttp('/api/now/cmdbquerybuilder/queries/' + queryStatusId + '/processStatus', {
+                method: 'GET'
+            })
+            .then(({
+                response
+            }) => {
+                if (response && response.result && api.state.isLoading) {
+                    const queryState = response.result;
+                    if ('READY' != queryState && 'PROCESSING' != queryState && 'ERROR' != queryState) {
+                        _clearState();
+                        helpers.navigate.to(
+                            'smart-search-results', {
+                                table: resultTable,
+                                listName: currentUserQuestion ? currentUserQuestion : "Intelligent search results"
+                            }, {
+                                savedQueryId,
+                                queryStatusId,
+                                queryState,
+                                nlqQueryLog: currentNlqQueryLogId ? currentNlqQueryLogId : "",
+                                encodedQuery: null,
+                                modification: api.state.modifiedUtterance
+                            },
+                            false,
+                            false,
+                            null,
+                            null,
+                            currentUserQuestion
+                        );
+                    } else if ('ERROR' == queryState) {
+                        api.setState('showNlqSearchNotification', true);
+                        api.setState('nlqSearchNotificationContent', genericErrorMsg);
+                        console.error('Execute query failed');
+                        _clearState();
+                    }
+                }
+            })
+            .catch(({
+                error
+            }) => {
+                api.setState('showNlqSearchNotification', true);
+                api.setState('nlqSearchNotificationContent', genericErrorMsg);
+                _clearState();
+                const message = `Error: ${error.data.error.message}`;
+                console.error(message);
+            });
+    }, 2000);
+
+    api.setState('isQueryLoadedPoller', isQueryLoadedPoller);
+
+    // clear stale nlq query log sys_id, and current user question
+    api.setState('nlqQueryLogId', '');
+    api.setState('userQuestion', '');
+
+
+}]]></script>
+        <script_api_version>2.0.0</script_api_version>
+        <sys_class_name>sys_ux_client_script</sys_class_name>
+        <sys_created_by>jon.lind</sys_created_by>
+        <sys_created_on>2024-04-17 20:07:16</sys_created_on>
+        <sys_id>7c03f672fb650a10d84afe7405efdcf5</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>dataFetchSucceededNlqQbRest</sys_name>
+        <sys_package display_value="Photobooth App" source="x_snc_pb_app">baa73cb74742dd10552caf52736d43f1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Photobooth App">baa73cb74742dd10552caf52736d43f1</sys_scope>
+        <sys_update_name>sys_ux_client_script_7c03f672fb650a10d84afe7405efdcf5</sys_update_name>
+        <sys_updated_by>jon.lind</sys_updated_by>
+        <sys_updated_on>2024-04-17 20:07:16</sys_updated_on>
+        <target>macroponent</target>
+        <type>default</type>
+    </sys_ux_client_script>
+</record_update>

@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_client_script">
+    <sys_ux_client_script action="INSERT_OR_UPDATE">
+        <controller_preset/>
+        <includes>47dd621a53041110573addeeff7b129d</includes>
+        <macroponent display_value="Home copy">5bf2be32fb650a10d84afe7405efdc44</macroponent>
+        <name>CMDB Health - Set Health Data</name>
+        <preset/>
+        <required_translations>[ {
+  "code" : "",
+  "message" : "Last update: {0}",
+  "comment" : ""
+}, {
+  "code" : "",
+  "message" : "N/A",
+  "comment" : ""
+}, {
+  "code" : "",
+  "message" : "CMDB Health {0} {1}",
+  "comment" : ""
+}, {
+  "code" : "",
+  "message" : "Factors impacting your overall score",
+  "comment" : ""
+} ]</required_translations>
+        <script><![CDATA[/**
+* @param {params} params
+* @param {api} params.api
+* @param {any} params.event
+* @param {any} params.imports
+* @param {ApiHelpers} params.helpers
+*/
+async function handler({api, event, helpers, imports}) {
+    const {
+        getHealthBadgeLabel,
+        getHealthBadgeColor,
+        getHealthBadgeVariant
+    } = imports["sn_cmdb_ws.cmdbWSCommonUtil"]();
+
+    const {
+        NowDateTime
+    } = imports["sn_uxf.core_libraries"]();
+
+    const OVERALL = "Overall";
+    const RELATIONSHIP = "Relationship";
+    const COMPLETENESS = "Completeness";
+    const COMPLIANCE = "Compliance";
+    const CORRECTNESS = "Correctness";
+    const COMPLETE = "complete";
+    const DEFAULT_SCORE = await helpers.translate("N/A");
+    let healthData = {
+        [OVERALL.toLowerCase()]: {
+            label: await helpers.translate(OVERALL),
+            score: DEFAULT_SCORE,
+            badgeLabel: "",
+            badgeColor: "",
+            badgeVariant: "",
+            ariaLabel: await helpers.translate("CMDB Health {0} {1}", OVERALL, DEFAULT_SCORE)
+        },
+        [RELATIONSHIP.toLowerCase()]: {
+            label: await helpers.translate(RELATIONSHIP),
+            score: DEFAULT_SCORE,
+            badgeLabel: "",
+            badgeColor: "",
+            badgeVariant: "",
+            ariaLabel: await helpers.translate("CMDB Health {0} {1}", RELATIONSHIP, DEFAULT_SCORE)
+        },
+        [COMPLETENESS.toLowerCase()]: {
+            label: await helpers.translate(COMPLETENESS),
+            score: DEFAULT_SCORE
+        },
+        [COMPLIANCE.toLowerCase()]: {
+            label: await helpers.translate(COMPLIANCE),
+            score: DEFAULT_SCORE
+        },
+        [CORRECTNESS.toLowerCase()]: {
+            label: await helpers.translate(CORRECTNESS),
+            score: DEFAULT_SCORE
+        },
+        accordionHeaderConfig: {
+            label: await helpers.translate("Factors impacting your overall score"),
+            variant: "primary",
+            size: "sm",
+            weight: "normal"
+        }
+    };
+
+    let output = api.data.get_cmdb_all_health_scores.outputHealthScores;
+    if (!output) {
+        api.setState('healthData', healthData);
+        return;
+    }
+
+    let result = output;
+    let {
+        cmdbHealthLastUpdate: {
+            value: lastUpdatedValue
+        }
+    } = api.state;
+
+    for (let record in result) {
+        let {
+            label,
+            metric,
+            status,
+            score,
+            color,
+            updated
+        } = result[record];
+        if (healthData.hasOwnProperty(label)) {
+            healthData[label].label = metric;
+            if (status.toLowerCase() === COMPLETE) {
+                healthData[label].score = score + '%';
+                if (label === OVERALL.toLowerCase() || label === RELATIONSHIP.toLowerCase()) {
+                    healthData[label].badgeLabel = await getHealthBadgeLabel(helpers, color);
+                    healthData[label].badgeColor = getHealthBadgeColor(color);
+                    healthData[label].badgeVariant = getHealthBadgeVariant(color);
+                    healthData[label].ariaLabel = await helpers.translate("CMDB Health {0} {1}", label, healthData[label].score);
+                    let updateDate = new NowDateTime(updated);
+                    if (updateDate.valueOf() > lastUpdatedValue) {
+                        let dateFormat = api.context.session.user.dateFormat.toUpperCase() || 'YYYY-MM-DD';
+                        let updateData = {
+                            value: updateDate.valueOf(),
+                            string: await helpers.translate('Last update: {0}', updateDate.format(dateFormat))
+                        };
+                        api.setState('cmdbHealthLastUpdate', updateData);
+                    }
+                }
+            }
+        }
+    }
+
+    api.setState('healthData', healthData);
+}]]></script>
+        <script_api_version>2.0.0</script_api_version>
+        <sys_class_name>sys_ux_client_script</sys_class_name>
+        <sys_created_by>jon.lind</sys_created_by>
+        <sys_created_on>2024-04-17 20:07:15</sys_created_on>
+        <sys_id>ec03f672fb650a10d84afe7405efdccf</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>CMDB Health - Set Health Data</sys_name>
+        <sys_package display_value="Photobooth App" source="x_snc_pb_app">baa73cb74742dd10552caf52736d43f1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Photobooth App">baa73cb74742dd10552caf52736d43f1</sys_scope>
+        <sys_update_name>sys_ux_client_script_ec03f672fb650a10d84afe7405efdccf</sys_update_name>
+        <sys_updated_by>jon.lind</sys_updated_by>
+        <sys_updated_on>2024-04-17 20:07:15</sys_updated_on>
+        <target>macroponent</target>
+        <type>default</type>
+    </sys_ux_client_script>
+</record_update>

@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_client_script">
     <sys_ux_client_script action="INSERT_OR_UPDATE">
+        <controller_preset/>
         <includes/>
         <macroponent display_value="Home Stylized">11dd4b7547e6e110552caf52736d4361</macroponent>
         <name>Map Photobooth From DB to State</name>
         <preset/>
-        <required_translations>[ ]</required_translations>
+        <required_translations>[
+    
+]</required_translations>
         <script><![CDATA[/**
  * @param {params} params
  * @param {api} params.api
@@ -28,14 +31,16 @@ function handler({
     // Treat these as special cases as the sysId isn't in the regular
     // list of fields and the device id needs to be put into an array
     setState("sysId", pb._row_data.uniqueValue);
+
+    // The value is stored as a string but rendered as a dropdown, whose choices are
+    // populated from the cameras and not a choice list so we can't rely on the field
+    // metadata specifying "choice" to know to save as an array so we do it manually
     setState("selectedCameraDeviceId", [pb.camera_device_id.displayValue]);
 
     // Map the rest based on camel and snake case, e.g. "longName == long_name"
     mapFromDbToState(pb, state, setState);
 
     setState("currentMessage", pb.idle_message.displayValue);
-
-//    data.look_up_request.refresh();
 
     function mapFromDbToState(row, state, setState) {
         const mapped = {};
@@ -44,17 +49,24 @@ function handler({
         const dbFieldNames = Object.keys(row).filter(k => !k.startsWith("_"));
 
         dbFieldNames.forEach(dbFieldName => {
+            const { isArray, isChoice, value } = row[dbFieldName];
             const stateFieldName = toCamelCase(dbFieldName);
-            if (state[stateFieldName] !== undefined) {
-                const {value} = row[dbFieldName];
-                setState(stateFieldName, value);
-                mapped[stateFieldName] = value;
-            } else {
-                notMapped.push(dbFieldName);
-            }
+
+//            if (state[stateFieldName] !== undefined) {
+                // Drop down render selected choices as arrays, but the db does not, force it to array
+                const mappedValue = isChoice && !isArray ? [value] : value;
+                setState(stateFieldName, mappedValue);
+                mapped[stateFieldName] = mappedValue;
+ //           } else {
+ //               notMapped.push(dbFieldName);
+ //           }
         });
 
-        console.log("MAP PHOTOBOOTH FROM DB TO STATE", {dbFieldNames, mapped, notMapped});
+        console.log("MAP PHOTOBOOTH FROM DB TO STATE", {
+            dbFieldNames,
+            mapped,
+            notMapped
+        });
 
         function toCamelCase(str) {
             return str.replace(/_([a-z])/g, (matchedLetter) => matchedLetter[1].toUpperCase());
@@ -66,14 +78,14 @@ function handler({
         <sys_created_by>jon.lind</sys_created_by>
         <sys_created_on>2023-05-02 20:11:05</sys_created_on>
         <sys_id>aedd8b7547e6e110552caf52736d431e</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>11</sys_mod_count>
         <sys_name>Map Photobooth From DB to State</sys_name>
         <sys_package display_value="Photobooth App" source="x_snc_pb_app">baa73cb74742dd10552caf52736d43f1</sys_package>
         <sys_policy/>
         <sys_scope display_value="Photobooth App">baa73cb74742dd10552caf52736d43f1</sys_scope>
         <sys_update_name>sys_ux_client_script_aedd8b7547e6e110552caf52736d431e</sys_update_name>
         <sys_updated_by>jon.lind</sys_updated_by>
-        <sys_updated_on>2023-05-02 20:13:56</sys_updated_on>
+        <sys_updated_on>2024-04-17 19:21:18</sys_updated_on>
         <target>macroponent</target>
         <type>default</type>
     </sys_ux_client_script>

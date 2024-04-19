@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_client_script">
+    <sys_ux_client_script action="INSERT_OR_UPDATE">
+        <controller_preset/>
+        <includes>1d9e83750742111017b703767cd30056</includes>
+        <macroponent display_value="Home copy">5bf2be32fb650a10d84afe7405efdc44</macroponent>
+        <name>Cancel query builder loading</name>
+        <preset/>
+        <required_translations>[
+    
+]</required_translations>
+        <script><![CDATA[/**
+ * @param {params} params
+ * @param {api} params.api
+ * @param {any} params.event
+ * @param {any} params.imports
+ * @param {ApiHelpers} params.helpers
+ */
+async function handler({
+    api,
+    event,
+    helpers,
+    imports
+}) {
+
+    if (api.state.workerId && api.state.queryStatusId) {
+        const {
+            cancelQueryError
+        } = imports['sn_cmdb_ws.cmdbNlqSearchUtil']();
+        const cancelError = await cancelQueryError(helpers);
+        
+        const {
+            workerId,
+            queryStatusId
+        } = api.state;
+
+        helpers.snHttp("/api/now/cmdbquerybuilder/queries/bg/cancel/" + workerId + "/" + queryStatusId, {
+            method: "PUT",
+            batch: false,
+            body: {}
+        }).then(response => {
+            // On success this is a no-op. Loading state has already been cleared
+        }).catch(error => {
+            api.setState('showNlqSearchNotification', true);
+            api.setState('nlqSearchNotificationContent', cancelError);
+            const message = `Error: ${error.data ? error.data.error.message : error}`;
+            console.error(message);
+        });
+
+        api.setState('workerId', null);
+        api.setState('isLoading', false);
+        api.setState('queryStatusId', null);
+        const isQueryLoadedPoller = api.state.isQueryLoadedPoller;
+        if (isQueryLoadedPoller) {
+            helpers.timing.clearInterval(isQueryLoadedPoller);
+        }
+    }
+}]]></script>
+        <script_api_version>2.0.0</script_api_version>
+        <sys_class_name>sys_ux_client_script</sys_class_name>
+        <sys_created_by>jon.lind</sys_created_by>
+        <sys_created_on>2024-04-17 20:07:15</sys_created_on>
+        <sys_id>ec03f672fb650a10d84afe7405efdcaf</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>Cancel query builder loading</sys_name>
+        <sys_package display_value="Photobooth App" source="x_snc_pb_app">baa73cb74742dd10552caf52736d43f1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Photobooth App">baa73cb74742dd10552caf52736d43f1</sys_scope>
+        <sys_update_name>sys_ux_client_script_ec03f672fb650a10d84afe7405efdcaf</sys_update_name>
+        <sys_updated_by>jon.lind</sys_updated_by>
+        <sys_updated_on>2024-04-17 20:07:15</sys_updated_on>
+        <target>macroponent</target>
+        <type>default</type>
+    </sys_ux_client_script>
+</record_update>

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_client_script">
+    <sys_ux_client_script action="INSERT_OR_UPDATE">
+        <controller_preset/>
+        <includes>47dd621a53041110573addeeff7b129d</includes>
+        <macroponent display_value="Home copy">5bf2be32fb650a10d84afe7405efdc44</macroponent>
+        <name>Quick Links - Transform Quick Link Data For Repeater</name>
+        <preset/>
+        <required_translations>[
+    {
+        "message": "View fewer"
+    },
+    {
+        "message": "View {0} more"
+    }
+]</required_translations>
+        <script><![CDATA[/**
+* @param {params} params
+* @param {api} params.api
+* @param {any} params.event
+* @param {any} params.imports
+* @param {ApiHelpers} params.helpers
+*/
+async function handler({api, event, helpers, imports}) {
+     const {
+        MAX_NUM_QUICK_LINKS
+    } = imports["sn_cmdb_ws.cmdbWSCommonUtil"]();
+    if(api.data.get_cmdb_quick_links && api.data.get_cmdb_quick_links.output) {
+        let quickLinks = api.data.get_cmdb_quick_links.output.data.GlideRecord_Query.sn_cmdb_ws_quick_links._results;
+        let transformedQuickLinks = [];
+        const featureFlagsToCheckCompat = [];
+        let recordsWithoutUser = 0;
+        api.setState('quickLinkMaxLength', MAX_NUM_QUICK_LINKS);
+        for (let index = 0; index < quickLinks.length; index++) {
+            if (quickLinks[index].feature_id.value) {
+                // remove link if incompatible and the api is done fetching data
+                if (api.data.featureSupportApi.output.complete && !api.data.featureSupportApi.output[quickLinks[index].feature_id.value].supported) {
+                    continue;
+                } else if (!api.data.featureSupportApi.output.complete) {
+                    // else add the flags to queue to fetch compatibility
+                    featureFlagsToCheckCompat.push(quickLinks[index].feature_id.value);
+                }
+            }
+            let link = {
+                'url': quickLinks[index].route.value ? "javascript:void(0);" : decodeURIComponent(quickLinks[index].url.value),
+                'title': decodeURIComponent(quickLinks[index].title.value),
+                'order': quickLinks[index].order.value,
+                'sys_id': quickLinks[index].sys_id.value,
+                'user': quickLinks[index].user.value,
+                'open_new_window': quickLinks[index].open_new_window.value,
+                'route': quickLinks[index].route.value ? quickLinks[index].route.value : "",
+                'route_params': quickLinks[index].route_params.value ? JSON.parse(quickLinks[index].route_params.value) : "",
+                'route_target': quickLinks[index].route_target.value ? quickLinks[index].route_target.value : ""
+            };
+            if(!quickLinks[index].user.value){
+               recordsWithoutUser++;     
+            }
+            link['editContainerHidden'] = true;
+            link['invalidURLMessage'] = '[]';
+            transformedQuickLinks.push(link);
+        }
+        if (featureFlagsToCheckCompat.length > 0) {
+            // trigger check for compatibility api and re-run the link generator on fetch
+            api.setState("featureFlagsToCheckCompat", featureFlagsToCheckCompat.join());
+            return;
+        }
+        api.setState("quickLinksDisableEditActions", recordsWithoutUser == quickLinks.length ? true: false);
+        api.setState('quickLinksTruncated', transformedQuickLinks);
+        let tempQuickLinks = JSON.parse(JSON.stringify(transformedQuickLinks));
+        if (api.state.quickLinksMoreItemAvailable == 'no') {
+            api.setState('quickLinks', tempQuickLinks);
+            api.setState('quickLinksMoreItemAvailable', 'no');
+            let text = await helpers.translate('View fewer');
+            api.setState('quickLinksViewMoreFewerText', text);
+        } else {
+            api.setState('quickLinks', tempQuickLinks.splice(0, api.state.quickLinkMaxLength));
+            if (transformedQuickLinks.length > api.state.quickLinkMaxLength) {
+                api.setState('quickLinksMoreItemAvailable', 'yes');
+                let text = await helpers.translate('View {0} more', (transformedQuickLinks.length - api.state.quickLinkMaxLength));
+                api.setState('quickLinksViewMoreFewerText', text);
+            }
+        }
+    }
+}]]></script>
+        <script_api_version>2.0.0</script_api_version>
+        <sys_class_name>sys_ux_client_script</sys_class_name>
+        <sys_created_by>jon.lind</sys_created_by>
+        <sys_created_on>2024-04-17 20:07:16</sys_created_on>
+        <sys_id>3003f672fb650a10d84afe7405efdce4</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>Quick Links - Transform Quick Link Data For Repeater</sys_name>
+        <sys_package display_value="Photobooth App" source="x_snc_pb_app">baa73cb74742dd10552caf52736d43f1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Photobooth App">baa73cb74742dd10552caf52736d43f1</sys_scope>
+        <sys_update_name>sys_ux_client_script_3003f672fb650a10d84afe7405efdce4</sys_update_name>
+        <sys_updated_by>jon.lind</sys_updated_by>
+        <sys_updated_on>2024-04-17 20:07:16</sys_updated_on>
+        <target>macroponent</target>
+        <type>default</type>
+    </sys_ux_client_script>
+</record_update>

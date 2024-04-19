@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_client_script">
+    <sys_ux_client_script action="INSERT_OR_UPDATE">
+        <controller_preset/>
+        <includes/>
+        <macroponent display_value="Home copy">5bf2be32fb650a10d84afe7405efdc44</macroponent>
+        <name>Update qb state loaded</name>
+        <preset/>
+        <required_translations>[
+    
+]</required_translations>
+        <script><![CDATA[/**
+* @param {params} params
+* @param {api} params.api
+* @param {any} params.event
+* @param {any} params.imports
+* @param {ApiHelpers} params.helpers
+*/
+function handler({api, event, helpers, imports}) {
+    api.setState('userQuestion', event.payload.userQuestion);
+    api.setState('nlqQueryLogId', event.payload.nlqLogSysId);
+    api.setState('modifiedUtterance', event.payload.modifiedUtterance);
+    const userName = api.context.session.user.userName.substring(0,10);
+    const payload = {
+        name: `NLQ - ${userName} : ${new Date().getTime().toString()}`,
+        source: "NLQ",
+        query: JSON.stringify(event.payload.queryBuilderData),
+        description: event.payload.userQuestion,
+        dependencies: ""
+    };
+    api.setState('nlqQbResult', JSON.stringify(payload));
+}]]></script>
+        <script_api_version>2.0.0</script_api_version>
+        <sys_class_name>sys_ux_client_script</sys_class_name>
+        <sys_created_by>jon.lind</sys_created_by>
+        <sys_created_on>2024-04-17 20:07:16</sys_created_on>
+        <sys_id>3803f672fb650a10d84afe7405efdcf9</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>Update qb state loaded</sys_name>
+        <sys_package display_value="Photobooth App" source="x_snc_pb_app">baa73cb74742dd10552caf52736d43f1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Photobooth App">baa73cb74742dd10552caf52736d43f1</sys_scope>
+        <sys_update_name>sys_ux_client_script_3803f672fb650a10d84afe7405efdcf9</sys_update_name>
+        <sys_updated_by>jon.lind</sys_updated_by>
+        <sys_updated_on>2024-04-17 20:07:16</sys_updated_on>
+        <target>macroponent</target>
+        <type>default</type>
+    </sys_ux_client_script>
+</record_update>

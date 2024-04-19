@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_client_script">
+    <sys_ux_client_script action="INSERT_OR_UPDATE">
+        <controller_preset/>
+        <includes>2e0ba1f4b7211110b87e80408e11a929</includes>
+        <macroponent display_value="Home copy">5bf2be32fb650a10d84afe7405efdc44</macroponent>
+        <name>Process and populate Important Actions</name>
+        <preset/>
+        <required_translations>[
+    {
+        "message": "{0} unassigned data attestation tasks must be assigned. Review the tasks for assignment."
+    },
+    {
+        "message": "{0} overdue data attestation tasks are unassigned. Review for activity."
+    },
+    {
+        "message": "{0} CI lifecycle approval tasks assigned by CMDB Data Manager. Review the tasks."
+    },
+    {
+        "message": "{0} de-duplication tasks have been created. Review the tasks to remediate duplicate CIs."
+    },
+    {
+        "message": "{0} CIs are identified as duplicates. Review the CIs to improve CMDB health."
+    },
+    {
+        "message": "{0} CIs are missing relationships. Review the CIs to improve CMDB health."
+    },
+    {
+        "message": "{0} CIs have not been updated recently. Review the CIs to improve CMDB health."
+    },
+    {
+        "message": "{0} CIs are excluded from CMDB Data Manager policies. Review the CIs for possible reinstatement."
+    },
+    {
+        "message": "{0} data attestation tasks are overdue. Review the tasks."
+    },
+    {
+        "message": "{0} data attestation tasks are new. Review the tasks."
+    },
+    {
+        "message": "{0} CI lifecycle approval tasks have been assigned by CMDB Data Manager. Review the tasks."
+    },
+    {
+        "message": "{0} of the CIs that you manage are identified as duplicates. Review the CIs to improve CMDB health."
+    },
+    {
+        "message": "{0} of the CIs that you manage are missing relationships. Review the CIs to improve CMDB health."
+    },
+    {
+        "message": "{0} of the CIs that you manage were not updated recently. Review the CIs to improve CMDB health."
+    }
+]</required_translations>
+        <script><![CDATA[/**
+* @param {params} params
+* @param {api} params.api
+* @param {any} params.event
+* @param {any} params.imports
+* @param {ApiHelpers} params.helpers
+*/
+async function handler({api, event, helpers, imports}) {
+    const {
+        NowDateTime
+    } = imports["sn_uxf.core_libraries"]();
+
+    api.setState('importantActionsLoading', true);
+    api.setState("importantActions", []);
+    helpers.snHttp('/api/sn_cmdb_ws/cmdb_workspace_api_scoped/imp_action_config',
+        {
+            method: 'GET',
+            batch: false
+        }
+    ).then(function({ response }) {
+        if (!response || !response.result) {
+            api.setState('importantActionsLoading', false);
+            api.setState('importantActions', []);
+            return;
+        }
+        
+        let configResult = response?.result;
+        let outputImportantActionConfigs = configResult?.configs;
+        let outputImportantActionTypes = configResult?.impActionTypes;
+        let lastRefreshedDateTime = configResult?.lastRefreshedDateTime;
+        let importantActions = [];
+        
+        if (!outputImportantActionConfigs || outputImportantActionConfigs.length == 0 || !outputImportantActionTypes) {
+            api.setState('importantActionsLoading', false);
+            api.setState('importantActions', []);
+            api.setState('impActionsLastRefreshed', lastRefreshedDateTime);
+            return;
+        }
+
+        let tempActions = [];
+        for (let config of outputImportantActionConfigs) {
+            let importantAction = outputImportantActionTypes[config.type.toUpperCase()];
+            let cardObj = {
+                title: {
+                    label: importantAction.TITLE,
+                    icon: importantAction.TITLE_ICON
+                },
+                type: config.type,
+                isLoading: true,
+                heading: {
+                    label: importantAction.NAME
+                },
+                button: {
+                    label: importantAction.BUTTON_LABEL,
+                    tooltip: importantAction.BUTTON_TOOLTIP
+                },
+                border: {
+                    color: importantAction.BORDER_COLOR,
+                    variant: "secondary"
+                }
+            };
+            importantActions.push(cardObj);
+            tempActions.push(cardObj);
+        }
+        api.setState('importantActions', importantActions);
+
+        let requestCount = outputImportantActionConfigs.length || 0;
+        let finishedRequestCount = 0;
+        for (let config of outputImportantActionConfigs) {
+            helpers.snHttp('/api/sn_cmdb_ws/cmdb_workspace_api_scoped/imp_action_card',
+                {
+                    method: 'POST',
+                    batch: false,
+                    body: {
+                        config: config
+                    }
+                }
+            ).then(async function({ response }) {
+                finishedRequestCount++;
+                let record = '';
+                let cardObj = '';
+                if (response && response.result) {
+                    record = response.result;
+                    let {
+                        type,
+                        count,
+                        table_name,
+                        filter_conditions,
+                        list_columns,
+                        list_groupby,
+                        description
+                    } = record;
+                    
+                    let getImportantActionDescription = async function(type, count, helpers) {
+                        let importantActionsDescriptions = {
+                            REASSIGNMENT_REQUESTS: await helpers.translate("{0} unassigned data attestation tasks must be assigned. Review the tasks for assignment.", count),
+                            UNASSIGNED_OVERDUE_TASKS: await helpers.translate("{0} overdue data attestation tasks are unassigned. Review for activity.", count),
+                            LIFECYCLE_APPROVALS: await helpers.translate("{0} CI lifecycle approval tasks assigned by CMDB Data Manager. Review the tasks.", count),
+                            DE_DUPLICATION_TASKS: await helpers.translate("{0} de-duplication tasks have been created. Review the tasks to remediate duplicate CIs.", count),
+                            DUPLICATE_CIS: await helpers.translate("{0} CIs are identified as duplicates. Review the CIs to improve CMDB health.", count),
+                            ORPHAN_CIS: await helpers.translate("{0} CIs are missing relationships. Review the CIs to improve CMDB health.", count),
+                            STALE_CIS: await helpers.translate("{0} CIs have not been updated recently. Review the CIs to improve CMDB health.", count),
+                            EXCLUDED_CIS: await helpers.translate("{0} CIs are excluded from CMDB Data Manager policies. Review the CIs for possible reinstatement.", count),
+                            CMDB_EDITOR_OVERDUE_TASKS: await helpers.translate("{0} data attestation tasks are overdue. Review the tasks.", count),
+                            CMDB_EDITOR_OPEN_TASKS: await helpers.translate("{0} data attestation tasks are new. Review the tasks.", count),
+                            CMDB_EDITOR_LIFECYCLE_APPROVALS: await helpers.translate("{0} CI lifecycle approval tasks have been assigned by CMDB Data Manager. Review the tasks.", count),
+                            CMDB_EDITOR_DUPLICATE_CIS: await helpers.translate("{0} of the CIs that you manage are identified as duplicates. Review the CIs to improve CMDB health.", count),
+                            CMDB_EDITOR_ORPHAN_CIS: await helpers.translate("{0} of the CIs that you manage are missing relationships. Review the CIs to improve CMDB health.", count),
+                            CMDB_EDITOR_STALE_CIS: await helpers.translate("{0} of the CIs that you manage were not updated recently. Review the CIs to improve CMDB health.", count)
+                        };
+                        return importantActionsDescriptions[type];
+                    }
+                    let importantAction = outputImportantActionTypes[type.toUpperCase()];
+                    cardObj = {
+                        title: {
+                            label: importantAction.TITLE,
+                            icon: importantAction.TITLE_ICON
+                        },
+                        isLoading: false,
+                        type: record.type,
+                        heading: {
+                            label: importantAction.NAME
+                        },
+                        description: {
+                            label: await getImportantActionDescription(type.toUpperCase(), Number(record.count).toLocaleString(), helpers),
+                            lines: "3"
+                        },
+                        metaData: {
+                            label: importantAction.METADATA_LABEL,
+                            value: Number(record.count).toLocaleString()
+                        },
+                        button: {
+                            label: importantAction.BUTTON_LABEL,
+                            tooltip: importantAction.BUTTON_TOOLTIP
+                        },
+                        border: {
+                            color: importantAction.BORDER_COLOR,
+                            variant: "secondary"
+                        },
+                        navigation: {
+                            route: "list",
+                            fields: {
+                                table: record.table_name
+                            },
+                            params : {
+                                listTitle: importantAction.NAME,
+                                fixedFilter: record.filter_conditions,
+                                maxRows: "20",
+                                columns: record.list_columns,
+                                groupBy : record.list_groupby,
+                                hideActions: !record.has_list_actions
+                            },
+                            title: importantAction.NAME
+                        }
+                    };
+                }
+                
+                // Find if the card is already displayed in loading state, if so
+                // switch it with the full description card. Only hide the entire section
+                // loader when we have at least one full info card
+                let stageActions = [];
+                for (let i = 0 ; i < tempActions.length; i++) {
+                    stageActions[i] = {...tempActions[i]};
+                }
+                let index = tempActions.findIndex(elm => elm.type === config.type);
+                if (index >= 0) {
+                    if (record && record.count > 0) {
+                        stageActions[index] = cardObj;
+                        tempActions[index] = cardObj;
+                        api.setState('importantActionsLoading', false);
+                    } else {
+                        tempActions.splice(index, 1);
+                        stageActions.splice(index, 1);
+                    }
+                    api.setState('importantActions', stageActions);
+                }
+                if (finishedRequestCount >= requestCount) {
+                    if (stageActions.length <= 0) {
+                        api.setState('importantActions', []);
+                    }
+                    api.setState('importantActionsLoading', false);
+                }
+            }).catch(function(error) {
+                finishedRequestCount++;
+                if (finishedRequestCount >= requestCount) {
+                    api.setState('importantActionsLoading', false);
+                }
+            });
+        }
+        
+        api.setState('impActionsLastRefreshed', lastRefreshedDateTime);
+    });
+}]]></script>
+        <script_api_version>2.0.0</script_api_version>
+        <sys_class_name>sys_ux_client_script</sys_class_name>
+        <sys_created_by>jon.lind</sys_created_by>
+        <sys_created_on>2024-04-17 20:07:16</sys_created_on>
+        <sys_id>2c03f672fb650a10d84afe7405efdcdc</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>Process and populate Important Actions</sys_name>
+        <sys_package display_value="Photobooth App" source="x_snc_pb_app">baa73cb74742dd10552caf52736d43f1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Photobooth App">baa73cb74742dd10552caf52736d43f1</sys_scope>
+        <sys_update_name>sys_ux_client_script_2c03f672fb650a10d84afe7405efdcdc</sys_update_name>
+        <sys_updated_by>jon.lind</sys_updated_by>
+        <sys_updated_on>2024-04-17 20:07:16</sys_updated_on>
+        <target>macroponent</target>
+        <type>default</type>
+    </sys_ux_client_script>
+</record_update>
