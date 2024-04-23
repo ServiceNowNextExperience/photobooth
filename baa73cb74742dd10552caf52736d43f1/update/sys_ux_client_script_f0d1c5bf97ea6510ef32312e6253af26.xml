@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_client_script">
     <sys_ux_client_script action="INSERT_OR_UPDATE">
+        <controller_preset/>
         <includes/>
         <macroponent display_value="Next Experience Landing Page">80d185bf97ea6510ef32312e6253afce</macroponent>
         <name>Set collapsed header value </name>

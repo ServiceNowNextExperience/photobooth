@@ -4,6 +4,7 @@
         <custom_icon/>
         <default_route_type/>
         <description/>
+        <disable_auto_reflow>false</disable_auto_reflow>
         <encode_query_string>false</encode_query_string>
         <icon display_value="camera-outline">camera_outline</icon>
         <landing_path>list</landing_path>

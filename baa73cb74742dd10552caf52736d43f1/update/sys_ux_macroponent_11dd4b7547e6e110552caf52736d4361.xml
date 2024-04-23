@@ -181,7 +181,7 @@
                                     "type": "MACROPONENT"
                                 },
                                 "elementId": "container_1",
-                                "elementLabel": "Container 1",
+                                "elementLabel": "Chin",
                                 "eventMappings": [
                                     
                                 ],
@@ -4811,7 +4811,7 @@
                                                             "selectedItems": {
                                                                 "binding": {
                                                                     "address": [
-                                                                        "sharingUi"
+                                                                        "selectedSharingUi"
                                                                     ]
                                                                 },
                                                                 "type": "STATE_BINDING"
@@ -7649,26 +7649,6 @@
                     },
                     {
                         "broker": null,
-                        "clientScript": null,
-                        "conditional": null,
-                        "declarativeAction": null,
-                        "event": {
-                            "apiName": "sn_uxf.MACROPONENT_STATE_UPDATE_REQUESTED",
-                            "payload": {
-                                "container": {
-                                    "propName": null,
-                                    "value": null
-                                },
-                                "type": "MAP_CONTAINER"
-                            },
-                            "sysId": "32408b42ff7a10109046e490703bf176"
-                        },
-                        "operation": null,
-                        "targetId": "clgxsfkujaabbggyddbhhvbbccgjdbbnr",
-                        "type": "EVENT"
-                    },
-                    {
-                        "broker": null,
                         "clientScript": {
                             "sysId": "4add4b7547e6e110552caf52736d43ea"
                         },
@@ -8057,7 +8037,7 @@
             "type": "CLIENT_STATE"
         },
         "dependencies": {},
-        "elementId": "record_watcher_1",
+        "elementId": "request_record_watcher",
         "elementLabel": "Request Record Watcher",
         "eventMappings": [
             {
@@ -8253,6 +8233,117 @@
                         "operation": null,
                         "targetId": "clhkvhzaaaaaaafddddbbplvlhjcaj",
                         "type": "CLIENT_SCRIPT"
+                    },
+                    {
+                        "broker": null,
+                        "clientScript": null,
+                        "conditional": {
+                            "operation": {
+                                "left": {
+                                    "operation": {
+                                        "left": {
+                                            "binding": {
+                                                "address": [
+                                                    "data",
+                                                    "record",
+                                                    "state",
+                                                    "value"
+                                                ]
+                                            },
+                                            "type": "EVENT_PAYLOAD_BINDING"
+                                        },
+                                        "operator": "EQUAL",
+                                        "right": {
+                                            "type": "JSON_LITERAL",
+                                            "value": "complete"
+                                        }
+                                    },
+                                    "type": "BINARY"
+                                },
+                                "operator": "AND",
+                                "right": {
+                                    "operation": {
+                                        "left": {
+                                            "binding": {
+                                                "address": [
+                                                    "selectedSharingUi"
+                                                ]
+                                            },
+                                            "type": "STATE_BINDING"
+                                        },
+                                        "operator": "EQUAL",
+                                        "right": {
+                                            "type": "JSON_LITERAL",
+                                            "value": "In App"
+                                        }
+                                    },
+                                    "type": "BINARY"
+                                }
+                            },
+                            "type": "BINARY"
+                        },
+                        "declarativeAction": null,
+                        "event": {
+                            "apiName": "x_snc_pb_app.NAV_ITEM_SELECTED_RELAY_11dd4b7547e6e110552caf52736d4361",
+                            "payload": {
+                                "container": {
+                                    "external": {
+                                        "type": "JSON_LITERAL",
+                                        "value": null
+                                    },
+                                    "fields": {
+                                        "container": {
+                                            "snapshotIndex": {
+                                                "type": "JSON_LITERAL",
+                                                "value": "0"
+                                            },
+                                            "sysId": {
+                                                "binding": {
+                                                    "address": [
+                                                        "requestId"
+                                                    ]
+                                                },
+                                                "type": "STATE_BINDING"
+                                            }
+                                        },
+                                        "type": "MAP_CONTAINER"
+                                    },
+                                    "multiInstField": {
+                                        "type": "JSON_LITERAL",
+                                        "value": null
+                                    },
+                                    "params": {
+                                        "type": "JSON_LITERAL",
+                                        "value": null
+                                    },
+                                    "passiveNavigation": {
+                                        "type": "JSON_LITERAL",
+                                        "value": null
+                                    },
+                                    "redirect": {
+                                        "type": "JSON_LITERAL",
+                                        "value": null
+                                    },
+                                    "route": {
+                                        "type": "JSON_LITERAL",
+                                        "value": "results"
+                                    },
+                                    "targetRoute": {
+                                        "type": "JSON_LITERAL",
+                                        "value": null
+                                    },
+                                    "title": {
+                                        "type": "JSON_LITERAL",
+                                        "value": null
+                                    }
+                                },
+                                "type": "MAP_CONTAINER"
+                            },
+                            "sysId": "9f7e47b547e6e110552caf52736d436c"
+                        },
+                        "operation": null,
+                        "targetId": "clvhhddfzflaabbjjccddbhhzdthhxdqrk",
+                        "type": "EVENT"
                     }
                 ]
             }
@@ -9056,7 +9147,7 @@
         "fieldType": "string",
         "id": "",
         "initialValue": null,
-        "name": "sharingUi",
+        "name": "selectedSharingUi",
         "shape": "",
         "valueType": "string"
     }
@@ -9065,14 +9156,14 @@
         <sys_created_by>jon.lind</sys_created_by>
         <sys_created_on>2023-05-02 20:11:01</sys_created_on>
         <sys_id>11dd4b7547e6e110552caf52736d4361</sys_id>
-        <sys_mod_count>88</sys_mod_count>
+        <sys_mod_count>98</sys_mod_count>
         <sys_name>Home Stylized</sys_name>
         <sys_package display_value="Photobooth App" source="x_snc_pb_app">baa73cb74742dd10552caf52736d43f1</sys_package>
         <sys_policy/>
         <sys_scope display_value="Photobooth App">baa73cb74742dd10552caf52736d43f1</sys_scope>
         <sys_update_name>sys_ux_macroponent_11dd4b7547e6e110552caf52736d4361</sys_update_name>
         <sys_updated_by>jon.lind</sys_updated_by>
-        <sys_updated_on>2024-04-17 19:36:47</sys_updated_on>
+        <sys_updated_on>2024-04-19 20:13:14</sys_updated_on>
     </sys_ux_macroponent>
     <sys_translated_text action="delete_multiple" query="documentkey=11dd4b7547e6e110552caf52736d4361"/>
 </record_update>

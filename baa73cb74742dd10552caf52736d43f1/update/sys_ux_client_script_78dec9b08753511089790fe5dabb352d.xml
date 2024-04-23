@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_client_script">
     <sys_ux_client_script action="INSERT_OR_UPDATE">
+        <controller_preset/>
         <includes/>
         <macroponent display_value="List of Requests default">e4de49b08753511089790fe5dabb35c9</macroponent>
         <name>Finish navigation for true up table</name>

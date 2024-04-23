@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_client_script">
     <sys_ux_client_script action="INSERT_OR_UPDATE">
+        <controller_preset/>
         <includes>e75113c0c3302010de10a0f89d40dd0e</includes>
         <macroponent display_value="List of Requests default">e4de49b08753511089790fe5dabb35c9</macroponent>
         <name>simpleListUserPrefState</name>

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_client_script">
     <sys_ux_client_script action="INSERT_OR_UPDATE">
+        <controller_preset/>
         <includes/>
         <macroponent display_value="Home Stylized">11dd4b7547e6e110552caf52736d4361</macroponent>
         <name>Clear Reset Timeout</name>

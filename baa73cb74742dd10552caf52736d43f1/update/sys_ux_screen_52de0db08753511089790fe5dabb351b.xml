@@ -3,6 +3,7 @@
         <active>true</active>
         <app_config display_value="Photobooth">aa68bcf74742dd10552caf52736d432d</app_config>
         <description/>
+        <disable_auto_reflow>false</disable_auto_reflow>
         <event_mappings>[ {
   "eventMappingId" : "ckrgajjmsgaaaaccxddhiicciibburiisljj",
   "isConfiguration" : false,

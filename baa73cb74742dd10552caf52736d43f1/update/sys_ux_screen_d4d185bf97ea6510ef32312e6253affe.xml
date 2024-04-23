@@ -3,6 +3,7 @@
         <active>true</active>
         <app_config display_value="Unified Navigation App Config">e42a5af4c700201072b211d4d8c2607c</app_config>
         <description/>
+        <disable_auto_reflow>false</disable_auto_reflow>
         <event_mappings>[ {
   "eventMappingId" : "clhezcjjaggaaeexffddbbpvaafabbjnv",
   "isConfiguration" : false,

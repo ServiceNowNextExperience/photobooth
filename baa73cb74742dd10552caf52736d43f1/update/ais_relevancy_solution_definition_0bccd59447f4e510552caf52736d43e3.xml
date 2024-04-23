@@ -6,10 +6,11 @@
         <dataset_language>en</dataset_language>
         <fields>signal_json</fields>
         <filter table="ais_relevancy_training_staging">sys_created_onONLast 30 days@javascript:gs.beginningOfLast30Days()@javascript:gs.endOfLast30Days()^search_profile=8dcc95949ef4e510fcfebc11e21c1d06^EQ<item endquery="false" field="sys_created_on" goto="false" newquery="false" operator="ON" or="false" value="Last 30 days@javascript:gs.beginningOfLast30Days()@javascript:gs.endOfLast30Days()"/>
-            <item display_table="ais_search_profile" display_value="Jon Workspace App Search Profile" endquery="false" field="search_profile" goto="false" newquery="false" operator="=" or="false" value="8dcc95949ef4e510fcfebc11e21c1d06"/>
+            <item endquery="false" field="search_profile" goto="false" newquery="false" operator="=" or="false" value="8dcc95949ef4e510fcfebc11e21c1d06"/>
             <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
         </filter>
-        <profile display_value="Jon Workspace App Search Profile">8dcc95949ef4e510fcfebc11e21c1d06</profile>
+        <pretrained>false</pretrained>
+        <profile display_value="">8dcc95949ef4e510fcfebc11e21c1d06</profile>
         <request_source>api</request_source>
         <solution_label>ais_relevancy_8dcc95949ef4e510fcfebc11e21c1d06</solution_label>
         <solution_name>ml_x_snc_x_snc_pb_app_global_ais_relevancy_8dcc95949ef4e510fcfebc11e21c1d06</solution_name>
@@ -32,6 +33,7 @@
         <sys_updated_on>2023-01-30 20:16:23</sys_updated_on>
         <table>ais_relevancy_training_staging</table>
         <training_frequency>every_30_days</training_frequency>
+        <triggered_source/>
         <word_vector_corpus/>
     </ais_relevancy_solution_definition>
 </record_update>
