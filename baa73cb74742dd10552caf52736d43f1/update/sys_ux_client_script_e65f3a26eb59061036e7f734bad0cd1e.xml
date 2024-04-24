@@ -31,15 +31,8 @@ function handler({api: { state, data, setState, context : {props}}, event, helpe
 
     helpers.navigate.setRouteParams({
 		route: "results",
-		fields: {sysId: props.sysId, snapshotIndex: nextSnapIndex},
-		params: {snapshot: nextSnapshot._row_data.uniqueValue},
-		redirect: null,
-		passiveNavigation: null,
-		title: null,
-		multiInstField: null,
-		targetRoute: null,
-		external: null,
-		navigationOptions: null
+		fields: {photoboothNameOrNumberOrSysId: props.photoboothNameOrNumberOrSysId, sysId: props.sysId, snapshotIndex: nextSnapIndex},
+		params: {snapshot: nextSnapshot._row_data.uniqueValue, snapshotType: nextSnapshot.snapshot_type.value}
     });
 }]]></script>
         <script_api_version>2.0.0</script_api_version>
@@ -47,14 +40,14 @@ function handler({api: { state, data, setState, context : {props}}, event, helpe
         <sys_created_by>jon.lind</sys_created_by>
         <sys_created_on>2024-04-04 16:13:16</sys_created_on>
         <sys_id>e65f3a26eb59061036e7f734bad0cd1e</sys_id>
-        <sys_mod_count>50</sys_mod_count>
+        <sys_mod_count>60</sys_mod_count>
         <sys_name>Navigate to Next Snapshot</sys_name>
         <sys_package display_value="Photobooth App" source="x_snc_pb_app">baa73cb74742dd10552caf52736d43f1</sys_package>
         <sys_policy/>
         <sys_scope display_value="Photobooth App">baa73cb74742dd10552caf52736d43f1</sys_scope>
         <sys_update_name>sys_ux_client_script_e65f3a26eb59061036e7f734bad0cd1e</sys_update_name>
         <sys_updated_by>jon.lind</sys_updated_by>
-        <sys_updated_on>2024-04-23 15:48:11</sys_updated_on>
+        <sys_updated_on>2024-04-24 22:09:15</sys_updated_on>
         <target>macroponent</target>
         <type>default</type>
     </sys_ux_client_script>

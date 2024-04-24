@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="sys_uib_screen_test_values">
     <sys_uib_screen_test_values action="INSERT_OR_UPDATE">
         <macroponent_config>{
-    "sysId": "fd9338b4975502906c017f6de053af41",
-    "snapshot": "",
+    "sysId": "ec6bcf81fb3d4250d84afe7405efdc90",
+    "snapshot": "1c7b43c1fb3d4250d84afe7405efdcaf",
     "snapshotIndex": "0",
     "029f04e053610110ac9bddeeff7b1294": {
         "view": "workspace",
@@ -18,20 +18,23 @@
         "activityLogs": null,
         "fields": null,
         "userPrefs": null
-    }
+    },
+    "photoboothNameOrNumberOrSysId": "K24Welcome",
+    "type": "params",
+    "snapshotType": "single"
 }</macroponent_config>
         <screen display_value="Default">d326ae62ebd5061036e7f734bad0cded</screen>
         <sys_class_name>sys_uib_screen_test_values</sys_class_name>
         <sys_created_by>jon.lind</sys_created_by>
         <sys_created_on>2024-04-04 14:17:01</sys_created_on>
         <sys_id>5326ae62ebd5061036e7f734bad0cdf1</sys_id>
-        <sys_mod_count>16</sys_mod_count>
+        <sys_mod_count>24</sys_mod_count>
         <sys_name/>
         <sys_package display_value="Photobooth App" source="x_snc_pb_app">baa73cb74742dd10552caf52736d43f1</sys_package>
         <sys_policy/>
         <sys_scope display_value="Photobooth App">baa73cb74742dd10552caf52736d43f1</sys_scope>
         <sys_update_name>sys_uib_screen_test_values_5326ae62ebd5061036e7f734bad0cdf1</sys_update_name>
         <sys_updated_by>jon.lind</sys_updated_by>
-        <sys_updated_on>2024-04-23 15:50:47</sys_updated_on>
+        <sys_updated_on>2024-04-24 22:10:03</sys_updated_on>
     </sys_uib_screen_test_values>
 </record_update>

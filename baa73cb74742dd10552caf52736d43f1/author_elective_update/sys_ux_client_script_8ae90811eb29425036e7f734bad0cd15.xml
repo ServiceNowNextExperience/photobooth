@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_client_script">
+    <sys_ux_client_script action="DELETE">
+        <controller_preset/>
+        <includes/>
+        <macroponent display_value="Default">4f26ae62ebd5061036e7f734bad0cde9</macroponent>
+        <name>Update Params from Props</name>
+        <preset/>
+        <required_translations>[
+    
+]</required_translations>
+        <script><![CDATA[/**
+* @param {params} params
+* @param {api} params.api
+* @param {any} params.event
+* @param {any} params.imports
+* @param {ApiHelpers} params.helpers
+*/
+function handler({api : {data, state, setState : origSetState, context : {props}}, event, helpers, imports}) {
+/*	const setState = (obj, val) => val ? origSetState(obj, val) : origSetState(Object.entries(obj)[0][0], Object.entries(obj)[0][1]);
+
+	console.log("UPDATE PARAMS FROM PROPS");
+    const snap = data.look_up_snaps.results[props.snapshotIndex];
+
+	const interactionEnabled = snap.snapshot_type.value == "single";
+	setState({interactionEnabled});
+
+    helpers.navigate.setRouteParams({
+		route: "results",
+		fields: {sysId: props.sysId, snapshotIndex: props.snapshotIndex},
+		params: {snapshot: snap._row_data.uniqueValue},
+		redirect: false,
+		passiveNavigation: null,
+		title: null,
+		multiInstField: null,
+		targetRoute: null,
+		external: null,
+		navigationOptions: null
+    });
+*/
+}]]></script>
+        <script_api_version>2.0.0</script_api_version>
+        <sys_class_name>sys_ux_client_script</sys_class_name>
+        <sys_created_by>jon.lind</sys_created_by>
+        <sys_created_on>2024-04-12 16:39:03</sys_created_on>
+        <sys_id>8ae90811eb29425036e7f734bad0cd15</sys_id>
+        <sys_mod_count>31</sys_mod_count>
+        <sys_name>Update Params from Props</sys_name>
+        <sys_package display_value="Photobooth App" source="x_snc_pb_app">baa73cb74742dd10552caf52736d43f1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Photobooth App">baa73cb74742dd10552caf52736d43f1</sys_scope>
+        <sys_update_name>sys_ux_client_script_8ae90811eb29425036e7f734bad0cd15</sys_update_name>
+        <sys_updated_by>jon.lind</sys_updated_by>
+        <sys_updated_on>2024-04-16 22:45:09</sys_updated_on>
+        <target>macroponent</target>
+        <type>default</type>
+    </sys_ux_client_script>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Photobooth App">baa73cb74742dd10552caf52736d43f1</application>
+        <file_path/>
+        <instance_id>15b69fc31b60025419254089bd4bcb07</instance_id>
+        <instance_name>wiffleball</instance_name>
+        <name>sys_ux_client_script_8ae90811eb29425036e7f734bad0cd15</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sys_ux_client_script"&gt;&lt;sys_ux_client_script action="INSERT_OR_UPDATE"&gt;&lt;controller_preset/&gt;&lt;includes/&gt;&lt;macroponent display_value="Default"&gt;4f26ae62ebd5061036e7f734bad0cde9&lt;/macroponent&gt;&lt;name&gt;Update Params from Props&lt;/name&gt;&lt;preset/&gt;&lt;required_translations&gt;[
+    
+]&lt;/required_translations&gt;&lt;script&gt;&lt;![CDATA[/**
+* @param {params} params
+* @param {api} params.api
+* @param {any} params.event
+* @param {any} params.imports
+* @param {ApiHelpers} params.helpers
+*/
+function handler({api : {data, state, setState : origSetState, context : {props}}, event, helpers, imports}) {
+/*	const setState = (obj, val) =&gt; val ? origSetState(obj, val) : origSetState(Object.entries(obj)[0][0], Object.entries(obj)[0][1]);
+
+	console.log("UPDATE PARAMS FROM PROPS");
+    const snap = data.look_up_snaps.results[props.snapshotIndex];
+
+	const interactionEnabled = snap.snapshot_type.value == "single";
+	setState({interactionEnabled});
+
+    helpers.navigate.setRouteParams({
+		route: "results",
+		fields: {sysId: props.sysId, snapshotIndex: props.snapshotIndex},
+		params: {snapshot: snap._row_data.uniqueValue},
+		redirect: false,
+		passiveNavigation: null,
+		title: null,
+		multiInstField: null,
+		targetRoute: null,
+		external: null,
+		navigationOptions: null
+    });
+*/
+}]]&gt;&lt;/script&gt;&lt;script_api_version&gt;2.0.0&lt;/script_api_version&gt;&lt;sys_class_name&gt;sys_ux_client_script&lt;/sys_class_name&gt;&lt;sys_created_by&gt;jon.lind&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2024-04-12 16:39:03&lt;/sys_created_on&gt;&lt;sys_id&gt;8ae90811eb29425036e7f734bad0cd15&lt;/sys_id&gt;&lt;sys_mod_count&gt;31&lt;/sys_mod_count&gt;&lt;sys_name&gt;Update Params from Props&lt;/sys_name&gt;&lt;sys_package display_value="Photobooth App" source="x_snc_pb_app"&gt;baa73cb74742dd10552caf52736d43f1&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Photobooth App"&gt;baa73cb74742dd10552caf52736d43f1&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_ux_client_script_8ae90811eb29425036e7f734bad0cd15&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;jon.lind&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2024-04-16 22:45:09&lt;/sys_updated_on&gt;&lt;target&gt;macroponent&lt;/target&gt;&lt;type&gt;default&lt;/type&gt;&lt;/sys_ux_client_script&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>-2074770136</payload_hash>
+        <record_name>Update Params from Props</record_name>
+        <reverted_from/>
+        <source>82200c6c9751ce506c017f6de053afad</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>jon.lind</sys_created_by>
+        <sys_created_on>2024-04-16 22:45:09</sys_created_on>
+        <sys_id>338d4e2afb21c610d84afe7405efdcac</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>18ee915e3320000001</sys_recorded_at>
+        <sys_updated_by>jon.lind</sys_updated_by>
+        <sys_updated_on>2024-04-16 22:45:09</sys_updated_on>
+        <type>UX Client Script</type>
+        <update_guid>f78d4e2af821c61075bbba8e8638fdab</update_guid>
+        <update_guid_history>f78d4e2af821c61075bbba8e8638fdab:-2074770136,edf69bce7e214610b58257fcaa6749a3:224053982,c044685152a942506f5caf473d35a3b2:2130210383,d71468517ea942502e18002ff8da87fb:-1569722547,294ed0993f6942506e6b725188140459:838921985,04dd5859a06942504ed0ca3260ed3bbb:2107928999,389d1859ba694250a755b2a896d8babe:-355153533,3c6d1459bc694250fb0aa3a411ea38c3:46449303,7d2c1cd5bc694250e7ff81aae00d3e22:-1349982712,851cdc9585694250ba3c8951cc0b12f3:1962963279,0da518dd102942502de51dcfbd442f73:-1349982712,e725dc9d23294250d005269b7c9f042e:-1914439226,5d05d89d5229425060ae97e98d0968c6:-2115971691,d684509dd5294250b81fd1eb1c64bc93:1312935279,6bd3d05d502942507ee204216e757da0:2024790814,0a63589979294250552a93a9efbf79af:2091163779</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>jon.lind</sys_created_by>
+        <sys_created_on>2024-04-24 19:34:24</sys_created_on>
+        <sys_db_object display_value="" name="sys_ux_client_script">sys_ux_client_script</sys_db_object>
+        <sys_id>0580e33a74394e30993447f355f76610</sys_id>
+        <sys_metadata>8ae90811eb29425036e7f734bad0cd15</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Update Params from Props</sys_name>
+        <sys_package display_value="Photobooth App" source="x_snc_pb_app">baa73cb74742dd10552caf52736d43f1</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Photobooth App">baa73cb74742dd10552caf52736d43f1</sys_scope>
+        <sys_scope_delete display_value="">868a264ca04c47ed906cd87c81ce8d11</sys_scope_delete>
+        <sys_update_name>sys_ux_client_script_8ae90811eb29425036e7f734bad0cd15</sys_update_name>
+        <sys_update_version display_value="sys_ux_client_script_8ae90811eb29425036e7f734bad0cd15">338d4e2afb21c610d84afe7405efdcac</sys_update_version>
+        <sys_updated_by>jon.lind</sys_updated_by>
+        <sys_updated_on>2024-04-24 19:34:24</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

@@ -246,9 +246,10 @@
                                                         "binding": {
                                                             "address": [
                                                                 "snapshotType"
-                                                            ]
+                                                            ],
+                                                            "category": "props"
                                                         },
-                                                        "type": "STATE_BINDING"
+                                                        "type": "CONTEXT_BINDING"
                                                     },
                                                     "operator": "NOT_EQUAL",
                                                     "right": {
@@ -277,7 +278,7 @@
                                                     "value": {
                                                         "code": null,
                                                         "comment": "",
-                                                        "message": "Looking good! This 2x2 has been sent to your email.  Scroll through the pics for AI processing and sharing."
+                                                        "message": "Looking good! This 2x2 has been sent to your email.  Use the Next button to scroll through the pics for AI processing and sharing."
                                                     }
                                                 }
                                             },
@@ -300,9 +301,10 @@
                                                         "binding": {
                                                             "address": [
                                                                 "snapshotType"
-                                                            ]
+                                                            ],
+                                                            "category": "props"
                                                         },
-                                                        "type": "STATE_BINDING"
+                                                        "type": "CONTEXT_BINDING"
                                                     },
                                                     "operator": "NOT_EQUAL",
                                                     "right": {
@@ -314,6 +316,46 @@
                                             },
                                             "overrides": {
                                                 "composition": [
+                                                    {
+                                                        "definition": {
+                                                            "id": "4335ba6dca80378f7ba7a67cd6667bec",
+                                                            "type": "MACROPONENT"
+                                                        },
+                                                        "elementId": "stylized_text_2",
+                                                        "elementLabel": "Stylized text 2",
+                                                        "eventMappings": [
+                                                            
+                                                        ],
+                                                        "isHidden": {
+                                                            "type": "JSON_LITERAL",
+                                                            "value": null
+                                                        },
+                                                        "preset": null,
+                                                        "propertyValues": {
+                                                            "configAria": {
+                                                                "type": "JSON_LITERAL",
+                                                                "value": {}
+                                                            },
+                                                            "css": {
+                                                                "type": "JSON_LITERAL",
+                                                                "value": "* { color: white }"
+                                                            },
+                                                            "tag": {
+                                                                "type": "JSON_LITERAL",
+                                                                "value": "h1"
+                                                            },
+                                                            "text": {
+                                                                "type": "TRANSLATION_LITERAL",
+                                                                "value": {
+                                                                    "code": null,
+                                                                    "comment": "",
+                                                                    "message": "Add a generative AI background from a preset or make your own prompt"
+                                                                }
+                                                            }
+                                                        },
+                                                        "slot": null,
+                                                        "styles": null
+                                                    },
                                                     {
                                                         "definition": {
                                                             "id": "d356d14b6e293a3020a244b63d278d8f",
@@ -805,7 +847,7 @@
                                                                             "value": {
                                                                                 "code": null,
                                                                                 "comment": "",
-                                                                                "message": "Select prompt above or create your own here"
+                                                                                "message": "E.g. standing next to a stream"
                                                                             }
                                                                         },
                                                                         "readonly": {
@@ -1056,7 +1098,7 @@
                                                                             "value": {
                                                                                 "code": null,
                                                                                 "comment": "",
-                                                                                "message": "Select suggested prompt above or enter your own"
+                                                                                "message": "Apply AI Background"
                                                                             }
                                                                         },
                                                                         "variant": {
@@ -1146,6 +1188,10 @@
                                                     "default": {
                                                         "children": null,
                                                         "items": [
+                                                            {
+                                                                "element_id": "stylized_text_2",
+                                                                "styles": {}
+                                                            },
                                                             {
                                                                 "element_id": "container_4",
                                                                 "styles": {}
@@ -1334,9 +1380,10 @@
                                                                                     "binding": {
                                                                                         "address": [
                                                                                             "photoboothNameOrNumberOrSysId"
-                                                                                        ]
+                                                                                        ],
+                                                                                        "category": "props"
                                                                                     },
-                                                                                    "type": "STATE_BINDING"
+                                                                                    "type": "CONTEXT_BINDING"
                                                                                 }
                                                                             },
                                                                             "type": "MAP_CONTAINER"
@@ -1509,9 +1556,10 @@
                                                         "binding": {
                                                             "address": [
                                                                 "snapshotType"
-                                                            ]
+                                                            ],
+                                                            "category": "props"
                                                         },
-                                                        "type": "STATE_BINDING"
+                                                        "type": "CONTEXT_BINDING"
                                                     },
                                                     "operator": "EQUAL",
                                                     "right": {
@@ -1984,6 +2032,15 @@
                                     },
                                     "fields": {
                                         "container": {
+                                            "photoboothNameOrNumberOrSysId": {
+                                                "binding": {
+                                                    "address": [
+                                                        "photoboothNameOrNumberOrSysId"
+                                                    ],
+                                                    "category": "props"
+                                                },
+                                                "type": "CONTEXT_BINDING"
+                                            },
                                             "snapshotIndex": {
                                                 "type": "JSON_LITERAL",
                                                 "value": "0"
@@ -2033,6 +2090,10 @@
                                                     ]
                                                 },
                                                 "type": "DATA_OUTPUT_BINDING"
+                                            },
+                                            "snapshotType": {
+                                                "type": "JSON_LITERAL",
+                                                "value": "main"
                                             }
                                         },
                                         "type": "MAP_CONTAINER"
@@ -2088,44 +2149,21 @@
                         "conditional": null,
                         "declarativeAction": null,
                         "event": {
-                            "apiName": "sn_uxf.MACROPONENT_STATE_UPDATE_REQUESTED",
+                            "apiName": "x_snc_pb_app.CONTENT_UPDATED_RELAY_4f26ae62ebd5061036e7f734bad0cde9",
                             "payload": {
                                 "script": {
                                     "apiVersion": "1.0.0",
                                     "controllerElementId": null,
-                                    "inlineScript": "/**\n* @param {params} params\n* @param {api} params.api\n* @param {any} params.event\n*/\nfunction evaluateEvent({api, event}) {\n\treturn {\n\t\tpropName: \"snapshotType\",\n\t\tvalue: api.data.look_up_snaps.results[api.context.props.snapshotIndex].snapshot_type.value\n\t};\n}",
+                                    "inlineScript": "/**\n* @param {params} params\n* @param {api} params.api\n* @param {any} params.event\n*/\nfunction evaluateEvent({api, event}) {\n\tconst snap = api.data.look_up_snaps.results[api.context.props.snapshotIndex];\n\treturn {\n\t\tparams: {\"type\" : snap.snapshot_type.value }\n\t};\n}",
                                     "scriptSysId": null,
                                     "target": null
                                 },
                                 "type": "CLIENT_TRANSFORM_SCRIPT"
                             },
-                            "sysId": "32408b42ff7a10109046e490703bf176"
+                            "sysId": "7635c5d2fb694610d84afe7405efdc72"
                         },
                         "operation": null,
-                        "targetId": "clvccyyrieeaaddhhjjddbhhpcobbccxbogg",
-                        "type": "EVENT"
-                    },
-                    {
-                        "broker": null,
-                        "clientScript": null,
-                        "conditional": null,
-                        "declarativeAction": null,
-                        "event": {
-                            "apiName": "sn_uxf.MACROPONENT_STATE_UPDATE_REQUESTED",
-                            "payload": {
-                                "script": {
-                                    "apiVersion": "1.0.0",
-                                    "controllerElementId": null,
-                                    "inlineScript": "/**\n* @param {params} params\n* @param {api} params.api\n* @param {any} params.event\n*/\nfunction evaluateEvent({api, event}) {\n\tconst result = api.data.look_up_snaps.results[0];\n\treturn {\n\t\tpropName: \"photoboothNameOrNumberOrSysId\",\n\t\tvalue: result.request._reference.photobooth._reference.name.value\n\t};\n}\n\n",
-                                    "scriptSysId": null,
-                                    "target": null
-                                },
-                                "type": "CLIENT_TRANSFORM_SCRIPT"
-                            },
-                            "sysId": "32408b42ff7a10109046e490703bf176"
-                        },
-                        "operation": null,
-                        "targetId": "clvcudfrjaaccyeeddbhhzrbuggddksg",
+                        "targetId": "clvehhqfufaabbsiddbhhppiffggsbuf",
                         "type": "EVENT"
                     }
                 ]
@@ -2182,7 +2220,7 @@
             },
             "returnFields": {
                 "type": "JSON_LITERAL",
-                "value": "snapshot_type,snapshot_state,request.photobooth.name"
+                "value": "snapshot_type,snapshot_state"
             },
             "sortType": {
                 "type": "JSON_LITERAL",
@@ -2243,7 +2281,7 @@
                                 "script": {
                                     "apiVersion": "1.0.0",
                                     "controllerElementId": null,
-                                    "inlineScript": "/**\n* @param {params} params\n* @param {api} params.api\n* @param {any} params.event\n*/\nfunction evaluateEvent({api, event}) {\n\treturn {\n\t\tparams: {\"snapshot\" : event.payload.data.sys_id}\n\t};\n}",
+                                    "inlineScript": "/**\n* @param {params} params\n* @param {api} params.api\n* @param {any} params.event\n*/\nfunction evaluateEvent({api, event}) {\n\treturn {\n\t\tparams: {\n\t\t\t\"snapshot\" : event.payload.data.sys_id, \n\t\t\t\"type\" : event.payload.data.record.snapshot_type.value\n\t\t}\n\t};\n}",
                                     "scriptSysId": null,
                                     "target": null
                                 },
@@ -2275,29 +2313,6 @@
                         },
                         "operation": null,
                         "targetId": "clvccynmfqaaddddcddbhhpxvocmcuf",
-                        "type": "EVENT"
-                    },
-                    {
-                        "broker": null,
-                        "clientScript": null,
-                        "conditional": null,
-                        "declarativeAction": null,
-                        "event": {
-                            "apiName": "sn_uxf.MACROPONENT_STATE_UPDATE_REQUESTED",
-                            "payload": {
-                                "script": {
-                                    "apiVersion": "1.0.0",
-                                    "controllerElementId": null,
-                                    "inlineScript": "/**\n* @param {params} params\n* @param {api} params.api\n* @param {any} params.event\n*/\nfunction evaluateEvent({api, event}) {\n\treturn {\n\t\tpropName: \"snapshotType\",\n\t\tvalue: event.payload.data.record.snapshot_type.value\n\t};\n}",
-                                    "scriptSysId": null,
-                                    "target": null
-                                },
-                                "type": "CLIENT_TRANSFORM_SCRIPT"
-                            },
-                            "sysId": "32408b42ff7a10109046e490703bf176"
-                        },
-                        "operation": null,
-                        "targetId": "clvcczccxzeaaddiikddbhhpjjrfjjjmeex",
                         "type": "EVENT"
                     }
                 ]
@@ -2466,10 +2481,55 @@
         "selectable": false,
         "typeMetadata": null,
         "valueType": "string"
+    },
+    {
+        "description": "",
+        "fieldType": "string",
+        "id": "clvehhocciiwaabbqxddbhhpaggffddgiizf",
+        "inherited": false,
+        "label": "Type",
+        "mandatory": false,
+        "name": "type",
+        "readOnly": false,
+        "selectable": false,
+        "typeMetadata": null,
+        "valueType": "string"
+    },
+    {
+        "description": "",
+        "fieldType": "string",
+        "id": "clvehhynggqaaddjrddbhhpzkbvccccvjj",
+        "inherited": false,
+        "label": "photoboothNameOrNumberOrSysId",
+        "mandatory": false,
+        "name": "photoboothNameOrNumberOrSysId",
+        "readOnly": false,
+        "selectable": false,
+        "typeMetadata": null,
+        "valueType": "string"
+    },
+    {
+        "description": "",
+        "fieldType": "string",
+        "id": "clveiiffbmraaeegrddbhhpqingxjjo",
+        "inherited": false,
+        "label": "snapshotType",
+        "mandatory": false,
+        "name": "snapshotType",
+        "readOnly": false,
+        "selectable": false,
+        "typeMetadata": null,
+        "valueType": "string"
     }
 ]</props>
         <required_translations>[ {
+  "message" : "Add a generative AI background from a preset or make your own prompt",
+  "comment" : ""
+}, {
   "message" : "Apply AI Background",
+  "comment" : ""
+}, {
+  "message" : "E.g. standing next to a stream",
   "comment" : ""
 }, {
   "message" : "Email It",
@@ -2478,16 +2538,10 @@
   "message" : "Here we go--this may take up to 10 seconds",
   "comment" : ""
 }, {
-  "message" : "Looking good! This 2x2 has been sent to your email.  Scroll through the pics for AI processing and sharing.",
+  "message" : "Looking good! This 2x2 has been sent to your email.  Use the Next button to scroll through the pics for AI processing and sharing.",
   "comment" : ""
 }, {
   "message" : "Next",
-  "comment" : ""
-}, {
-  "message" : "Select prompt above or create your own here",
-  "comment" : ""
-}, {
-  "message" : "Select suggested prompt above or enter your own",
   "comment" : ""
 }, {
   "message" : "Start over",
@@ -2560,13 +2614,6 @@
     {
         "id": "",
         "initialValue": null,
-        "name": "snapshotType",
-        "shape": "",
-        "valueType": "string"
-    },
-    {
-        "id": "",
-        "initialValue": null,
         "name": "currentAiBackgroundPrompt",
         "shape": "",
         "valueType": "string"
@@ -2583,14 +2630,14 @@
         <sys_created_by>jon.lind</sys_created_by>
         <sys_created_on>2024-04-04 14:17:00</sys_created_on>
         <sys_id>4f26ae62ebd5061036e7f734bad0cde9</sys_id>
-        <sys_mod_count>235</sys_mod_count>
+        <sys_mod_count>263</sys_mod_count>
         <sys_name>Default</sys_name>
         <sys_package display_value="Photobooth App" source="x_snc_pb_app">baa73cb74742dd10552caf52736d43f1</sys_package>
         <sys_policy/>
         <sys_scope display_value="Photobooth App">baa73cb74742dd10552caf52736d43f1</sys_scope>
         <sys_update_name>sys_ux_macroponent_4f26ae62ebd5061036e7f734bad0cde9</sys_update_name>
         <sys_updated_by>jon.lind</sys_updated_by>
-        <sys_updated_on>2024-04-23 20:39:37</sys_updated_on>
+        <sys_updated_on>2024-04-24 22:12:15</sys_updated_on>
     </sys_ux_macroponent>
     <sys_translated_text action="delete_multiple" query="documentkey=4f26ae62ebd5061036e7f734bad0cde9"/>
 </record_update>

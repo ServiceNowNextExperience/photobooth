@@ -392,6 +392,92 @@
                 "type": "EVENT"
             }
         ]
+    },
+    {
+        "eventMappingId": "clvehhrdepaabbsyddbhhpojiibbwnggr",
+        "isConfiguration": false,
+        "offRowStorageId": null,
+        "sourceEventApiName": "x_snc_pb_app.CONTENT_UPDATED_RELAY_4f26ae62ebd5061036e7f734bad0cde9",
+        "sourceEventCorrelationId": null,
+        "sourceEventDefinition": {
+            "apiName": "x_snc_pb_app.CONTENT_UPDATED_RELAY_4f26ae62ebd5061036e7f734bad0cde9",
+            "id": null,
+            "type": "UXEVENT"
+        },
+        "sourceEventSysId": null,
+        "targets": [
+            {
+                "broker": null,
+                "clientScript": null,
+                "clientTransformScript": null,
+                "clientTransformScriptUxValue": null,
+                "conditional": null,
+                "declarativeAction": null,
+                "event": {
+                    "apiName": "sn_canvas_core.CONTENT_UPDATED",
+                    "payload": {
+                        "container": {
+                            "params": {
+                                "binding": {
+                                    "address": [
+                                        "params"
+                                    ]
+                                },
+                                "type": "EVENT_PAYLOAD_BINDING"
+                            }
+                        },
+                        "type": "MAP_CONTAINER"
+                    },
+                    "sysId": "75f3815fb0d9c38bb6df1626a0f284c4"
+                },
+                "operation": null,
+                "targetId": "clvehhrdepaabbsxddbhhpwaahphiiaagg",
+                "type": "EVENT"
+            }
+        ]
+    },
+    {
+        "eventMappingId": "clvehhsubbcaabbttddbhhpibbfyeqcco",
+        "isConfiguration": false,
+        "offRowStorageId": null,
+        "sourceEventApiName": "x_snc_pb_app.CONTENT_UPDATED_RELAY_4f26ae62ebd5061036e7f734bad0cde9",
+        "sourceEventCorrelationId": null,
+        "sourceEventDefinition": {
+            "apiName": "x_snc_pb_app.CONTENT_UPDATED_RELAY_4f26ae62ebd5061036e7f734bad0cde9",
+            "id": null,
+            "type": "UXEVENT"
+        },
+        "sourceEventSysId": null,
+        "targets": [
+            {
+                "broker": null,
+                "clientScript": null,
+                "clientTransformScript": null,
+                "clientTransformScriptUxValue": null,
+                "conditional": null,
+                "declarativeAction": null,
+                "event": {
+                    "apiName": "sn_canvas_core.CONTENT_UPDATED",
+                    "payload": {
+                        "container": {
+                            "params": {
+                                "binding": {
+                                    "address": [
+                                        "params"
+                                    ]
+                                },
+                                "type": "EVENT_PAYLOAD_BINDING"
+                            }
+                        },
+                        "type": "MAP_CONTAINER"
+                    },
+                    "sysId": "75f3815fb0d9c38bb6df1626a0f284c4"
+                },
+                "operation": null,
+                "targetId": "clvehhsubbbaabbtsddbhhpbbiyhiiny",
+                "type": "EVENT"
+            }
+        ]
     }
 ]</event_mappings>
         <macroponent display_value="Default">4f26ae62ebd5061036e7f734bad0cde9</macroponent>
@@ -438,7 +524,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>d326ae62ebd5061036e7f734bad0cded</sys_id>
-        <sys_mod_count>232</sys_mod_count>
+        <sys_mod_count>260</sys_mod_count>
         <sys_name>Default</sys_name>
         <sys_overrides/>
         <sys_package display_value="Photobooth App" source="x_snc_pb_app">baa73cb74742dd10552caf52736d43f1</sys_package>
@@ -446,7 +532,7 @@
         <sys_scope display_value="Photobooth App">baa73cb74742dd10552caf52736d43f1</sys_scope>
         <sys_update_name>sys_ux_screen_d326ae62ebd5061036e7f734bad0cded</sys_update_name>
         <sys_updated_by>jon.lind</sys_updated_by>
-        <sys_updated_on>2024-04-23 20:39:37</sys_updated_on>
+        <sys_updated_on>2024-04-24 22:12:15</sys_updated_on>
     </sys_ux_screen>
     <sys_translated_text action="delete_multiple" query="documentkey=d326ae62ebd5061036e7f734bad0cded"/>
 </record_update>
