@@ -306,10 +306,10 @@
                                                         },
                                                         "type": "CONTEXT_BINDING"
                                                     },
-                                                    "operator": "NOT_EQUAL",
+                                                    "operator": "EQUAL",
                                                     "right": {
                                                         "type": "JSON_LITERAL",
-                                                        "value": "single"
+                                                        "value": "main"
                                                     }
                                                 },
                                                 "type": "BINARY"
@@ -1491,6 +1491,124 @@
                                                 "id": "67d8bc45906c355a3100c0782f45487b",
                                                 "type": "MACROPONENT"
                                             },
+                                            "elementId": "button_bare_4",
+                                            "elementLabel": "Mural Board Button",
+                                            "eventMappings": [
+                                                {
+                                                    "eventMappingId": "clvedyrbcaaeethddbhhpvwhhqiigccx",
+                                                    "isConfiguration": false,
+                                                    "offRowStorageId": null,
+                                                    "sourceEventApiName": "sn_button.NOW_BUTTON_BARE#CLICKED",
+                                                    "sourceEventCorrelationId": null,
+                                                    "sourceEventDefinition": {
+                                                        "apiName": "sn_button.NOW_BUTTON_BARE#CLICKED",
+                                                        "id": null,
+                                                        "type": "UXEVENT"
+                                                    },
+                                                    "sourceEventSysId": null,
+                                                    "targets": [
+                                                        {
+                                                            "broker": null,
+                                                            "clientScript": null,
+                                                            "conditional": null,
+                                                            "declarativeAction": null,
+                                                            "event": null,
+                                                            "operation": {
+                                                                "dataBrokerId": "9b4b978353211010cbc2ddeeff7b1245",
+                                                                "operationName": "EXECUTE",
+                                                                "parentResourceId": "update_record",
+                                                                "payload": {
+                                                                    "container": {
+                                                                        "recordId": {
+                                                                            "binding": {
+                                                                                "address": [
+                                                                                    "snapshot"
+                                                                                ],
+                                                                                "category": "props"
+                                                                            },
+                                                                            "type": "CONTEXT_BINDING"
+                                                                        },
+                                                                        "table": {
+                                                                            "type": "JSON_LITERAL",
+                                                                            "value": "x_snc_pb_core_snapshot"
+                                                                        },
+                                                                        "templateFields": {
+                                                                            "type": "JSON_LITERAL",
+                                                                            "value": "snapshot_state=Sharing^integrations=Share to Mural Board"
+                                                                        },
+                                                                        "useSetDisplayValue": {
+                                                                            "type": "JSON_LITERAL",
+                                                                            "value": null
+                                                                        }
+                                                                    },
+                                                                    "type": "MAP_CONTAINER"
+                                                                }
+                                                            },
+                                                            "targetId": "clvedyrbcaaeetiddbhhptpekhhcccgg",
+                                                            "type": "DATABROKER_OP"
+                                                        }
+                                                    ]
+                                                }
+                                            ],
+                                            "isHidden": {
+                                                "type": "JSON_LITERAL",
+                                                "value": null
+                                            },
+                                            "preset": null,
+                                            "propertyValues": {
+                                                "configAria": {
+                                                    "type": "JSON_LITERAL",
+                                                    "value": {}
+                                                },
+                                                "disabled": {
+                                                    "type": "JSON_LITERAL",
+                                                    "value": false
+                                                },
+                                                "hideBlockPadding": {
+                                                    "type": "JSON_LITERAL",
+                                                    "value": false
+                                                },
+                                                "highContrast": {
+                                                    "type": "JSON_LITERAL",
+                                                    "value": false
+                                                },
+                                                "iconEnd": {
+                                                    "type": "JSON_LITERAL",
+                                                    "value": "image-outline"
+                                                },
+                                                "iconStart": {
+                                                    "type": "JSON_LITERAL",
+                                                    "value": null
+                                                },
+                                                "label": {
+                                                    "type": "TRANSLATION_LITERAL",
+                                                    "value": {
+                                                        "code": null,
+                                                        "comment": "",
+                                                        "message": "Mural Board"
+                                                    }
+                                                },
+                                                "showInlinePadding": {
+                                                    "type": "JSON_LITERAL",
+                                                    "value": false
+                                                },
+                                                "size": {
+                                                    "type": "JSON_LITERAL",
+                                                    "value": "lg"
+                                                },
+                                                "variant": {
+                                                    "type": "JSON_LITERAL",
+                                                    "value": "primary"
+                                                }
+                                            },
+                                            "slot": null,
+                                            "styles": null
+                                        },
+                                        {
+                                            "definition": {
+                                                "id": "67d8bc45906c355a3100c0782f45487b",
+                                                "type": "MACROPONENT"
+                                            },
                                             "elementId": "button_bare_2",
                                             "elementLabel": "Email Button",
                                             "eventMappings": [
@@ -1738,6 +1856,10 @@
                                                     "styles": {}
                                                 },
                                                 {
+                                                    "element_id": "button_bare_4",
+                                                    "styles": {}
+                                                },
+                                                {
                                                     "element_id": "button_bare_2",
                                                     "styles": {
                                                         "--now-button--primary--background-color": "var(--pb-bright-green)",
@@ -1766,6 +1888,7 @@
                                                 "align-items": "flex-end",
                                                 "flex": "1 0 auto",
                                                 "flex-direction": "row",
+                                                "flex-wrap": "wrap",
                                                 "gap": "var(--now-scalable-space--md)",
                                                 "justify-content": "flex-end",
                                                 "width": "100%"
@@ -2281,7 +2404,7 @@
                                 "script": {
                                     "apiVersion": "1.0.0",
                                     "controllerElementId": null,
-                                    "inlineScript": "/**\n* @param {params} params\n* @param {api} params.api\n* @param {any} params.event\n*/\nfunction evaluateEvent({api, event}) {\n\treturn {\n\t\tparams: {\n\t\t\t\"snapshot\" : event.payload.data.sys_id, \n\t\t\t\"type\" : event.payload.data.record.snapshot_type.value\n\t\t}\n\t};\n}",
+                                    "inlineScript": "/**\n* @param {params} params\n* @param {api} params.api\n* @param {any} params.event\n*/\nfunction evaluateEvent({api, event}) {\n\treturn {\n\t\tparams: {\n\t\t\tsnapshot : event.payload.data.sys_id, \n\t\t\tsnapshotType : event.payload.data.record.snapshot_type.value\n\t\t}\n\t};\n}",
                                     "scriptSysId": null,
                                     "target": null
                                 },
@@ -2541,6 +2664,9 @@
   "message" : "Looking good! This 2x2 has been sent to your email.  Use the Next button to scroll through the pics for AI processing and sharing.",
   "comment" : ""
 }, {
+  "message" : "Mural Board",
+  "comment" : ""
+}, {
   "message" : "Next",
   "comment" : ""
 }, {
@@ -2630,14 +2756,14 @@
         <sys_created_by>jon.lind</sys_created_by>
         <sys_created_on>2024-04-04 14:17:00</sys_created_on>
         <sys_id>4f26ae62ebd5061036e7f734bad0cde9</sys_id>
-        <sys_mod_count>263</sys_mod_count>
+        <sys_mod_count>271</sys_mod_count>
         <sys_name>Default</sys_name>
         <sys_package display_value="Photobooth App" source="x_snc_pb_app">baa73cb74742dd10552caf52736d43f1</sys_package>
         <sys_policy/>
         <sys_scope display_value="Photobooth App">baa73cb74742dd10552caf52736d43f1</sys_scope>
         <sys_update_name>sys_ux_macroponent_4f26ae62ebd5061036e7f734bad0cde9</sys_update_name>
         <sys_updated_by>jon.lind</sys_updated_by>
-        <sys_updated_on>2024-04-24 22:12:15</sys_updated_on>
+        <sys_updated_on>2024-04-25 20:00:06</sys_updated_on>
     </sys_ux_macroponent>
     <sys_translated_text action="delete_multiple" query="documentkey=4f26ae62ebd5061036e7f734bad0cde9"/>
 </record_update>
