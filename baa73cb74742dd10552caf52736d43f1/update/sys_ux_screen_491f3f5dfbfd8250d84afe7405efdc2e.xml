@@ -480,7 +480,7 @@
         ]
     }
 ]</event_mappings>
-        <macroponent display_value="Default">4f26ae62ebd5061036e7f734bad0cde9</macroponent>
+        <macroponent display_value="Results Stylized">370f775dfbfd8250d84afe7405efdc8a</macroponent>
         <macroponent_config>{
     "bare": {
         "type": "JSON_LITERAL",
@@ -511,8 +511,8 @@
         "value": "y"
     }
 }</macroponent_config>
-        <name>Default</name>
-        <order>100</order>
+        <name>Results Stylized</name>
+        <order>0</order>
         <parent_macroponent display_value="UXR Base Experience Shell">76a83a645b122010b913030a1d81c780</parent_macroponent>
         <required_translations>[ ]</required_translations>
         <rollback_screen/>
@@ -520,19 +520,19 @@
         <screen_type display_value="Results Stylized">c726ee22ebd5061036e7f734bad0cda0</screen_type>
         <sys_class_name>sys_ux_screen</sys_class_name>
         <sys_created_by>jon.lind</sys_created_by>
-        <sys_created_on>2024-04-04 14:17:01</sys_created_on>
+        <sys_created_on>2024-04-25 20:04:25</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
-        <sys_id>d326ae62ebd5061036e7f734bad0cded</sys_id>
-        <sys_mod_count>269</sys_mod_count>
-        <sys_name>Default</sys_name>
+        <sys_id>491f3f5dfbfd8250d84afe7405efdc2e</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>Results Stylized</sys_name>
         <sys_overrides/>
         <sys_package display_value="Photobooth App" source="x_snc_pb_app">baa73cb74742dd10552caf52736d43f1</sys_package>
         <sys_policy/>
         <sys_scope display_value="Photobooth App">baa73cb74742dd10552caf52736d43f1</sys_scope>
-        <sys_update_name>sys_ux_screen_d326ae62ebd5061036e7f734bad0cded</sys_update_name>
+        <sys_update_name>sys_ux_screen_491f3f5dfbfd8250d84afe7405efdc2e</sys_update_name>
         <sys_updated_by>jon.lind</sys_updated_by>
-        <sys_updated_on>2024-04-25 20:04:47</sys_updated_on>
+        <sys_updated_on>2024-04-25 20:09:30</sys_updated_on>
     </sys_ux_screen>
-    <sys_translated_text action="delete_multiple" query="documentkey=d326ae62ebd5061036e7f734bad0cded"/>
+    <sys_translated_text action="delete_multiple" query="documentkey=491f3f5dfbfd8250d84afe7405efdc2e"/>
 </record_update>
