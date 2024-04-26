@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_app_route">
+    <sys_ux_app_route action="DELETE">
+        <app_config display_value="Photobooth">aa68bcf74742dd10552caf52736d432d</app_config>
+        <description/>
+        <extension_point/>
+        <fields/>
+        <icon/>
+        <name>TEMP - Testing</name>
+        <optional_parameters/>
+        <order>0</order>
+        <parent_macroponent display_value="UXR Base Experience Shell">76a83a645b122010b913030a1d81c780</parent_macroponent>
+        <parent_macroponent_composition_element_id/>
+        <route_type>temp-testing</route_type>
+        <screen_type display_value="TEMP - Testing">0375447dfbfdc250d84afe7405efdcb4</screen_type>
+        <sys_class_name>sys_ux_app_route</sys_class_name>
+        <sys_created_by>chris.johnson</sys_created_by>
+        <sys_created_on>2024-04-26 15:10:53</sys_created_on>
+        <sys_id>8b75847dfbfdc250d84afe7405efdc4d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>TEMP - Testing</sys_name>
+        <sys_package display_value="Photobooth App" source="x_snc_pb_app">baa73cb74742dd10552caf52736d43f1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Photobooth App">baa73cb74742dd10552caf52736d43f1</sys_scope>
+        <sys_update_name>sys_ux_app_route_8b75847dfbfdc250d84afe7405efdc4d</sys_update_name>
+        <sys_updated_by>chris.johnson</sys_updated_by>
+        <sys_updated_on>2024-04-26 15:10:53</sys_updated_on>
+    </sys_ux_app_route>
+    <sys_translated_text action="DELETE" query="documentkey=8b75847dfbfdc250d84afe7405efdc4d"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Photobooth App">baa73cb74742dd10552caf52736d43f1</application>
+        <file_path/>
+        <instance_id>15b69fc31b60025419254089bd4bcb07</instance_id>
+        <instance_name>wiffleball</instance_name>
+        <name>sys_ux_app_route_8b75847dfbfdc250d84afe7405efdc4d</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_app_route"><sys_ux_app_route action="INSERT_OR_UPDATE"><app_config display_value="Photobooth">aa68bcf74742dd10552caf52736d432d</app_config><description/><extension_point/><fields/><icon/><name>TEMP - Testing</name><optional_parameters/><order>0</order><parent_macroponent display_value="UXR Base Experience Shell">76a83a645b122010b913030a1d81c780</parent_macroponent><parent_macroponent_composition_element_id/><route_type>temp-testing</route_type><screen_type display_value="TEMP - Testing">0375447dfbfdc250d84afe7405efdcb4</screen_type><sys_class_name>sys_ux_app_route</sys_class_name><sys_created_by>chris.johnson</sys_created_by><sys_created_on>2024-04-26 15:10:53</sys_created_on><sys_id>8b75847dfbfdc250d84afe7405efdc4d</sys_id><sys_mod_count>0</sys_mod_count><sys_name>TEMP - Testing</sys_name><sys_package display_value="Photobooth App" source="x_snc_pb_app">baa73cb74742dd10552caf52736d43f1</sys_package><sys_policy/><sys_scope display_value="Photobooth App">baa73cb74742dd10552caf52736d43f1</sys_scope><sys_update_name>sys_ux_app_route_8b75847dfbfdc250d84afe7405efdc4d</sys_update_name><sys_updated_by>chris.johnson</sys_updated_by><sys_updated_on>2024-04-26 15:10:53</sys_updated_on></sys_ux_app_route><sys_translated_text action="delete_multiple" query="documentkey=8b75847dfbfdc250d84afe7405efdc4d"/></record_update>]]></payload>
+        <payload_hash>564769894</payload_hash>
+        <record_name>TEMP - Testing</record_name>
+        <reverted_from/>
+        <source>40f585fdfbf10650d84afe7405efdceb</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>jon.lind@snc</sys_created_by>
+        <sys_created_on>2024-04-26 19:52:31</sys_created_on>
+        <sys_id>14f5c5fdfbf10650d84afe7405efdc53</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>18f1bf76c130000001</sys_recorded_at>
+        <sys_updated_by>jon.lind@snc</sys_updated_by>
+        <sys_updated_on>2024-04-26 19:52:31</sys_updated_on>
+        <type>UX App Route</type>
+        <update_guid>4775847dd0fdc2506ac702fe19d50e4f</update_guid>
+        <update_guid_history>4775847dd0fdc2506ac702fe19d50e4f:564769894,20c581fdfef106504a826183b825be91:-1297897495,4775847dd0fdc2506ac702fe19d50e4f:564769894</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>chris.johnson</sys_created_by>
+        <sys_created_on>2024-04-26 21:48:56</sys_created_on>
+        <sys_db_object display_value="" name="sys_ux_app_route">sys_ux_app_route</sys_db_object>
+        <sys_id>0b7cba6bee0b43c7995dac5720639539</sys_id>
+        <sys_metadata>8b75847dfbfdc250d84afe7405efdc4d</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>TEMP - Testing</sys_name>
+        <sys_package display_value="Photobooth App" source="x_snc_pb_app">baa73cb74742dd10552caf52736d43f1</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Photobooth App">baa73cb74742dd10552caf52736d43f1</sys_scope>
+        <sys_scope_delete display_value="">868a264ca04c47ed906cd87c81ce8d11</sys_scope_delete>
+        <sys_update_name>sys_ux_app_route_8b75847dfbfdc250d84afe7405efdc4d</sys_update_name>
+        <sys_update_version display_value="sys_ux_app_route_8b75847dfbfdc250d84afe7405efdc4d">14f5c5fdfbf10650d84afe7405efdc53</sys_update_version>
+        <sys_updated_by>chris.johnson</sys_updated_by>
+        <sys_updated_on>2024-04-26 21:48:56</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

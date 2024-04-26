@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="db_image">
+    <db_image action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <category/>
+        <format/>
+        <height/>
+        <image>b8cbe075fbb10650d84afe7405efdc19</image>
+        <name>upload_K24_logo.svg</name>
+        <size_bytes/>
+        <sys_class_name>db_image</sys_class_name>
+        <sys_created_by>chris.johnson</sys_created_by>
+        <sys_created_on>2024-04-26 17:58:07</sys_created_on>
+        <sys_id>f0cb2075fbb10650d84afe7405efdca2</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>upload_K24_logo.svg</sys_name>
+        <sys_package display_value="Photobooth App" source="x_snc_pb_app">baa73cb74742dd10552caf52736d43f1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Photobooth App">baa73cb74742dd10552caf52736d43f1</sys_scope>
+        <sys_update_name>db_image_f0cb2075fbb10650d84afe7405efdca2</sys_update_name>
+        <sys_updated_by>chris.johnson</sys_updated_by>
+        <sys_updated_on>2024-04-26 17:58:08</sys_updated_on>
+        <thumbnail/>
+        <width/>
+    </db_image>
+    <sys_attachment action="INSERT_OR_UPDATE">
+        <average_image_color/>
+        <chunk_size_bytes>700000</chunk_size_bytes>
+        <compressed>true</compressed>
+        <content_type>image/svg+xml</content_type>
+        <encryption_context/>
+        <file_name>K24_logo.svg</file_name>
+        <hash>2700de73b848fc4b9146d460164d86a803dd566f0abe8215dc7614d949d70f31</hash>
+        <image_height/>
+        <image_width/>
+        <size_bytes>4669</size_bytes>
+        <size_compressed>1988</size_compressed>
+        <state>available</state>
+        <sys_created_by>chris.johnson</sys_created_by>
+        <sys_created_on>2024-04-26 17:58:08</sys_created_on>
+        <sys_id>b8cbe075fbb10650d84afe7405efdc19</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>guest</sys_updated_by>
+        <sys_updated_on>2024-04-26 21:21:35</sys_updated_on>
+        <table_name>db_image</table_name>
+        <table_sys_id>f0cb2075fbb10650d84afe7405efdca2</table_sys_id>
+    </sys_attachment>
+    <sys_attachment_doc action="INSERT_OR_UPDATE">
+        <data>H4sIAAAAAAAA/w==</data>
+        <length>16</length>
+        <position>0</position>
+        <sys_attachment display_value="K24_logo.svg" sys_id="b8cbe075fbb10650d84afe7405efdc19">b8cbe075fbb10650d84afe7405efdc19</sys_attachment>
+        <sys_created_by>chris.johnson</sys_created_by>
+        <sys_created_on>2024-04-26 17:58:08</sys_created_on>
+        <sys_id>f8cbe075fbb10650d84afe7405efdc19</sys_id>
+    </sys_attachment_doc>
+    <sys_attachment_doc action="INSERT_OR_UPDATE">
+        <data>jVhNjxy3Eb37VzQm9xZZrGIVA68P6QSYw/g6B98CWNEKUGQjXnj98/Mem+SsgmDhgzSqJlmsj1evivr+t98/ba+ff355frqYxWV7/vj50/PL0yVLvWy/f/74+rdf/ni6pC1tWN761399/vLl6fL1l68fL9sf//7y9beny/PLy69//fDh9fV1fy37L//59EFSSh+g/PLDd9//+s+X5+3np8uPJm1PIVBje0ntKrG3XNuRy55z9vl9S7uo5MB9WXbLbz60urub3HEyLNrx2AkVJRf+pgZL0140uco27lgfrqXhn6JHabKn5I+dpZW9BKzYawu3JfPvKH5M2fbk3mLrCkS2umux1raheMoP7/DBYdLcV/dSoZ6fm/oU6ZGr3+FhpBrH3JXanmnUUJJzg8u23BrydYT2MM27SVn7zOBOyUvPlMc1K5BrH++Jtk09ECXJNjN3itfibW8aR/HYpda5qzi0hjFCVZC2KSNuLsbtp4yrQlrd+nHbetia5W2oXR/eeKU46I+dZr67eU97NlvycIdR9JaPtW3giHpaKifQcPM3gBS7DwD+NEH+lyp/D/3H5cNbFMNoS1W38D27tmuFTuDihgiWhJTVuidFaOd6QeQhFvqm9Tq23a0Byh43HBeDurnuvodovlXZvRIfAtej3nCttlTXtcOMZevr8+eXj99ampPvWr2rlrArQWFaumUWATkBFDfgWkVwE35T07UceZcocp/HgW9PTW5TLfZXeDDX37WkOqtog8pUi6ImkBBvW9geGc5nq6g62SJgEACiCI7UIR5ZEQtra7UARi6PwwWFyIRM5eIM6Qa0lZywLkCP6uZp1yi2ZNgP2HP/KdOG3IiG87zB3yYP/YrElob9435lJgU1M8wrrEn3Zf2Qj+ncWh/OK+NbgcYRnKXfZc/tzf2ue03xsG/Iy/4hL//G+eX/t8H/6cesCQZsTrMd5xWkCe50Q969wn4Ych738kjGkOEO6hlmrHUjs0U/7oW5RBGiqJb6ijjxPKrXELbuPqocVonHQ5zeDBn1gTrg+nkct7iaLfWmIG4rx7weddUU1DDNY/SE0RrmD/kY3j2WT+d5XBqSccZmaUfS8tvbkfuGmC7rhrysn/Jwbhxfvn8T+XcrBlWoebHMjUnOuS6a4LqkuOWmuxV0FXiZk9wknf7MfULqq/UmguzrYxuYEu3osQ1gVPX+HX8Wy0g2kAK+o+YjgdxgPy9B400PCqQxJeQ6jH7PLwElE1xQG02v4iQdW5wjZGjJi3PO7fex/V3FQVeoGM06X0sKoL8uFhbyasqLhsHBe4tyR97RquR6Hr/3hlG5XFGcdq8EW8tzeWh/z44CtpBJuUcBANx0yluBf/BxA2XkQOcsGvtJLU6mKwBvMiEapYD8ixmoyAm/sCpLPuHG/afsHIQqZpJxnnbWKFN9AH6h2M7bBUTKNojZZ1p3BgnWdNuHdC2ADnhuhKxc++pi++HoyAwcNfSjPOWuOmPaAWxL47QE5EvNhL4ATDBFUGE0PGlmXPqYxbrJluMhT0eHjLpD/0cgzuMdHf34qd04J3C44+3w31BoqWD7sI5TTi4+HB3StbDtqzG7hugNR/8E5hQocY5F6KMp/I5eHq2UY373DJZAfDUNhkZ5IKqQU0cBGBnUVDBaIl8oOjCTZO2TJAqv97sabCwF3i0ZcxS2M21znVVdRz/EGMWJJM5+6IGxq7JavRM2WAcg4YjRQWPA+ZIZa5w7psx+U9Gf5nlQZgiDR/0AGYnUOAXi+tp89LON1hmuZ7tLZKwAA4VM+cCsBIZ6LDea2SsmWp+DtGMS2gK5Q2xOpgIA0KQzYsd+UHi7Ro8lGQS/jIH5jWN66pMuBtrW+pyfcR7QwKRoPbjOkVH25kRSsC0r5eQ5n+ZxAs6ogkw7jeayX+CF0b3BFDTlPgLT7LXO3CAKZz+BCOtabycAAHbDWXQZtpPGEQGh40DKdhL+kM/RSo8l94mLE/Z5nq0+aTnV41mAqmqsEl4uZ1GSFjhQwwlmfuKITewUj+65+1pFoCoc5jRBcmcioH+MFagKeB6l3oEGTIHtOkB+H+B/t05E+mtikrOiXKO1Rc6aO0EtcuY6WHiR8zi/2Bn9nvy22Hmu/wl6VsWYgofTeTUYHW0Cz7CbVpqEBgfY1RyHYgzRUdrWGRopwTCG6cNr5bCG6FhnIE/B/Xz1nEOaJa4jB6V0GCbgYclKz/RYMqcVDoM8T+bHtZb01M+iI0VoPni/1c5giXCmfXi+EHe4j+WQe+Me8gFUoBW/WYdhnG+gH2MPzpMqiUwUq8N9dAb0+V5FQfcRpqY0m1phHhqJsAaNJa4sDtCr8iWHmqGyXPtwEqVwfTw8xsRL4xK735iI6Sz58LHeEOyNJM4XsnI+ys4miVZTD7x8QTiIiZGvseywudBWqbR5yAgligihnTJSwUgB3w1FYXyHZcpkBmemkWC4yhaFwREBDgYelyPYfMZJsei2NZQesZYagVJ64M/2AGwSQSiDc4IhdjlGl9v/AO39NyVaHgih8RIw653vYFAm3opKir3PjowWBltirYMAeen9PHbD0xjU2NZ7DzgkleI7kqtD+amk9roFKOy8pEwl125KlOsw6f/azf/Z+eG7/wLwPF3NPRIAAA==</data>
+        <length>2640</length>
+        <position>1</position>
+        <sys_attachment display_value="K24_logo.svg" sys_id="b8cbe075fbb10650d84afe7405efdc19">b8cbe075fbb10650d84afe7405efdc19</sys_attachment>
+        <sys_created_by>chris.johnson</sys_created_by>
+        <sys_created_on>2024-04-26 17:58:08</sys_created_on>
+        <sys_id>7ccbe075fbb10650d84afe7405efdc19</sys_id>
+    </sys_attachment_doc>
+</record_update>
