@@ -2988,168 +2988,6 @@
                         "composition": [
                             {
                                 "definition": {
-                                    "id": "d37ce8abca89d02905fed903c8e34d8e",
-                                    "type": "MACROPONENT"
-                                },
-                                "elementId": "button_5",
-                                "elementLabel": "Share to Mural Board Button",
-                                "eventMappings": [
-                                    {
-                                        "eventMappingId": "clvleeiiueeaabbbbhddbhhsthrmsiycc",
-                                        "isConfiguration": false,
-                                        "offRowStorageId": null,
-                                        "sourceEventApiName": "sn_button.NOW_BUTTON#CLICKED",
-                                        "sourceEventCorrelationId": null,
-                                        "sourceEventDefinition": {
-                                            "apiName": "sn_button.NOW_BUTTON#CLICKED",
-                                            "id": null,
-                                            "type": "UXEVENT"
-                                        },
-                                        "sourceEventSysId": null,
-                                        "targets": [
-                                            {
-                                                "broker": null,
-                                                "clientScript": null,
-                                                "conditional": null,
-                                                "declarativeAction": null,
-                                                "event": null,
-                                                "operation": {
-                                                    "dataBrokerId": "9b4b978353211010cbc2ddeeff7b1245",
-                                                    "operationName": "EXECUTE",
-                                                    "parentResourceId": "update_record",
-                                                    "payload": {
-                                                        "container": {
-                                                            "recordId": {
-                                                                "binding": {
-                                                                    "address": [
-                                                                        "snapshot"
-                                                                    ],
-                                                                    "category": "props"
-                                                                },
-                                                                "type": "CONTEXT_BINDING"
-                                                            },
-                                                            "table": {
-                                                                "type": "JSON_LITERAL",
-                                                                "value": "x_snc_pb_core_snapshot"
-                                                            },
-                                                            "templateFields": {
-                                                                "type": "JSON_LITERAL",
-                                                                "value": "integrations=Share to Mural Board^snapshot_state=Sharing"
-                                                            },
-                                                            "useSetDisplayValue": {
-                                                                "type": "JSON_LITERAL",
-                                                                "value": null
-                                                            }
-                                                        },
-                                                        "type": "MAP_CONTAINER"
-                                                    }
-                                                },
-                                                "targetId": "clvleeiiueeaabbbbiddbhhsffggfgwiifff",
-                                                "type": "DATABROKER_OP"
-                                            },
-                                            {
-                                                "broker": null,
-                                                "clientScript": null,
-                                                "conditional": null,
-                                                "declarativeAction": null,
-                                                "event": {
-                                                    "apiName": "sn_uxf.MACROPONENT_STATE_UPDATE_REQUESTED",
-                                                    "payload": {
-                                                        "script": {
-                                                            "apiVersion": "1.0.0",
-                                                            "controllerElementId": null,
-                                                            "inlineScript": "/**\n* @param {params} params\n* @param {api} params.api\n* @param {any} params.event\n*/\nfunction evaluateEvent({api, event}) {\n\treturn {\n\t\tpropName: \"disableMuralBoard\",\n\t\tvalue: true\n\t};\n}",
-                                                            "scriptSysId": null,
-                                                            "target": null
-                                                        },
-                                                        "type": "CLIENT_TRANSFORM_SCRIPT"
-                                                    },
-                                                    "sysId": "32408b42ff7a10109046e490703bf176"
-                                                },
-                                                "operation": null,
-                                                "targetId": "clvljjpkeehhaabbnjjddbhhsbbvccjjhhuad",
-                                                "type": "EVENT"
-                                            }
-                                        ]
-                                    }
-                                ],
-                                "isHidden": {
-                                    "operation": {
-                                        "left": {
-                                            "binding": {
-                                                "address": [
-                                                    "disableMuralBoard"
-                                                ]
-                                            },
-                                            "type": "STATE_BINDING"
-                                        },
-                                        "operator": "OR",
-                                        "right": {
-                                            "operation": {
-                                                "left": {
-                                                    "binding": {
-                                                        "address": [
-                                                            "snapshotType"
-                                                        ],
-                                                        "category": "props"
-                                                    },
-                                                    "type": "CONTEXT_BINDING"
-                                                },
-                                                "operator": "EQUAL",
-                                                "right": {
-                                                    "type": "JSON_LITERAL",
-                                                    "value": "main"
-                                                }
-                                            },
-                                            "type": "BINARY"
-                                        }
-                                    },
-                                    "type": "BINARY"
-                                },
-                                "preset": null,
-                                "propertyValues": {
-                                    "configAria": {
-                                        "type": "JSON_LITERAL",
-                                        "value": {}
-                                    },
-                                    "disabled": {
-                                        "type": "JSON_LITERAL",
-                                        "value": false
-                                    },
-                                    "icon": {
-                                        "type": "JSON_LITERAL",
-                                        "value": "image-fill"
-                                    },
-                                    "label": {
-                                        "type": "TRANSLATION_LITERAL",
-                                        "value": {
-                                            "code": null,
-                                            "comment": "",
-                                            "message": "Share to Knowledge Mural Board"
-                                        }
-                                    },
-                                    "size": {
-                                        "type": "JSON_LITERAL",
-                                        "value": "lg"
-                                    },
-                                    "tooltipContent": {
-                                        "type": "TRANSLATION_LITERAL",
-                                        "value": {
-                                            "code": null,
-                                            "comment": "",
-                                            "message": "Share this pic to the K24 Mural Board"
-                                        }
-                                    },
-                                    "variant": {
-                                        "type": "JSON_LITERAL",
-                                        "value": "primary"
-                                    }
-                                },
-                                "slot": null,
-                                "styles": null
-                            },
-                            {
-                                "definition": {
                                     "id": "b5ef11d7766e63aea1a8113e8360b276",
                                     "type": "MACROPONENT"
                                 },
@@ -3221,24 +3059,6 @@
                             "default": {
                                 "children": null,
                                 "items": [
-                                    {
-                                        "element_id": "button_5",
-                                        "styles": {
-                                            "--now-button--primary--background-color": "3,45,66,0",
-                                            "--now-button--primary--background-color--active": "3,45,66,0",
-                                            "--now-button--primary--background-color--hover": "3,45,66,0",
-                                            "--now-button--primary--border-color": "134,120,237",
-                                            "--now-button--primary--border-color--active": "134,120,237",
-                                            "--now-button--primary--border-color--hover": "134,120,237",
-                                            "--now-button--primary--border-radius": "100px",
-                                            "--now-button--primary--color": "255,255,255",
-                                            "align-self": "center",
-                                            "background": "linear-gradient(180deg, #023D42 0%, #86ED78 100%)",
-                                            "border-radius": "100px",
-                                            "margin-top": "0",
-                                            "width": "100%"
-                                        }
-                                    },
                                     {
                                         "element_id": "checkbox_1",
                                         "styles": {
@@ -3722,6 +3542,168 @@
                                     "id": "d37ce8abca89d02905fed903c8e34d8e",
                                     "type": "MACROPONENT"
                                 },
+                                "elementId": "button_5",
+                                "elementLabel": "Share to Mural Board Button",
+                                "eventMappings": [
+                                    {
+                                        "eventMappingId": "clvleeiiueeaabbbbhddbhhsthrmsiycc",
+                                        "isConfiguration": false,
+                                        "offRowStorageId": null,
+                                        "sourceEventApiName": "sn_button.NOW_BUTTON#CLICKED",
+                                        "sourceEventCorrelationId": null,
+                                        "sourceEventDefinition": {
+                                            "apiName": "sn_button.NOW_BUTTON#CLICKED",
+                                            "id": null,
+                                            "type": "UXEVENT"
+                                        },
+                                        "sourceEventSysId": null,
+                                        "targets": [
+                                            {
+                                                "broker": null,
+                                                "clientScript": null,
+                                                "conditional": null,
+                                                "declarativeAction": null,
+                                                "event": null,
+                                                "operation": {
+                                                    "dataBrokerId": "9b4b978353211010cbc2ddeeff7b1245",
+                                                    "operationName": "EXECUTE",
+                                                    "parentResourceId": "update_record",
+                                                    "payload": {
+                                                        "container": {
+                                                            "recordId": {
+                                                                "binding": {
+                                                                    "address": [
+                                                                        "snapshot"
+                                                                    ],
+                                                                    "category": "props"
+                                                                },
+                                                                "type": "CONTEXT_BINDING"
+                                                            },
+                                                            "table": {
+                                                                "type": "JSON_LITERAL",
+                                                                "value": "x_snc_pb_core_snapshot"
+                                                            },
+                                                            "templateFields": {
+                                                                "type": "JSON_LITERAL",
+                                                                "value": "integrations=Share to Mural Board^snapshot_state=Sharing"
+                                                            },
+                                                            "useSetDisplayValue": {
+                                                                "type": "JSON_LITERAL",
+                                                                "value": null
+                                                            }
+                                                        },
+                                                        "type": "MAP_CONTAINER"
+                                                    }
+                                                },
+                                                "targetId": "clvleeiiueeaabbbbiddbhhsffggfgwiifff",
+                                                "type": "DATABROKER_OP"
+                                            },
+                                            {
+                                                "broker": null,
+                                                "clientScript": null,
+                                                "conditional": null,
+                                                "declarativeAction": null,
+                                                "event": {
+                                                    "apiName": "sn_uxf.MACROPONENT_STATE_UPDATE_REQUESTED",
+                                                    "payload": {
+                                                        "script": {
+                                                            "apiVersion": "1.0.0",
+                                                            "controllerElementId": null,
+                                                            "inlineScript": "/**\n* @param {params} params\n* @param {api} params.api\n* @param {any} params.event\n*/\nfunction evaluateEvent({api, event}) {\n\treturn {\n\t\tpropName: \"disableMuralBoard\",\n\t\tvalue: true\n\t};\n}",
+                                                            "scriptSysId": null,
+                                                            "target": null
+                                                        },
+                                                        "type": "CLIENT_TRANSFORM_SCRIPT"
+                                                    },
+                                                    "sysId": "32408b42ff7a10109046e490703bf176"
+                                                },
+                                                "operation": null,
+                                                "targetId": "clvljjpkeehhaabbnjjddbhhsbbvccjjhhuad",
+                                                "type": "EVENT"
+                                            }
+                                        ]
+                                    }
+                                ],
+                                "isHidden": {
+                                    "operation": {
+                                        "left": {
+                                            "binding": {
+                                                "address": [
+                                                    "disableMuralBoard"
+                                                ]
+                                            },
+                                            "type": "STATE_BINDING"
+                                        },
+                                        "operator": "OR",
+                                        "right": {
+                                            "operation": {
+                                                "left": {
+                                                    "binding": {
+                                                        "address": [
+                                                            "snapshotType"
+                                                        ],
+                                                        "category": "props"
+                                                    },
+                                                    "type": "CONTEXT_BINDING"
+                                                },
+                                                "operator": "EQUAL",
+                                                "right": {
+                                                    "type": "JSON_LITERAL",
+                                                    "value": "main"
+                                                }
+                                            },
+                                            "type": "BINARY"
+                                        }
+                                    },
+                                    "type": "BINARY"
+                                },
+                                "preset": null,
+                                "propertyValues": {
+                                    "configAria": {
+                                        "type": "JSON_LITERAL",
+                                        "value": {}
+                                    },
+                                    "disabled": {
+                                        "type": "JSON_LITERAL",
+                                        "value": false
+                                    },
+                                    "icon": {
+                                        "type": "JSON_LITERAL",
+                                        "value": "image-fill"
+                                    },
+                                    "label": {
+                                        "type": "TRANSLATION_LITERAL",
+                                        "value": {
+                                            "code": null,
+                                            "comment": "",
+                                            "message": "Share to Knowledge Mural Board"
+                                        }
+                                    },
+                                    "size": {
+                                        "type": "JSON_LITERAL",
+                                        "value": "lg"
+                                    },
+                                    "tooltipContent": {
+                                        "type": "TRANSLATION_LITERAL",
+                                        "value": {
+                                            "code": null,
+                                            "comment": "",
+                                            "message": "Share this pic to the K24 Mural Board"
+                                        }
+                                    },
+                                    "variant": {
+                                        "type": "JSON_LITERAL",
+                                        "value": "primary"
+                                    }
+                                },
+                                "slot": null,
+                                "styles": null
+                            },
+                            {
+                                "definition": {
+                                    "id": "d37ce8abca89d02905fed903c8e34d8e",
+                                    "type": "MACROPONENT"
+                                },
                                 "elementId": "button_4",
                                 "elementLabel": "Next Photo Button",
                                 "eventMappings": [
@@ -3843,6 +3825,23 @@
                                             "--now-button--primary--border-color--hover": "3,45,66",
                                             "--now-button--primary--border-radius": ".75rem",
                                             "--now-button--primary--color": "3,45,66"
+                                        }
+                                    },
+                                    {
+                                        "element_id": "button_5",
+                                        "styles": {
+                                            "--now-button--primary--background-color": "3,45,66,0",
+                                            "--now-button--primary--background-color--active": "3,45,66,0",
+                                            "--now-button--primary--background-color--hover": "3,45,66,0",
+                                            "--now-button--primary--border-color": "134,120,237",
+                                            "--now-button--primary--border-color--active": "134,120,237",
+                                            "--now-button--primary--border-color--hover": "134,120,237",
+                                            "--now-button--primary--border-radius": ".75rem",
+                                            "--now-button--primary--color": "255,255,255",
+                                            "align-self": "center",
+                                            "background": "linear-gradient(180deg, #023D42 0%, #86ED78 100%)",
+                                            "border-radius": ".75rem",
+                                            "margin-top": "0"
                                         }
                                     },
                                     {
@@ -4848,14 +4847,14 @@
         <sys_created_by>jon.lind</sys_created_by>
         <sys_created_on>2024-04-25 20:04:20</sys_created_on>
         <sys_id>370f775dfbfd8250d84afe7405efdc8a</sys_id>
-        <sys_mod_count>169</sys_mod_count>
+        <sys_mod_count>176</sys_mod_count>
         <sys_name>Results Stylized</sys_name>
         <sys_package display_value="Photobooth App" source="x_snc_pb_app">baa73cb74742dd10552caf52736d43f1</sys_package>
         <sys_policy/>
         <sys_scope display_value="Photobooth App">baa73cb74742dd10552caf52736d43f1</sys_scope>
         <sys_update_name>sys_ux_macroponent_370f775dfbfd8250d84afe7405efdc8a</sys_update_name>
         <sys_updated_by>jon.lind</sys_updated_by>
-        <sys_updated_on>2024-04-29 19:46:40</sys_updated_on>
+        <sys_updated_on>2024-04-29 20:00:56</sys_updated_on>
     </sys_ux_macroponent>
     <sys_translated_text action="delete_multiple" query="documentkey=370f775dfbfd8250d84afe7405efdc8a"/>
 </record_update>
