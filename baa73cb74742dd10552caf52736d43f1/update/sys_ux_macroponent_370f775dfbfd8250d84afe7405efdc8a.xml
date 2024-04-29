@@ -1065,9 +1065,167 @@
                                                             "type": "MACROPONENT"
                                                         },
                                                         "elementId": "button_2",
-                                                        "elementLabel": "Button 2",
+                                                        "elementLabel": "Apply AI Prompt Button",
                                                         "eventMappings": [
-                                                            
+                                                            {
+                                                                "eventMappingId": "clvleeiiueeaabbbbhddbhhsthrmsiycc",
+                                                                "isConfiguration": false,
+                                                                "offRowStorageId": null,
+                                                                "sourceEventApiName": "sn_button.NOW_BUTTON#CLICKED",
+                                                                "sourceEventCorrelationId": null,
+                                                                "sourceEventDefinition": {
+                                                                    "apiName": "sn_button.NOW_BUTTON#CLICKED",
+                                                                    "id": null,
+                                                                    "type": "UXEVENT"
+                                                                },
+                                                                "sourceEventSysId": null,
+                                                                "targets": [
+                                                                    {
+                                                                        "broker": null,
+                                                                        "clientScript": null,
+                                                                        "conditional": {
+                                                                            "operation": {
+                                                                                "operand": {
+                                                                                    "transform": {
+                                                                                        "operands": {
+                                                                                            "container": [
+                                                                                                {
+                                                                                                    "binding": {
+                                                                                                        "address": [
+                                                                                                            "aiBackgroundPrompt"
+                                                                                                        ]
+                                                                                                    },
+                                                                                                    "type": "STATE_BINDING"
+                                                                                                }
+                                                                                            ],
+                                                                                            "type": "LIST_CONTAINER"
+                                                                                        },
+                                                                                        "operator": "EMPTY"
+                                                                                    },
+                                                                                    "type": "CLIENT_TRANSFORM"
+                                                                                },
+                                                                                "operator": "NOT"
+                                                                            },
+                                                                            "type": "UNARY"
+                                                                        },
+                                                                        "declarativeAction": null,
+                                                                        "event": null,
+                                                                        "operation": {
+                                                                            "dataBrokerId": "9b4b978353211010cbc2ddeeff7b1245",
+                                                                            "operationName": "EXECUTE",
+                                                                            "parentResourceId": "update_record",
+                                                                            "payload": {
+                                                                                "container": {
+                                                                                    "recordId": {
+                                                                                        "binding": {
+                                                                                            "address": [
+                                                                                                "snapshot"
+                                                                                            ],
+                                                                                            "category": "props"
+                                                                                        },
+                                                                                        "type": "CONTEXT_BINDING"
+                                                                                    },
+                                                                                    "table": {
+                                                                                        "type": "JSON_LITERAL",
+                                                                                        "value": "x_snc_pb_core_snapshot"
+                                                                                    },
+                                                                                    "templateFields": {
+                                                                                        "transform": {
+                                                                                            "operands": {
+                                                                                                "container": [
+                                                                                                    {
+                                                                                                        "type": "JSON_LITERAL",
+                                                                                                        "value": "integrations="
+                                                                                                    },
+                                                                                                    {
+                                                                                                        "transform": {
+                                                                                                            "operands": {
+                                                                                                                "container": [
+                                                                                                                    {
+                                                                                                                        "type": "JSON_LITERAL",
+                                                                                                                        "value": "Send to Photoroom: "
+                                                                                                                    },
+                                                                                                                    {
+                                                                                                                        "binding": {
+                                                                                                                            "address": [
+                                                                                                                                "aiBackgroundPrompt"
+                                                                                                                            ]
+                                                                                                                        },
+                                                                                                                        "type": "STATE_BINDING"
+                                                                                                                    }
+                                                                                                                ],
+                                                                                                                "type": "LIST_CONTAINER"
+                                                                                                            },
+                                                                                                            "operator": "CONCAT"
+                                                                                                        },
+                                                                                                        "type": "CLIENT_TRANSFORM"
+                                                                                                    }
+                                                                                                ],
+                                                                                                "type": "LIST_CONTAINER"
+                                                                                            },
+                                                                                            "operator": "CONCAT"
+                                                                                        },
+                                                                                        "type": "CLIENT_TRANSFORM"
+                                                                                    },
+                                                                                    "useSetDisplayValue": {
+                                                                                        "type": "JSON_LITERAL",
+                                                                                        "value": null
+                                                                                    }
+                                                                                },
+                                                                                "type": "MAP_CONTAINER"
+                                                                            }
+                                                                        },
+                                                                        "targetId": "clvleeiiueeaabbbbiddbhhsffggfgwiifff",
+                                                                        "type": "DATABROKER_OP"
+                                                                    },
+                                                                    {
+                                                                        "broker": null,
+                                                                        "clientScript": null,
+                                                                        "conditional": {
+                                                                            "operation": {
+                                                                                "operand": {
+                                                                                    "transform": {
+                                                                                        "operands": {
+                                                                                            "container": [
+                                                                                                {
+                                                                                                    "binding": {
+                                                                                                        "address": [
+                                                                                                            "aiBackgroundPrompt"
+                                                                                                        ]
+                                                                                                    },
+                                                                                                    "type": "STATE_BINDING"
+                                                                                                }
+                                                                                            ],
+                                                                                            "type": "LIST_CONTAINER"
+                                                                                        },
+                                                                                        "operator": "EMPTY"
+                                                                                    },
+                                                                                    "type": "CLIENT_TRANSFORM"
+                                                                                },
+                                                                                "operator": "NOT"
+                                                                            },
+                                                                            "type": "UNARY"
+                                                                        },
+                                                                        "declarativeAction": null,
+                                                                        "event": {
+                                                                            "apiName": "sn_uxf_page.NOW_UXF_PAGE#SET_LOADING_STATE",
+                                                                            "payload": {
+                                                                                "type": "JSON_LITERAL",
+                                                                                "value": {
+                                                                                    "action": null,
+                                                                                    "label": "Calling out to the cloud.  This may take as long as 10 seconds.",
+                                                                                    "loading": true,
+                                                                                    "nonBlocking": false
+                                                                                }
+                                                                            },
+                                                                            "sysId": "0404f68486f1baab1dc7ef2a27a3de50"
+                                                                        },
+                                                                        "operation": null,
+                                                                        "targetId": "clvleemdeesaabbeeaaddbhhspxtflhhhj",
+                                                                        "type": "EVENT"
+                                                                    }
+                                                                ]
+                                                            }
                                                         ],
                                                         "isHidden": {
                                                             "type": "JSON_LITERAL",
@@ -4522,6 +4680,9 @@
   "message" : "Apply your AI prompt to the current photo",
   "comment" : ""
 }, {
+  "message" : "Calling out to the cloud.  This may take as long as 10 seconds.",
+  "comment" : ""
+}, {
   "message" : "Email It",
   "comment" : ""
 }, {
@@ -4605,10 +4766,9 @@
         "initialValue": {
             "type": "JSON_LITERAL",
             "value": [
-                "On the beach",
-                "Stone quarry",
-                "The moon",
-                "Mars"
+                "Standing on the moon",
+                "Green and sparkly",
+                "Standing in the forest"
             ]
         },
         "name": "aiBackgroundPrompts",
@@ -4641,14 +4801,14 @@
         <sys_created_by>jon.lind</sys_created_by>
         <sys_created_on>2024-04-25 20:04:20</sys_created_on>
         <sys_id>370f775dfbfd8250d84afe7405efdc8a</sys_id>
-        <sys_mod_count>116</sys_mod_count>
+        <sys_mod_count>125</sys_mod_count>
         <sys_name>Results Stylized</sys_name>
         <sys_package display_value="Photobooth App" source="x_snc_pb_app">baa73cb74742dd10552caf52736d43f1</sys_package>
         <sys_policy/>
         <sys_scope display_value="Photobooth App">baa73cb74742dd10552caf52736d43f1</sys_scope>
         <sys_update_name>sys_ux_macroponent_370f775dfbfd8250d84afe7405efdc8a</sys_update_name>
-        <sys_updated_by>chris.johnson</sys_updated_by>
-        <sys_updated_on>2024-04-26 18:13:31</sys_updated_on>
+        <sys_updated_by>jon.lind</sys_updated_by>
+        <sys_updated_on>2024-04-29 15:42:15</sys_updated_on>
     </sys_ux_macroponent>
     <sys_translated_text action="delete_multiple" query="documentkey=370f775dfbfd8250d84afe7405efdc8a"/>
 </record_update>
