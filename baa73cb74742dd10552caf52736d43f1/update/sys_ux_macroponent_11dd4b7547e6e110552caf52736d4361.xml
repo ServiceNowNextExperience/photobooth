@@ -814,7 +814,7 @@
                                                             "value": {
                                                                 "binding": {
                                                                     "address": [
-                                                                        "look_up_photobooth",
+                                                                        "look_up_photobooths",
                                                                         "results",
                                                                         "0",
                                                                         "completion_message",
@@ -5946,7 +5946,7 @@
                                                                 "right": {
                                                                     "binding": {
                                                                         "address": [
-                                                                            "look_up_photobooth",
+                                                                            "look_up_photobooths",
                                                                             "results",
                                                                             "0",
                                                                             "name",
@@ -6023,7 +6023,7 @@
                                                             "operation": {
                                                                 "dataBrokerId": "b997a84053021010cbc2ddeeff7b1228",
                                                                 "operationName": "REFRESH",
-                                                                "parentResourceId": "look_up_photobooth",
+                                                                "parentResourceId": "look_up_photobooths",
                                                                 "payload": {
                                                                     "type": "JSON_LITERAL",
                                                                     "value": {}
@@ -7665,7 +7665,7 @@
             "type": "COMPOSITE"
         },
         "dependencies": {},
-        "elementId": "look_up_photobooth",
+        "elementId": "look_up_photobooths",
         "elementLabel": "Look Up Photobooth",
         "eventMappings": [
             {
@@ -8445,7 +8445,7 @@
                             {
                                 "binding": {
                                     "address": [
-                                        "look_up_photobooth",
+                                        "look_up_photobooths",
                                         "results",
                                         "0",
                                         "_row_data",
@@ -8615,7 +8615,26 @@
         <handled_events/>
         <interactions/>
         <interfaces/>
-        <internal_event_mappings>{}</internal_event_mappings>
+        <internal_event_mappings>{
+    "MACROPONENT_READY": [
+        {
+            "broker": null,
+            "clientScript": {
+                "payload": {
+                    "type": "JSON_LITERAL",
+                    "value": {}
+                },
+                "sysId": "4add4b7547e6e110552caf52736d43ea"
+            },
+            "conditional": null,
+            "declarativeAction": null,
+            "event": null,
+            "operation": null,
+            "targetId": "clvmmnntddaabbhhtddbiiaaccddggesjffcc",
+            "type": "CLIENT_SCRIPT"
+        }
+    ]
+}</internal_event_mappings>
         <layout>{
     "default": {
         "children": null,
@@ -9272,14 +9291,14 @@
         <sys_created_by>jon.lind</sys_created_by>
         <sys_created_on>2023-05-02 20:11:01</sys_created_on>
         <sys_id>11dd4b7547e6e110552caf52736d4361</sys_id>
-        <sys_mod_count>122</sys_mod_count>
+        <sys_mod_count>125</sys_mod_count>
         <sys_name>Home Stylized</sys_name>
         <sys_package display_value="Photobooth App" source="x_snc_pb_app">baa73cb74742dd10552caf52736d43f1</sys_package>
         <sys_policy/>
         <sys_scope display_value="Photobooth App">baa73cb74742dd10552caf52736d43f1</sys_scope>
         <sys_update_name>sys_ux_macroponent_11dd4b7547e6e110552caf52736d4361</sys_update_name>
         <sys_updated_by>jon.lind</sys_updated_by>
-        <sys_updated_on>2024-04-29 20:51:20</sys_updated_on>
+        <sys_updated_on>2024-04-30 16:53:37</sys_updated_on>
     </sys_ux_macroponent>
     <sys_translated_text action="delete_multiple" query="documentkey=11dd4b7547e6e110552caf52736d4361"/>
 </record_update>
