@@ -3053,6 +3053,157 @@
                                 },
                                 "slot": null,
                                 "styles": null
+                            },
+                            {
+                                "definition": {
+                                    "id": "844d56291d91b330f2269558e3f47701",
+                                    "type": "MACROPONENT"
+                                },
+                                "elementId": "button_iconic_2",
+                                "elementLabel": "Home Button",
+                                "eventMappings": [
+                                    {
+                                        "eventMappingId": "clvlewaaulaacckgddbhhssgvdjjatb",
+                                        "isConfiguration": false,
+                                        "offRowStorageId": null,
+                                        "sourceEventApiName": "sn_button.NOW_BUTTON_ICONIC#CLICKED",
+                                        "sourceEventCorrelationId": null,
+                                        "sourceEventDefinition": {
+                                            "apiName": "sn_button.NOW_BUTTON_ICONIC#CLICKED",
+                                            "id": null,
+                                            "type": "UXEVENT"
+                                        },
+                                        "sourceEventSysId": null,
+                                        "targets": [
+                                            {
+                                                "broker": null,
+                                                "clientScript": null,
+                                                "conditional": null,
+                                                "declarativeAction": null,
+                                                "event": {
+                                                    "apiName": "x_snc_pb_app.NAV_ITEM_SELECTED_RELAY_370f775dfbfd8250d84afe7405efdc8a",
+                                                    "payload": {
+                                                        "container": {
+                                                            "external": {
+                                                                "type": "JSON_LITERAL",
+                                                                "value": null
+                                                            },
+                                                            "fields": {
+                                                                "container": {
+                                                                    "photoboothNameOrNumberOrSysId": {
+                                                                        "binding": {
+                                                                            "address": [
+                                                                                "photoboothNameOrNumberOrSysId"
+                                                                            ],
+                                                                            "category": "props"
+                                                                        },
+                                                                        "type": "CONTEXT_BINDING"
+                                                                    }
+                                                                },
+                                                                "type": "MAP_CONTAINER"
+                                                            },
+                                                            "multiInstField": {
+                                                                "type": "JSON_LITERAL",
+                                                                "value": null
+                                                            },
+                                                            "navigationOptions": {
+                                                                "type": "JSON_LITERAL",
+                                                                "value": null
+                                                            },
+                                                            "params": {
+                                                                "type": "JSON_LITERAL",
+                                                                "value": null
+                                                            },
+                                                            "passiveNavigation": {
+                                                                "type": "JSON_LITERAL",
+                                                                "value": null
+                                                            },
+                                                            "redirect": {
+                                                                "type": "JSON_LITERAL",
+                                                                "value": null
+                                                            },
+                                                            "route": {
+                                                                "type": "JSON_LITERAL",
+                                                                "value": "home"
+                                                            },
+                                                            "targetRoute": {
+                                                                "type": "JSON_LITERAL",
+                                                                "value": null
+                                                            },
+                                                            "title": {
+                                                                "type": "JSON_LITERAL",
+                                                                "value": null
+                                                            }
+                                                        },
+                                                        "type": "MAP_CONTAINER"
+                                                    },
+                                                    "sysId": "6e1727e2fb39c210d84afe7405efdc14"
+                                                },
+                                                "operation": null,
+                                                "targetId": "clvlewaaulaacckhddbhhsejjbwccaaffii",
+                                                "type": "EVENT"
+                                            }
+                                        ]
+                                    }
+                                ],
+                                "isHidden": {
+                                    "type": "JSON_LITERAL",
+                                    "value": null
+                                },
+                                "preset": null,
+                                "propertyValues": {
+                                    "bare": {
+                                        "type": "JSON_LITERAL",
+                                        "value": false
+                                    },
+                                    "configAria": {
+                                        "container": {
+                                            "aria-label": {
+                                                "type": "TRANSLATION_LITERAL",
+                                                "value": {
+                                                    "code": null,
+                                                    "comment": "",
+                                                    "message": "Return to the Photobooth"
+                                                }
+                                            }
+                                        },
+                                        "type": "MAP_CONTAINER"
+                                    },
+                                    "disabled": {
+                                        "type": "JSON_LITERAL",
+                                        "value": false
+                                    },
+                                    "hidePadding": {
+                                        "type": "JSON_LITERAL",
+                                        "value": false
+                                    },
+                                    "highContrast": {
+                                        "type": "JSON_LITERAL",
+                                        "value": false
+                                    },
+                                    "icon": {
+                                        "type": "JSON_LITERAL",
+                                        "value": "camera-fill"
+                                    },
+                                    "size": {
+                                        "type": "JSON_LITERAL",
+                                        "value": "lg"
+                                    },
+                                    "tooltipContent": {
+                                        "type": "TRANSLATION_LITERAL",
+                                        "value": {
+                                            "code": null,
+                                            "comment": "",
+                                            "message": "Return to the Photobooth"
+                                        }
+                                    },
+                                    "variant": {
+                                        "type": "JSON_LITERAL",
+                                        "value": "primary"
+                                    }
+                                },
+                                "slot": null,
+                                "styles": null
                             }
                         ],
                         "layout": {
@@ -3065,6 +3216,19 @@
                                             "padding-bottom": "var(--now-scalable-space--md)",
                                             "padding-top": "var(--now-scalable-space--md)",
                                             "width": "100%"
+                                        }
+                                    },
+                                    {
+                                        "element_id": "button_iconic_2",
+                                        "styles": {
+                                            "--now-button--iconic--background-color": "134, 237, 120",
+                                            "--now-button--iconic--background-color--active": "134, 237, 120",
+                                            "--now-button--iconic--background-color--hover": "134, 237, 120",
+                                            "--now-button--iconic--border-color": "3,45,66",
+                                            "--now-button--iconic--border-color--active": "3,45,66",
+                                            "--now-button--iconic--border-color--hover": "3,45,66",
+                                            "--now-button--iconic--border-radius": ".75rem",
+                                            "--now-button--iconic--color": "3,45,66"
                                         }
                                     }
                                 ],
@@ -3676,7 +3840,7 @@
                                         "value": {
                                             "code": null,
                                             "comment": "",
-                                            "message": "Share to Knowledge Mural Board"
+                                            "message": "Share to Photo Board"
                                         }
                                     },
                                     "size": {
@@ -4456,10 +4620,184 @@
             }
         },
         "readEvaluationMode": "EXPLICIT"
+    },
+    {
+        "definition": {
+            "id": "bba46ec077223010f5025df90f5a9920",
+            "type": "CLIENT_STATE"
+        },
+        "elementId": "record_watcher_2",
+        "elementLabel": "Request Record Watcher",
+        "eventMappings": [
+            {
+                "eventMappingId": "clvleqzzbbaaccehhddbhhskffqehjjsp",
+                "isConfiguration": false,
+                "offRowStorageId": null,
+                "sourceEventApiName": "sn_record_watcher.RECORD_WATCHER#MESSAGE_RECEIVED",
+                "sourceEventCorrelationId": null,
+                "sourceEventDefinition": {
+                    "apiName": "sn_record_watcher.RECORD_WATCHER#MESSAGE_RECEIVED",
+                    "id": null,
+                    "type": "UXEVENT"
+                },
+                "sourceEventSysId": null,
+                "targets": [
+                    {
+                        "broker": null,
+                        "clientScript": {
+                            "payload": {
+                                "type": "JSON_LITERAL",
+                                "value": {}
+                            },
+                            "sysId": "501f3f5dfbfd8250d84afe7405efdc0a"
+                        },
+                        "conditional": null,
+                        "declarativeAction": null,
+                        "event": null,
+                        "operation": null,
+                        "targetId": "clvleqzzbbaacceiiddbhhsdclnyucii",
+                        "type": "CLIENT_SCRIPT"
+                    },
+                    {
+                        "broker": null,
+                        "clientScript": null,
+                        "conditional": null,
+                        "declarativeAction": null,
+                        "event": {
+                            "apiName": "x_snc_pb_app.NAV_ITEM_SELECTED_RELAY_370f775dfbfd8250d84afe7405efdc8a",
+                            "payload": {
+                                "container": {
+                                    "external": {
+                                        "type": "JSON_LITERAL",
+                                        "value": null
+                                    },
+                                    "fields": {
+                                        "container": {
+                                            "photoboothNameOrNumberOrSysId": {
+                                                "binding": {
+                                                    "address": [
+                                                        "photoboothNameOrNumberOrSysId"
+                                                    ],
+                                                    "category": "props"
+                                                },
+                                                "type": "CONTEXT_BINDING"
+                                            }
+                                        },
+                                        "type": "MAP_CONTAINER"
+                                    },
+                                    "multiInstField": {
+                                        "type": "JSON_LITERAL",
+                                        "value": null
+                                    },
+                                    "navigationOptions": {
+                                        "type": "JSON_LITERAL",
+                                        "value": null
+                                    },
+                                    "params": {
+                                        "type": "JSON_LITERAL",
+                                        "value": null
+                                    },
+                                    "passiveNavigation": {
+                                        "type": "JSON_LITERAL",
+                                        "value": null
+                                    },
+                                    "redirect": {
+                                        "type": "JSON_LITERAL",
+                                        "value": null
+                                    },
+                                    "route": {
+                                        "type": "JSON_LITERAL",
+                                        "value": "home"
+                                    },
+                                    "targetRoute": {
+                                        "type": "JSON_LITERAL",
+                                        "value": null
+                                    },
+                                    "title": {
+                                        "type": "JSON_LITERAL",
+                                        "value": null
+                                    }
+                                },
+                                "type": "MAP_CONTAINER"
+                            },
+                            "sysId": "6e1727e2fb39c210d84afe7405efdc14"
+                        },
+                        "operation": null,
+                        "targetId": "clvlfhhzggtaaccmeddbhhsybcyjjroaa",
+                        "type": "EVENT"
+                    }
+                ]
+            }
+        ],
+        "inputValues": {
+            "filterConditions": {
+                "transform": {
+                    "operands": {
+                        "container": [
+                            {
+                                "type": "JSON_LITERAL",
+                                "value": "photobooth.name="
+                            },
+                            {
+                                "binding": {
+                                    "address": [
+                                        "photoboothNameOrNumberOrSysId"
+                                    ],
+                                    "category": "props"
+                                },
+                                "type": "CONTEXT_BINDING"
+                            },
+                            {
+                                "type": "JSON_LITERAL",
+                                "value": "^ORphotobooth.number="
+                            },
+                            {
+                                "binding": {
+                                    "address": [
+                                        "photoboothNameOrNumberOrSysId"
+                                    ],
+                                    "category": "props"
+                                },
+                                "type": "CONTEXT_BINDING"
+                            },
+                            {
+                                "type": "JSON_LITERAL",
+                                "value": "^ORphotobooth.sys_id="
+                            },
+                            {
+                                "binding": {
+                                    "address": [
+                                        "photoboothNameOrNumberOrSysId"
+                                    ],
+                                    "category": "props"
+                                },
+                                "type": "CONTEXT_BINDING"
+                            },
+                            {
+                                "type": "JSON_LITERAL",
+                                "value": "^state=new"
+                            }
+                        ],
+                        "type": "LIST_CONTAINER"
+                    },
+                    "operator": "CONCAT"
+                },
+                "type": "CLIENT_TRANSFORM"
+            },
+            "subscribe": {
+                "type": "JSON_LITERAL",
+                "value": true
+            },
+            "table": {
+                "type": "JSON_LITERAL",
+                "value": "x_snc_pb_core_request"
+            }
+        },
+        "readEvaluationMode": "EAGER"
     }
 ]</data>
         <description/>
-        <dispatched_events>0d2baaa6ebd5061036e7f734bad0cd24,7635c5d2fb694610d84afe7405efdc72</dispatched_events>
+        <dispatched_events>0d2baaa6ebd5061036e7f734bad0cd24,7635c5d2fb694610d84afe7405efdc72,6e1727e2fb39c210d84afe7405efdc14</dispatched_events>
         <ext_controller_dep/>
         <extends display_value="Page Template">19be392623033300f4b4c50947bf65ba</extends>
         <extension_point/>
@@ -4741,10 +5079,13 @@
   "message" : "Or write your own:",
   "comment" : ""
 }, {
+  "message" : "Return to the Photobooth",
+  "comment" : ""
+}, {
   "message" : "Share this pic to the K24 Mural Board",
   "comment" : ""
 }, {
-  "message" : "Share to Knowledge Mural Board",
+  "message" : "Share to Photo Board",
   "comment" : ""
 }, {
   "message" : "Start over",
@@ -4847,14 +5188,14 @@
         <sys_created_by>jon.lind</sys_created_by>
         <sys_created_on>2024-04-25 20:04:20</sys_created_on>
         <sys_id>370f775dfbfd8250d84afe7405efdc8a</sys_id>
-        <sys_mod_count>176</sys_mod_count>
+        <sys_mod_count>188</sys_mod_count>
         <sys_name>Results Stylized</sys_name>
         <sys_package display_value="Photobooth App" source="x_snc_pb_app">baa73cb74742dd10552caf52736d43f1</sys_package>
         <sys_policy/>
         <sys_scope display_value="Photobooth App">baa73cb74742dd10552caf52736d43f1</sys_scope>
         <sys_update_name>sys_ux_macroponent_370f775dfbfd8250d84afe7405efdc8a</sys_update_name>
         <sys_updated_by>jon.lind</sys_updated_by>
-        <sys_updated_on>2024-04-29 20:00:56</sys_updated_on>
+        <sys_updated_on>2024-04-29 20:38:08</sys_updated_on>
     </sys_ux_macroponent>
     <sys_translated_text action="delete_multiple" query="documentkey=370f775dfbfd8250d84afe7405efdc8a"/>
 </record_update>
