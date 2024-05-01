@@ -4701,11 +4701,11 @@
                                                     },
                                                     {
                                                         "definition": {
-                                                            "id": "22c67d9a1e515fef66442e1469bed3a2",
+                                                            "id": "d356d14b6e293a3020a244b63d278d8f",
                                                             "type": "MACROPONENT"
                                                         },
-                                                        "elementId": "shareUi",
-                                                        "elementLabel": "Share UI Dropdown",
+                                                        "elementId": "grid_container_1",
+                                                        "elementLabel": "Grid Container 1",
                                                         "eventMappings": [
                                                             
                                                         ],
@@ -4713,150 +4713,480 @@
                                                             "type": "JSON_LITERAL",
                                                             "value": null
                                                         },
-                                                        "preset": null,
-                                                        "propertyValues": {
-                                                            "bare": {
-                                                                "type": "JSON_LITERAL",
-                                                                "value": false
-                                                            },
-                                                            "configAria": {
-                                                                "type": "JSON_LITERAL",
-                                                                "value": null
-                                                            },
-                                                            "disabled": {
-                                                                "type": "JSON_LITERAL",
-                                                                "value": false
-                                                            },
-                                                            "hideCaret": {
-                                                                "type": "JSON_LITERAL",
-                                                                "value": false
-                                                            },
-                                                            "hideLabel": {
-                                                                "type": "JSON_LITERAL",
-                                                                "value": false
-                                                            },
-                                                            "icon": {
-                                                                "type": "JSON_LITERAL",
-                                                                "value": null
-                                                            },
-                                                            "items": {
-                                                                "container": [
-                                                                    {
-                                                                        "container": {
-                                                                            "id": {
-                                                                                "type": "JSON_LITERAL",
-                                                                                "value": "Email Only"
+                                                        "overrides": {
+                                                            "composition": [
+                                                                {
+                                                                    "definition": {
+                                                                        "id": "22c67d9a1e515fef66442e1469bed3a2",
+                                                                        "type": "MACROPONENT"
+                                                                    },
+                                                                    "elementId": "sharingUi",
+                                                                    "elementLabel": "Sharing UI Dropdown",
+                                                                    "eventMappings": [
+                                                                        {
+                                                                            "eventMappingId": "clvmxejgfaaccjjiddbiiaaaaaaffccbbnwa",
+                                                                            "isConfiguration": false,
+                                                                            "offRowStorageId": null,
+                                                                            "sourceEventApiName": "sn_dropdown.NOW_DROPDOWN#SELECTED_ITEMS_SET",
+                                                                            "sourceEventCorrelationId": null,
+                                                                            "sourceEventDefinition": {
+                                                                                "apiName": "sn_dropdown.NOW_DROPDOWN#SELECTED_ITEMS_SET",
+                                                                                "id": null,
+                                                                                "type": "UXEVENT"
                                                                             },
-                                                                            "label": {
-                                                                                "type": "TRANSLATION_LITERAL",
-                                                                                "value": {
-                                                                                    "code": null,
-                                                                                    "comment": "",
-                                                                                    "message": "Email Only"
+                                                                            "sourceEventSysId": null,
+                                                                            "targets": [
+                                                                                {
+                                                                                    "broker": null,
+                                                                                    "clientScript": null,
+                                                                                    "conditional": null,
+                                                                                    "declarativeAction": null,
+                                                                                    "event": {
+                                                                                        "apiName": "sn_uxf.MACROPONENT_STATE_UPDATE_REQUESTED",
+                                                                                        "payload": {
+                                                                                            "container": {
+                                                                                                "propName": {
+                                                                                                    "type": "JSON_LITERAL",
+                                                                                                    "value": "selectedSharingUi"
+                                                                                                },
+                                                                                                "value": {
+                                                                                                    "binding": {
+                                                                                                        "address": [
+                                                                                                            "value"
+                                                                                                        ]
+                                                                                                    },
+                                                                                                    "type": "EVENT_PAYLOAD_BINDING"
+                                                                                                }
+                                                                                            },
+                                                                                            "type": "MAP_CONTAINER"
+                                                                                        },
+                                                                                        "sysId": "32408b42ff7a10109046e490703bf176"
+                                                                                    },
+                                                                                    "operation": null,
+                                                                                    "targetId": "clvmxejggaaccjjjddbiiaajggzaloqe",
+                                                                                    "type": "EVENT"
+                                                                                },
+                                                                                {
+                                                                                    "broker": null,
+                                                                                    "clientScript": null,
+                                                                                    "conditional": null,
+                                                                                    "declarativeAction": null,
+                                                                                    "event": {
+                                                                                        "apiName": "sn_uxf.MACROPONENT_STATE_UPDATE_REQUESTED",
+                                                                                        "payload": {
+                                                                                            "script": {
+                                                                                                "apiVersion": "1.0.0",
+                                                                                                "controllerElementId": null,
+                                                                                                "inlineScript": "/**\n* @param {params} params\n* @param {api} params.api\n* @param {any} params.event\n*/\nfunction evaluateEvent({api : { state : {changedSettings}}, event}) {\n\tif(!changedSettings.includes(\"selectedSharingUi\")){\n\t\tchangedSettings.push(\"selectedSharingUi\");\n\t}\n\t\n\treturn {\n\t\tpropName: \"changedSettings\",\n\t\tvalue: changedSettings\n\t};\n}",
+                                                                                                "scriptSysId": null,
+                                                                                                "target": null
+                                                                                            },
+                                                                                            "type": "CLIENT_TRANSFORM_SCRIPT"
+                                                                                        },
+                                                                                        "sysId": "32408b42ff7a10109046e490703bf176"
+                                                                                    },
+                                                                                    "operation": null,
+                                                                                    "targetId": "clvmxhgrcaaccbfddbiiaafggreeaarj",
+                                                                                    "type": "EVENT"
+                                                                                },
+                                                                                {
+                                                                                    "broker": null,
+                                                                                    "clientScript": null,
+                                                                                    "conditional": null,
+                                                                                    "declarativeAction": null,
+                                                                                    "event": {
+                                                                                        "apiName": "sn_uxf.MACROPONENT_STATE_UPDATE_REQUESTED",
+                                                                                        "payload": {
+                                                                                            "script": {
+                                                                                                "apiVersion": "1.0.0",
+                                                                                                "controllerElementId": null,
+                                                                                                "inlineScript": "/**\n* @param {params} params\n* @param {api} params.api\n* @param {any} params.event\n*/\nfunction evaluateEvent({api, event}) {\n\treturn {\n\t\tpropName: \"saveDisabled\",\n\t\tvalue: false\n\t};\n}",
+                                                                                                "scriptSysId": null,
+                                                                                                "target": null
+                                                                                            },
+                                                                                            "type": "CLIENT_TRANSFORM_SCRIPT"
+                                                                                        },
+                                                                                        "sysId": "32408b42ff7a10109046e490703bf176"
+                                                                                    },
+                                                                                    "operation": null,
+                                                                                    "targetId": "clvmxirzgaaccbtddbiiaawbbaauiwbbv",
+                                                                                    "type": "EVENT"
+                                                                                },
+                                                                                {
+                                                                                    "broker": null,
+                                                                                    "clientScript": {
+                                                                                        "payload": {
+                                                                                            "type": "JSON_LITERAL",
+                                                                                            "value": {}
+                                                                                        },
+                                                                                        "sysId": "4add4b7547e6e110552caf52736d43ea"
+                                                                                    },
+                                                                                    "conditional": null,
+                                                                                    "declarativeAction": null,
+                                                                                    "event": null,
+                                                                                    "operation": null,
+                                                                                    "targetId": "clvmxktjjfaacccgddbiiaahhpmzvlqcc",
+                                                                                    "type": "CLIENT_SCRIPT"
                                                                                 }
-                                                                            },
-                                                                            "sublabel": {
-                                                                                "type": "TRANSLATION_LITERAL",
-                                                                                "value": {
-                                                                                    "code": null,
-                                                                                    "comment": "",
-                                                                                    "message": "Send an email with a notification.  This email may optionally include a link to portal for sharing."
+                                                                            ]
+                                                                        }
+                                                                    ],
+                                                                    "isHidden": {
+                                                                        "type": "JSON_LITERAL",
+                                                                        "value": null
+                                                                    },
+                                                                    "preset": null,
+                                                                    "propertyValues": {
+                                                                        "bare": {
+                                                                            "type": "JSON_LITERAL",
+                                                                            "value": false
+                                                                        },
+                                                                        "configAria": {
+                                                                            "type": "JSON_LITERAL",
+                                                                            "value": null
+                                                                        },
+                                                                        "disabled": {
+                                                                            "type": "JSON_LITERAL",
+                                                                            "value": false
+                                                                        },
+                                                                        "hideCaret": {
+                                                                            "type": "JSON_LITERAL",
+                                                                            "value": false
+                                                                        },
+                                                                        "hideLabel": {
+                                                                            "type": "JSON_LITERAL",
+                                                                            "value": false
+                                                                        },
+                                                                        "icon": {
+                                                                            "type": "JSON_LITERAL",
+                                                                            "value": null
+                                                                        },
+                                                                        "items": {
+                                                                            "container": [
+                                                                                {
+                                                                                    "container": {
+                                                                                        "id": {
+                                                                                            "type": "JSON_LITERAL",
+                                                                                            "value": "Email Only"
+                                                                                        },
+                                                                                        "label": {
+                                                                                            "type": "TRANSLATION_LITERAL",
+                                                                                            "value": {
+                                                                                                "code": null,
+                                                                                                "comment": "",
+                                                                                                "message": "Email Only"
+                                                                                            }
+                                                                                        },
+                                                                                        "sublabel": {
+                                                                                            "type": "TRANSLATION_LITERAL",
+                                                                                            "value": {
+                                                                                                "code": null,
+                                                                                                "comment": "",
+                                                                                                "message": "Send an email with a notification.  This email may optionally include a link to portal for sharing."
+                                                                                            }
+                                                                                        }
+                                                                                    },
+                                                                                    "type": "MAP_CONTAINER"
+                                                                                },
+                                                                                {
+                                                                                    "container": {
+                                                                                        "id": {
+                                                                                            "type": "JSON_LITERAL",
+                                                                                            "value": "In App"
+                                                                                        },
+                                                                                        "label": {
+                                                                                            "type": "TRANSLATION_LITERAL",
+                                                                                            "value": {
+                                                                                                "code": null,
+                                                                                                "comment": "",
+                                                                                                "message": "In App"
+                                                                                            }
+                                                                                        },
+                                                                                        "sublabel": {
+                                                                                            "type": "TRANSLATION_LITERAL",
+                                                                                            "value": {
+                                                                                                "code": null,
+                                                                                                "comment": "",
+                                                                                                "message": "Immediately show results within the current app and offer sharing and AI processing."
+                                                                                            }
+                                                                                        }
+                                                                                    },
+                                                                                    "type": "MAP_CONTAINER"
                                                                                 }
+                                                                            ],
+                                                                            "type": "LIST_CONTAINER"
+                                                                        },
+                                                                        "label": {
+                                                                            "type": "TRANSLATION_LITERAL",
+                                                                            "value": {
+                                                                                "code": null,
+                                                                                "comment": "",
+                                                                                "message": "Sharing UI"
                                                                             }
                                                                         },
-                                                                        "type": "MAP_CONTAINER"
+                                                                        "labelPosition": {
+                                                                            "type": "JSON_LITERAL",
+                                                                            "value": "top"
+                                                                        },
+                                                                        "labelSize": {
+                                                                            "type": "JSON_LITERAL",
+                                                                            "value": ""
+                                                                        },
+                                                                        "opened": {
+                                                                            "type": "JSON_LITERAL",
+                                                                            "value": false
+                                                                        },
+                                                                        "panelFitProps": {
+                                                                            "type": "JSON_LITERAL",
+                                                                            "value": {}
+                                                                        },
+                                                                        "placeholder": {
+                                                                            "type": "TRANSLATION_LITERAL",
+                                                                            "value": {
+                                                                                "code": null,
+                                                                                "comment": "",
+                                                                                "message": ""
+                                                                            }
+                                                                        },
+                                                                        "search": {
+                                                                            "type": "JSON_LITERAL",
+                                                                            "value": "none"
+                                                                        },
+                                                                        "select": {
+                                                                            "type": "JSON_LITERAL",
+                                                                            "value": "single"
+                                                                        },
+                                                                        "selectedItems": {
+                                                                            "binding": {
+                                                                                "address": [
+                                                                                    "selectedSharingUi"
+                                                                                ]
+                                                                            },
+                                                                            "type": "STATE_BINDING"
+                                                                        },
+                                                                        "showPadding": {
+                                                                            "type": "JSON_LITERAL",
+                                                                            "value": false
+                                                                        },
+                                                                        "size": {
+                                                                            "type": "JSON_LITERAL",
+                                                                            "value": "md"
+                                                                        },
+                                                                        "tooltipContent": {
+                                                                            "type": "JSON_LITERAL",
+                                                                            "value": null
+                                                                        },
+                                                                        "variant": {
+                                                                            "type": "JSON_LITERAL",
+                                                                            "value": "secondary"
+                                                                        }
                                                                     },
-                                                                    {
-                                                                        "container": {
-                                                                            "id": {
+                                                                    "slot": null,
+                                                                    "styles": null
+                                                                },
+                                                                {
+                                                                    "definition": {
+                                                                        "id": "b5ef11d7766e63aea1a8113e8360b276",
+                                                                        "type": "MACROPONENT"
+                                                                    },
+                                                                    "elementId": "aiProcessingOffered",
+                                                                    "elementLabel": "AI Processing Offered Checkbox",
+                                                                    "eventMappings": [
+                                                                        {
+                                                                            "eventMappingId": "clvmyvffggmaaccjtddbiiaanhhaueuhb",
+                                                                            "isConfiguration": false,
+                                                                            "offRowStorageId": null,
+                                                                            "sourceEventApiName": "sn_checkbox.NOW_CHECKBOX#CHECKED_SET",
+                                                                            "sourceEventCorrelationId": null,
+                                                                            "sourceEventDefinition": {
+                                                                                "apiName": "sn_checkbox.NOW_CHECKBOX#CHECKED_SET",
+                                                                                "id": null,
+                                                                                "type": "UXEVENT"
+                                                                            },
+                                                                            "sourceEventSysId": null,
+                                                                            "targets": [
+                                                                                {
+                                                                                    "broker": null,
+                                                                                    "clientScript": {
+                                                                                        "payload": {
+                                                                                            "type": "JSON_LITERAL",
+                                                                                            "value": {}
+                                                                                        },
+                                                                                        "sysId": "4add4b7547e6e110552caf52736d43ea"
+                                                                                    },
+                                                                                    "conditional": null,
+                                                                                    "declarativeAction": null,
+                                                                                    "event": null,
+                                                                                    "operation": null,
+                                                                                    "targetId": "clvmyxsubaacckaaddbiiaaizqiijbbyp",
+                                                                                    "type": "CLIENT_SCRIPT"
+                                                                                },
+                                                                                {
+                                                                                    "broker": null,
+                                                                                    "clientScript": {
+                                                                                        "payload": {
+                                                                                            "type": "JSON_LITERAL",
+                                                                                            "value": {}
+                                                                                        },
+                                                                                        "sysId": "0add4b7547e6e110552caf52736d43d0"
+                                                                                    },
+                                                                                    "conditional": null,
+                                                                                    "declarativeAction": null,
+                                                                                    "event": null,
+                                                                                    "operation": null,
+                                                                                    "targetId": "clvmzfmjjbbaaaazdddbhhsnwggxmsxi",
+                                                                                    "type": "CLIENT_SCRIPT"
+                                                                                }
+                                                                            ]
+                                                                        }
+                                                                    ],
+                                                                    "isHidden": {
+                                                                        "operation": {
+                                                                            "left": {
+                                                                                "binding": {
+                                                                                    "address": [
+                                                                                        "selectedSharingUi",
+                                                                                        "0"
+                                                                                    ]
+                                                                                },
+                                                                                "type": "STATE_BINDING"
+                                                                            },
+                                                                            "operator": "NOT_EQUAL",
+                                                                            "right": {
                                                                                 "type": "JSON_LITERAL",
                                                                                 "value": "In App"
-                                                                            },
-                                                                            "label": {
-                                                                                "type": "TRANSLATION_LITERAL",
-                                                                                "value": {
-                                                                                    "code": null,
-                                                                                    "comment": "",
-                                                                                    "message": "In App"
-                                                                                }
-                                                                            },
-                                                                            "sublabel": {
-                                                                                "type": "TRANSLATION_LITERAL",
-                                                                                "value": {
-                                                                                    "code": null,
-                                                                                    "comment": "",
-                                                                                    "message": "Immediately show results within the current app and offer sharing and AI processing."
-                                                                                }
                                                                             }
                                                                         },
-                                                                        "type": "MAP_CONTAINER"
-                                                                    }
-                                                                ],
-                                                                "type": "LIST_CONTAINER"
+                                                                        "type": "BINARY"
+                                                                    },
+                                                                    "preset": null,
+                                                                    "propertyValues": {
+                                                                        "checked": {
+                                                                            "binding": {
+                                                                                "address": [
+                                                                                    "aiProcessingOffered"
+                                                                                ]
+                                                                            },
+                                                                            "type": "STATE_BINDING"
+                                                                        },
+                                                                        "configAria": {
+                                                                            "type": "JSON_LITERAL",
+                                                                            "value": {}
+                                                                        },
+                                                                        "disabled": {
+                                                                            "type": "JSON_LITERAL",
+                                                                            "value": false
+                                                                        },
+                                                                        "fullWidth": {
+                                                                            "type": "JSON_LITERAL",
+                                                                            "value": false
+                                                                        },
+                                                                        "invalid": {
+                                                                            "type": "JSON_LITERAL",
+                                                                            "value": false
+                                                                        },
+                                                                        "label": {
+                                                                            "type": "TRANSLATION_LITERAL",
+                                                                            "value": {
+                                                                                "code": null,
+                                                                                "comment": "",
+                                                                                "message": "AI Processing Offered"
+                                                                            }
+                                                                        },
+                                                                        "labelPosition": {
+                                                                            "type": "JSON_LITERAL",
+                                                                            "value": "start"
+                                                                        },
+                                                                        "name": {
+                                                                            "type": "JSON_LITERAL",
+                                                                            "value": null
+                                                                        },
+                                                                        "readonly": {
+                                                                            "type": "JSON_LITERAL",
+                                                                            "value": false
+                                                                        },
+                                                                        "required": {
+                                                                            "type": "JSON_LITERAL",
+                                                                            "value": false
+                                                                        },
+                                                                        "size": {
+                                                                            "type": "JSON_LITERAL",
+                                                                            "value": "md"
+                                                                        }
+                                                                    },
+                                                                    "slot": null,
+                                                                    "styles": null
+                                                                }
+                                                            ],
+                                                            "layout": {
+                                                                "default": {
+                                                                    "children": null,
+                                                                    "items": [
+                                                                        {
+                                                                            "element_id": "sharingUi",
+                                                                            "styles": {}
+                                                                        },
+                                                                        {
+                                                                            "element_id": "aiProcessingOffered",
+                                                                            "styles": {
+                                                                                "margin-top": "var(--now-scalable-space--xl)",
+                                                                                "padding-left": "var(--now-scalable-space--sm)"
+                                                                            }
+                                                                        }
+                                                                    ],
+                                                                    "root": null,
+                                                                    "rules": null,
+                                                                    "styles": {
+                                                                        "display": "grid",
+                                                                        "grid-auto-columns": "1fr",
+                                                                        "grid-auto-rows": "1fr",
+                                                                        "grid-template-columns": "1fr 1fr",
+                                                                        "grid-template-rows": "1fr",
+                                                                        "gridAutoColumns": "1fr",
+                                                                        "gridAutoRows": "1fr",
+                                                                        "gridTemplateColumns": "1fr 1fr",
+                                                                        "gridTemplateRows": "1fr 1fr",
+                                                                        "width": "100%"
+                                                                    },
+                                                                    "templateId": "5832fd4d53c31010e6bcddeeff7b12db",
+                                                                    "type": "grid"
+                                                                },
+                                                                "version": "3.0.0"
+                                                            }
+                                                        },
+                                                        "preset": null,
+                                                        "propertyValues": {
+                                                            "ariaRegionHeadingLevel": {
+                                                                "type": "JSON_LITERAL",
+                                                                "value": "1"
                                                             },
-                                                            "label": {
+                                                            "ariaRegionName": {
                                                                 "type": "TRANSLATION_LITERAL",
                                                                 "value": {
                                                                     "code": null,
                                                                     "comment": "",
-                                                                    "message": "The type of UI for Sharing"
+                                                                    "message": ""
                                                                 }
                                                             },
-                                                            "labelPosition": {
-                                                                "type": "JSON_LITERAL",
-                                                                "value": "top"
-                                                            },
-                                                            "labelSize": {
+                                                            "ariaRole": {
                                                                 "type": "JSON_LITERAL",
                                                                 "value": ""
                                                             },
-                                                            "opened": {
+                                                            "hideEmptyStateUi": {
+                                                                "type": "JSON_LITERAL",
+                                                                "value": true
+                                                            },
+                                                            "includeAriaHeading": {
                                                                 "type": "JSON_LITERAL",
                                                                 "value": false
                                                             },
-                                                            "panelFitProps": {
+                                                            "slotWrapperBehavior": {
                                                                 "type": "JSON_LITERAL",
-                                                                "value": {}
+                                                                "value": "fullheight"
                                                             },
-                                                            "placeholder": {
-                                                                "type": "TRANSLATION_LITERAL",
-                                                                "value": {
-                                                                    "code": null,
-                                                                    "comment": "",
-                                                                    "message": "Dropdown"
-                                                                }
-                                                            },
-                                                            "search": {
+                                                            "type": {
                                                                 "type": "JSON_LITERAL",
-                                                                "value": "none"
-                                                            },
-                                                            "select": {
-                                                                "type": "JSON_LITERAL",
-                                                                "value": "single"
-                                                            },
-                                                            "selectedItems": {
-                                                                "binding": {
-                                                                    "address": [
-                                                                        "selectedSharingUi"
-                                                                    ]
-                                                                },
-                                                                "type": "STATE_BINDING"
-                                                            },
-                                                            "showPadding": {
-                                                                "type": "JSON_LITERAL",
-                                                                "value": false
-                                                            },
-                                                            "size": {
-                                                                "type": "JSON_LITERAL",
-                                                                "value": "md"
-                                                            },
-                                                            "tooltipContent": {
-                                                                "type": "JSON_LITERAL",
-                                                                "value": null
-                                                            },
-                                                            "variant": {
-                                                                "type": "JSON_LITERAL",
-                                                                "value": "secondary"
+                                                                "value": "section"
                                                             }
                                                         },
                                                         "slot": null,
@@ -5059,7 +5389,7 @@
                                                                 "styles": {}
                                                             },
                                                             {
-                                                                "element_id": "shareUi",
+                                                                "element_id": "grid_container_1",
                                                                 "styles": {}
                                                             }
                                                         ],
@@ -5465,6 +5795,18 @@
                                                                                                 ]
                                                                                             },
                                                                                             "type": "STATE_BINDING"
+                                                                                        },
+                                                                                        {
+                                                                                            "type": "JSON_LITERAL",
+                                                                                            "value": "^sharing_ui="
+                                                                                        },
+                                                                                        {
+                                                                                            "binding": {
+                                                                                                "address": [
+                                                                                                    "selectedSharingUi"
+                                                                                                ]
+                                                                                            },
+                                                                                            "type": "STATE_BINDING"
                                                                                         }
                                                                                     ],
                                                                                     "type": "LIST_CONTAINER"
@@ -5549,6 +5891,29 @@
                                                             },
                                                             "operation": null,
                                                             "targetId": "clgeejjsqjjfaaccheddbhhvtzkhhyywj",
+                                                            "type": "EVENT"
+                                                        },
+                                                        {
+                                                            "broker": null,
+                                                            "clientScript": null,
+                                                            "conditional": null,
+                                                            "declarativeAction": null,
+                                                            "event": {
+                                                                "apiName": "sn_uxf.MACROPONENT_STATE_UPDATE_REQUESTED",
+                                                                "payload": {
+                                                                    "script": {
+                                                                        "apiVersion": "1.0.0",
+                                                                        "controllerElementId": null,
+                                                                        "inlineScript": "/**\n* @param {params} params\n* @param {api} params.api\n* @param {any} params.event\n*/\nfunction evaluateEvent({api, event}) {\n\treturn {\n\t\tpropName: \"refreshRequested\",\n\t\tvalue: Date.now()\n\t};\n}",
+                                                                        "scriptSysId": null,
+                                                                        "target": null
+                                                                    },
+                                                                    "type": "CLIENT_TRANSFORM_SCRIPT"
+                                                                },
+                                                                "sysId": "32408b42ff7a10109046e490703bf176"
+                                                            },
+                                                            "operation": null,
+                                                            "targetId": "clvmyfeeqddaacciddddbiiaabcqccjiy",
                                                             "type": "EVENT"
                                                         }
                                                     ]
@@ -8722,9 +9087,25 @@
         "selectable": false,
         "typeMetadata": null,
         "valueType": "string"
+    },
+    {
+        "description": "",
+        "fieldType": "string",
+        "id": "clvmxggwdgaaccbbwddbiiaaiibbbddppffm",
+        "inherited": false,
+        "label": "reset",
+        "mandatory": false,
+        "name": "reset",
+        "readOnly": false,
+        "selectable": false,
+        "typeMetadata": null,
+        "valueType": "string"
     }
 ]</props>
         <required_translations>[ {
+  "message" : "AI Processing Offered",
+  "comment" : ""
+}, {
   "message" : "Available Cameras",
   "comment" : ""
 }, {
@@ -8759,9 +9140,6 @@
   "comment" : ""
 }, {
   "message" : "Create a new photobooth instance by changing the Name and inserting.",
-  "comment" : ""
-}, {
-  "message" : "Dropdown",
   "comment" : ""
 }, {
   "message" : "Email Address",
@@ -8851,6 +9229,9 @@
   "message" : "Send an email with a notification.  This email may optionally include a link to portal for sharing.",
   "comment" : ""
 }, {
+  "message" : "Sharing UI",
+  "comment" : ""
+}, {
   "message" : "Short name, no spaces, used in the URL of your photobooth, e.g. \"CC23\" instead of \"CreatorCon 2023\". ",
   "comment" : ""
 }, {
@@ -8882,9 +9263,6 @@
   "comment" : ""
 }, {
   "message" : "The position of the watermark image on the output snapshot. Choices are \"top-left\", \"top-center\", \"top-right\", \"bottom-left\", \"bottom-center\" (default), \"bottom-right\" and \"center\".",
-  "comment" : ""
-}, {
-  "message" : "The type of UI for Sharing",
   "comment" : ""
 }, {
   "message" : "Watermark Image Height in Pixels",
@@ -9285,20 +9663,31 @@
         "name": "rando",
         "shape": "",
         "valueType": "string"
+    },
+    {
+        "fieldType": "boolean",
+        "id": "",
+        "initialValue": {
+            "type": "JSON_LITERAL",
+            "value": false
+        },
+        "name": "aiProcessingOffered",
+        "shape": "",
+        "valueType": "boolean"
     }
 ]</state_properties>
         <sys_class_name>sys_ux_macroponent</sys_class_name>
         <sys_created_by>jon.lind</sys_created_by>
         <sys_created_on>2023-05-02 20:11:01</sys_created_on>
         <sys_id>11dd4b7547e6e110552caf52736d4361</sys_id>
-        <sys_mod_count>125</sys_mod_count>
+        <sys_mod_count>141</sys_mod_count>
         <sys_name>Home Stylized</sys_name>
         <sys_package display_value="Photobooth App" source="x_snc_pb_app">baa73cb74742dd10552caf52736d43f1</sys_package>
         <sys_policy/>
         <sys_scope display_value="Photobooth App">baa73cb74742dd10552caf52736d43f1</sys_scope>
         <sys_update_name>sys_ux_macroponent_11dd4b7547e6e110552caf52736d4361</sys_update_name>
         <sys_updated_by>jon.lind</sys_updated_by>
-        <sys_updated_on>2024-04-30 16:53:37</sys_updated_on>
+        <sys_updated_on>2024-04-30 22:51:22</sys_updated_on>
     </sys_ux_macroponent>
     <sys_translated_text action="delete_multiple" query="documentkey=11dd4b7547e6e110552caf52736d4361"/>
 </record_update>
