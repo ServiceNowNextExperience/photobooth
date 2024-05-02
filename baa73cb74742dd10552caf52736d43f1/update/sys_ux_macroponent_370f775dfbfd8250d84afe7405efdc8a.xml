@@ -378,14 +378,14 @@
                                                 },
                                                 "tag": {
                                                     "type": "JSON_LITERAL",
-                                                    "value": "h1"
+                                                    "value": "h2"
                                                 },
                                                 "text": {
                                                     "type": "TRANSLATION_LITERAL",
                                                     "value": {
                                                         "code": null,
                                                         "comment": "",
-                                                        "message": "Looking good! This 2x2 has been sent to your email.  Use the Next button to scroll through the pics for AI processing and sharing."
+                                                        "message": "Looking good! This has been sent to your email.  Scan your badge to start over or continue to add a Gen AI background or to share to the Photo Board."
                                                     }
                                                 }
                                             },
@@ -449,7 +449,7 @@
                                                             },
                                                             "tag": {
                                                                 "type": "JSON_LITERAL",
-                                                                "value": "h1"
+                                                                "value": "h2"
                                                             },
                                                             "text": {
                                                                 "type": "TRANSLATION_LITERAL",
@@ -3108,7 +3108,7 @@
                                     "type": "MACROPONENT"
                                 },
                                 "elementId": "button_4",
-                                "elementLabel": "Next Photo Button",
+                                "elementLabel": "Get Started Button",
                                 "eventMappings": [
                                     {
                                         "eventMappingId": "clvgxhvbxaaddcciddbhhtcdjseeeeaas",
@@ -3153,10 +3153,136 @@
                                             },
                                             "type": "CONTEXT_BINDING"
                                         },
-                                        "operator": "&gt;=",
+                                        "operator": "NOT_EQUAL",
                                         "right": {
                                             "type": "JSON_LITERAL",
-                                            "value": 4
+                                            "value": 0
+                                        }
+                                    },
+                                    "type": "BINARY"
+                                },
+                                "preset": null,
+                                "propertyValues": {
+                                    "configAria": {
+                                        "type": "JSON_LITERAL",
+                                        "value": {}
+                                    },
+                                    "disabled": {
+                                        "type": "JSON_LITERAL",
+                                        "value": false
+                                    },
+                                    "icon": {
+                                        "type": "JSON_LITERAL",
+                                        "value": null
+                                    },
+                                    "label": {
+                                        "type": "TRANSLATION_LITERAL",
+                                        "value": {
+                                            "code": null,
+                                            "comment": "",
+                                            "message": "Share and Modify Your Snaps ►"
+                                        }
+                                    },
+                                    "size": {
+                                        "type": "JSON_LITERAL",
+                                        "value": "lg"
+                                    },
+                                    "tooltipContent": {
+                                        "type": "TRANSLATION_LITERAL",
+                                        "value": {
+                                            "code": null,
+                                            "comment": "",
+                                            "message": "Share and Modify your Snapshots"
+                                        }
+                                    },
+                                    "variant": {
+                                        "type": "JSON_LITERAL",
+                                        "value": "primary"
+                                    }
+                                },
+                                "slot": null,
+                                "styles": null
+                            },
+                            {
+                                "definition": {
+                                    "id": "d37ce8abca89d02905fed903c8e34d8e",
+                                    "type": "MACROPONENT"
+                                },
+                                "elementId": "button_7",
+                                "elementLabel": "Button 7",
+                                "eventMappings": [
+                                    {
+                                        "eventMappingId": "clvgxhvbxaaddcciddbhhtcdjseeeeaas",
+                                        "isConfiguration": false,
+                                        "offRowStorageId": null,
+                                        "sourceEventApiName": "sn_button.NOW_BUTTON#CLICKED",
+                                        "sourceEventCorrelationId": null,
+                                        "sourceEventDefinition": {
+                                            "apiName": "sn_button.NOW_BUTTON#CLICKED",
+                                            "id": null,
+                                            "type": "UXEVENT"
+                                        },
+                                        "sourceEventSysId": null,
+                                        "targets": [
+                                            {
+                                                "broker": null,
+                                                "clientScript": {
+                                                    "payload": {
+                                                        "type": "JSON_LITERAL",
+                                                        "value": {}
+                                                    },
+                                                    "sysId": "9c1f3f5dfbfd8250d84afe7405efdc0d"
+                                                },
+                                                "conditional": null,
+                                                "declarativeAction": null,
+                                                "event": null,
+                                                "operation": null,
+                                                "targetId": "clvgxhvbxaaddccjddbhhtgggeeiikwccff",
+                                                "type": "CLIENT_SCRIPT"
+                                            }
+                                        ]
+                                    }
+                                ],
+                                "isHidden": {
+                                    "operation": {
+                                        "left": {
+                                            "operation": {
+                                                "left": {
+                                                    "binding": {
+                                                        "address": [
+                                                            "snapshotIndex"
+                                                        ],
+                                                        "category": "props"
+                                                    },
+                                                    "type": "CONTEXT_BINDING"
+                                                },
+                                                "operator": "&gt;=",
+                                                "right": {
+                                                    "type": "JSON_LITERAL",
+                                                    "value": 4
+                                                }
+                                            },
+                                            "type": "BINARY"
+                                        },
+                                        "operator": "OR",
+                                        "right": {
+                                            "operation": {
+                                                "left": {
+                                                    "binding": {
+                                                        "address": [
+                                                            "snapshotIndex"
+                                                        ],
+                                                        "category": "props"
+                                                    },
+                                                    "type": "CONTEXT_BINDING"
+                                                },
+                                                "operator": "EQUAL",
+                                                "right": {
+                                                    "type": "JSON_LITERAL",
+                                                    "value": 0
+                                                }
+                                            },
+                                            "type": "BINARY"
                                         }
                                     },
                                     "type": "BINARY"
@@ -3365,6 +3491,19 @@
                                     },
                                     {
                                         "element_id": "button_4",
+                                        "styles": {
+                                            "--now-button--primary--background-color": "134, 237, 120",
+                                            "--now-button--primary--background-color--active": "134, 237, 120",
+                                            "--now-button--primary--background-color--hover": "134, 237, 120",
+                                            "--now-button--primary--border-color": "3,45,66",
+                                            "--now-button--primary--border-color--active": "3,45,66",
+                                            "--now-button--primary--border-color--hover": "3,45,66",
+                                            "--now-button--primary--border-radius": ".75rem",
+                                            "--now-button--primary--color": "3,45,66"
+                                        }
+                                    },
+                                    {
+                                        "element_id": "button_7",
                                         "styles": {
                                             "--now-button--primary--background-color": "134, 237, 120",
                                             "--now-button--primary--background-color--active": "134, 237, 120",
@@ -3913,7 +4052,7 @@
                             "sysId": "0404f68486f1baab1dc7ef2a27a3de50"
                         },
                         "operation": null,
-                        "targetId": "clvccynmfqaaddddcddbhhpxvocmcuf",
+                        "targetId": "clvodrvxxaabbcceddbiiaaiffaazfibe",
                         "type": "EVENT"
                     }
                 ]
@@ -4107,6 +4246,109 @@
             "table": {
                 "type": "JSON_LITERAL",
                 "value": "x_snc_pb_core_request"
+            }
+        },
+        "readEvaluationMode": "EAGER"
+    },
+    {
+        "definition": {
+            "id": "b997a84053021010cbc2ddeeff7b1228",
+            "type": "COMPOSITE"
+        },
+        "elementId": "look_up_properties",
+        "elementLabel": "Look up Properties",
+        "eventMappings": [
+            {
+                "eventMappingId": "clvpdgkeecaabbffwddbiiaayxdddmhhjff",
+                "isConfiguration": false,
+                "offRowStorageId": null,
+                "sourceEventApiName": "sn_uxf.DATA_FETCH_SUCCEEDED",
+                "sourceEventCorrelationId": null,
+                "sourceEventDefinition": {
+                    "apiName": "sn_uxf.DATA_FETCH_SUCCEEDED",
+                    "id": null,
+                    "type": "UXEVENT"
+                },
+                "sourceEventSysId": null,
+                "targets": [
+                    {
+                        "broker": null,
+                        "clientScript": {
+                            "payload": {
+                                "type": "JSON_LITERAL",
+                                "value": {}
+                            },
+                            "sysId": "501f3f5dfbfd8250d84afe7405efdc0a"
+                        },
+                        "conditional": null,
+                        "declarativeAction": null,
+                        "event": null,
+                        "operation": null,
+                        "targetId": "clvpdgkeecaabbffxddbiiaaiioibccmrff",
+                        "type": "CLIENT_SCRIPT"
+                    },
+                    {
+                        "broker": null,
+                        "clientScript": null,
+                        "conditional": null,
+                        "declarativeAction": null,
+                        "event": {
+                            "apiName": "sn_uxf.MACROPONENT_STATE_UPDATE_REQUESTED",
+                            "payload": {
+                                "script": {
+                                    "apiVersion": "1.0.0",
+                                    "controllerElementId": null,
+                                    "inlineScript": "/**\n * @param {params} params\n * @param {api} params.api\n * @param {any} params.event\n */\nfunction evaluateEvent({\n    api,\n    event\n}) {\n\tconst properties = api.data.look_up_properties.results;\n\tconst value = findValueByName(properties, \"x_snc_pb_out.photoroom.sampleprompts\");\n\n    return {\n        propName : \"aiBackgroundPrompts\",\n        value\n    };\n\n    function findValueByName(data, name) {\n        const item = data.find(obj =&gt; obj.name.value === name);\n        return item ? JSON.parse(item.value.value) : null;\n    }\n}",
+                                    "scriptSysId": null,
+                                    "target": null
+                                },
+                                "type": "CLIENT_TRANSFORM_SCRIPT"
+                            },
+                            "sysId": "32408b42ff7a10109046e490703bf176"
+                        },
+                        "operation": null,
+                        "targetId": "clvpdinnaaaabbggoddbiiaasdlmjwvjj",
+                        "type": "EVENT"
+                    }
+                ]
+            }
+        ],
+        "inputValues": {
+            "encodedQuery": {
+                "type": "JSON_LITERAL",
+                "value": "nameINx_snc_pb_out.photoroom.sampleprompts"
+            },
+            "limit": {
+                "type": "JSON_LITERAL",
+                "value": "1000"
+            },
+            "offset": {
+                "type": "JSON_LITERAL",
+                "value": null
+            },
+            "orderBy": {
+                "type": "JSON_LITERAL",
+                "value": "name"
+            },
+            "queryCategory": {
+                "type": "JSON_LITERAL",
+                "value": ""
+            },
+            "returnFieldMetadata": {
+                "type": "JSON_LITERAL",
+                "value": false
+            },
+            "returnFields": {
+                "type": "JSON_LITERAL",
+                "value": "value"
+            },
+            "sortType": {
+                "type": "JSON_LITERAL",
+                "value": "asc"
+            },
+            "table": {
+                "type": "JSON_LITERAL",
+                "value": "sys_properties"
             }
         },
         "readEvaluationMode": "EAGER"
@@ -4377,7 +4619,7 @@
   "message" : "Here we go--this may take up to 10 seconds",
   "comment" : ""
 }, {
-  "message" : "Looking good! This 2x2 has been sent to your email.  Use the Next button to scroll through the pics for AI processing and sharing.",
+  "message" : "Looking good! This has been sent to your email.  Scan your badge to start over or continue to add a Gen AI background or to share to the Photo Board.",
   "comment" : ""
 }, {
   "message" : "Next",
@@ -4396,6 +4638,12 @@
   "comment" : ""
 }, {
   "message" : "Return to the Photobooth",
+  "comment" : ""
+}, {
+  "message" : "Share and Modify Your Snaps ►",
+  "comment" : ""
+}, {
+  "message" : "Share and Modify your Snapshots",
   "comment" : ""
 }, {
   "message" : "Share this pic to the K24 Photo Board",
@@ -4447,10 +4695,7 @@
         "initialValue": {
             "type": "JSON_LITERAL",
             "value": [
-                "Standing on the moon",
-                "Green and sparkly",
-                "Standing in the forest",
-                "On a city street with neon in the background"
+                
             ]
         },
         "name": "aiBackgroundPrompts",
@@ -4505,14 +4750,14 @@
         <sys_created_by>jon.lind</sys_created_by>
         <sys_created_on>2024-04-25 20:04:20</sys_created_on>
         <sys_id>370f775dfbfd8250d84afe7405efdc8a</sys_id>
-        <sys_mod_count>206</sys_mod_count>
+        <sys_mod_count>226</sys_mod_count>
         <sys_name>Results Stylized</sys_name>
         <sys_package display_value="Photobooth App" source="x_snc_pb_app">baa73cb74742dd10552caf52736d43f1</sys_package>
         <sys_policy/>
         <sys_scope display_value="Photobooth App">baa73cb74742dd10552caf52736d43f1</sys_scope>
         <sys_update_name>sys_ux_macroponent_370f775dfbfd8250d84afe7405efdc8a</sys_update_name>
         <sys_updated_by>jon.lind</sys_updated_by>
-        <sys_updated_on>2024-05-01 18:24:02</sys_updated_on>
+        <sys_updated_on>2024-05-02 16:36:50</sys_updated_on>
     </sys_ux_macroponent>
     <sys_translated_text action="delete_multiple" query="documentkey=370f775dfbfd8250d84afe7405efdc8a"/>
 </record_update>

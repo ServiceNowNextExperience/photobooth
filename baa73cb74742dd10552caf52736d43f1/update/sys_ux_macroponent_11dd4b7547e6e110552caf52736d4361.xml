@@ -77,7 +77,38 @@
                                             {
                                                 "broker": null,
                                                 "clientScript": null,
-                                                "conditional": null,
+                                                "conditional": {
+                                                    "operation": {
+                                                        "left": {
+                                                            "binding": {
+                                                                "address": [
+                                                                    "enabled"
+                                                                ]
+                                                            },
+                                                            "type": "STATE_BINDING"
+                                                        },
+                                                        "operator": "AND",
+                                                        "right": {
+                                                            "operation": {
+                                                                "left": {
+                                                                    "binding": {
+                                                                        "address": [
+                                                                            "enableCameraButton"
+                                                                        ]
+                                                                    },
+                                                                    "type": "STATE_BINDING"
+                                                                },
+                                                                "operator": "EQUAL",
+                                                                "right": {
+                                                                    "type": "JSON_LITERAL",
+                                                                    "value": "yes"
+                                                                }
+                                                            },
+                                                            "type": "BINARY"
+                                                        }
+                                                    },
+                                                    "type": "BINARY"
+                                                },
                                                 "declarativeAction": null,
                                                 "event": {
                                                     "apiName": "x_snc_pb_app.MODAL_SELECTED_RELAY_11dd4b7547e6e110552caf52736d4361",
@@ -86,10 +117,12 @@
                                                         "value": {
                                                             "bare": true,
                                                             "displayOptions": null,
+                                                            "headerLabel": null,
                                                             "modalId": "[component-id$='snapshot_modal']",
                                                             "showModal": true,
                                                             "viewportElementId": null,
                                                             "viewportFields": null,
+                                                            "viewportParams": null,
                                                             "viewportRoute": null
                                                         }
                                                     },
@@ -142,18 +175,8 @@
                                         "type": "MAP_CONTAINER"
                                     },
                                     "disabled": {
-                                        "operation": {
-                                            "operand": {
-                                                "binding": {
-                                                    "address": [
-                                                        "enabled"
-                                                    ]
-                                                },
-                                                "type": "STATE_BINDING"
-                                            },
-                                            "operator": "NOT"
-                                        },
-                                        "type": "UNARY"
+                                        "type": "JSON_LITERAL",
+                                        "value": false
                                     },
                                     "hasShadow": {
                                         "type": "JSON_LITERAL",
@@ -8176,7 +8199,7 @@
             },
             "returnFields": {
                 "type": "JSON_LITERAL",
-                "value": "camera_device_id,watermark_image,gap,watermark_image_position,chin_height,fill_style,name,watermark_image_height,completion_message,idle_message,long_name,sharing_ui,ai_processing_offered"
+                "value": "camera_device_id,watermark_image,gap,watermark_image_position,chin_height,fill_style,name,watermark_image_height,completion_message,idle_message,long_name,sharing_ui,ai_processing_offered,enable_camera_button"
             },
             "sortType": {
                 "type": "JSON_LITERAL",
@@ -8980,26 +9003,7 @@
         <handled_events/>
         <interactions/>
         <interfaces/>
-        <internal_event_mappings>{
-    "MACROPONENT_READY": [
-        {
-            "broker": null,
-            "clientScript": {
-                "payload": {
-                    "type": "JSON_LITERAL",
-                    "value": {}
-                },
-                "sysId": "4add4b7547e6e110552caf52736d43ea"
-            },
-            "conditional": null,
-            "declarativeAction": null,
-            "event": null,
-            "operation": null,
-            "targetId": "clvmmnntddaabbhhtddbiiaaccddggesjffcc",
-            "type": "CLIENT_SCRIPT"
-        }
-    ]
-}</internal_event_mappings>
+        <internal_event_mappings>{}</internal_event_mappings>
         <layout>{
     "default": {
         "children": null,
@@ -9674,20 +9678,30 @@
         "name": "aiProcessingOffered",
         "shape": "",
         "valueType": "boolean"
+    },
+    {
+        "id": "",
+        "initialValue": {
+            "type": "JSON_LITERAL",
+            "value": "yes"
+        },
+        "name": "enableCameraButton",
+        "shape": "",
+        "valueType": "string"
     }
 ]</state_properties>
         <sys_class_name>sys_ux_macroponent</sys_class_name>
         <sys_created_by>jon.lind</sys_created_by>
         <sys_created_on>2023-05-02 20:11:01</sys_created_on>
         <sys_id>11dd4b7547e6e110552caf52736d4361</sys_id>
-        <sys_mod_count>141</sys_mod_count>
+        <sys_mod_count>153</sys_mod_count>
         <sys_name>Home Stylized</sys_name>
         <sys_package display_value="Photobooth App" source="x_snc_pb_app">baa73cb74742dd10552caf52736d43f1</sys_package>
         <sys_policy/>
         <sys_scope display_value="Photobooth App">baa73cb74742dd10552caf52736d43f1</sys_scope>
         <sys_update_name>sys_ux_macroponent_11dd4b7547e6e110552caf52736d4361</sys_update_name>
         <sys_updated_by>jon.lind</sys_updated_by>
-        <sys_updated_on>2024-04-30 22:51:22</sys_updated_on>
+        <sys_updated_on>2024-05-02 16:23:47</sys_updated_on>
     </sys_ux_macroponent>
     <sys_translated_text action="delete_multiple" query="documentkey=11dd4b7547e6e110552caf52736d4361"/>
 </record_update>

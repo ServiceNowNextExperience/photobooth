@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_client_script">
+    <sys_ux_client_script action="DELETE">
+        <controller_preset/>
+        <includes/>
+        <macroponent display_value="Home Stylized">11dd4b7547e6e110552caf52736d4361</macroponent>
+        <name>Debug Data</name>
+        <preset/>
+        <required_translations>[
+    
+]</required_translations>
+        <script><![CDATA[/**
+* @param {params} params
+* @param {api} params.api
+* @param {any} params.event
+* @param {any} params.imports
+* @param {ApiHelpers} params.helpers
+*/
+function handler({api, event, helpers, imports}) {
+    console.log("!!!!!!!");
+    console.log("!!!!!!!", api.data.look_up_photobooths[0].enable_camera_button);
+}]]></script>
+        <script_api_version>2.0.0</script_api_version>
+        <sys_class_name>sys_ux_client_script</sys_class_name>
+        <sys_created_by>jon.lind</sys_created_by>
+        <sys_created_on>2024-05-02 16:15:39</sys_created_on>
+        <sys_id>fc4d076beb35c21036e7f734bad0cd65</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>Debug Data</sys_name>
+        <sys_package display_value="Photobooth App" source="x_snc_pb_app">baa73cb74742dd10552caf52736d43f1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Photobooth App">baa73cb74742dd10552caf52736d43f1</sys_scope>
+        <sys_update_name>sys_ux_client_script_fc4d076beb35c21036e7f734bad0cd65</sys_update_name>
+        <sys_updated_by>jon.lind</sys_updated_by>
+        <sys_updated_on>2024-05-02 16:16:50</sys_updated_on>
+        <target>macroponent</target>
+        <type>default</type>
+    </sys_ux_client_script>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Photobooth App">baa73cb74742dd10552caf52736d43f1</application>
+        <file_path/>
+        <instance_id>15b69fc31b60025419254089bd4bcb07</instance_id>
+        <instance_name>wiffleball</instance_name>
+        <name>sys_ux_client_script_fc4d076beb35c21036e7f734bad0cd65</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sys_ux_client_script"&gt;&lt;sys_ux_client_script action="INSERT_OR_UPDATE"&gt;&lt;controller_preset/&gt;&lt;includes/&gt;&lt;macroponent display_value="Home Stylized"&gt;11dd4b7547e6e110552caf52736d4361&lt;/macroponent&gt;&lt;name&gt;Debug Data&lt;/name&gt;&lt;preset/&gt;&lt;required_translations&gt;[
+    
+]&lt;/required_translations&gt;&lt;script&gt;&lt;![CDATA[/**
+* @param {params} params
+* @param {api} params.api
+* @param {any} params.event
+* @param {any} params.imports
+* @param {ApiHelpers} params.helpers
+*/
+function handler({api, event, helpers, imports}) {
+    console.log("!!!!!!!");
+    console.log("!!!!!!!", api.data.look_up_photobooths[0].enable_camera_button);
+}]]&gt;&lt;/script&gt;&lt;script_api_version&gt;2.0.0&lt;/script_api_version&gt;&lt;sys_class_name&gt;sys_ux_client_script&lt;/sys_class_name&gt;&lt;sys_created_by&gt;jon.lind&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2024-05-02 16:15:39&lt;/sys_created_on&gt;&lt;sys_id&gt;fc4d076beb35c21036e7f734bad0cd65&lt;/sys_id&gt;&lt;sys_mod_count&gt;3&lt;/sys_mod_count&gt;&lt;sys_name&gt;Debug Data&lt;/sys_name&gt;&lt;sys_package display_value="Photobooth App" source="x_snc_pb_app"&gt;baa73cb74742dd10552caf52736d43f1&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Photobooth App"&gt;baa73cb74742dd10552caf52736d43f1&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_ux_client_script_fc4d076beb35c21036e7f734bad0cd65&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;jon.lind&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2024-05-02 16:16:50&lt;/sys_updated_on&gt;&lt;target&gt;macroponent&lt;/target&gt;&lt;type&gt;default&lt;/type&gt;&lt;/sys_ux_client_script&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>-296024124</payload_hash>
+        <record_name>Debug Data</record_name>
+        <reverted_from/>
+        <source>8521e579fb710210d84afe7405efdc68</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>jon.lind</sys_created_by>
+        <sys_created_on>2024-05-02 16:16:50</sys_created_on>
+        <sys_id>5b1e4babeb35c21036e7f734bad0cdad</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>18f3a181f490000001</sys_recorded_at>
+        <sys_updated_by>jon.lind</sys_updated_by>
+        <sys_updated_on>2024-05-02 16:16:50</sys_updated_on>
+        <type>UX Client Script</type>
+        <update_guid>131e4bab3835c210124a94f374733aad</update_guid>
+        <update_guid_history>131e4bab3835c210124a94f374733aad:-296024124,cadd07ab8d35c210444f8e4d69cd2609:-628532492</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>jon.lind</sys_created_by>
+        <sys_created_on>2024-05-02 16:23:48</sys_created_on>
+        <sys_db_object display_value="" name="sys_ux_client_script">sys_ux_client_script</sys_db_object>
+        <sys_id>5fc825dba9cd456080d7c7788d50bc40</sys_id>
+        <sys_metadata>fc4d076beb35c21036e7f734bad0cd65</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Debug Data</sys_name>
+        <sys_package display_value="Photobooth App" source="x_snc_pb_app">baa73cb74742dd10552caf52736d43f1</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Photobooth App">baa73cb74742dd10552caf52736d43f1</sys_scope>
+        <sys_scope_delete display_value="">868a264ca04c47ed906cd87c81ce8d11</sys_scope_delete>
+        <sys_update_name>sys_ux_client_script_fc4d076beb35c21036e7f734bad0cd65</sys_update_name>
+        <sys_update_version display_value="sys_ux_client_script_fc4d076beb35c21036e7f734bad0cd65">5b1e4babeb35c21036e7f734bad0cdad</sys_update_version>
+        <sys_updated_by>jon.lind</sys_updated_by>
+        <sys_updated_on>2024-05-02 16:23:48</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>
