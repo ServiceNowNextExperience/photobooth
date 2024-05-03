@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_event">
+    <sys_ux_event action="INSERT_OR_UPDATE">
+        <description/>
+        <event_name>CONTENT_UPDATED_RELAY_11dd4b7547e6e110552caf52736d4361</event_name>
+        <explicit_api_name/>
+        <interfaces/>
+        <label>Add parameters to URL Relay (Home Stylized)</label>
+        <props>[
+    {
+        "defaultValue": null,
+        "description": "Add parameters to the URL",
+        "fieldType": "json",
+        "label": "Parameters",
+        "name": "params",
+        "type": "json",
+        "typeMetadata": {
+            "schema": {
+                "properties": {
+                    "selectedIndex": {
+                        "type": "string"
+                    }
+                },
+                "type": "object"
+            }
+        },
+        "valueType": "string"
+    }
+]</props>
+        <required_translations>[ {
+  "message" : "Add parameters to the URL",
+  "comment" : ""
+}, {
+  "message" : "Parameters",
+  "comment" : ""
+} ]</required_translations>
+        <schema_version>1.0.0</schema_version>
+        <sys_class_name>sys_ux_event</sys_class_name>
+        <sys_created_by>jon.lind</sys_created_by>
+        <sys_created_on>2024-05-03 16:40:24</sys_created_on>
+        <sys_id>05c80848eb4e061036e7f734bad0cd08</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Add parameters to URL Relay (Home Stylized)</sys_name>
+        <sys_package display_value="Photobooth App" source="x_snc_pb_app">baa73cb74742dd10552caf52736d43f1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Photobooth App">baa73cb74742dd10552caf52736d43f1</sys_scope>
+        <sys_update_name>sys_ux_event_05c80848eb4e061036e7f734bad0cd08</sys_update_name>
+        <sys_updated_by>jon.lind</sys_updated_by>
+        <sys_updated_on>2024-05-03 16:40:24</sys_updated_on>
+    </sys_ux_event>
+    <sys_translated_text action="delete_multiple" query="documentkey=05c80848eb4e061036e7f734bad0cd08"/>
+</record_update>

@@ -1018,10 +1018,11 @@
                                     "refreshRequested": {
                                         "binding": {
                                             "address": [
-                                                "refreshRequested"
-                                            ]
+                                                "reset"
+                                            ],
+                                            "category": "props"
                                         },
-                                        "type": "STATE_BINDING"
+                                        "type": "CONTEXT_BINDING"
                                     },
                                     "shutterSoundFile": {
                                         "type": "JSON_LITERAL",
@@ -2606,7 +2607,7 @@
                                             "elementLabel": "Refresh Button",
                                             "eventMappings": [
                                                 {
-                                                    "eventMappingId": "clgggopeeveaaaaggxddbhhvaatbcxffuii",
+                                                    "eventMappingId": "clvqwhhbcaabbccggddbhhsiivcsogocc",
                                                     "isConfiguration": false,
                                                     "offRowStorageId": null,
                                                     "sourceEventApiName": "sn_button.NOW_BUTTON_ICONIC#CLICKED",
@@ -2624,21 +2625,21 @@
                                                             "conditional": null,
                                                             "declarativeAction": null,
                                                             "event": {
-                                                                "apiName": "sn_uxf.MACROPONENT_STATE_UPDATE_REQUESTED",
+                                                                "apiName": "x_snc_pb_app.CONTENT_UPDATED_RELAY_11dd4b7547e6e110552caf52736d4361",
                                                                 "payload": {
                                                                     "script": {
                                                                         "apiVersion": "1.0.0",
                                                                         "controllerElementId": null,
-                                                                        "inlineScript": "/**\n* @param {params} params\n* @param {api} params.api\n* @param {any} params.event\n*/\nfunction evaluateEvent({api, event}) {\n\treturn {\n\t\tpropName: \"refreshRequested\",\n\t\tvalue: Date.now()\n\t};\n}",
+                                                                        "inlineScript": "/**\n* @param {params} params\n* @param {api} params.api\n* @param {any} params.event\n*/\nfunction evaluateEvent({api, event}) {\n\tconst reset = Date.now();\n\treturn {\n\t\tparams: {reset}\n\t};\n}",
                                                                         "scriptSysId": null,
                                                                         "target": null
                                                                     },
                                                                     "type": "CLIENT_TRANSFORM_SCRIPT"
                                                                 },
-                                                                "sysId": "32408b42ff7a10109046e490703bf176"
+                                                                "sysId": "05c80848eb4e061036e7f734bad0cd08"
                                                             },
                                                             "operation": null,
-                                                            "targetId": "clgggopeeveaaaaggyddbhhvtiihggzlqt",
+                                                            "targetId": "clvqwhhbcaabbcchhddbhhsbrehipggii",
                                                             "type": "EVENT"
                                                         }
                                                     ]
@@ -9152,7 +9153,7 @@
     }
 ]</data>
         <description/>
-        <dispatched_events>9f7e47b547e6e110552caf52736d436c,5f7e8b7547e6e110552caf52736d439e,9d2e9ffc870a651089790fe5dabb35bd,e7e6e0c54775a510552caf52736d437e</dispatched_events>
+        <dispatched_events>9f7e47b547e6e110552caf52736d436c,5f7e8b7547e6e110552caf52736d439e,9d2e9ffc870a651089790fe5dabb35bd,e7e6e0c54775a510552caf52736d437e,05c80848eb4e061036e7f734bad0cd08</dispatched_events>
         <ext_controller_dep/>
         <extends display_value="Page Template">19be392623033300f4b4c50947bf65ba</extends>
         <extension_point/>
@@ -9710,18 +9711,6 @@
     },
     {
         "description": "",
-        "fieldType": "string",
-        "initialValue": {
-            "type": "JSON_LITERAL",
-            "value": null
-        },
-        "label": "refreshRequested",
-        "name": "refreshRequested",
-        "shape": "",
-        "valueType": "string"
-    },
-    {
-        "description": "",
         "fieldType": "boolean",
         "initialValue": {
             "type": "JSON_LITERAL",
@@ -9856,14 +9845,14 @@
         <sys_created_by>jon.lind</sys_created_by>
         <sys_created_on>2023-05-02 20:11:01</sys_created_on>
         <sys_id>11dd4b7547e6e110552caf52736d4361</sys_id>
-        <sys_mod_count>157</sys_mod_count>
+        <sys_mod_count>164</sys_mod_count>
         <sys_name>Home Stylized</sys_name>
         <sys_package display_value="Photobooth App" source="x_snc_pb_app">baa73cb74742dd10552caf52736d43f1</sys_package>
         <sys_policy/>
         <sys_scope display_value="Photobooth App">baa73cb74742dd10552caf52736d43f1</sys_scope>
         <sys_update_name>sys_ux_macroponent_11dd4b7547e6e110552caf52736d4361</sys_update_name>
         <sys_updated_by>jon.lind</sys_updated_by>
-        <sys_updated_on>2024-05-03 15:22:11</sys_updated_on>
+        <sys_updated_on>2024-05-03 16:40:25</sys_updated_on>
     </sys_ux_macroponent>
     <sys_translated_text action="delete_multiple" query="documentkey=11dd4b7547e6e110552caf52736d4361"/>
 </record_update>
