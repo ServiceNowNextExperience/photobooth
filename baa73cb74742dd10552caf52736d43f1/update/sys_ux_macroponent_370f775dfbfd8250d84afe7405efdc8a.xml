@@ -456,7 +456,7 @@
                                                                 "value": {
                                                                     "code": null,
                                                                     "comment": "",
-                                                                    "message": "Add a background to your photo with GenAI!"
+                                                                    "message": "Upgrade your background with GenAI!"
                                                                 }
                                                             }
                                                         },
@@ -2348,20 +2348,20 @@
                             },
                             {
                                 "definition": {
-                                    "id": "844d56291d91b330f2269558e3f47701",
+                                    "id": "d37ce8abca89d02905fed903c8e34d8e",
                                     "type": "MACROPONENT"
                                 },
-                                "elementId": "button_iconic_2",
-                                "elementLabel": "Home Button",
+                                "elementId": "button_8",
+                                "elementLabel": "Button 8",
                                 "eventMappings": [
                                     {
-                                        "eventMappingId": "clvmnaakofaabbddlddbhhscggidfpbbbb",
+                                        "eventMappingId": "clvrccamwddaaccjjeddbiiaaibbbuhxggt",
                                         "isConfiguration": false,
                                         "offRowStorageId": null,
-                                        "sourceEventApiName": "sn_button.NOW_BUTTON_ICONIC#CLICKED",
+                                        "sourceEventApiName": "sn_button.NOW_BUTTON#CLICKED",
                                         "sourceEventCorrelationId": null,
                                         "sourceEventDefinition": {
-                                            "apiName": "sn_button.NOW_BUTTON_ICONIC#CLICKED",
+                                            "apiName": "sn_button.NOW_BUTTON#CLICKED",
                                             "id": null,
                                             "type": "UXEVENT"
                                         },
@@ -2380,49 +2380,37 @@
                                                 "declarativeAction": null,
                                                 "event": null,
                                                 "operation": null,
-                                                "targetId": "clvmnaakogaabbddmddbhhsknccaxiihhq",
+                                                "targetId": "clvrccamwddaaccjjfddbiiaaahcctddojee",
                                                 "type": "CLIENT_SCRIPT"
                                             }
                                         ]
                                     }
                                 ],
                                 "isHidden": {
-                                    "type": "JSON_LITERAL"
+                                    "type": "JSON_LITERAL",
+                                    "value": null
                                 },
                                 "preset": null,
                                 "propertyValues": {
-                                    "bare": {
-                                        "type": "JSON_LITERAL",
-                                        "value": false
-                                    },
                                     "configAria": {
-                                        "container": {
-                                            "aria-label": {
-                                                "type": "TRANSLATION_LITERAL",
-                                                "value": {
-                                                    "code": null,
-                                                    "comment": "",
-                                                    "message": "Return to the Photobooth"
-                                                }
-                                            }
-                                        },
-                                        "type": "MAP_CONTAINER"
+                                        "type": "JSON_LITERAL",
+                                        "value": {}
                                     },
                                     "disabled": {
                                         "type": "JSON_LITERAL",
                                         "value": false
                                     },
-                                    "hidePadding": {
-                                        "type": "JSON_LITERAL",
-                                        "value": false
-                                    },
-                                    "highContrast": {
-                                        "type": "JSON_LITERAL",
-                                        "value": false
-                                    },
                                     "icon": {
                                         "type": "JSON_LITERAL",
-                                        "value": "camera-fill"
+                                        "value": null
+                                    },
+                                    "label": {
+                                        "type": "TRANSLATION_LITERAL",
+                                        "value": {
+                                            "code": null,
+                                            "comment": "",
+                                            "message": "⏮ Start Over"
+                                        }
                                     },
                                     "size": {
                                         "type": "JSON_LITERAL",
@@ -2433,12 +2421,12 @@
                                         "value": {
                                             "code": null,
                                             "comment": "",
-                                            "message": "Return to the Photobooth"
+                                            "message": "Start over"
                                         }
                                     },
                                     "variant": {
                                         "type": "JSON_LITERAL",
-                                        "value": "primary"
+                                        "value": "secondary"
                                     }
                                 },
                                 "slot": null,
@@ -2458,16 +2446,16 @@
                                         }
                                     },
                                     {
-                                        "element_id": "button_iconic_2",
+                                        "element_id": "button_8",
                                         "styles": {
-                                            "--now-button--iconic--background-color": "134, 237, 120",
-                                            "--now-button--iconic--background-color--active": "134, 237, 120",
-                                            "--now-button--iconic--background-color--hover": "134, 237, 120",
-                                            "--now-button--iconic--border-color": "3,45,66",
-                                            "--now-button--iconic--border-color--active": "3,45,66",
-                                            "--now-button--iconic--border-color--hover": "3,45,66",
-                                            "--now-button--iconic--border-radius": ".75rem",
-                                            "--now-button--iconic--color": "3,45,66"
+                                            "--now-button--primary--background-color": "3,45,66,.05",
+                                            "--now-button--primary--background-color--active": "3,45,66,.05",
+                                            "--now-button--primary--background-color--hover": "3,45,66,.05",
+                                            "--now-button--primary--border-color": "3,45,66",
+                                            "--now-button--primary--border-color--active": "3,45,66",
+                                            "--now-button--primary--border-color--hover": "3,45,66",
+                                            "--now-button--primary--border-radius": ".75rem",
+                                            "--now-button--primary--color": "3,45,66"
                                         }
                                     }
                                 ],
@@ -3318,7 +3306,7 @@
                                         "value": {
                                             "code": null,
                                             "comment": "",
-                                            "message": "Next Photo ►"
+                                            "message": "Next Photo"
                                         }
                                     },
                                     "variant": {
@@ -4589,9 +4577,6 @@
     }
 ]</props>
         <required_translations>[ {
-  "message" : "Add a background to your photo with GenAI!",
-  "comment" : ""
-}, {
   "message" : "Add an AI prompt",
   "comment" : ""
 }, {
@@ -4625,6 +4610,9 @@
   "message" : "Next",
   "comment" : ""
 }, {
+  "message" : "Next Photo",
+  "comment" : ""
+}, {
   "message" : "Next Photo ►",
   "comment" : ""
 }, {
@@ -4635,9 +4623,6 @@
   "comment" : ""
 }, {
   "message" : "Return to Photobooth",
-  "comment" : ""
-}, {
-  "message" : "Return to the Photobooth",
   "comment" : ""
 }, {
   "message" : "Share and Modify Your Snaps ►",
@@ -4655,7 +4640,13 @@
   "message" : "Start over",
   "comment" : ""
 }, {
+  "message" : "Upgrade your background with GenAI!",
+  "comment" : ""
+}, {
   "message" : "Use an example prompt:",
+  "comment" : ""
+}, {
+  "message" : "⏮ Start Over",
   "comment" : ""
 } ]</required_translations>
         <root_component/>
@@ -4750,14 +4741,14 @@
         <sys_created_by>jon.lind</sys_created_by>
         <sys_created_on>2024-04-25 20:04:20</sys_created_on>
         <sys_id>370f775dfbfd8250d84afe7405efdc8a</sys_id>
-        <sys_mod_count>228</sys_mod_count>
+        <sys_mod_count>231</sys_mod_count>
         <sys_name>Results Stylized</sys_name>
         <sys_package display_value="Photobooth App" source="x_snc_pb_app">baa73cb74742dd10552caf52736d43f1</sys_package>
         <sys_policy/>
         <sys_scope display_value="Photobooth App">baa73cb74742dd10552caf52736d43f1</sys_scope>
         <sys_update_name>sys_ux_macroponent_370f775dfbfd8250d84afe7405efdc8a</sys_update_name>
         <sys_updated_by>jon.lind</sys_updated_by>
-        <sys_updated_on>2024-05-03 16:47:01</sys_updated_on>
+        <sys_updated_on>2024-05-03 19:22:30</sys_updated_on>
     </sys_ux_macroponent>
     <sys_translated_text action="delete_multiple" query="documentkey=370f775dfbfd8250d84afe7405efdc8a"/>
 </record_update>

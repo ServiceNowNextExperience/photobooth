@@ -1388,6 +1388,34 @@
                                 },
                                 "slot": null,
                                 "styles": null
+                            },
+                            {
+                                "definition": {
+                                    "id": "2d56f06d55f46bbd4e79b5e624beb940",
+                                    "type": "MACROPONENT"
+                                },
+                                "elementId": "rich_text_1",
+                                "elementLabel": "Rich text 1",
+                                "eventMappings": [
+                                    
+                                ],
+                                "isHidden": {
+                                    "type": "JSON_LITERAL",
+                                    "value": null
+                                },
+                                "preset": null,
+                                "propertyValues": {
+                                    "html": {
+                                        "type": "TRANSLATION_LITERAL",
+                                        "value": {
+                                            "code": null,
+                                            "comment": "",
+                                            "message": "&lt;h1&gt;1. Scan your badge to get started.&lt;/h1&gt;\n&lt;h1&gt;2. Wait for the countdown and then take four snapshots.&lt;/h1&gt;\n&lt;h1&gt;3. Continue on to share to the K24 Photo Board, via email or to modify it using GenAI!&lt;/h1&gt;"
+                                        }
+                                    }
+                                },
+                                "slot": null,
+                                "styles": null
                             }
                         ],
                         "layout": {
@@ -1414,6 +1442,12 @@
                                             "padding": "0.5rem",
                                             "padding-left": "20%",
                                             "padding-right": "20%"
+                                        }
+                                    },
+                                    {
+                                        "element_id": "rich_text_1",
+                                        "styles": {
+                                            "margin-left": "var(--now-scalable-space--sm)"
                                         }
                                     }
                                 ],
@@ -9264,6 +9298,9 @@
     }
 ]</props>
         <required_translations>[ {
+  "message" : "&lt;h1&gt;1. Scan your badge to get started.&lt;/h1&gt;\n&lt;h1&gt;2. Wait for the countdown and then take four snapshots.&lt;/h1&gt;\n&lt;h1&gt;3. Continue on to share to the K24 Photo Board, via email or to modify it using GenAI!&lt;/h1&gt;",
+  "comment" : ""
+}, {
   "message" : "AI Processing Offered",
   "comment" : ""
 }, {
@@ -9845,14 +9882,14 @@
         <sys_created_by>jon.lind</sys_created_by>
         <sys_created_on>2023-05-02 20:11:01</sys_created_on>
         <sys_id>11dd4b7547e6e110552caf52736d4361</sys_id>
-        <sys_mod_count>164</sys_mod_count>
+        <sys_mod_count>166</sys_mod_count>
         <sys_name>Home Stylized</sys_name>
         <sys_package display_value="Photobooth App" source="x_snc_pb_app">baa73cb74742dd10552caf52736d43f1</sys_package>
         <sys_policy/>
         <sys_scope display_value="Photobooth App">baa73cb74742dd10552caf52736d43f1</sys_scope>
         <sys_update_name>sys_ux_macroponent_11dd4b7547e6e110552caf52736d4361</sys_update_name>
         <sys_updated_by>jon.lind</sys_updated_by>
-        <sys_updated_on>2024-05-03 16:40:25</sys_updated_on>
+        <sys_updated_on>2024-05-03 19:24:17</sys_updated_on>
     </sys_ux_macroponent>
     <sys_translated_text action="delete_multiple" query="documentkey=11dd4b7547e6e110552caf52736d4361"/>
 </record_update>

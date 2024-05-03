@@ -754,7 +754,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>491f3f5dfbfd8250d84afe7405efdc2e</sys_id>
-        <sys_mod_count>226</sys_mod_count>
+        <sys_mod_count>229</sys_mod_count>
         <sys_name>Results Stylized</sys_name>
         <sys_overrides/>
         <sys_package display_value="Photobooth App" source="x_snc_pb_app">baa73cb74742dd10552caf52736d43f1</sys_package>
@@ -762,7 +762,7 @@
         <sys_scope display_value="Photobooth App">baa73cb74742dd10552caf52736d43f1</sys_scope>
         <sys_update_name>sys_ux_screen_491f3f5dfbfd8250d84afe7405efdc2e</sys_update_name>
         <sys_updated_by>jon.lind</sys_updated_by>
-        <sys_updated_on>2024-05-03 16:47:01</sys_updated_on>
+        <sys_updated_on>2024-05-03 19:22:30</sys_updated_on>
     </sys_ux_screen>
     <sys_translated_text action="delete_multiple" query="documentkey=491f3f5dfbfd8250d84afe7405efdc2e"/>
 </record_update>
