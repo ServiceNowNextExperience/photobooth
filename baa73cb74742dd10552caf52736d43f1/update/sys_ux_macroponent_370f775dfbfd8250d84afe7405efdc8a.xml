@@ -342,6 +342,46 @@
                                                 "id": "4335ba6dca80378f7ba7a67cd6667bec",
                                                 "type": "MACROPONENT"
                                             },
+                                            "elementId": "stylized_text_5",
+                                            "elementLabel": "Timeout Warning",
+                                            "eventMappings": [
+                                                
+                                            ],
+                                            "isHidden": {
+                                                "type": "JSON_LITERAL",
+                                                "value": null
+                                            },
+                                            "preset": null,
+                                            "propertyValues": {
+                                                "configAria": {
+                                                    "type": "JSON_LITERAL",
+                                                    "value": {}
+                                                },
+                                                "css": {
+                                                    "type": "JSON_LITERAL",
+                                                    "value": "* { color: red; }"
+                                                },
+                                                "tag": {
+                                                    "type": "JSON_LITERAL",
+                                                    "value": "h2"
+                                                },
+                                                "text": {
+                                                    "binding": {
+                                                        "address": [
+                                                            "timeoutMessage"
+                                                        ]
+                                                    },
+                                                    "type": "STATE_BINDING"
+                                                }
+                                            },
+                                            "slot": null,
+                                            "styles": null
+                                        },
+                                        {
+                                            "definition": {
+                                                "id": "4335ba6dca80378f7ba7a67cd6667bec",
+                                                "type": "MACROPONENT"
+                                            },
                                             "elementId": "stylized_text_1",
                                             "elementLabel": "2x2 Message",
                                             "eventMappings": [
@@ -525,7 +565,7 @@
                                                                         "type": "MACROPONENT"
                                                                     },
                                                                     "elementId": "button_1",
-                                                                    "elementLabel": "Button 1",
+                                                                    "elementLabel": "Suggested Prompt Button",
                                                                     "eventMappings": [
                                                                         {
                                                                             "eventMappingId": "clvfpxjjgaaaccraddbhhtfffccyaacchgg",
@@ -601,6 +641,22 @@
                                                                                     "operation": null,
                                                                                     "targetId": "clvfpyccjjwaaccssddbhhtgghbsbdehh",
                                                                                     "type": "EVENT"
+                                                                                },
+                                                                                {
+                                                                                    "broker": null,
+                                                                                    "clientScript": {
+                                                                                        "payload": {
+                                                                                            "type": "JSON_LITERAL",
+                                                                                            "value": {}
+                                                                                        },
+                                                                                        "sysId": "01a05f6feb35c21036e7f734bad0cd46"
+                                                                                    },
+                                                                                    "conditional": null,
+                                                                                    "declarativeAction": null,
+                                                                                    "event": null,
+                                                                                    "operation": null,
+                                                                                    "targetId": "clvreeffyjjqaabbffuddbiiaadrsitlhhg",
+                                                                                    "type": "CLIENT_SCRIPT"
                                                                                 }
                                                                             ]
                                                                         }
@@ -720,46 +776,6 @@
                                                     },
                                                     {
                                                         "definition": {
-                                                            "id": "4335ba6dca80378f7ba7a67cd6667bec",
-                                                            "type": "MACROPONENT"
-                                                        },
-                                                        "elementId": "stylized_text_4",
-                                                        "elementLabel": "Or write your own",
-                                                        "eventMappings": [
-                                                            
-                                                        ],
-                                                        "isHidden": {
-                                                            "type": "JSON_LITERAL",
-                                                            "value": true
-                                                        },
-                                                        "preset": null,
-                                                        "propertyValues": {
-                                                            "configAria": {
-                                                                "type": "JSON_LITERAL",
-                                                                "value": {}
-                                                            },
-                                                            "css": {
-                                                                "type": "JSON_LITERAL",
-                                                                "value": "* {\n    margin: 0;\n    padding: 0;\n    font-size: 1rem;\n}"
-                                                            },
-                                                            "tag": {
-                                                                "type": "JSON_LITERAL",
-                                                                "value": "p"
-                                                            },
-                                                            "text": {
-                                                                "type": "TRANSLATION_LITERAL",
-                                                                "value": {
-                                                                    "code": null,
-                                                                    "comment": "",
-                                                                    "message": "Or write your own:"
-                                                                }
-                                                            }
-                                                        },
-                                                        "slot": null,
-                                                        "styles": null
-                                                    },
-                                                    {
-                                                        "definition": {
                                                             "id": "bb0f92e8d7eff1590624bfe69d316f23",
                                                             "type": "MACROPONENT"
                                                         },
@@ -779,22 +795,6 @@
                                                                 },
                                                                 "sourceEventSysId": null,
                                                                 "targets": [
-                                                                    {
-                                                                        "broker": null,
-                                                                        "clientScript": {
-                                                                            "payload": {
-                                                                                "type": "JSON_LITERAL",
-                                                                                "value": {}
-                                                                            },
-                                                                            "sysId": "501f3f5dfbfd8250d84afe7405efdc0a"
-                                                                        },
-                                                                        "conditional": null,
-                                                                        "declarativeAction": null,
-                                                                        "event": null,
-                                                                        "operation": null,
-                                                                        "targetId": "clvccyguccaaaddbbvddbhhpprpxyeeil",
-                                                                        "type": "CLIENT_SCRIPT"
-                                                                    },
                                                                     {
                                                                         "broker": null,
                                                                         "clientScript": null,
@@ -877,13 +877,13 @@
                                                                                 "type": "JSON_LITERAL",
                                                                                 "value": {}
                                                                             },
-                                                                            "sysId": "501f3f5dfbfd8250d84afe7405efdc0a"
+                                                                            "sysId": "01a05f6feb35c21036e7f734bad0cd46"
                                                                         },
                                                                         "conditional": null,
                                                                         "declarativeAction": null,
                                                                         "event": null,
                                                                         "operation": null,
-                                                                        "targetId": "clveeaauysyaabbddiddbhhytteuqktcc",
+                                                                        "targetId": "clvreeccuwbaabbffgddbiiaazggujjcclaaw",
                                                                         "type": "CLIENT_SCRIPT"
                                                                     }
                                                                 ]
@@ -1223,6 +1223,22 @@
                                                                         "operation": null,
                                                                         "targetId": "clvleemdeesaabbeeaaddbhhspxtflhhhj",
                                                                         "type": "EVENT"
+                                                                    },
+                                                                    {
+                                                                        "broker": null,
+                                                                        "clientScript": {
+                                                                            "payload": {
+                                                                                "type": "JSON_LITERAL",
+                                                                                "value": {}
+                                                                            },
+                                                                            "sysId": "01a05f6feb35c21036e7f734bad0cd46"
+                                                                        },
+                                                                        "conditional": null,
+                                                                        "declarativeAction": null,
+                                                                        "event": null,
+                                                                        "operation": null,
+                                                                        "targetId": "clvrddeddnaaaaxoddbiiaaeeddvnrddjf",
+                                                                        "type": "CLIENT_SCRIPT"
                                                                     }
                                                                 ]
                                                             }
@@ -1610,12 +1626,6 @@
                                                                 }
                                                             },
                                                             {
-                                                                "element_id": "stylized_text_4",
-                                                                "styles": {
-                                                                    "margin-top": "var(--now-scalable-space--lg)"
-                                                                }
-                                                            },
-                                                            {
                                                                 "element_id": "input_1",
                                                                 "styles": {
                                                                     "--now-input--background-color": "255,255, 255",
@@ -1708,6 +1718,10 @@
                                         "default": {
                                             "children": null,
                                             "items": [
+                                                {
+                                                    "element_id": "stylized_text_5",
+                                                    "styles": {}
+                                                },
                                                 {
                                                     "element_id": "stylized_text_1",
                                                     "styles": {
@@ -2280,79 +2294,11 @@
                         "composition": [
                             {
                                 "definition": {
-                                    "id": "b5ef11d7766e63aea1a8113e8360b276",
-                                    "type": "MACROPONENT"
-                                },
-                                "elementId": "checkbox_1",
-                                "elementLabel": "Add to the Knowledge Mural",
-                                "eventMappings": [
-                                    
-                                ],
-                                "isHidden": {
-                                    "type": "JSON_LITERAL",
-                                    "value": true
-                                },
-                                "preset": null,
-                                "propertyValues": {
-                                    "checked": {
-                                        "type": "JSON_LITERAL",
-                                        "value": true
-                                    },
-                                    "configAria": {
-                                        "type": "JSON_LITERAL",
-                                        "value": {}
-                                    },
-                                    "disabled": {
-                                        "type": "JSON_LITERAL",
-                                        "value": false
-                                    },
-                                    "fullWidth": {
-                                        "type": "JSON_LITERAL",
-                                        "value": false
-                                    },
-                                    "invalid": {
-                                        "type": "JSON_LITERAL",
-                                        "value": false
-                                    },
-                                    "label": {
-                                        "type": "TRANSLATION_LITERAL",
-                                        "value": {
-                                            "code": null,
-                                            "comment": "",
-                                            "message": "Add to the Knowledge Photo Mural"
-                                        }
-                                    },
-                                    "labelPosition": {
-                                        "type": "JSON_LITERAL",
-                                        "value": "end"
-                                    },
-                                    "name": {
-                                        "type": "JSON_LITERAL",
-                                        "value": null
-                                    },
-                                    "readonly": {
-                                        "type": "JSON_LITERAL",
-                                        "value": false
-                                    },
-                                    "required": {
-                                        "type": "JSON_LITERAL",
-                                        "value": false
-                                    },
-                                    "size": {
-                                        "type": "JSON_LITERAL",
-                                        "value": "md"
-                                    }
-                                },
-                                "slot": null,
-                                "styles": null
-                            },
-                            {
-                                "definition": {
                                     "id": "d37ce8abca89d02905fed903c8e34d8e",
                                     "type": "MACROPONENT"
                                 },
                                 "elementId": "button_8",
-                                "elementLabel": "Button 8",
+                                "elementLabel": "Start Over Button",
                                 "eventMappings": [
                                     {
                                         "eventMappingId": "clvrccamwddaaccjjeddbiiaaibbbuhxggt",
@@ -2438,14 +2384,6 @@
                                 "children": null,
                                 "items": [
                                     {
-                                        "element_id": "checkbox_1",
-                                        "styles": {
-                                            "padding-bottom": "var(--now-scalable-space--md)",
-                                            "padding-top": "var(--now-scalable-space--md)",
-                                            "width": "100%"
-                                        }
-                                    },
-                                    {
                                         "element_id": "button_8",
                                         "styles": {
                                             "--now-button--primary--background-color": "3,45,66,.05",
@@ -2526,246 +2464,6 @@
                     },
                     "overrides": {
                         "composition": [
-                            {
-                                "definition": {
-                                    "id": "67d8bc45906c355a3100c0782f45487b",
-                                    "type": "MACROPONENT"
-                                },
-                                "elementId": "button_bare_5",
-                                "elementLabel": "Home Button",
-                                "eventMappings": [
-                                    {
-                                        "eventMappingId": "clvcumtdiaaccztddbhhzsosqavwx",
-                                        "isConfiguration": false,
-                                        "offRowStorageId": null,
-                                        "sourceEventApiName": "sn_button.NOW_BUTTON_BARE#CLICKED",
-                                        "sourceEventCorrelationId": null,
-                                        "sourceEventDefinition": {
-                                            "apiName": "sn_button.NOW_BUTTON_BARE#CLICKED",
-                                            "id": null,
-                                            "type": "UXEVENT"
-                                        },
-                                        "sourceEventSysId": null,
-                                        "targets": [
-                                            {
-                                                "broker": null,
-                                                "clientScript": null,
-                                                "conditional": null,
-                                                "declarativeAction": null,
-                                                "event": {
-                                                    "apiName": "x_snc_pb_app.NAV_ITEM_SELECTED_RELAY_4f26ae62ebd5061036e7f734bad0cde9",
-                                                    "payload": {
-                                                        "container": {
-                                                            "external": {
-                                                                "type": "JSON_LITERAL",
-                                                                "value": null
-                                                            },
-                                                            "fields": {
-                                                                "container": {
-                                                                    "photoboothNameOrNumberOrSysId": {
-                                                                        "binding": {
-                                                                            "address": [
-                                                                                "photoboothNameOrNumberOrSysId"
-                                                                            ],
-                                                                            "category": "props"
-                                                                        },
-                                                                        "type": "CONTEXT_BINDING"
-                                                                    }
-                                                                },
-                                                                "type": "MAP_CONTAINER"
-                                                            },
-                                                            "multiInstField": {
-                                                                "type": "JSON_LITERAL",
-                                                                "value": null
-                                                            },
-                                                            "navigationOptions": {
-                                                                "type": "JSON_LITERAL",
-                                                                "value": null
-                                                            },
-                                                            "params": {
-                                                                "type": "JSON_LITERAL",
-                                                                "value": null
-                                                            },
-                                                            "passiveNavigation": {
-                                                                "type": "JSON_LITERAL",
-                                                                "value": null
-                                                            },
-                                                            "redirect": {
-                                                                "type": "JSON_LITERAL",
-                                                                "value": null
-                                                            },
-                                                            "route": {
-                                                                "type": "JSON_LITERAL",
-                                                                "value": "home"
-                                                            },
-                                                            "targetRoute": {
-                                                                "type": "JSON_LITERAL",
-                                                                "value": null
-                                                            },
-                                                            "title": {
-                                                                "type": "JSON_LITERAL",
-                                                                "value": null
-                                                            }
-                                                        },
-                                                        "type": "MAP_CONTAINER"
-                                                    },
-                                                    "sysId": "0d2baaa6ebd5061036e7f734bad0cd24"
-                                                },
-                                                "operation": null,
-                                                "targetId": "clvcumtdiaacczuddbhhzmiedkyyee",
-                                                "type": "EVENT"
-                                            }
-                                        ]
-                                    }
-                                ],
-                                "isHidden": {
-                                    "type": "JSON_LITERAL",
-                                    "value": true
-                                },
-                                "preset": null,
-                                "propertyValues": {
-                                    "configAria": {
-                                        "type": "JSON_LITERAL",
-                                        "value": {}
-                                    },
-                                    "disabled": {
-                                        "type": "JSON_LITERAL",
-                                        "value": false
-                                    },
-                                    "hideBlockPadding": {
-                                        "type": "JSON_LITERAL",
-                                        "value": false
-                                    },
-                                    "highContrast": {
-                                        "type": "JSON_LITERAL",
-                                        "value": false
-                                    },
-                                    "iconEnd": {
-                                        "type": "JSON_LITERAL",
-                                        "value": null
-                                    },
-                                    "iconStart": {
-                                        "type": "JSON_LITERAL",
-                                        "value": null
-                                    },
-                                    "label": {
-                                        "type": "TRANSLATION_LITERAL",
-                                        "value": {
-                                            "code": null,
-                                            "comment": "",
-                                            "message": "Start over"
-                                        }
-                                    },
-                                    "showInlinePadding": {
-                                        "type": "JSON_LITERAL",
-                                        "value": false
-                                    },
-                                    "size": {
-                                        "type": "JSON_LITERAL",
-                                        "value": "lg"
-                                    },
-                                    "variant": {
-                                        "type": "JSON_LITERAL",
-                                        "value": "primary"
-                                    }
-                                },
-                                "slot": null,
-                                "styles": null
-                            },
-                            {
-                                "definition": {
-                                    "id": "67d8bc45906c355a3100c0782f45487b",
-                                    "type": "MACROPONENT"
-                                },
-                                "elementId": "button_bare_8",
-                                "elementLabel": "Button bare 8",
-                                "eventMappings": [
-                                    {
-                                        "eventMappingId": "clvhheegghhffeeaaccsxddbhhrxiicchhaddjf",
-                                        "isConfiguration": false,
-                                        "offRowStorageId": null,
-                                        "sourceEventApiName": "sn_button.NOW_BUTTON_BARE#CLICKED",
-                                        "sourceEventCorrelationId": null,
-                                        "sourceEventDefinition": {
-                                            "apiName": "sn_button.NOW_BUTTON_BARE#CLICKED",
-                                            "id": null,
-                                            "type": "UXEVENT"
-                                        },
-                                        "sourceEventSysId": null,
-                                        "targets": [
-                                            {
-                                                "broker": null,
-                                                "clientScript": {
-                                                    "payload": {
-                                                        "type": "JSON_LITERAL",
-                                                        "value": {}
-                                                    },
-                                                    "sysId": "9c1f3f5dfbfd8250d84afe7405efdc0d"
-                                                },
-                                                "conditional": null,
-                                                "declarativeAction": null,
-                                                "event": null,
-                                                "operation": null,
-                                                "targetId": "clvhheegghhffeeaaccsyddbhhrxuqeeccteeh",
-                                                "type": "CLIENT_SCRIPT"
-                                            }
-                                        ]
-                                    }
-                                ],
-                                "isHidden": {
-                                    "type": "JSON_LITERAL",
-                                    "value": true
-                                },
-                                "preset": null,
-                                "propertyValues": {
-                                    "configAria": {
-                                        "type": "JSON_LITERAL",
-                                        "value": {}
-                                    },
-                                    "disabled": {
-                                        "type": "JSON_LITERAL",
-                                        "value": false
-                                    },
-                                    "hideBlockPadding": {
-                                        "type": "JSON_LITERAL",
-                                        "value": false
-                                    },
-                                    "highContrast": {
-                                        "type": "JSON_LITERAL",
-                                        "value": false
-                                    },
-                                    "iconEnd": {
-                                        "type": "JSON_LITERAL",
-                                        "value": "circle-arrow-right-outline"
-                                    },
-                                    "iconStart": {
-                                        "type": "JSON_LITERAL",
-                                        "value": ""
-                                    },
-                                    "label": {
-                                        "type": "TRANSLATION_LITERAL",
-                                        "value": {
-                                            "code": null,
-                                            "comment": "",
-                                            "message": "Next"
-                                        }
-                                    },
-                                    "showInlinePadding": {
-                                        "type": "JSON_LITERAL",
-                                        "value": false
-                                    },
-                                    "size": {
-                                        "type": "JSON_LITERAL",
-                                        "value": "lg"
-                                    },
-                                    "variant": {
-                                        "type": "JSON_LITERAL",
-                                        "value": "primary"
-                                    }
-                                },
-                                "slot": null,
-                                "styles": null
-                            },
                             {
                                 "definition": {
                                     "id": "d37ce8abca89d02905fed903c8e34d8e",
@@ -2849,6 +2547,22 @@
                                                 "operation": null,
                                                 "targetId": "clvlbybhgaabbvjjddbhhskskjjjprf",
                                                 "type": "EVENT"
+                                            },
+                                            {
+                                                "broker": null,
+                                                "clientScript": {
+                                                    "payload": {
+                                                        "type": "JSON_LITERAL",
+                                                        "value": {}
+                                                    },
+                                                    "sysId": "01a05f6feb35c21036e7f734bad0cd46"
+                                                },
+                                                "conditional": null,
+                                                "declarativeAction": null,
+                                                "event": null,
+                                                "operation": null,
+                                                "targetId": "clvrddewjjbaaaaxtddbiiaaqiioffikpz",
+                                                "type": "CLIENT_SCRIPT"
                                             }
                                         ]
                                     }
@@ -3011,6 +2725,22 @@
                                                 "operation": null,
                                                 "targetId": "clvljjpkeehhaabbnjjddbhhsbbvccjjhhuad",
                                                 "type": "EVENT"
+                                            },
+                                            {
+                                                "broker": null,
+                                                "clientScript": {
+                                                    "payload": {
+                                                        "type": "JSON_LITERAL",
+                                                        "value": {}
+                                                    },
+                                                    "sysId": "01a05f6feb35c21036e7f734bad0cd46"
+                                                },
+                                                "conditional": null,
+                                                "declarativeAction": null,
+                                                "event": null,
+                                                "operation": null,
+                                                "targetId": "clvrddfeemjjaaaaxzddbiiaayccmcceaarr",
+                                                "type": "CLIENT_SCRIPT"
                                             }
                                         ]
                                     }
@@ -3126,6 +2856,22 @@
                                                 "operation": null,
                                                 "targetId": "clvgxhvbxaaddccjddbhhtgggeeiikwccff",
                                                 "type": "CLIENT_SCRIPT"
+                                            },
+                                            {
+                                                "broker": null,
+                                                "clientScript": {
+                                                    "payload": {
+                                                        "type": "JSON_LITERAL",
+                                                        "value": {}
+                                                    },
+                                                    "sysId": "01a05f6feb35c21036e7f734bad0cd46"
+                                                },
+                                                "conditional": null,
+                                                "declarativeAction": null,
+                                                "event": null,
+                                                "operation": null,
+                                                "targetId": "clvrddwziuaabbeeuddbiiaawccpjjiihzm",
+                                                "type": "CLIENT_SCRIPT"
                                             }
                                         ]
                                     }
@@ -3226,6 +2972,22 @@
                                                 "event": null,
                                                 "operation": null,
                                                 "targetId": "clvgxhvbxaaddccjddbhhtgggeeiikwccff",
+                                                "type": "CLIENT_SCRIPT"
+                                            },
+                                            {
+                                                "broker": null,
+                                                "clientScript": {
+                                                    "payload": {
+                                                        "type": "JSON_LITERAL",
+                                                        "value": {}
+                                                    },
+                                                    "sysId": "01a05f6feb35c21036e7f734bad0cd46"
+                                                },
+                                                "conditional": null,
+                                                "declarativeAction": null,
+                                                "event": null,
+                                                "operation": null,
+                                                "targetId": "clvrddfbazaaaayffddbiiaaufnvwerh",
                                                 "type": "CLIENT_SCRIPT"
                                             }
                                         ]
@@ -3423,30 +3185,6 @@
                             "default": {
                                 "children": null,
                                 "items": [
-                                    {
-                                        "element_id": "button_bare_5",
-                                        "styles": {}
-                                    },
-                                    {
-                                        "element_id": "button_bare_8",
-                                        "styles": {
-                                            "--now-button--bare--primary--background-color": "3,45,66,0",
-                                            "--now-button--primary--background-color--active": "3,45,66,0",
-                                            "--now-button--primary--background-color--hover": "3,45,66,0",
-                                            "--now-button--primary--border-color": "253,1,247",
-                                            "--now-button--primary--border-color--active": "253,1,247",
-                                            "--now-button--primary--border-color--hover": "253,1,247",
-                                            "--now-button--primary--border-radius": "100px",
-                                            "--now-button--primary--color": "255,255,255",
-                                            "background": "rgb(var(--now-color_surface--neutral-1))",
-                                            "border-color": "rgb(var(--now-color_brand--secondary))",
-                                            "border-radius": "var(--now-static-border-radius--md)",
-                                            "border-style": "solid",
-                                            "border-width": "var(--now-static-space--xs)",
-                                            "padding-left": "var(--now-scalable-space--sm)",
-                                            "padding-right": "var(--now-scalable-space--sm)"
-                                        }
-                                    },
                                     {
                                         "element_id": "button_3",
                                         "styles": {
@@ -3893,6 +3631,22 @@
                         "operation": null,
                         "targetId": "clvehhqfufaabbsiddbhhppiffggsbuf",
                         "type": "EVENT"
+                    },
+                    {
+                        "broker": null,
+                        "clientScript": {
+                            "payload": {
+                                "type": "JSON_LITERAL",
+                                "value": {}
+                            },
+                            "sysId": "01a05f6feb35c21036e7f734bad0cd46"
+                        },
+                        "conditional": null,
+                        "declarativeAction": null,
+                        "event": null,
+                        "operation": null,
+                        "targetId": "clvrddbjjaaeeaaaaxccddbiiaaaajjhhhtccgjj",
+                        "type": "CLIENT_SCRIPT"
                     }
                 ]
             }
@@ -4042,6 +3796,22 @@
                         "operation": null,
                         "targetId": "clvodrvxxaabbcceddbiiaaiffaazfibe",
                         "type": "EVENT"
+                    },
+                    {
+                        "broker": null,
+                        "clientScript": {
+                            "payload": {
+                                "type": "JSON_LITERAL",
+                                "value": {}
+                            },
+                            "sysId": "01a05f6feb35c21036e7f734bad0cd46"
+                        },
+                        "conditional": null,
+                        "declarativeAction": null,
+                        "event": null,
+                        "operation": null,
+                        "targetId": "clvrddebbsccaaaaxkddbiiaaecrpfdjja",
+                        "type": "CLIENT_SCRIPT"
                     }
                 ]
             }
@@ -4137,22 +3907,6 @@
                 },
                 "sourceEventSysId": null,
                 "targets": [
-                    {
-                        "broker": null,
-                        "clientScript": {
-                            "payload": {
-                                "type": "JSON_LITERAL",
-                                "value": {}
-                            },
-                            "sysId": "501f3f5dfbfd8250d84afe7405efdc0a"
-                        },
-                        "conditional": null,
-                        "declarativeAction": null,
-                        "event": null,
-                        "operation": null,
-                        "targetId": "clvleqzzbbaacceiiddbhhsdclnyucii",
-                        "type": "CLIENT_SCRIPT"
-                    },
                     {
                         "broker": null,
                         "clientScript": {
@@ -4580,9 +4334,6 @@
   "message" : "Add an AI prompt",
   "comment" : ""
 }, {
-  "message" : "Add to the Knowledge Photo Mural",
-  "comment" : ""
-}, {
   "message" : "Apply AI Background",
   "comment" : ""
 }, {
@@ -4607,9 +4358,6 @@
   "message" : "Looking good! This has been sent to your email.  Scan your badge to start over or continue to add a Gen AI background or to share to the Photo Board.",
   "comment" : ""
 }, {
-  "message" : "Next",
-  "comment" : ""
-}, {
   "message" : "Next Photo",
   "comment" : ""
 }, {
@@ -4617,9 +4365,6 @@
   "comment" : ""
 }, {
   "message" : "Or write your own",
-  "comment" : ""
-}, {
-  "message" : "Or write your own:",
   "comment" : ""
 }, {
   "message" : "Return to Photobooth",
@@ -4735,20 +4480,34 @@
         "name": "disableEmail",
         "shape": "",
         "valueType": "boolean"
+    },
+    {
+        "id": "",
+        "initialValue": null,
+        "name": "timeoutId",
+        "shape": "",
+        "valueType": "string"
+    },
+    {
+        "id": "",
+        "initialValue": null,
+        "name": "timeoutMessage",
+        "shape": "",
+        "valueType": "string"
     }
 ]</state_properties>
         <sys_class_name>sys_ux_macroponent</sys_class_name>
         <sys_created_by>jon.lind</sys_created_by>
         <sys_created_on>2024-04-25 20:04:20</sys_created_on>
         <sys_id>370f775dfbfd8250d84afe7405efdc8a</sys_id>
-        <sys_mod_count>231</sys_mod_count>
+        <sys_mod_count>258</sys_mod_count>
         <sys_name>Results Stylized</sys_name>
         <sys_package display_value="Photobooth App" source="x_snc_pb_app">baa73cb74742dd10552caf52736d43f1</sys_package>
         <sys_policy/>
         <sys_scope display_value="Photobooth App">baa73cb74742dd10552caf52736d43f1</sys_scope>
         <sys_update_name>sys_ux_macroponent_370f775dfbfd8250d84afe7405efdc8a</sys_update_name>
         <sys_updated_by>jon.lind</sys_updated_by>
-        <sys_updated_on>2024-05-03 19:22:30</sys_updated_on>
+        <sys_updated_on>2024-05-03 20:15:48</sys_updated_on>
     </sys_ux_macroponent>
     <sys_translated_text action="delete_multiple" query="documentkey=370f775dfbfd8250d84afe7405efdc8a"/>
 </record_update>
