@@ -6386,6 +6386,158 @@
                                                 "id": "d37ce8abca89d02905fed903c8e34d8e",
                                                 "type": "MACROPONENT"
                                             },
+                                            "elementId": "button_7",
+                                            "elementLabel": "Open Instance Button",
+                                            "eventMappings": [
+                                                {
+                                                    "eventMappingId": "clvqtgazeaaaaxqddbhhsmubbhghigg",
+                                                    "isConfiguration": false,
+                                                    "offRowStorageId": null,
+                                                    "sourceEventApiName": "sn_button.NOW_BUTTON#CLICKED",
+                                                    "sourceEventCorrelationId": null,
+                                                    "sourceEventDefinition": {
+                                                        "apiName": "sn_button.NOW_BUTTON#CLICKED",
+                                                        "id": null,
+                                                        "type": "UXEVENT"
+                                                    },
+                                                    "sourceEventSysId": null,
+                                                    "targets": [
+                                                        {
+                                                            "broker": null,
+                                                            "clientScript": null,
+                                                            "conditional": null,
+                                                            "declarativeAction": null,
+                                                            "event": {
+                                                                "apiName": "x_snc_pb_app.NAV_ITEM_SELECTED_RELAY_11dd4b7547e6e110552caf52736d4361",
+                                                                "payload": {
+                                                                    "container": {
+                                                                        "external": {
+                                                                            "container": {
+                                                                                "url": {
+                                                                                    "transform": {
+                                                                                        "operands": {
+                                                                                            "container": [
+                                                                                                {
+                                                                                                    "type": "JSON_LITERAL",
+                                                                                                    "value": "x_snc_pb_core_photobooth.do?sys_id="
+                                                                                                },
+                                                                                                {
+                                                                                                    "binding": {
+                                                                                                        "address": [
+                                                                                                            "sysId"
+                                                                                                        ]
+                                                                                                    },
+                                                                                                    "type": "STATE_BINDING"
+                                                                                                }
+                                                                                            ],
+                                                                                            "type": "LIST_CONTAINER"
+                                                                                        },
+                                                                                        "operator": "CONCAT"
+                                                                                    },
+                                                                                    "type": "CLIENT_TRANSFORM"
+                                                                                }
+                                                                            },
+                                                                            "type": "MAP_CONTAINER"
+                                                                        },
+                                                                        "fields": {
+                                                                            "type": "JSON_LITERAL",
+                                                                            "value": null
+                                                                        },
+                                                                        "multiInstField": {
+                                                                            "type": "JSON_LITERAL",
+                                                                            "value": null
+                                                                        },
+                                                                        "navigationOptions": {
+                                                                            "type": "JSON_LITERAL",
+                                                                            "value": null
+                                                                        },
+                                                                        "params": {
+                                                                            "type": "JSON_LITERAL",
+                                                                            "value": null
+                                                                        },
+                                                                        "passiveNavigation": {
+                                                                            "type": "JSON_LITERAL",
+                                                                            "value": null
+                                                                        },
+                                                                        "redirect": {
+                                                                            "type": "JSON_LITERAL",
+                                                                            "value": null
+                                                                        },
+                                                                        "route": {
+                                                                            "type": "JSON_LITERAL",
+                                                                            "value": null
+                                                                        },
+                                                                        "targetRoute": {
+                                                                            "type": "JSON_LITERAL",
+                                                                            "value": null
+                                                                        },
+                                                                        "title": {
+                                                                            "type": "JSON_LITERAL",
+                                                                            "value": null
+                                                                        }
+                                                                    },
+                                                                    "type": "MAP_CONTAINER"
+                                                                },
+                                                                "sysId": "9f7e47b547e6e110552caf52736d436c"
+                                                            },
+                                                            "operation": null,
+                                                            "targetId": "clvqtgazeaaaaxrddbhhsccujqmkbp",
+                                                            "type": "EVENT"
+                                                        }
+                                                    ]
+                                                }
+                                            ],
+                                            "isHidden": {
+                                                "type": "JSON_LITERAL",
+                                                "value": null
+                                            },
+                                            "preset": null,
+                                            "propertyValues": {
+                                                "configAria": {
+                                                    "type": "JSON_LITERAL",
+                                                    "value": {}
+                                                },
+                                                "disabled": {
+                                                    "type": "JSON_LITERAL",
+                                                    "value": false
+                                                },
+                                                "icon": {
+                                                    "type": "JSON_LITERAL",
+                                                    "value": null
+                                                },
+                                                "label": {
+                                                    "type": "TRANSLATION_LITERAL",
+                                                    "value": {
+                                                        "code": null,
+                                                        "comment": "",
+                                                        "message": "Open Instance Record"
+                                                    }
+                                                },
+                                                "size": {
+                                                    "type": "JSON_LITERAL",
+                                                    "value": "md"
+                                                },
+                                                "tooltipContent": {
+                                                    "type": "TRANSLATION_LITERAL",
+                                                    "value": {
+                                                        "code": null,
+                                                        "comment": "",
+                                                        "message": "Open the instance record on the platform"
+                                                    }
+                                                },
+                                                "variant": {
+                                                    "type": "JSON_LITERAL",
+                                                    "value": "secondary-negative"
+                                                }
+                                            },
+                                            "slot": null,
+                                            "styles": null
+                                        },
+                                        {
+                                            "definition": {
+                                                "id": "d37ce8abca89d02905fed903c8e34d8e",
+                                                "type": "MACROPONENT"
+                                            },
                                             "elementId": "button_4",
                                             "elementLabel": "Cancel Button",
                                             "eventMappings": [
@@ -6533,6 +6685,10 @@
                                                 },
                                                 {
                                                     "element_id": "button_3",
+                                                    "styles": {}
+                                                },
+                                                {
+                                                    "element_id": "button_7",
                                                     "styles": {}
                                                 },
                                                 {
@@ -9197,6 +9353,12 @@
   "message" : "New Request",
   "comment" : ""
 }, {
+  "message" : "Open Instance Record",
+  "comment" : ""
+}, {
+  "message" : "Open the instance record on the platform",
+  "comment" : ""
+}, {
   "message" : "Path to local image (does not work with third party urls due to cross-origin rules).  Go the System UI &gt; Images and upload your image. Copy the name of the image here.",
   "comment" : ""
 }, {
@@ -9694,14 +9856,14 @@
         <sys_created_by>jon.lind</sys_created_by>
         <sys_created_on>2023-05-02 20:11:01</sys_created_on>
         <sys_id>11dd4b7547e6e110552caf52736d4361</sys_id>
-        <sys_mod_count>155</sys_mod_count>
+        <sys_mod_count>157</sys_mod_count>
         <sys_name>Home Stylized</sys_name>
         <sys_package display_value="Photobooth App" source="x_snc_pb_app">baa73cb74742dd10552caf52736d43f1</sys_package>
         <sys_policy/>
         <sys_scope display_value="Photobooth App">baa73cb74742dd10552caf52736d43f1</sys_scope>
         <sys_update_name>sys_ux_macroponent_11dd4b7547e6e110552caf52736d4361</sys_update_name>
         <sys_updated_by>jon.lind</sys_updated_by>
-        <sys_updated_on>2024-05-02 22:23:35</sys_updated_on>
+        <sys_updated_on>2024-05-03 15:22:11</sys_updated_on>
     </sys_ux_macroponent>
     <sys_translated_text action="delete_multiple" query="documentkey=11dd4b7547e6e110552caf52736d4361"/>
 </record_update>
