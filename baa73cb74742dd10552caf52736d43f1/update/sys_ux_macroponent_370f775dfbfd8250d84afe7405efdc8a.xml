@@ -1159,6 +1159,10 @@
                                                                                                             "operator": "CONCAT"
                                                                                                         },
                                                                                                         "type": "CLIENT_TRANSFORM"
+                                                                                                    },
+                                                                                                    {
+                                                                                                        "type": "JSON_LITERAL",
+                                                                                                        "value": "^snapshot_state=Ready"
                                                                                                     }
                                                                                                 ],
                                                                                                 "type": "LIST_CONTAINER"
@@ -3631,22 +3635,6 @@
                         "operation": null,
                         "targetId": "clvehhqfufaabbsiddbhhppiffggsbuf",
                         "type": "EVENT"
-                    },
-                    {
-                        "broker": null,
-                        "clientScript": {
-                            "payload": {
-                                "type": "JSON_LITERAL",
-                                "value": {}
-                            },
-                            "sysId": "01a05f6feb35c21036e7f734bad0cd46"
-                        },
-                        "conditional": null,
-                        "declarativeAction": null,
-                        "event": null,
-                        "operation": null,
-                        "targetId": "clvrddbjjaaeeaaaaxccddbiiaaaajjhhhtccgjj",
-                        "type": "CLIENT_SCRIPT"
                     }
                 ]
             }
@@ -4031,26 +4019,35 @@
                     },
                     {
                         "broker": null,
-                        "clientScript": null,
+                        "clientScript": {
+                            "payload": {
+                                "type": "JSON_LITERAL",
+                                "value": {}
+                            },
+                            "sysId": "a1ac104deb8e4a1036e7f734bad0cd4b"
+                        },
                         "conditional": null,
                         "declarativeAction": null,
-                        "event": {
-                            "apiName": "sn_uxf.MACROPONENT_STATE_UPDATE_REQUESTED",
-                            "payload": {
-                                "script": {
-                                    "apiVersion": "1.0.0",
-                                    "controllerElementId": null,
-                                    "inlineScript": "/**\n * @param {params} params\n * @param {api} params.api\n * @param {any} params.event\n */\nfunction evaluateEvent({\n    api,\n    event\n}) {\n\tconst properties = api.data.look_up_properties.results;\n\tconst value = findValueByName(properties, \"x_snc_pb_out.photoroom.sampleprompts\");\n\n    return {\n        propName : \"aiBackgroundPrompts\",\n        value\n    };\n\n    function findValueByName(data, name) {\n        const item = data.find(obj =&gt; obj.name.value === name);\n        return item ? JSON.parse(item.value.value) : null;\n    }\n}",
-                                    "scriptSysId": null,
-                                    "target": null
-                                },
-                                "type": "CLIENT_TRANSFORM_SCRIPT"
-                            },
-                            "sysId": "32408b42ff7a10109046e490703bf176"
-                        },
+                        "event": null,
                         "operation": null,
-                        "targetId": "clvpdinnaaaabbggoddbiiaasdlmjwvjj",
-                        "type": "EVENT"
+                        "targetId": "clvvctggbhhaabbggbddbhhrcqfaaaashp",
+                        "type": "CLIENT_SCRIPT"
+                    },
+                    {
+                        "broker": null,
+                        "clientScript": {
+                            "payload": {
+                                "type": "JSON_LITERAL",
+                                "value": {}
+                            },
+                            "sysId": "01a05f6feb35c21036e7f734bad0cd46"
+                        },
+                        "conditional": null,
+                        "declarativeAction": null,
+                        "event": null,
+                        "operation": null,
+                        "targetId": "clvvdeehjvaabbazddbhhrrdvzyzxgg",
+                        "type": "CLIENT_SCRIPT"
                     }
                 ]
             }
@@ -4058,7 +4055,7 @@
         "inputValues": {
             "encodedQuery": {
                 "type": "JSON_LITERAL",
-                "value": "nameINx_snc_pb_out.photoroom.sampleprompts"
+                "value": "nameINx_snc_pb_out.photoroom.sampleprompts,x_snc_pb_app.results_timeout_seconds"
             },
             "limit": {
                 "type": "JSON_LITERAL",
@@ -4500,14 +4497,14 @@
         <sys_created_by>jon.lind</sys_created_by>
         <sys_created_on>2024-04-25 20:04:20</sys_created_on>
         <sys_id>370f775dfbfd8250d84afe7405efdc8a</sys_id>
-        <sys_mod_count>258</sys_mod_count>
+        <sys_mod_count>274</sys_mod_count>
         <sys_name>Results Stylized</sys_name>
         <sys_package display_value="Photobooth App" source="x_snc_pb_app">baa73cb74742dd10552caf52736d43f1</sys_package>
         <sys_policy/>
         <sys_scope display_value="Photobooth App">baa73cb74742dd10552caf52736d43f1</sys_scope>
         <sys_update_name>sys_ux_macroponent_370f775dfbfd8250d84afe7405efdc8a</sys_update_name>
         <sys_updated_by>jon.lind</sys_updated_by>
-        <sys_updated_on>2024-05-03 20:15:48</sys_updated_on>
+        <sys_updated_on>2024-05-06 20:15:49</sys_updated_on>
     </sys_ux_macroponent>
     <sys_translated_text action="delete_multiple" query="documentkey=370f775dfbfd8250d84afe7405efdc8a"/>
 </record_update>
