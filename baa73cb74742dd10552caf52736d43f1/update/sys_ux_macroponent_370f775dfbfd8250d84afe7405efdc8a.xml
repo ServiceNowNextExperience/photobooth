@@ -588,22 +588,14 @@
                                                                                     "event": {
                                                                                         "apiName": "sn_uxf.MACROPONENT_STATE_UPDATE_REQUESTED",
                                                                                         "payload": {
-                                                                                            "container": {
-                                                                                                "propName": {
-                                                                                                    "type": "JSON_LITERAL",
-                                                                                                    "value": "currentAiBackgroundPrompt"
-                                                                                                },
-                                                                                                "value": {
-                                                                                                    "binding": {
-                                                                                                        "address": [
-                                                                                                            
-                                                                                                        ],
-                                                                                                        "category": "value"
-                                                                                                    },
-                                                                                                    "type": "REPEATER_ITEM_BINDING"
-                                                                                                }
+                                                                                            "script": {
+                                                                                                "apiVersion": "1.0.0",
+                                                                                                "controllerElementId": null,
+                                                                                                "inlineScript": "/**\n* @param {params} params\n* @param {api} params.api\n* @param {any} params.event\n*/\nfunction evaluateEvent({api, event}) {\n\treturn {\n\t\tpropName: \"currentAiBackgroundPrompt\",\n\t\tvalue: api.item.value.replace(\"*\", \"\")\n\t};\n}",
+                                                                                                "scriptSysId": null,
+                                                                                                "target": null
                                                                                             },
-                                                                                            "type": "MAP_CONTAINER"
+                                                                                            "type": "CLIENT_TRANSFORM_SCRIPT"
                                                                                         },
                                                                                         "sysId": "32408b42ff7a10109046e490703bf176"
                                                                                     },
@@ -619,22 +611,14 @@
                                                                                     "event": {
                                                                                         "apiName": "sn_uxf.MACROPONENT_STATE_UPDATE_REQUESTED",
                                                                                         "payload": {
-                                                                                            "container": {
-                                                                                                "propName": {
-                                                                                                    "type": "JSON_LITERAL",
-                                                                                                    "value": "aiBackgroundPrompt"
-                                                                                                },
-                                                                                                "value": {
-                                                                                                    "binding": {
-                                                                                                        "address": [
-                                                                                                            
-                                                                                                        ],
-                                                                                                        "category": "value"
-                                                                                                    },
-                                                                                                    "type": "REPEATER_ITEM_BINDING"
-                                                                                                }
+                                                                                            "script": {
+                                                                                                "apiVersion": "1.0.0",
+                                                                                                "controllerElementId": null,
+                                                                                                "inlineScript": "/**\n* @param {params} params\n* @param {api} params.api\n* @param {any} params.event\n*/\nfunction evaluateEvent({api, event}) {\n\treturn {\n\t\tpropName: \"aiBackgroundPrompt\",\n\t\tvalue: api.item.value.replace(\"*\", \"\")\n\t};\n}",
+                                                                                                "scriptSysId": null,
+                                                                                                "target": null
                                                                                             },
-                                                                                            "type": "MAP_CONTAINER"
+                                                                                            "type": "CLIENT_TRANSFORM_SCRIPT"
                                                                                         },
                                                                                         "sysId": "32408b42ff7a10109046e490703bf176"
                                                                                     },
@@ -657,6 +641,22 @@
                                                                                     "operation": null,
                                                                                     "targetId": "clvreeffyjjqaabbffuddbiiaadrsitlhhg",
                                                                                     "type": "CLIENT_SCRIPT"
+                                                                                },
+                                                                                {
+                                                                                    "broker": null,
+                                                                                    "clientScript": {
+                                                                                        "payload": {
+                                                                                            "type": "JSON_LITERAL",
+                                                                                            "value": {}
+                                                                                        },
+                                                                                        "sysId": "501f3f5dfbfd8250d84afe7405efdc0a"
+                                                                                    },
+                                                                                    "conditional": null,
+                                                                                    "declarativeAction": null,
+                                                                                    "event": null,
+                                                                                    "operation": null,
+                                                                                    "targetId": "clvvfnddhxaabbwvddbhhrhqwzwsvz",
+                                                                                    "type": "CLIENT_SCRIPT"
                                                                                 }
                                                                             ]
                                                                         }
@@ -676,17 +676,57 @@
                                                                             "value": false
                                                                         },
                                                                         "icon": {
-                                                                            "type": "JSON_LITERAL",
-                                                                            "value": "ai-sparkle-fill"
+                                                                            "transform": {
+                                                                                "operands": {
+                                                                                    "container": [
+                                                                                        {
+                                                                                            "transform": {
+                                                                                                "operands": {
+                                                                                                    "container": [
+                                                                                                        {
+                                                                                                            "binding": {
+                                                                                                                "address": [
+                                                                                                                    
+                                                                                                                ],
+                                                                                                                "category": "value"
+                                                                                                            },
+                                                                                                            "type": "REPEATER_ITEM_BINDING"
+                                                                                                        },
+                                                                                                        {
+                                                                                                            "type": "JSON_LITERAL",
+                                                                                                            "value": "*"
+                                                                                                        }
+                                                                                                    ],
+                                                                                                    "type": "LIST_CONTAINER"
+                                                                                                },
+                                                                                                "operator": "INCLUDES"
+                                                                                            },
+                                                                                            "type": "CLIENT_TRANSFORM"
+                                                                                        },
+                                                                                        {
+                                                                                            "type": "JSON_LITERAL",
+                                                                                            "value": "ai-sparkle-fill"
+                                                                                        },
+                                                                                        {
+                                                                                            "type": "JSON_LITERAL",
+                                                                                            "value": ""
+                                                                                        }
+                                                                                    ],
+                                                                                    "type": "LIST_CONTAINER"
+                                                                                },
+                                                                                "operator": "IF"
+                                                                            },
+                                                                            "type": "CLIENT_TRANSFORM"
                                                                         },
                                                                         "label": {
-                                                                            "binding": {
-                                                                                "address": [
-                                                                                    
-                                                                                ],
-                                                                                "category": "value"
+                                                                            "script": {
+                                                                                "apiVersion": "2.0.0",
+                                                                                "controllerElementId": null,
+                                                                                "inlineScript": null,
+                                                                                "scriptSysId": "e1ac104deb8e4a1036e7f734bad0cd4b",
+                                                                                "target": null
                                                                             },
-                                                                            "type": "REPEATER_ITEM_BINDING"
+                                                                            "type": "CLIENT_TRANSFORM_SCRIPT"
                                                                         },
                                                                         "size": {
                                                                             "type": "JSON_LITERAL",
@@ -1263,7 +1303,7 @@
                                                             },
                                                             "icon": {
                                                                 "type": "JSON_LITERAL",
-                                                                "value": "ai-sparkle-fill"
+                                                                "value": ""
                                                             },
                                                             "label": {
                                                                 "type": "TRANSLATION_LITERAL",
@@ -4497,14 +4537,14 @@
         <sys_created_by>jon.lind</sys_created_by>
         <sys_created_on>2024-04-25 20:04:20</sys_created_on>
         <sys_id>370f775dfbfd8250d84afe7405efdc8a</sys_id>
-        <sys_mod_count>274</sys_mod_count>
+        <sys_mod_count>285</sys_mod_count>
         <sys_name>Results Stylized</sys_name>
         <sys_package display_value="Photobooth App" source="x_snc_pb_app">baa73cb74742dd10552caf52736d43f1</sys_package>
         <sys_policy/>
         <sys_scope display_value="Photobooth App">baa73cb74742dd10552caf52736d43f1</sys_scope>
         <sys_update_name>sys_ux_macroponent_370f775dfbfd8250d84afe7405efdc8a</sys_update_name>
         <sys_updated_by>jon.lind</sys_updated_by>
-        <sys_updated_on>2024-05-06 20:15:49</sys_updated_on>
+        <sys_updated_on>2024-05-06 21:05:22</sys_updated_on>
     </sys_ux_macroponent>
     <sys_translated_text action="delete_multiple" query="documentkey=370f775dfbfd8250d84afe7405efdc8a"/>
 </record_update>
