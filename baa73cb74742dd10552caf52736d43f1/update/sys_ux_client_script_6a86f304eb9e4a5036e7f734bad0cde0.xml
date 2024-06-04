@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_client_script">
+    <sys_ux_client_script action="INSERT_OR_UPDATE">
+        <controller_preset/>
+        <includes/>
+        <macroponent display_value="Home Stylized copy">ca863304eb9e4a5036e7f734bad0cd0f</macroponent>
+        <name>Map Photobooth From DB to State</name>
+        <preset/>
+        <required_translations>[
+    
+]</required_translations>
+        <script><![CDATA[/**
+ * @param {params} params
+ * @param {api} params.api
+ * @param {any} params.event
+ * @param {any} params.imports
+ * @param {ApiHelpers} params.helpers
+ */
+function handler({
+    api: {
+        setState,
+        data,
+        state
+    },
+    event,
+    helpers,
+    imports
+}) {
+    console.log("Map Photobooth From DB To State!");
+    const pb = data.look_up_photobooths.results[0];
+
+    // Treat these as special cases as the sysId isn't in the regular
+    // list of fields and the device id needs to be put into an array
+    setState("sysId", pb._row_data.uniqueValue);
+
+    // The value is stored as a string but rendered as a dropdown, whose choices are
+    // populated from the cameras and not a choice list so we can't rely on the field
+    // metadata specifying "choice" to know to save as an array so we do it manually
+    setState("selectedCameraDeviceId", [pb.camera_device_id.displayValue]);
+    setState("selectedSharingUi", [pb.sharing_ui.displayValue]);
+
+    // Map the rest based on camel and snake case, e.g. "longName == long_name"
+    mapFromDbToState(pb, state, setState);
+
+    setState("currentMessage", pb.idle_message.displayValue);
+
+    function mapFromDbToState(row, state, setState) {
+        const mapped = {};
+        const notMapped = [];
+
+        const dbFieldNames = Object.keys(row).filter(k => !k.startsWith("_"));
+
+        dbFieldNames.forEach(dbFieldName => {
+            const { value } = row[dbFieldName];
+            const stateFieldName = toCamelCase(dbFieldName);
+
+            if (state[stateFieldName] !== undefined) {
+                // Drop down render selected choices as arrays, but the db does not, force it to array
+                setState(stateFieldName, value);
+                mapped[stateFieldName] = value;
+           } else {
+               notMapped.push(dbFieldName);
+           }
+        });
+
+        console.log("MAP PHOTOBOOTH FROM DB TO STATE", {
+            dbFieldNames,
+            mapped,
+            notMapped
+        });
+
+        function toCamelCase(str) {
+            return str.replace(/_([a-z])/g, (matchedLetter) => matchedLetter[1].toUpperCase());
+        }
+    }
+}]]></script>
+        <script_api_version>2.0.0</script_api_version>
+        <sys_class_name>sys_ux_client_script</sys_class_name>
+        <sys_created_by>jon.lind</sys_created_by>
+        <sys_created_on>2024-05-16 18:46:06</sys_created_on>
+        <sys_id>6a86f304eb9e4a5036e7f734bad0cde0</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>Map Photobooth From DB to State</sys_name>
+        <sys_package display_value="Photobooth App" source="x_snc_pb_app">baa73cb74742dd10552caf52736d43f1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Photobooth App">baa73cb74742dd10552caf52736d43f1</sys_scope>
+        <sys_update_name>sys_ux_client_script_6a86f304eb9e4a5036e7f734bad0cde0</sys_update_name>
+        <sys_updated_by>jon.lind</sys_updated_by>
+        <sys_updated_on>2024-05-16 18:46:06</sys_updated_on>
+        <target>macroponent</target>
+        <type>default</type>
+    </sys_ux_client_script>
+</record_update>

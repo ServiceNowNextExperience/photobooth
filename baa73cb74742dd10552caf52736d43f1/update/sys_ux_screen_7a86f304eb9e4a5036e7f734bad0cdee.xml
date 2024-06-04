@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ux_screen">
     <sys_ux_screen action="INSERT_OR_UPDATE">
-        <active>true</active>
+        <active>false</active>
         <app_config display_value="Photobooth">aa68bcf74742dd10552caf52736d432d</app_config>
         <description/>
         <disable_auto_reflow>false</disable_auto_reflow>
@@ -667,7 +667,7 @@
         ]
     }
 ]</event_mappings>
-        <macroponent display_value="Home Stylized">11dd4b7547e6e110552caf52736d4361</macroponent>
+        <macroponent display_value="Home Stylized copy">ca863304eb9e4a5036e7f734bad0cd0f</macroponent>
         <macroponent_config>{
     "autoCreateReq": {
         "type": "JSON_LITERAL",
@@ -710,7 +710,7 @@
         "value": "none"
     }
 }</macroponent_config>
-        <name>Home Stylized</name>
+        <name>Home Stylized copy</name>
         <order>-1</order>
         <parent_macroponent display_value="UXR Base Experience Shell">76a83a645b122010b913030a1d81c780</parent_macroponent>
         <required_translations>[ ]</required_translations>
@@ -719,19 +719,19 @@
         <screen_type display_value="Home">d1610c1a471ca5d0552caf52736d4309</screen_type>
         <sys_class_name>sys_ux_screen</sys_class_name>
         <sys_created_by>jon.lind</sys_created_by>
-        <sys_created_on>2023-05-02 20:11:01</sys_created_on>
+        <sys_created_on>2024-05-16 18:46:08</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
-        <sys_id>addd4b7547e6e110552caf52736d436f</sys_id>
-        <sys_mod_count>112</sys_mod_count>
-        <sys_name>Home Stylized</sys_name>
+        <sys_id>7a86f304eb9e4a5036e7f734bad0cdee</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>Home Stylized copy</sys_name>
         <sys_overrides/>
         <sys_package display_value="Photobooth App" source="x_snc_pb_app">baa73cb74742dd10552caf52736d43f1</sys_package>
         <sys_policy/>
         <sys_scope display_value="Photobooth App">baa73cb74742dd10552caf52736d43f1</sys_scope>
-        <sys_update_name>sys_ux_screen_addd4b7547e6e110552caf52736d436f</sys_update_name>
+        <sys_update_name>sys_ux_screen_7a86f304eb9e4a5036e7f734bad0cdee</sys_update_name>
         <sys_updated_by>jon.lind</sys_updated_by>
-        <sys_updated_on>2024-06-04 22:23:38</sys_updated_on>
+        <sys_updated_on>2024-06-04 22:17:01</sys_updated_on>
     </sys_ux_screen>
-    <sys_translated_text action="delete_multiple" query="documentkey=addd4b7547e6e110552caf52736d436f"/>
+    <sys_translated_text action="delete_multiple" query="documentkey=7a86f304eb9e4a5036e7f734bad0cdee"/>
 </record_update>
