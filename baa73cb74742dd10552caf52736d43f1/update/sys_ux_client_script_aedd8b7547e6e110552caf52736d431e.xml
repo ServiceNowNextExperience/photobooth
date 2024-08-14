@@ -32,14 +32,14 @@ function handler({
     // list of fields and the device id needs to be put into an array
     setState("sysId", pb._row_data.uniqueValue);
 
+    // Map the rest based on camel and snake case, e.g. "longName == long_name"
+    mapFromDbToState(pb, state, setState);
+
     // The value is stored as a string but rendered as a dropdown, whose choices are
     // populated from the cameras and not a choice list so we can't rely on the field
     // metadata specifying "choice" to know to save as an array so we do it manually
     setState("selectedCameraDeviceId", [pb.camera_device_id.displayValue]);
-    setState("selectedSharingUi", [pb.sharing_ui.displayValue]);
 
-    // Map the rest based on camel and snake case, e.g. "longName == long_name"
-    mapFromDbToState(pb, state, setState);
 
     setState("currentMessage", pb.idle_message.displayValue);
 
@@ -78,14 +78,14 @@ function handler({
         <sys_created_by>jon.lind</sys_created_by>
         <sys_created_on>2023-05-02 20:11:05</sys_created_on>
         <sys_id>aedd8b7547e6e110552caf52736d431e</sys_id>
-        <sys_mod_count>23</sys_mod_count>
+        <sys_mod_count>35</sys_mod_count>
         <sys_name>Map Photobooth From DB to State</sys_name>
         <sys_package display_value="Photobooth App" source="x_snc_pb_app">baa73cb74742dd10552caf52736d43f1</sys_package>
         <sys_policy/>
         <sys_scope display_value="Photobooth App">baa73cb74742dd10552caf52736d43f1</sys_scope>
         <sys_update_name>sys_ux_client_script_aedd8b7547e6e110552caf52736d431e</sys_update_name>
         <sys_updated_by>jon.lind</sys_updated_by>
-        <sys_updated_on>2024-04-30 22:03:44</sys_updated_on>
+        <sys_updated_on>2024-08-14 15:50:25</sys_updated_on>
         <target>macroponent</target>
         <type>default</type>
     </sys_ux_client_script>

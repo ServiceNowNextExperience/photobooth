@@ -758,18 +758,6 @@
                                                 "operation": null,
                                                 "targetId": "clfldbdddyaaaaeecddbhhvsuyzbaaaac",
                                                 "type": "EVENT"
-                                            },
-                                            {
-                                                "broker": null,
-                                                "clientScript": {
-                                                    "sysId": "4add4b7547e6e110552caf52736d43ea"
-                                                },
-                                                "conditional": null,
-                                                "declarativeAction": null,
-                                                "event": null,
-                                                "operation": null,
-                                                "targetId": "clgxvpablaaaaeebbddbhhvoddekeeelbb",
-                                                "type": "CLIENT_SCRIPT"
                                             }
                                         ]
                                     },
@@ -915,32 +903,11 @@
                                                     },
                                                     "sysId": "96dd4b7547e6e110552caf52736d43fc"
                                                 },
-                                                "conditional": {
-                                                    "operation": {
-                                                        "left": {
-                                                            "binding": {
-                                                                "address": [
-                                                                    "look_up_photobooth",
-                                                                    "results",
-                                                                    "0",
-                                                                    "sharing_ui",
-                                                                    "value"
-                                                                ]
-                                                            },
-                                                            "type": "DATA_OUTPUT_BINDING"
-                                                        },
-                                                        "operator": "NOT_EQUAL",
-                                                        "right": {
-                                                            "type": "JSON_LITERAL",
-                                                            "value": "In App"
-                                                        }
-                                                    },
-                                                    "type": "BINARY"
-                                                },
+                                                "conditional": null,
                                                 "declarativeAction": null,
                                                 "event": null,
                                                 "operation": null,
-                                                "targetId": "clhfbnkobbaabbjjnddbbpqfxteesbaa",
+                                                "targetId": "clztaanheecaaaaybddbhhubpchzgsff",
                                                 "type": "CLIENT_SCRIPT"
                                             }
                                         ]
@@ -4981,12 +4948,8 @@
                                                                             "value": "single"
                                                                         },
                                                                         "selectedItems": {
-                                                                            "binding": {
-                                                                                "address": [
-                                                                                    "selectedSharingUi"
-                                                                                ]
-                                                                            },
-                                                                            "type": "STATE_BINDING"
+                                                                            "type": "JSON_LITERAL",
+                                                                            "value": "[]"
                                                                         },
                                                                         "showPadding": {
                                                                             "type": "JSON_LITERAL",
@@ -6905,6 +6868,61 @@
                         "type": "CLIENT_SCRIPT"
                     }
                 ]
+            },
+            {
+                "eventMappingId": "clzsyvjjdkaaccwwddbhhtkoaaadddpy",
+                "isConfiguration": false,
+                "offRowStorageId": null,
+                "sourceEventApiName": "sn_uxf_page.CANVAS_MODAL#CLOSED",
+                "sourceEventCorrelationId": null,
+                "sourceEventDefinition": {
+                    "apiName": "sn_uxf_page.CANVAS_MODAL#CLOSED",
+                    "id": null,
+                    "type": "UXEVENT"
+                },
+                "sourceEventSysId": null,
+                "targets": [
+                    {
+                        "broker": null,
+                        "clientScript": null,
+                        "conditional": null,
+                        "declarativeAction": null,
+                        "event": {
+                            "apiName": "sn_uxf.MACROPONENT_STATE_UPDATE_REQUESTED",
+                            "payload": {
+                                "type": "JSON_LITERAL",
+                                "value": {
+                                    "propName": "requestEmail",
+                                    "value": null
+                                }
+                            },
+                            "sysId": "32408b42ff7a10109046e490703bf176"
+                        },
+                        "operation": null,
+                        "targetId": "clzsyvjjdkaaccwxddbhhtmhaajjkmhhk",
+                        "type": "EVENT"
+                    },
+                    {
+                        "broker": null,
+                        "clientScript": null,
+                        "conditional": null,
+                        "declarativeAction": null,
+                        "event": {
+                            "apiName": "sn_uxf.MACROPONENT_STATE_UPDATE_REQUESTED",
+                            "payload": {
+                                "type": "JSON_LITERAL",
+                                "value": {
+                                    "propName": "requestFirstName",
+                                    "value": null
+                                }
+                            },
+                            "sysId": "32408b42ff7a10109046e490703bf176"
+                        },
+                        "operation": null,
+                        "targetId": "clzsyvzweeaaccxjjddbhhtffaenajjbbff",
+                        "type": "EVENT"
+                    }
+                ]
             }
         ],
         "extensionPoints": [
@@ -7719,7 +7737,7 @@
                                     "type": "MACROPONENT"
                                 },
                                 "elementId": "button_circular_2",
-                                "elementLabel": "Take Snapshot",
+                                "elementLabel": "Take Snapshot Button",
                                 "eventMappings": [
                                     {
                                         "eventMappingId": "clgybiiuytaaaaxggddbhhvccaarccaaffaar",
@@ -8356,7 +8374,7 @@
             },
             "returnFields": {
                 "type": "JSON_LITERAL",
-                "value": "camera_device_id,watermark_image,gap,watermark_image_position,chin_height,fill_style,name,watermark_image_height,completion_message,idle_message,long_name,sharing_ui,ai_processing_offered,enable_camera_button"
+                "value": "camera_device_id,watermark_image,gap,watermark_image_position,chin_height,fill_style,name,watermark_image_height,completion_message,idle_message,long_name,ai_processing_offered,enable_camera_button"
             },
             "sortType": {
                 "type": "JSON_LITERAL",
@@ -8802,31 +8820,6 @@
                     },
                     {
                         "broker": null,
-                        "clientScript": null,
-                        "conditional": null,
-                        "declarativeAction": null,
-                        "event": {
-                            "apiName": "x_snc_pb_app.MODAL_SELECTED_RELAY_11dd4b7547e6e110552caf52736d4361",
-                            "payload": {
-                                "type": "JSON_LITERAL",
-                                "value": {
-                                    "bare": true,
-                                    "displayOptions": null,
-                                    "modalId": "[component-id$='snapshot_modal']",
-                                    "showModal": null,
-                                    "viewportElementId": null,
-                                    "viewportFields": null,
-                                    "viewportRoute": null
-                                }
-                            },
-                            "sysId": "5f7e8b7547e6e110552caf52736d439e"
-                        },
-                        "operation": null,
-                        "targetId": "clhfbiiiuccaabbiibbddbbpiixybuddbb",
-                        "type": "EVENT"
-                    },
-                    {
-                        "broker": null,
                         "clientScript": {
                             "sysId": "34811e09973a6910ef32312e6253af93"
                         },
@@ -8858,121 +8851,28 @@
                     {
                         "broker": null,
                         "clientScript": null,
-                        "conditional": {
-                            "operation": {
-                                "left": {
-                                    "operation": {
-                                        "left": {
-                                            "binding": {
-                                                "address": [
-                                                    "data",
-                                                    "record",
-                                                    "state",
-                                                    "value"
-                                                ]
-                                            },
-                                            "type": "EVENT_PAYLOAD_BINDING"
-                                        },
-                                        "operator": "EQUAL",
-                                        "right": {
-                                            "type": "JSON_LITERAL",
-                                            "value": "complete"
-                                        }
-                                    },
-                                    "type": "BINARY"
-                                },
-                                "operator": "AND",
-                                "right": {
-                                    "operation": {
-                                        "left": {
-                                            "binding": {
-                                                "address": [
-                                                    "selectedSharingUi"
-                                                ]
-                                            },
-                                            "type": "STATE_BINDING"
-                                        },
-                                        "operator": "EQUAL",
-                                        "right": {
-                                            "type": "JSON_LITERAL",
-                                            "value": "In App"
-                                        }
-                                    },
-                                    "type": "BINARY"
-                                }
-                            },
-                            "type": "BINARY"
-                        },
+                        "conditional": null,
                         "declarativeAction": null,
                         "event": {
-                            "apiName": "x_snc_pb_app.NAV_ITEM_SELECTED_RELAY_11dd4b7547e6e110552caf52736d4361",
+                            "apiName": "x_snc_pb_app.MODAL_SELECTED_RELAY_11dd4b7547e6e110552caf52736d4361",
                             "payload": {
-                                "container": {
-                                    "external": {
-                                        "type": "JSON_LITERAL",
-                                        "value": null
-                                    },
-                                    "fields": {
-                                        "container": {
-                                            "photoboothNameOrNumberOrSysId": {
-                                                "binding": {
-                                                    "address": [
-                                                        "photoboothNameOrNumberOrSysId"
-                                                    ],
-                                                    "category": "props"
-                                                },
-                                                "type": "CONTEXT_BINDING"
-                                            },
-                                            "snapshotIndex": {
-                                                "type": "JSON_LITERAL",
-                                                "value": "0"
-                                            },
-                                            "sysId": {
-                                                "binding": {
-                                                    "address": [
-                                                        "requestId"
-                                                    ]
-                                                },
-                                                "type": "STATE_BINDING"
-                                            }
-                                        },
-                                        "type": "MAP_CONTAINER"
-                                    },
-                                    "multiInstField": {
-                                        "type": "JSON_LITERAL",
-                                        "value": null
-                                    },
-                                    "params": {
-                                        "type": "JSON_LITERAL",
-                                        "value": null
-                                    },
-                                    "passiveNavigation": {
-                                        "type": "JSON_LITERAL",
-                                        "value": null
-                                    },
-                                    "redirect": {
-                                        "type": "JSON_LITERAL",
-                                        "value": null
-                                    },
-                                    "route": {
-                                        "type": "JSON_LITERAL",
-                                        "value": "results"
-                                    },
-                                    "targetRoute": {
-                                        "type": "JSON_LITERAL",
-                                        "value": null
-                                    },
-                                    "title": {
-                                        "type": "JSON_LITERAL",
-                                        "value": null
-                                    }
-                                },
-                                "type": "MAP_CONTAINER"
+                                "type": "JSON_LITERAL",
+                                "value": {
+                                    "bare": false,
+                                    "displayOptions": null,
+                                    "headerLabel": null,
+                                    "modalId": "[component-id$='snapshot_modal']",
+                                    "showModal": null,
+                                    "viewportElementId": null,
+                                    "viewportFields": null,
+                                    "viewportParams": null,
+                                    "viewportRoute": null
+                                }
                             },
-                            "sysId": "9f7e47b547e6e110552caf52736d436c"
+                            "sysId": "5f7e8b7547e6e110552caf52736d439e"
                         },
                         "operation": null,
-                        "targetId": "clvhhddfzflaabbjjccddbhhzdthhxdqrk",
+                        "targetId": "clztznjlqaaaaxdddbhhupkzuijiih",
                         "type": "EVENT"
                     }
                 ]
@@ -9805,14 +9705,6 @@
         "valueType": "boolean"
     },
     {
-        "fieldType": "string",
-        "id": "",
-        "initialValue": null,
-        "name": "selectedSharingUi",
-        "shape": "",
-        "valueType": "string"
-    },
-    {
         "id": "",
         "initialValue": null,
         "name": "rando",
@@ -9845,14 +9737,14 @@
         <sys_created_by>jon.lind</sys_created_by>
         <sys_created_on>2023-05-02 20:11:01</sys_created_on>
         <sys_id>11dd4b7547e6e110552caf52736d4361</sys_id>
-        <sys_mod_count>171</sys_mod_count>
+        <sys_mod_count>198</sys_mod_count>
         <sys_name>Home Stylized</sys_name>
         <sys_package display_value="Photobooth App" source="x_snc_pb_app">baa73cb74742dd10552caf52736d43f1</sys_package>
         <sys_policy/>
         <sys_scope display_value="Photobooth App">baa73cb74742dd10552caf52736d43f1</sys_scope>
         <sys_update_name>sys_ux_macroponent_11dd4b7547e6e110552caf52736d4361</sys_update_name>
         <sys_updated_by>jon.lind</sys_updated_by>
-        <sys_updated_on>2024-06-04 22:23:38</sys_updated_on>
+        <sys_updated_on>2024-08-14 15:50:24</sys_updated_on>
     </sys_ux_macroponent>
     <sys_translated_text action="delete_multiple" query="documentkey=11dd4b7547e6e110552caf52736d4361"/>
 </record_update>

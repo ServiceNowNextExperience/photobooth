@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_client_script">
+    <sys_ux_client_script action="DELETE">
+        <controller_preset/>
+        <includes>ac98005d87c6a51089790fe5dabb35bd</includes>
+        <macroponent display_value="Home Stylized">ca863304eb9e4a5036e7f734bad0cd0f</macroponent>
+        <name>Setting Updated</name>
+        <preset/>
+        <required_translations>[
+    
+]</required_translations>
+        <script><![CDATA[/**
+ * @param {params} params
+ * @param {api} params.api
+ * @param {any} params.event
+ * @param {any} params.imports
+ * @param {ApiHelpers} params.helpers
+ */
+function handler({
+    api: {
+        state,
+        data,
+        setState
+    },
+    event: {
+        elementId,
+        payload
+    }
+}) {
+    console.log("SETTINGS CHANGED!", state, {
+        elementId,
+        payload
+    });
+
+    // Keep track of the number of settings changes. If the new value is different from the db
+    // the increment it.  If it's the same, decrement the count.
+    var changedSettings = state.changedSettings.filter(e => e !== elementId);
+
+    // The name (elementId) of the form elements are the same as
+    // the client state parameters.  They also match the database
+    // field names but in snake case, e.g. chinHeight == chin_height
+
+    // Check to see if this elementId has a payload and a matching state variable
+    if(state[elementId] !== undefined && (payload.fieldValue !== undefined || payload.value !== undefined)){
+        // FieldValue is used by text fields, value by drop downs. Check undefined instead of
+        // falsey to account for empty string
+        const payloadValue = payload.fieldValue !== undefined ? payload.fieldValue : payload.value;
+
+        setState(elementId, payloadValue);
+
+        const dbFieldName = toSnakeCase(elementId);
+
+        const pb = data.look_up_photobooths.results[0];
+
+        if(pb[dbFieldName] !== undefined){
+            const dbValue = pb[dbFieldName].value;
+            if (dbValue != payloadValue) {
+                changedSettings.push(elementId);
+            }
+        } 
+    }
+
+    // Run the changedSettings and saveDisabled logic every time, even if the state or db value doesn't
+    // exist, so that you can use this method to update saveDisabled on any event.
+    setState("changedSettings", changedSettings);
+    setState("saveDisabled", (changedSettings.length === 0));
+
+    function toSnakeCase(str) {
+        return str.replace(/[A-Z]/g, (letter) => `_${letter.toLowerCase()}`);
+    }
+}]]></script>
+        <script_api_version>2.0.0</script_api_version>
+        <sys_class_name>sys_ux_client_script</sys_class_name>
+        <sys_created_by>jon.lind</sys_created_by>
+        <sys_created_on>2024-05-16 18:46:06</sys_created_on>
+        <sys_id>9a863304eb9e4a5036e7f734bad0cd14</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>Setting Updated</sys_name>
+        <sys_package display_value="Photobooth App" source="x_snc_pb_app">baa73cb74742dd10552caf52736d43f1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Photobooth App">baa73cb74742dd10552caf52736d43f1</sys_scope>
+        <sys_update_name>sys_ux_client_script_9a863304eb9e4a5036e7f734bad0cd14</sys_update_name>
+        <sys_updated_by>jon.lind</sys_updated_by>
+        <sys_updated_on>2024-05-16 18:46:06</sys_updated_on>
+        <target>macroponent</target>
+        <type>default</type>
+    </sys_ux_client_script>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Photobooth App">baa73cb74742dd10552caf52736d43f1</application>
+        <file_path/>
+        <instance_id>15b69fc31b60025419254089bd4bcb07</instance_id>
+        <instance_name>wiffleball</instance_name>
+        <name>sys_ux_client_script_9a863304eb9e4a5036e7f734bad0cd14</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sys_ux_client_script"&gt;&lt;sys_ux_client_script action="INSERT_OR_UPDATE"&gt;&lt;controller_preset/&gt;&lt;includes&gt;ac98005d87c6a51089790fe5dabb35bd&lt;/includes&gt;&lt;macroponent display_value="Home Stylized"&gt;ca863304eb9e4a5036e7f734bad0cd0f&lt;/macroponent&gt;&lt;name&gt;Setting Updated&lt;/name&gt;&lt;preset/&gt;&lt;required_translations&gt;[
+    
+]&lt;/required_translations&gt;&lt;script&gt;&lt;![CDATA[/**
+ * @param {params} params
+ * @param {api} params.api
+ * @param {any} params.event
+ * @param {any} params.imports
+ * @param {ApiHelpers} params.helpers
+ */
+function handler({
+    api: {
+        state,
+        data,
+        setState
+    },
+    event: {
+        elementId,
+        payload
+    }
+}) {
+    console.log("SETTINGS CHANGED!", state, {
+        elementId,
+        payload
+    });
+
+    // Keep track of the number of settings changes. If the new value is different from the db
+    // the increment it.  If it's the same, decrement the count.
+    var changedSettings = state.changedSettings.filter(e =&gt; e !== elementId);
+
+    // The name (elementId) of the form elements are the same as
+    // the client state parameters.  They also match the database
+    // field names but in snake case, e.g. chinHeight == chin_height
+
+    // Check to see if this elementId has a payload and a matching state variable
+    if(state[elementId] !== undefined &amp;&amp; (payload.fieldValue !== undefined || payload.value !== undefined)){
+        // FieldValue is used by text fields, value by drop downs. Check undefined instead of
+        // falsey to account for empty string
+        const payloadValue = payload.fieldValue !== undefined ? payload.fieldValue : payload.value;
+
+        setState(elementId, payloadValue);
+
+        const dbFieldName = toSnakeCase(elementId);
+
+        const pb = data.look_up_photobooths.results[0];
+
+        if(pb[dbFieldName] !== undefined){
+            const dbValue = pb[dbFieldName].value;
+            if (dbValue != payloadValue) {
+                changedSettings.push(elementId);
+            }
+        } 
+    }
+
+    // Run the changedSettings and saveDisabled logic every time, even if the state or db value doesn't
+    // exist, so that you can use this method to update saveDisabled on any event.
+    setState("changedSettings", changedSettings);
+    setState("saveDisabled", (changedSettings.length === 0));
+
+    function toSnakeCase(str) {
+        return str.replace(/[A-Z]/g, (letter) =&gt; `_${letter.toLowerCase()}`);
+    }
+}]]&gt;&lt;/script&gt;&lt;script_api_version&gt;2.0.0&lt;/script_api_version&gt;&lt;sys_class_name&gt;sys_ux_client_script&lt;/sys_class_name&gt;&lt;sys_created_by&gt;jon.lind&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2024-05-16 18:46:06&lt;/sys_created_on&gt;&lt;sys_id&gt;9a863304eb9e4a5036e7f734bad0cd14&lt;/sys_id&gt;&lt;sys_mod_count&gt;1&lt;/sys_mod_count&gt;&lt;sys_name&gt;Setting Updated&lt;/sys_name&gt;&lt;sys_package display_value="Photobooth App" source="x_snc_pb_app"&gt;baa73cb74742dd10552caf52736d43f1&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Photobooth App"&gt;baa73cb74742dd10552caf52736d43f1&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_ux_client_script_9a863304eb9e4a5036e7f734bad0cd14&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;jon.lind&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2024-05-16 18:46:06&lt;/sys_updated_on&gt;&lt;target&gt;macroponent&lt;/target&gt;&lt;type&gt;default&lt;/type&gt;&lt;/sys_ux_client_script&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>-664417855</payload_hash>
+        <record_name>Setting Updated</record_name>
+        <reverted_from/>
+        <source>8521e579fb710210d84afe7405efdc68</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>jon.lind</sys_created_by>
+        <sys_created_on>2024-05-16 18:46:06</sys_created_on>
+        <sys_id>16863304eb9e4a5036e7f734bad0cd18</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>18f82b9cf0a0000001</sys_recorded_at>
+        <sys_updated_by>jon.lind</sys_updated_by>
+        <sys_updated_on>2024-05-16 18:46:06</sys_updated_on>
+        <type>UX Client Script</type>
+        <update_guid>1a863304dc9e4a50c60fb4231b8bd917</update_guid>
+        <update_guid_history>1a863304dc9e4a50c60fb4231b8bd917:-664417855</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>jon.lind</sys_created_by>
+        <sys_created_on>2024-08-13 21:35:10</sys_created_on>
+        <sys_db_object display_value="" name="sys_ux_client_script">sys_ux_client_script</sys_db_object>
+        <sys_id>0dd3429af6484b068462d2236e9c7c61</sys_id>
+        <sys_metadata>9a863304eb9e4a5036e7f734bad0cd14</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Setting Updated</sys_name>
+        <sys_package display_value="Photobooth App" source="x_snc_pb_app">baa73cb74742dd10552caf52736d43f1</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Photobooth App">baa73cb74742dd10552caf52736d43f1</sys_scope>
+        <sys_scope_delete display_value="">868a264ca04c47ed906cd87c81ce8d11</sys_scope_delete>
+        <sys_update_name>sys_ux_client_script_9a863304eb9e4a5036e7f734bad0cd14</sys_update_name>
+        <sys_update_version display_value="sys_ux_client_script_9a863304eb9e4a5036e7f734bad0cd14">16863304eb9e4a5036e7f734bad0cd18</sys_update_version>
+        <sys_updated_by>jon.lind</sys_updated_by>
+        <sys_updated_on>2024-08-13 21:35:10</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

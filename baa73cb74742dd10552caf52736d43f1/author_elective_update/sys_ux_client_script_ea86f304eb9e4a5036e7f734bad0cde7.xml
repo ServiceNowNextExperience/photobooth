@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_client_script">
+    <sys_ux_client_script action="DELETE">
+        <controller_preset/>
+        <includes/>
+        <macroponent display_value="Home Stylized">ca863304eb9e4a5036e7f734bad0cd0f</macroponent>
+        <name>Validate And Parse Email</name>
+        <preset/>
+        <required_translations>[
+    
+]</required_translations>
+        <script><![CDATA[/**
+* @param {params} params
+* @param {api} params.api
+* @param {any} params.event
+* @param {any} params.imports
+* @param {ApiHelpers} params.helpers
+*/
+function handler({api : {setState, state}, event , helpers, imports}) {
+    console.log('Validating Email!');
+    
+    var firstName = state.requestFirstName;
+    const email = event.payload.fieldValue;
+    
+    if(email.includes("@") && !firstName){
+        // If they have not specified a request first name yet
+        // Try to parse the first name for common "jon.lind@servicenow.com" addresses.
+        const possibleFirstName = email.split("@")[0].split(".")[0];
+
+        if(possibleFirstName){
+            firstName = InitialCaps(possibleFirstName);
+            setState("requestFirstName", firstName);
+        }
+    }
+
+    if(IsValidEmail(email) && firstName){
+        setState("requestIsValid", true);
+    } else {
+        setState("requestIsValid", false);
+    }
+
+    function InitialCaps(str){
+        return str.charAt(0).toUpperCase() + str.slice(1);
+    }
+
+    function IsValidEmail(email){
+        const regex = /(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*|"(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21\x23-\x5b\x5d-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])*")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\[(?:(?:(2(5[0-5]|[0-4][0-9])|1[0-9][0-9]|[1-9]?[0-9]))\.){3}(?:(2(5[0-5]|[0-4][0-9])|1[0-9][0-9]|[1-9]?[0-9])|[a-z0-9-]*[a-z0-9]:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])+)\])/;
+        return regex.test(email);
+    }
+}]]></script>
+        <script_api_version>2.0.0</script_api_version>
+        <sys_class_name>sys_ux_client_script</sys_class_name>
+        <sys_created_by>jon.lind</sys_created_by>
+        <sys_created_on>2024-05-16 18:46:06</sys_created_on>
+        <sys_id>ea86f304eb9e4a5036e7f734bad0cde7</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>Validate And Parse Email</sys_name>
+        <sys_package display_value="Photobooth App" source="x_snc_pb_app">baa73cb74742dd10552caf52736d43f1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Photobooth App">baa73cb74742dd10552caf52736d43f1</sys_scope>
+        <sys_update_name>sys_ux_client_script_ea86f304eb9e4a5036e7f734bad0cde7</sys_update_name>
+        <sys_updated_by>jon.lind</sys_updated_by>
+        <sys_updated_on>2024-05-16 18:46:06</sys_updated_on>
+        <target>macroponent</target>
+        <type>default</type>
+    </sys_ux_client_script>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Photobooth App">baa73cb74742dd10552caf52736d43f1</application>
+        <file_path/>
+        <instance_id>15b69fc31b60025419254089bd4bcb07</instance_id>
+        <instance_name>wiffleball</instance_name>
+        <name>sys_ux_client_script_ea86f304eb9e4a5036e7f734bad0cde7</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sys_ux_client_script"&gt;&lt;sys_ux_client_script action="INSERT_OR_UPDATE"&gt;&lt;controller_preset/&gt;&lt;includes/&gt;&lt;macroponent display_value="Home Stylized"&gt;ca863304eb9e4a5036e7f734bad0cd0f&lt;/macroponent&gt;&lt;name&gt;Validate And Parse Email&lt;/name&gt;&lt;preset/&gt;&lt;required_translations&gt;[
+    
+]&lt;/required_translations&gt;&lt;script&gt;&lt;![CDATA[/**
+* @param {params} params
+* @param {api} params.api
+* @param {any} params.event
+* @param {any} params.imports
+* @param {ApiHelpers} params.helpers
+*/
+function handler({api : {setState, state}, event , helpers, imports}) {
+    console.log('Validating Email!');
+    
+    var firstName = state.requestFirstName;
+    const email = event.payload.fieldValue;
+    
+    if(email.includes("@") &amp;&amp; !firstName){
+        // If they have not specified a request first name yet
+        // Try to parse the first name for common "jon.lind@servicenow.com" addresses.
+        const possibleFirstName = email.split("@")[0].split(".")[0];
+
+        if(possibleFirstName){
+            firstName = InitialCaps(possibleFirstName);
+            setState("requestFirstName", firstName);
+        }
+    }
+
+    if(IsValidEmail(email) &amp;&amp; firstName){
+        setState("requestIsValid", true);
+    } else {
+        setState("requestIsValid", false);
+    }
+
+    function InitialCaps(str){
+        return str.charAt(0).toUpperCase() + str.slice(1);
+    }
+
+    function IsValidEmail(email){
+        const regex = /(?:[a-z0-9!#$%&amp;'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&amp;'*+/=?^_`{|}~-]+)*|"(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21\x23-\x5b\x5d-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])*")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\[(?:(?:(2(5[0-5]|[0-4][0-9])|1[0-9][0-9]|[1-9]?[0-9]))\.){3}(?:(2(5[0-5]|[0-4][0-9])|1[0-9][0-9]|[1-9]?[0-9])|[a-z0-9-]*[a-z0-9]:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])+)\])/;
+        return regex.test(email);
+    }
+}]]&gt;&lt;/script&gt;&lt;script_api_version&gt;2.0.0&lt;/script_api_version&gt;&lt;sys_class_name&gt;sys_ux_client_script&lt;/sys_class_name&gt;&lt;sys_created_by&gt;jon.lind&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2024-05-16 18:46:06&lt;/sys_created_on&gt;&lt;sys_id&gt;ea86f304eb9e4a5036e7f734bad0cde7&lt;/sys_id&gt;&lt;sys_mod_count&gt;1&lt;/sys_mod_count&gt;&lt;sys_name&gt;Validate And Parse Email&lt;/sys_name&gt;&lt;sys_package display_value="Photobooth App" source="x_snc_pb_app"&gt;baa73cb74742dd10552caf52736d43f1&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Photobooth App"&gt;baa73cb74742dd10552caf52736d43f1&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_ux_client_script_ea86f304eb9e4a5036e7f734bad0cde7&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;jon.lind&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2024-05-16 18:46:06&lt;/sys_updated_on&gt;&lt;target&gt;macroponent&lt;/target&gt;&lt;type&gt;default&lt;/type&gt;&lt;/sys_ux_client_script&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>-1519845659</payload_hash>
+        <record_name>Validate And Parse Email</record_name>
+        <reverted_from/>
+        <source>8521e579fb710210d84afe7405efdc68</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>jon.lind</sys_created_by>
+        <sys_created_on>2024-05-16 18:46:06</sys_created_on>
+        <sys_id>ea86f304eb9e4a5036e7f734bad0cde9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>18f82b9d0f60000001</sys_recorded_at>
+        <sys_updated_by>jon.lind</sys_updated_by>
+        <sys_updated_on>2024-05-16 18:46:06</sys_updated_on>
+        <type>UX Client Script</type>
+        <update_guid>ee86f304679e4a504418b77a5b8b05e8</update_guid>
+        <update_guid_history>ee86f304679e4a504418b77a5b8b05e8:-1519845659</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>jon.lind</sys_created_by>
+        <sys_created_on>2024-08-13 21:35:11</sys_created_on>
+        <sys_db_object display_value="" name="sys_ux_client_script">sys_ux_client_script</sys_db_object>
+        <sys_id>01b983d1c81249f080071b0aca97ee40</sys_id>
+        <sys_metadata>ea86f304eb9e4a5036e7f734bad0cde7</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Validate And Parse Email</sys_name>
+        <sys_package display_value="Photobooth App" source="x_snc_pb_app">baa73cb74742dd10552caf52736d43f1</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Photobooth App">baa73cb74742dd10552caf52736d43f1</sys_scope>
+        <sys_scope_delete display_value="">868a264ca04c47ed906cd87c81ce8d11</sys_scope_delete>
+        <sys_update_name>sys_ux_client_script_ea86f304eb9e4a5036e7f734bad0cde7</sys_update_name>
+        <sys_update_version display_value="sys_ux_client_script_ea86f304eb9e4a5036e7f734bad0cde7">ea86f304eb9e4a5036e7f734bad0cde9</sys_update_version>
+        <sys_updated_by>jon.lind</sys_updated_by>
+        <sys_updated_on>2024-08-13 21:35:11</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

@@ -5,7 +5,9 @@
         <macroponent display_value="Home Stylized">11dd4b7547e6e110552caf52736d4361</macroponent>
         <name>Clear Reset Timeout</name>
         <preset/>
-        <required_translations>[ ]</required_translations>
+        <required_translations>[
+    
+]</required_translations>
         <script><![CDATA[/**
 * @param {params} params
 * @param {api} params.api
@@ -14,6 +16,7 @@
 * @param {ApiHelpers} params.helpers
 */
 function handler({api : { setState, state : { timeoutId}}, event, helpers : {timing : {clearTimeout}}, imports}) {
+    console.log("CLEAR TIMEOUT: ", timeoutId);
     if(timeoutId){
         clearTimeout(timeoutId);
         setState("timeoutId", "");
@@ -24,14 +27,14 @@ function handler({api : { setState, state : { timeoutId}}, event, helpers : {tim
         <sys_created_by>jon.lind</sys_created_by>
         <sys_created_on>2023-05-12 18:07:42</sys_created_on>
         <sys_id>34811e09973a6910ef32312e6253af93</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>4</sys_mod_count>
         <sys_name>Clear Reset Timeout</sys_name>
         <sys_package display_value="Photobooth App" source="x_snc_pb_app">baa73cb74742dd10552caf52736d43f1</sys_package>
         <sys_policy/>
         <sys_scope display_value="Photobooth App">baa73cb74742dd10552caf52736d43f1</sys_scope>
         <sys_update_name>sys_ux_client_script_34811e09973a6910ef32312e6253af93</sys_update_name>
         <sys_updated_by>jon.lind</sys_updated_by>
-        <sys_updated_on>2023-05-12 18:11:22</sys_updated_on>
+        <sys_updated_on>2024-08-14 15:11:46</sys_updated_on>
         <target>macroponent</target>
         <type>default</type>
     </sys_ux_client_script>

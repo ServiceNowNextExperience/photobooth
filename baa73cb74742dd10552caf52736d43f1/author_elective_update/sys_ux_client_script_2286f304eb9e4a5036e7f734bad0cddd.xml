@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_client_script">
+    <sys_ux_client_script action="DELETE">
+        <controller_preset/>
+        <includes/>
+        <macroponent display_value="Home Stylized">ca863304eb9e4a5036e7f734bad0cd0f</macroponent>
+        <name>Countdown then Take Snaps</name>
+        <preset/>
+        <required_translations>[
+    
+]</required_translations>
+        <script><![CDATA[/**
+* @param {params} params
+* @param {api} params.api
+* @param {any} params.event
+* @param {any} params.imports
+* @param {ApiHelpers} params.helpers
+*/
+function handler({api : { setState, state }, event, helpers : {timing : {setTimeout, setInterval, clearInterval}}, imports}) {
+    console.log("COUNTDOWN");
+    const countdownMessages = [...state.countdownMessages];
+
+//    setState("currentMessage", countdownMessages.shift());
+    // Wait an extra second to show the "hi" message before counting down.
+    setTimeout(() => {
+        const interval = setInterval(()=> {
+            const currentCountdownMessage = countdownMessages.shift();
+            if(!currentCountdownMessage) {
+                clearInterval(interval);
+                setState("snapRequested", Date.now());
+            } else {
+                setState("currentMessage", currentCountdownMessage);
+            }
+        }, 1000);
+    }, 1000);
+
+}]]></script>
+        <script_api_version>2.0.0</script_api_version>
+        <sys_class_name>sys_ux_client_script</sys_class_name>
+        <sys_created_by>jon.lind</sys_created_by>
+        <sys_created_on>2024-05-16 18:46:06</sys_created_on>
+        <sys_id>2286f304eb9e4a5036e7f734bad0cddd</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>Countdown then Take Snaps</sys_name>
+        <sys_package display_value="Photobooth App" source="x_snc_pb_app">baa73cb74742dd10552caf52736d43f1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Photobooth App">baa73cb74742dd10552caf52736d43f1</sys_scope>
+        <sys_update_name>sys_ux_client_script_2286f304eb9e4a5036e7f734bad0cddd</sys_update_name>
+        <sys_updated_by>jon.lind</sys_updated_by>
+        <sys_updated_on>2024-05-16 18:46:06</sys_updated_on>
+        <target>macroponent</target>
+        <type>default</type>
+    </sys_ux_client_script>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Photobooth App">baa73cb74742dd10552caf52736d43f1</application>
+        <file_path/>
+        <instance_id>15b69fc31b60025419254089bd4bcb07</instance_id>
+        <instance_name>wiffleball</instance_name>
+        <name>sys_ux_client_script_2286f304eb9e4a5036e7f734bad0cddd</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sys_ux_client_script"&gt;&lt;sys_ux_client_script action="INSERT_OR_UPDATE"&gt;&lt;controller_preset/&gt;&lt;includes/&gt;&lt;macroponent display_value="Home Stylized"&gt;ca863304eb9e4a5036e7f734bad0cd0f&lt;/macroponent&gt;&lt;name&gt;Countdown then Take Snaps&lt;/name&gt;&lt;preset/&gt;&lt;required_translations&gt;[
+    
+]&lt;/required_translations&gt;&lt;script&gt;&lt;![CDATA[/**
+* @param {params} params
+* @param {api} params.api
+* @param {any} params.event
+* @param {any} params.imports
+* @param {ApiHelpers} params.helpers
+*/
+function handler({api : { setState, state }, event, helpers : {timing : {setTimeout, setInterval, clearInterval}}, imports}) {
+    console.log("COUNTDOWN");
+    const countdownMessages = [...state.countdownMessages];
+
+//    setState("currentMessage", countdownMessages.shift());
+    // Wait an extra second to show the "hi" message before counting down.
+    setTimeout(() =&gt; {
+        const interval = setInterval(()=&gt; {
+            const currentCountdownMessage = countdownMessages.shift();
+            if(!currentCountdownMessage) {
+                clearInterval(interval);
+                setState("snapRequested", Date.now());
+            } else {
+                setState("currentMessage", currentCountdownMessage);
+            }
+        }, 1000);
+    }, 1000);
+
+}]]&gt;&lt;/script&gt;&lt;script_api_version&gt;2.0.0&lt;/script_api_version&gt;&lt;sys_class_name&gt;sys_ux_client_script&lt;/sys_class_name&gt;&lt;sys_created_by&gt;jon.lind&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2024-05-16 18:46:06&lt;/sys_created_on&gt;&lt;sys_id&gt;2286f304eb9e4a5036e7f734bad0cddd&lt;/sys_id&gt;&lt;sys_mod_count&gt;1&lt;/sys_mod_count&gt;&lt;sys_name&gt;Countdown then Take Snaps&lt;/sys_name&gt;&lt;sys_package display_value="Photobooth App" source="x_snc_pb_app"&gt;baa73cb74742dd10552caf52736d43f1&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Photobooth App"&gt;baa73cb74742dd10552caf52736d43f1&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_ux_client_script_2286f304eb9e4a5036e7f734bad0cddd&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;jon.lind&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2024-05-16 18:46:06&lt;/sys_updated_on&gt;&lt;target&gt;macroponent&lt;/target&gt;&lt;type&gt;default&lt;/type&gt;&lt;/sys_ux_client_script&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>1145030260</payload_hash>
+        <record_name>Countdown then Take Snaps</record_name>
+        <reverted_from/>
+        <source>8521e579fb710210d84afe7405efdc68</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>jon.lind</sys_created_by>
+        <sys_created_on>2024-05-16 18:46:06</sys_created_on>
+        <sys_id>2286f304eb9e4a5036e7f734bad0cddf</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>18f82b9d0550000001</sys_recorded_at>
+        <sys_updated_by>jon.lind</sys_updated_by>
+        <sys_updated_on>2024-05-16 18:46:06</sys_updated_on>
+        <type>UX Client Script</type>
+        <update_guid>2686f304e49e4a5019fc02745389e3de</update_guid>
+        <update_guid_history>2686f304e49e4a5019fc02745389e3de:1145030260</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>jon.lind</sys_created_by>
+        <sys_created_on>2024-08-13 21:35:10</sys_created_on>
+        <sys_db_object display_value="" name="sys_ux_client_script">sys_ux_client_script</sys_db_object>
+        <sys_id>159f55de257c40b48a36cf553f525581</sys_id>
+        <sys_metadata>2286f304eb9e4a5036e7f734bad0cddd</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Countdown then Take Snaps</sys_name>
+        <sys_package display_value="Photobooth App" source="x_snc_pb_app">baa73cb74742dd10552caf52736d43f1</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Photobooth App">baa73cb74742dd10552caf52736d43f1</sys_scope>
+        <sys_scope_delete display_value="">868a264ca04c47ed906cd87c81ce8d11</sys_scope_delete>
+        <sys_update_name>sys_ux_client_script_2286f304eb9e4a5036e7f734bad0cddd</sys_update_name>
+        <sys_update_version display_value="sys_ux_client_script_2286f304eb9e4a5036e7f734bad0cddd">2286f304eb9e4a5036e7f734bad0cddf</sys_update_version>
+        <sys_updated_by>jon.lind</sys_updated_by>
+        <sys_updated_on>2024-08-13 21:35:10</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>
